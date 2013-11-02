@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Hangfire by odinserj</title>
+    <title>HangFire by odinserj</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -59,21 +59,21 @@
 
 <p>HangFire stores its data in the Redis server instance, so you need to install it first. To learn different options and their pros and cons, see the <a href="">Installing Redis</a> page in the documentation. But for now we'll install it using the simplest method through the NuGet Package Manager Console:</p>
 
-<pre>PM&gt; Install-Package Redis-32</pre>
+<pre style="background-color: #202020;border: 4px solid silver;border-radius: 3px;color: #E2E2E2;display: block;padding: 10px;">PM&gt; Install-Package Redis-32</pre>
 
 <p>Package Manager will install the Redis binaries to the <code>&lt;project-folder&gt;\packages\redis-32.&lt;*&gt;\tools</code> folder. Just open this folder and run the <code>redis-server.exe</code> program.</p>
 
 <p>Next, install the HangFire into your <strong>ASP.NET application</strong> using the Package Manager again:</p>
 
-<pre>PM&gt; Install-Package HangFire</pre>
+<pre style="background-color: #202020;border: 4px solid silver;border-radius: 3px;color: #E2E2E2;display: block;padding: 10px;">PM&gt; Install-Package HangFire</pre>
 
 <h2>
 <a name="configuration" class="anchor" href="#configuration"><span class="octicon octicon-link"></span></a>Configuration</h2>
 
 <p>During the installation of the HangFire package, the <code>App_Start\HangFireConfig.cs</code> file appears in your project. This file contains the instructions to run the HangFire Server during the start-up of your ASP.NET application with the default options. Just build your project and open the following URL in a browser:</p>
 
-<div>
-http://&lt;your-site&gt;/hangfire.axd
+<div style="border-radius: 0;border:solid 3px #ccc;background-color:#fcfcfc;box-shadow: 1px 1px 1px #ddd inset, 1px 1px 1px #eee;padding:3px 7px;">
+<span style="color: #666;">http://&lt;your-site&gt;</span>/hangfire.axd
 </div>
 
 <p>If you see a page like this, then the configuration step is finished. To learn more about configuration or if you do not see that page, the <a href="">Configuration page</a> in the documentation, especially its Troubleshooting section.</p>
