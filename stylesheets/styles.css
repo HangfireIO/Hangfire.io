@@ -622,7 +622,7 @@ code {
   color: #666;
   font-size: 13px;
   margin: 0 0px;
-  padding: 4px 6px;
+  padding: 0px 6px 1px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
