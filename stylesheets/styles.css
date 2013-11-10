@@ -532,7 +532,7 @@ body {
   padding: 0px 0 20px 0px;
   margin: 0px;
   font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: #111;
   font-weight: normal;
   background: #252525;
   background-attachment: fixed !important;
@@ -540,7 +540,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #666;
+  color: #333;
   margin: 0 0 10px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
