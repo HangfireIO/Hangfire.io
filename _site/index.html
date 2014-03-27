@@ -1,51 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Your New Jekyll Site</title>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/vs.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
     </head>
     <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">HangFire</a></h1>
-            <a class="extra" href="/">home</a>
+        <nav class="navbar" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <span class="glyphicon glyphicon-fire"></span>
+                HangFire
+              </a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Getting Started</a></li>
+                <li><a href="https://github.com/odinserj/HangFire">Sources on GitHub</a></li>
+              </ul>
+            </div>
           </div>
+        </nav>
 
-          <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    
-      <li><span>27 Mar 2014</span> &raquo; <a href="/jekyll/update/2014/03/27/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
-    
-  </ul>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>HangFire</h1>
+    <p>A simple way to kick off long-running processes from the ASP.NET request processing pipeline.</p>
+  </div>
 </div>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>1. Install</h2>
+      <p>HangFire is available as a <a href="http://nuget.org/packages/HangFire">NuGet package</a>. To install it, type in your <a href="https://docs.nuget.org/docs/start-here/using-the-package-manager-console" target="_blank">Package Manager Console</a> window:</p>
+      <p><pre style="background-color: #202020;border: 4px solid silver;border-radius: 3px;color: #E2E2E2;display: block;padding: 10px;">PM> Install-Package HangFire</pre></p>
+    </div>
+    <div class="col-md-6">
+      <h2>2. Call</h2>
+      <p>To call method asynchronously, call the `BackgroundJob.Enqueue` method and tell it what method needs to be invoked asynchronously.</p>
+      <pre><code>BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));</code></pre>
+   </div>
+  </div>
+</div>        
 
+        <div class="container">
+          <hr>
+
+          <footer>
+            <p>&copy; 2013-2014 <a href="https://github.com/odinserj">Sergey Odinokov</a></p>
+          </footer>
+        </div> <!-- /container -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

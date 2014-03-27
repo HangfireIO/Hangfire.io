@@ -3,11 +3,25 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>HangFire</h1>
+    <p>A simple way to kick off long-running processes from the ASP.NET request processing pipeline.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>1. Install</h2>
+      <p>HangFire is available as a <a href="http://nuget.org/packages/HangFire">NuGet package</a>. To install it, type in your <a href="https://docs.nuget.org/docs/start-here/using-the-package-manager-console" target="_blank">Package Manager Console</a> window:</p>
+      <p><pre style="background-color: #202020;border: 4px solid silver;border-radius: 3px;color: #E2E2E2;display: block;padding: 10px;">PM> Install-Package HangFire</pre></p>
+    </div>
+    <div class="col-md-6">
+      <h2>2. Call</h2>
+      <p>To call method asynchronously, call the `BackgroundJob.Enqueue` method and tell it what method needs to be invoked asynchronously.</p>
+      <pre><code>BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));</code></pre>
+   </div>
+  </div>
 </div>
