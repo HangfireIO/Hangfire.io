@@ -4,5 +4,28 @@
 }
 
 .jumbotron {
-    padding-top: 0;
+    padding-top: 20px;
+}
+ 
+.carousel-control {
+    opacity: 0;
+}
+
+#screenshots {
+    border-radius: 3px;
+    box-shadow: 0 0 3px #777;
+}
+
+#screenshots .carousel-control {
+    border-radius: 3px;
+}
+
+#screenshots .carousel-indicators {
+    bottom: -45px;
+}
+
+#screenshots img {
+    border-radius: 5px;
+    width: 400px;
+    height: 221px;
 }
