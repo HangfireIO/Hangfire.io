@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>HangFire</title>
+        <title>HangFire – Background job processing for ASP.NET</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <nav class="navbar" role="navigation">
+        <nav class="navbar navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -42,110 +42,193 @@
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
-  <div class="container">
-    <div id="screenshots" class="carousel slide pull-right" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#screenshots" data-slide-to="0" class="active"></li>
-        <li data-target="#screenshots" data-slide-to="1"></li>
-        <li data-target="#screenshots" data-slide-to="2"></li>
-        <li data-target="#screenshots" data-slide-to="3"></li>
-        <li data-target="#screenshots" data-slide-to="4"></li>
-        <li data-target="#screenshots" data-slide-to="5"></li>
-      </ol>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>HangFire</h1>
+                <p>A simple way to kick off long-running processes from the ASP.NET request processing pipeline.</p>
+            </div>
+            <div class="col-md-5">
+                <div id="screenshots" class="carousel slide pull-right" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#screenshots" data-slide-to="0" class="active"></li>
+                        <li data-target="#screenshots" data-slide-to="1"></li>
+                        <li data-target="#screenshots" data-slide-to="2"></li>
+                        <li data-target="#screenshots" data-slide-to="3"></li>
+                        <li data-target="#screenshots" data-slide-to="4"></li>
+                        <li data-target="#screenshots" data-slide-to="5"></li>
+                    </ol>
 
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-        <div class="item active">
-          <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/dashboard.png">
-            <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/dashboard-sm.png" alt="HangFire Dashboard">
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/succeeded-job.png">
-            <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/succeeded-job-sm.png" alt="HangFire Succeeded Job">
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-job.png">
-            <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-job-sm.png" alt="HangFire Failed Job">
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-jobs.png">
-            <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-jobs-sm.png" alt="HangFire Failed Job List">
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/queues.png">
-            <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/queues-sm.png" alt="HangFire Queue List">
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/processing-jobs.png">
-            <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/processing-jobs-sm.png" alt="HangFire Performing Job List">
-          </a>
-        </div>
-      </div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/dashboard.png">
+                                <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/dashboard-sm.png" alt="HangFire Dashboard">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/succeeded-job.png">
+                                <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/succeeded-job-sm.png" alt="HangFire Succeeded Job">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-job.png">
+                                <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-job-sm.png" alt="HangFire Failed Job">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-jobs.png">
+                                <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/failed-jobs-sm.png" alt="HangFire Failed Job List">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/queues.png">
+                                <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/queues-sm.png" alt="HangFire Queue List">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="https://raw.githubusercontent.com/odinserj/HangFire/master/content/processing-jobs.png">
+                                <img src="https://raw.githubusercontent.com/odinserj/HangFire/master/content/processing-jobs-sm.png" alt="HangFire Performing Job List">
+                            </a>
+                        </div>
+                    </div>
 
-      <!-- Controls -->
-      <a class="left carousel-control" href="#screenshots" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#screenshots" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#screenshots" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#screenshots" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <h1>HangFire</h1>
-    <p>A simple way to kick off long-running processes from the ASP.NET request processing pipeline.</p>
-  </div>
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-5 col-md-offset-1">
-      <h3>1. Install</h3>
-      <p>HangFire is available as a <a href="http://nuget.org/packages/HangFire">NuGet package</a>. To install it, type in your <a href="https://docs.nuget.org/docs/start-here/using-the-package-manager-console" target="_blank">Package Manager Console</a> window:</p>
-      <p><pre style="background-color: #202020;border: 4px solid silver;border-radius: 3px;color: #E2E2E2;display: block;padding: 10px;">PM> Install-Package HangFire</pre></p>
+    <!--div class="row">
+        <div class="col-md-12">
+            <h1>Features</h1>
+            <ul>
+                <li>Backround method invocation.</li>
+                <li>Delayed method invocation.</li>
+                <li>Queue based processing</li>
+                <li>Dedicated thread processing</li>
+                <li>Concurrency configuration</li>
+                <li>Multiple server instances.</li>
+                <li>Retry logic.</li>
+                <li>Multi-queue processing with priority support.</li>
+                <li>Culture capturing.</li>
+                <li>SQL Server storage</li>
+                <li>Redis storage</li>
+                <li>Custom job activator</li>
+                <li>State changing</li>
+                <li>Monitoring API</li>
+                <li>Host-agnostic processing</li>
+            </ul>
+        </div>
+    </div-->
+    <div class="row">
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-send"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Simple</h3>
+                <p>Использовать HangFire так же просто, как и пул потоков для выполнения ваших fire-and-forget задач:</p>
+                <p></p>
+                <pre style="border: none; padding: 3px 5px;"><span style="color: #2B91AF;">BackgroundJob</span>.Enqueue(
+    () => <span style="color: #2B91AF">Console</span>.WriteLine(<span style="color: #A01714">&quot;Hello!&quot;</span>));</pre>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-tower"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Reliable</h3>
+                <p>В HangFire применяется алгоритм надежной обработки задач, содержащий логику автоматического повтора процесса обработки. После успешного создания задачи, она гарантированно будет выполнена <strong>хотя бы раз</strong>, даже если процесс был прерван на самом &quot;неловком&quot; месте.</p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-ok"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Ready for ASP.NET</h3>
+                <p>Фоновые задачи записываются в персистентное хранилище и могут пережить перезапуск пула приложения. Если выполнение задачи было прервано shutdown таймаутом, она будет снова запущена после перезапуска приложения.</p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-5">
-      <h3>2. Call</h3>
-      <p>To call method asynchronously, call the `BackgroundJob.Enqueue` method and tell it what method needs to be invoked asynchronously.</p>
-      <pre><code>BackgroundJob.Enqueue(() => Console.WriteLine("Hi!"));</code></pre>
-   </div>
-  </div>
-  <!--div class="row">
-      <div class="col-md-12">
-        <h1>Features</h1>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-4">
-          <h3><span class="glyphicon glyphicon-tower"></span> Reliable</h3>
-          <p>kjwasdngkjas dngkan sdg</p>
-      </div>
-      <div class="col-md-4">
-          <h3><span class="glyphicon glyphicon-flash"></span> Efficient</h3>
-          <p>sakflkas jdlkasjd las</p>
-      </div>
-      <div class="col-md-4">
-          <h3><span class="glyphicon glyphicon-search"></span> Transparent</h3>
-          <p>sdkjfnkaj dgaksn as</p>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-4">
-          <h3><span class="glyphicon glyphicon-user"></span> Open source</h3>
-          <p>Free for commercial use</p>
-      </div>
-      <div class="col-md-4">
-          <h3><span class="glyphicon glyphicon-send"></span> Simple</h3>
-      </div>
-      <div class="col-md-4">
-          <h3><span class="glyphicon glyphicon-ok"></span> Ready for ASP.NET</h3>
-      </div>
-  </div-->
+    <div class="row">
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-flash"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Efficient</h3>
+                <p>При обработке заданий используются алгоритмы, сложность которых составляет максимум O(logN). То есть время обработки заданий мало зависит от их количества.</p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-search"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Transparent</h3>
+                <p>Вы можете отслеживать как состояние обработки каждой задачи, так и общую статистику их обработки с помощью встроенного веб-интерфейса.</p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-fullscreen"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Scalable</h3>
+                <p>Если ресурсов сервера перестало хватать на обработку задач, вы можете запустить HangFire на другой машине, как внутри ASP.NET-приложения, так и вне его, например, в консольном приложении или службе Windows.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-th-large"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Extensible</h3>
+                <p>Вы можете расширить HangFire разными путями: написать обработчики для конвейера создания и обработки заданий, создать новые состояния или реализовать поддержку вашего любимого хранилища.</p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-cog"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Self-maintainable</h3>
+                <p>HangFire держит используемое хранилище в чистоте и удаляет все старые записи. Его объем не будет расти с течением времени.</p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-user"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Open source</h3>
+                <p>HangFire is open source software and is completely free for commercial use. It is licensed under <a href="https://github.com/odinserj/HangFire/blob/master/LICENSE.md">LGPLv3 license</a>.</p>    
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <hr>
+            <p>
+                <a class="btn btn-primary btn-lg" href="https://github.com/odinserj/HangFire/blob/master/README.md">See the Quick Start Guide</a>
+            </p>
+        </div>
+    </div>
 </div>        
 
         <div class="container">
