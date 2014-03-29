@@ -100,7 +100,7 @@ title: HangFire – Background job processing for ASP.NET
             </div>
             <div class="feature-body">
                 <h3>Simple</h3>
-                <p>Использовать HangFire так же просто, как и пул потоков для выполнения ваших fire-and-forget задач:</p>
+                <p>HangFire is as simple as the use of Thread Pool to perform your fire-and-forget tasks:</p>
                 <p></p>
                 <pre style="border: none; padding: 3px 5px;"><span style="color: #2B91AF;">BackgroundJob</span>.Enqueue(
     () => <span style="color: #2B91AF">Console</span>.WriteLine(<span style="color: #A01714">&quot;Hello!&quot;</span>));</pre>
@@ -112,7 +112,8 @@ title: HangFire – Background job processing for ASP.NET
             </div>
             <div class="feature-body">
                 <h3>Reliable</h3>
-                <p>В HangFire применяется алгоритм надежной обработки задач, содержащий логику автоматического повтора процесса обработки. После успешного создания задачи, она гарантированно будет выполнена <strong>хотя бы раз</strong>, даже если процесс был прерван на самом &quot;неловком&quot; месте.</p>
+                <p>HangFire uses a reliable fetching algorithm together with the automatic job retry logic.</p>
+                <p>When a background task was created, it is guaranteed that it will be performed <strong>at least once</strong>, even if the host process has been terminated.</p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -120,8 +121,8 @@ title: HangFire – Background job processing for ASP.NET
                 <span class="glyphicon glyphicon-ok"></span>
             </div>
             <div class="feature-body">
-                <h3>Ready for ASP.NET</h3>
-                <p>Фоновые задачи записываются в персистентное хранилище и могут пережить перезапуск пула приложения. Если выполнение задачи было прервано shutdown таймаутом, она будет снова запущена после перезапуска приложения.</p>
+                <h3>Designed for ASP.NET</h3>
+                <p>Background jobs are being saved into a persistent storage and can survive the application pool recycling process. If the performance of a job was terminated due to ASP.NET shutdown timeout, it will be retried after the restart of an application.</p>
             </div>
         </div>
     </div>
@@ -132,7 +133,7 @@ title: HangFire – Background job processing for ASP.NET
             </div>
             <div class="feature-body">
                 <h3>Efficient</h3>
-                <p>При обработке заданий используются алгоритмы, сложность которых составляет максимум O(logN). То есть время обработки заданий мало зависит от их количества.</p>
+                <p>Job processing time is virtually independent of their count – worst job processing algorithm complexity is O(log(n)).</p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -141,7 +142,7 @@ title: HangFire – Background job processing for ASP.NET
             </div>
             <div class="feature-body">
                 <h3>Transparent</h3>
-                <p>Вы можете отслеживать как состояние обработки каждой задачи, так и общую статистику их обработки с помощью встроенного веб-интерфейса.</p>
+                <p>You can track the detailed state of each job and see the statistics using the integrated web interface.</p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -150,7 +151,7 @@ title: HangFire – Background job processing for ASP.NET
             </div>
             <div class="feature-body">
                 <h3>Scalable</h3>
-                <p>Если ресурсов сервера перестало хватать на обработку задач, вы можете запустить HangFire на другой машине, как внутри ASP.NET-приложения, так и вне его, например, в консольном приложении или службе Windows.</p>
+                <p>You can run multiple instances of HangFire Server, either inside an ASP.NET application or outside of it, as a console application or Windows Service.</p>
             </div>
         </div>
     </div>
@@ -161,7 +162,7 @@ title: HangFire – Background job processing for ASP.NET
             </div>
             <div class="feature-body">
                 <h3>Extensible</h3>
-                <p>Вы можете расширить HangFire разными путями: написать обработчики для конвейера создания и обработки заданий, создать новые состояния или реализовать поддержку вашего любимого хранилища.</p>
+                <p>You can extend HangFire using different methods: write filters for the job creation/processing pipeline, create new states or implement support for your favourite storage.</p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -170,7 +171,7 @@ title: HangFire – Background job processing for ASP.NET
             </div>
             <div class="feature-body">
                 <h3>Self-maintainable</h3>
-                <p>HangFire держит используемое хранилище в чистоте и удаляет все старые записи. Его объем не будет расти с течением времени.</p>
+                <p>HangFire keeps your storage as clean as possible and removes old records. It will not become bloat up with time.</p>
             </div>
         </div>
         <div class="col-md-4 feature">
