@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Instance methods</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/vs.css" rel="stylesheet">
+        <link href="/css/styles.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45386460-1', 'hangfire.io');
+  ga('send', 'pageview');
+
+</script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <span class="glyphicon glyphicon-fire"></span>
+                HangFire
+              </a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                
+                
+                <li >
+                  <a href="/features/" title="">Features</a>
+                </li>
+                
+                <li >
+                  <a href="https://github.com/odinserj/HangFire" title="">Fork me on GitHub</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container">
+    <div class="row">
+    <div class="col-md-3">
+        <ul class="features-sidenav" data-spy="affix" data-offset-top="40" data-offset-bottom="200">
+            <li><a href="/features/">Queue-based processing</a></li>
+            <li><a href="/features/instance-methods.html">Instance methods</a></li>
+            <li><a href="/features/delayed-jobs.html">Delayed jobs</a></li>
+            <li><a href="/features/dedicated-thread-pool.html">Dedicated thread pool</a></li>
+            <li><a href="/features/multiple-servers.html">Multiple servers</a></li>
+            <li><a href="/features/host-agnostic-server.html">Host-agnostic server</a></li>
+            <li><a href="/features/retry-logic.html">Retry logic</a></li>
+            <li><a href="/features/culture-capturing.html">Culture capturing</a></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <h1 class="page-header">Instance methods</h1>
+        <p>В предыдущих примерах в качестве метода использовались статические методы. Однако в качестве методов, на основе которых создаются фоновые задачи также можно использовать и методы экземпляров.</p>
+<div class="highlight"><pre><code class="csharp language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">EmailService</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Send</span><span class="p">(</span><span class="kt">string</span> <span class="n">address</span><span class="p">,</span> <span class="kt">string</span> <span class="n">body</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">BackgroundJob</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">&lt;</span><span class="n">EmailService</span><span class="p">&gt;(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">Send</span><span class="p">(</span><span class="s">&quot;me@exapmle.com&quot;</span><span class="p">,</span> <span class="s">&quot;Hello!&quot;</span><span class="p">));</span>
+</code></pre></div>
+<p>В этом случае при выполнении задачи сначала будет проведена процедура активации, которая создаст экземпляр класса <code>EmailService</code>, а потом будет вызван его метод <code>Send</code>. Активация по-умолчанию производится посредством вызова метода <code>Activator.CreateInstance</code>, то есть по-умолчанию поддерживаются только классы, в которых есть конструктор по-умолчанию (без параметров).</p>
+
+<h2>IoC Containers</h2>
+
+<p>Instance method invocation is great, because it simplifies the testability of your methods – no static method invocation, no factories, etc. If you are using an IoC container (<a href="http://www.ninject.org">Ninject</a>, <a href="http://autofac.org">Autofac</a>, etc.), you can inject it to the job activation process to use custom constructors for your classes.</p>
+
+<div class="callout callout-warning">
+    <h4>Http context is not available</h4>
+    <p><code>HttpContext.Current</code> недоступен при активации задачи. Все сервисы, зарегистрированные на активацию внутри контекста или зависящие от него приведут к ошибке при активации.</p>
+</div>
+<div class="highlight"><pre><code class="csharp language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">AutofacActivator</span> <span class="p">:</span> <span class="n">JobActivator</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">ILifetimeScope</span> <span class="n">_scope</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">AutofacActivator</span><span class="p">(</span><span class="n">ILifetimeScope</span> <span class="n">scope</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_scope</span> <span class="p">=</span> <span class="n">scope</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="kt">object</span> <span class="nf">ActivateJob</span><span class="p">(</span><span class="n">Type</span> <span class="n">type</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_scope</span><span class="p">.</span><span class="n">Resolve</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/* Global.asax.cs */</span>
+<span class="n">JobActivator</span><span class="p">.</span><span class="n">Current</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AutofacActivator</span><span class="p">(</span><span class="n">scope</span><span class="p">);</span>
+</code></pre></div>
+<p>After that, you could use any constructors.</p>
+<div class="highlight"><pre><code class="csharp language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">class</span> <span class="nc">NotificationService</span> <span class="p">:</span> <span class="n">IDisposable</span>
+<span class="p">{</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">DbContext</span> <span class="n">_context</span><span class="p">;</span>
+    <span class="k">private</span> <span class="k">readonly</span> <span class="n">IEmailService</span> <span class="n">_email</span><span class="p">;</span>    
+
+    <span class="k">public</span> <span class="nf">NotificationService</span><span class="p">(</span><span class="n">DbContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">IEmailService</span> <span class="n">email</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_context</span> <span class="p">=</span> <span class="n">context</span><span class="p">;</span>
+        <span class="n">_email</span> <span class="p">=</span> <span class="n">email</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">SendNotification</span><span class="p">(</span><span class="kt">int</span> <span class="n">userId</span><span class="p">,</span> <span class="kt">string</span> <span class="n">template</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">user</span> <span class="p">=</span> <span class="n">_context</span><span class="p">.</span><span class="n">Users</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+        <span class="n">_email</span><span class="p">.</span><span class="n">Send</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">Email</span><span class="p">,</span> <span class="n">template</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Instances of classes that implement the IDisposable</span>
+    <span class="c1">// interface, will be disposed.</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">Dispose</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">_context</span><span class="p">.</span><span class="n">Dispose</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+        <ul class="pager">
+            
+            
+            <li class="next"><a href="/features/delayed-jobs.html">Delayed jobs &rarr;</a></li>
+            
+        </ul>
+
+        <hr>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'hangfire'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</div>
+</div>
+        
+
+        <div class="container">
+          <hr>
+
+          <footer>
+            <p>&copy; 2013-2014 <a href="https://github.com/odinserj">Sergey Odinokov</a></p>
+          </footer>
+        </div> <!-- /container -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

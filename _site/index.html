@@ -43,7 +43,16 @@
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://github.com/odinserj/HangFire">Sources on GitHub</a></li>
+                
+                
+                <li >
+                  <a href="/features/" title="">Features</a>
+                </li>
+                
+                <li >
+                  <a href="https://github.com/odinserj/HangFire" title="">Fork me on GitHub</a>
+                </li>
+                
               </ul>
             </div>
           </div>
@@ -57,7 +66,7 @@
                 <h1>HangFire</h1>
                 <p>A simple way to kick off long-running processes from the ASP.NET request processing pipeline, backed by SQL Server or Redis.</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 visible-md visible-lg">
                 <div id="screenshots" class="carousel slide pull-right" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -117,28 +126,6 @@
 </div>
 
 <div class="container">
-    <!--div class="row">
-        <div class="col-md-12">
-            <h1>Features</h1>
-            <ul>
-                <li>Backround method invocation.</li>
-                <li>Delayed method invocation.</li>
-                <li>Queue based processing</li>
-                <li>Dedicated thread processing</li>
-                <li>Concurrency configuration</li>
-                <li>Multiple server instances.</li>
-                <li>Retry logic.</li>
-                <li>Multi-queue processing with priority support.</li>
-                <li>Culture capturing.</li>
-                <li>SQL Server storage</li>
-                <li>Redis storage</li>
-                <li>Custom job activator</li>
-                <li>State changing</li>
-                <li>Monitoring API</li>
-                <li>Host-agnostic processing</li>
-            </ul>
-        </div>
-    </div-->
     <div class="row">
         <div class="col-md-4 feature">
             <div class="feature-icon">
@@ -168,7 +155,8 @@
             </div>
             <div class="feature-body">
                 <h3>Designed for ASP.NET</h3>
-                <p>Background jobs are being saved into a persistent storage and can survive the application pool recycling process. If the performance of a job was terminated due to ASP.NET shutdown timeout, it will be retried after the restart of an application.</p>
+                <p>Background jobs are being saved into a persistent storage and can survive the application pool recycling process.</p> 
+                <p>If the performance of a job was terminated due to ASP.NET shutdown timeout, it will be retried after the restart of an application.</p>
             </div>
         </div>
     </div>
@@ -234,9 +222,11 @@
     <div class="row">
         <div class="col-md-12" style="text-align: center;">
             <hr>
-            <p>
-                <a class="btn btn-primary btn-lg" href="https://github.com/odinserj/HangFire/blob/master/README.md">See the Quick Start Guide</a>
-            </p>
+            <div>
+                <a class="btn btn-default btn-lg" href="/features">Features</a>
+                <span class="btn btn-lg">or</span>
+                <a class="btn btn-primary btn-lg" href="https://github.com/odinserj/HangFire/blob/master/README.md">Getting Started</a>
+            </div>
         </div>
     </div>
 </div>        
