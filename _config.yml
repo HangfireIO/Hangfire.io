@@ -7,6 +7,8 @@ navigation:
   url: http://docs.hangfire.io/en/latest/quickstart.html
 - text: Features
   url: http://docs.hangfire.io/en/latest/features.html
+- text: Packages
+  url: https://www.nuget.org/packages?q=HangFire
 - text: Fork me on GitHub
   url: https://github.com/odinserj/HangFire
 
