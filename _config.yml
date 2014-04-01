@@ -3,8 +3,10 @@ markdown: redcarpet
 pygments: true
 
 navigation:
+- text: Quick Start
+  url: http://docs.hangfire.io/en/latest/quickstart.html
 - text: Features
-  url: /features/
+  url: http://docs.hangfire.io/en/latest/features.html
 - text: Fork me on GitHub
   url: https://github.com/odinserj/HangFire
 
