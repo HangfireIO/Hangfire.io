@@ -17,6 +17,13 @@ body {
     color: #666;
 }
 
+.navbar .navbar-nav>.open>a, 
+.navbar .navbar-nav>.open>a:hover, 
+.navbar .navbar-nav>.open>a:focus {
+    background-color: #ddd;
+    color: #555;
+}
+
 .jumbotron {
     padding-top: 10px;
 }
