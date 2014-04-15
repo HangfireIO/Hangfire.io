@@ -134,10 +134,21 @@ body {
     display: inline-block;
 }
 
-.quickstart {
+.quickstart h3 {
+    font-size: 20px;
+    color: #999;
+    margin-top: 15px;
+    font-weight: lighter;
+}
+
+.quickstart .lead-digit {
+    font-weight: bold;
+}
+
+.quickstart pre {
     border-color: #eee;
-    background-color: transparent;
-    padding: 12px;
+    border: none;
+    padding: 5px 10px;
 }
 
 .quickstart hr {

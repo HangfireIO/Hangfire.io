@@ -11,7 +11,7 @@ title: HangFire – Background job processing for ASP.NET
                 <h1>HangFire</h1>
                 <p>A reliable way to kick off long-running processes from the ASP.NET request processing pipeline, backed by SQL Server or Redis.</p>
                 <p>
-                    <a class="btn btn-primary" href="https://nuget.org/packages/HangFire">Install via NuGet</a>
+                    <a class="btn btn-primary" href="https://nuget.org/packages/HangFire">NuGet Package</a>
                     <a class="btn btn-default" href="https://github.com/odinserj/HangFire"><img style="vertical-align: text-top;" width="16" src="/img/GitHub-Mark-32px.png"> Fork on GitHub</a>
                 </p>
             </div>
@@ -76,24 +76,25 @@ title: HangFire – Background job processing for ASP.NET
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
-            <pre class="quickstart"><span class="comm">// 1. Install using NuGet<span class="hidden-xs"> Package Manager Console</span>:</span>
-PM> Install-Package HangFire
-<hr><span class="comm">// 2. Enqueue any method invocation<span class="hidden-xs"> as a background job</span>:</span>
-<span class="keywd">public</span> <span class="type">ActionResult</span> Create()
+        <div class="col-md-8 quickstart">
+        <h3 style="margin-top: 0;"><span class="lead-digit">1.</span> Install using NuGet</h3>
+            <pre class="nuget">
+PM> Install-Package HangFire</pre>
+<h3><span class="lead-digit">2.</span> Enqueue any method call</h3>
+<pre><span class="keywd">public</span> <span class="type">ActionResult</span> Create()
 {
     <span class="type">BackgroundJob</span>.Enqueue(<br class="visible-xs"><span class="hidden-sm hidden-md hidden-lg">        </span>() => <span class="type">Console</span>.WriteLine(<span class="string">&quot;Hello<span class="hidden-xs">, world!</span>&quot;</span>));
     <span class="keywd">return</span> View();
-}
-<hr><span class="comm">// 3. Start the background job processing:</span>
-<span class="keywd">protected</span> Application_Start()
+}</pre>
+<h3><span class="lead-digit">3.</span> Start the processing</h3>
+<pre><span class="keywd">protected</span> Application_Start()
 {
     _server = <br class="visible-xs"><span class="hidden-sm hidden-md hidden-lg">        </span><span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
     _server.Start();
 }</pre>
         </div>
         <div class="col-md-4">
-            <a height="319" class="twitter-timeline" href="https://twitter.com/hangfire_net" data-widget-id="451027617567621120">Твиты пользователя @hangfire_net</a>
+            <a height="354" class="twitter-timeline" href="https://twitter.com/hangfire_net" data-widget-id="451027617567621120">Твиты пользователя @hangfire_net</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
