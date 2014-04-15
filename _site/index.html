@@ -80,10 +80,6 @@
                 <p>
                     <a class="btn btn-primary" href="https://nuget.org/packages/HangFire">Install via NuGet</a>
                     <a class="btn btn-default" href="https://github.com/odinserj/HangFire"><img style="vertical-align: text-top;" width="16" src="/img/GitHub-Mark-32px.png"> Fork on GitHub</a>
-                    <span class="main-twitter-button">
-                        <a href="https://twitter.com/hangfire_net" class="twitter-follow-button" data-show-count="false">Follow @hangfire_net</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    </span>
                 </p>
             </div>
             <div class="col-md-5 visible-md visible-lg">
@@ -147,6 +143,28 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-md-8">
+            <pre class="quickstart"><span class="comm">// 1. Install using NuGet<span class="hidden-xs"> Package Manager Console</span>:</span>
+PM> Install-Package HangFire
+<hr><span class="comm">// 2. Enqueue any method invocation<span class="hidden-xs"> as a background job</span>:</span>
+<span class="keywd">public</span> <span class="type">ActionResult</span> Create()
+{
+    <span class="type">BackgroundJob</span>.Enqueue(<br class="visible-xs"><span class="hidden-sm hidden-md hidden-lg">        </span>() => <span class="type">Console</span>.WriteLine(<span class="string">&quot;Hello<span class="hidden-xs">, world!</span>&quot;</span>));
+    <span class="keywd">return</span> View();
+}
+<hr><span class="comm">// 3. Start the background job processing:</span>
+<span class="keywd">protected</span> Application_Start()
+{
+    _server = <br class="visible-xs"><span class="hidden-sm hidden-md hidden-lg">        </span><span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
+    _server.Start();
+}</pre>
+        </div>
+        <div class="col-md-4">
+            <a height="319" class="twitter-timeline" href="https://twitter.com/hangfire_net" data-widget-id="451027617567621120">Твиты пользователя @hangfire_net</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-4 feature">
             <div class="feature-icon">
                 <span class="glyphicon glyphicon-send"></span>
@@ -155,8 +173,8 @@
                 <h3>Simple</h3>
                 <p>HangFire is as simple as the use of Thread Pool to perform your fire-and-forget tasks:</p>
                 <p></p>
-                <pre style="border: none; padding: 3px 5px;"><span style="color: #2B91AF;">BackgroundJob</span>.Enqueue(
-    () => <span style="color: #2B91AF">Console</span>.WriteLine(<span style="color: #A01714">&quot;Hello!&quot;</span>));</pre>
+                <pre style="border: none; padding: 3px 5px;"><span class="type">BackgroundJob</span>.Enqueue(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">&quot;Hello!&quot;</span>));</pre>
             </div>
         </div>
         <div class="col-md-4 feature">

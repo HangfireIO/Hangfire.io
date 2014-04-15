@@ -133,3 +133,29 @@ body {
     vertical-align: bottom;
     display: inline-block;
 }
+
+.quickstart {
+    border-color: #eee;
+    background-color: transparent;
+    padding: 12px;
+}
+
+.quickstart hr {
+    margin: 10px 0;
+}
+
+pre .type {
+    color: #2B91AF;
+}
+
+pre .string {
+    color: #A01714;
+}
+
+pre .keywd {
+    color: #182AFC;
+}
+
+pre .comm {
+    color: #319B44;
+}
