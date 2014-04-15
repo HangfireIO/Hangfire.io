@@ -128,3 +128,8 @@ body {
 .features-sidenav.affix {
     margin-top: 10px;
 }
+
+.main-twitter-button {
+    vertical-align: bottom;
+    display: inline-block;
+}
