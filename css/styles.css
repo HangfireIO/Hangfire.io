@@ -28,6 +28,22 @@ body {
     padding-top: 10px;
     padding-bottom: 18px;
 }
+
+@media(max-width: 991px) {
+    .jumbotron {
+        text-align: center;
+    }
+}
+
+.jumbotron .carousel, .jumbotron .carousel-inner {
+    display: inline-block;
+}
+
+@media(min-width: 992px) {
+    .jumbotron .carousel {
+        float: right;
+    }
+}
  
 .carousel-control {
     opacity: 0;
@@ -48,7 +64,7 @@ body {
 
 #screenshots img {
     width: 450px;
-    height: 267px;
+    max-height: 267px;
     background-color: transparent;
 }
 
