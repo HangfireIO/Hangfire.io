@@ -183,3 +183,5 @@ pre .keywd {
 pre .comm {
     color: #319B44;
 }
+
+[id^=___plusone] { width:75px !important; }
