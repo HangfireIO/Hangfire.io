@@ -113,7 +113,7 @@ title: HangFire – Background job processing for ASP.NET
         </div>
         <div class="col-md-4">
             <h3>Run them inside ASP.NET app…</h3>
-            <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – HangFire is reliable for ASP.NET from scratch.</em></p>
+            <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – HangFire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
 <pre><span class="keywd">var</span> server = 
   <span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
 server.Start();</pre>
@@ -136,10 +136,12 @@ server.Start();</pre>
             </div>
             <div class="feature-body">
                 <h3>Simple</h3>
-                <p>HangFire is as simple as the use of Thread Pool to perform your fire-and-forget tasks:</p>
-                <p></p>
-                <pre style="border: none; padding: 3px 5px;"><span class="type">BackgroundJob</span>.Enqueue(
-    () => <span class="type">Console</span>.WriteLine(<span class="string">&quot;Hello!&quot;</span>));</pre>
+                <p>
+                    <a href="http://docs.hangfire.io/en/latest/quickstart.html" target="_blank">Easy to setup, easy to configure</a>. You don't need to run additional services or console programs for background job processing.
+                </p>
+                <p>
+                    You can call regular static or instance .NET methods in background and pass arguments as usual.
+                </p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -148,8 +150,12 @@ server.Start();</pre>
             </div>
             <div class="feature-body">
                 <h3>Reliable</h3>
-                <p>HangFire uses a reliable fetching algorithm together with the automatic job retry logic.</p>
-                <p>When a background task was created, it is guaranteed that it will be performed <strong>at least once</strong>, even if the host process has been terminated.</p>
+                <p>
+                    Background jobs are being deleted from the storage only on successful execution. Abruptly aborted jobs will be requeued after application restart.
+                </p>
+                <p>
+                    Once a job was created, it will be performed <em>at least once</em>, even if the host process was terminated.
+                </p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -158,8 +164,12 @@ server.Start();</pre>
             </div>
             <div class="feature-body">
                 <h3>Designed for ASP.NET</h3>
-                <p>Background jobs are being saved into a persistent storage and can survive the application pool recycling process.</p> 
-                <p>If the performance of a job was terminated due to ASP.NET shutdown timeout, it will be retried after the restart of an application.</p>
+                <p>
+                    Background tasks are being saved into a persistent storage and can survive the application pool recycling process.
+                </p>
+                <p>
+                    You can run <a href="http://docs.hangfire.io/en/latest/users-guide/running-multiple-server-instances.html" target="_blank">multiple instances</a> of HangFire Server, so Web Garden &amp; Web Farm environments are fully supported.
+                </p>
             </div>
         </div>
     </div>
@@ -169,8 +179,13 @@ server.Start();</pre>
                 <span class="glyphicon glyphicon-flash"></span>
             </div>
             <div class="feature-body">
-                <h3>Efficient</h3>
-                <p>Job processing time is virtually independent of their count – worst job processing algorithm complexity is O(log(n)).</p>
+                <h3>Transparent</h3>
+                <p>
+                    Watch the <a href="http://hangfire.io/img/dashboard.png" target="_blank">statistics</a>, know the <a href="http://hangfire.io/img/failed-job.png" target="_blank">detailed history</a> of job processing, manually <a href="http://hangfire.io/img/failed-jobs.png" target="_blank">retry or delete</a> any job from the integrated web monitoring UI.
+                </p>
+                <p>
+                    Plug in your logging framework to get notifications about problems in background job processing.
+                </p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -178,8 +193,13 @@ server.Start();</pre>
                 <span class="glyphicon glyphicon-search"></span>
             </div>
             <div class="feature-body">
-                <h3>Transparent</h3>
-                <p>You can track the detailed state of each job and see the statistics using the integrated web interface.</p>
+                <h3>Scalable</h3>
+                <p>
+                    Start with the simplest setup using SQL Server and grow your computational power by adding extra HangFire Server instances either inside ASP.NET apps or use separate Windows Services.
+                </p>
+                <p>
+                    Leverage multiple job storages to overcome the restrictions dictated by a single storage.
+                </p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -187,8 +207,13 @@ server.Start();</pre>
                 <span class="glyphicon glyphicon-fullscreen"></span>
             </div>
             <div class="feature-body">
-                <h3>Scalable</h3>
-                <p>You can run multiple instances of HangFire Server, either inside an ASP.NET application or outside of it, as a console application or Windows Service.</p>
+                <h3>Extensible</h3>
+                <p>
+                    Intercept the creation/performance/state change pipeline to add extra functionality using filters that are similar to ASP.NET MVC Filters.
+                </p>
+                <p>
+                    Implement the support of persistent storage which is being used in your project environment – it is also abstracted.
+                </p>
             </div>
         </div>
     </div>
@@ -198,8 +223,10 @@ server.Start();</pre>
                 <span class="glyphicon glyphicon-th-large"></span>
             </div>
             <div class="feature-body">
-                <h3>Extensible</h3>
-                <p>You can extend HangFire using different methods: write filters for the job creation/processing pipeline, create new states or implement support for your favourite storage.</p>
+                <h3>Efficient</h3>
+                <p>
+                    Although the default installation uses SQL Server and polling technique to fetch jobs, you can leverage <a href="https://www.nuget.org/packages/HangFire.SqlServer.MSMQ/">MSMQ</a> or <a href="https://www.nuget.org/packages/HangFire.Redis/" target="_blank">Redis</a> extensions to reduce the processing latency to minimum.
+                </p>                
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -208,7 +235,9 @@ server.Start();</pre>
             </div>
             <div class="feature-body">
                 <h3>Self-maintainable</h3>
-                <p>HangFire keeps your storage as clean as possible and removes old records. It will not become bloat up with time.</p>
+                <p>
+                    You don't need to manually clear the storage – HangFire keeps it as clean as possible and removes old records automatically. 
+                </p>
             </div>
         </div>
         <div class="col-md-4 feature">
@@ -217,7 +246,12 @@ server.Start();</pre>
             </div>
             <div class="feature-body">
                 <h3>Open source</h3>
-                <p>HangFire is open source software and is completely free for commercial use. It is licensed under <a href="https://github.com/odinserj/HangFire/blob/master/LICENSE.md">LGPLv3 license</a>.</p>    
+                <p>
+                    HangFire is open source software and is completely free for commercial use. It is licensed under <a href="https://github.com/odinserj/HangFire/blob/master/LICENSE.md">LGPLv3 license</a>.
+                </p>
+                <p>
+                    Fork <a href="https://github.com/odinserj/HangFire" target="_blank">the project</a> and make contributions on GitHub!
+                </p>
             </div>
         </div>
     </div>
