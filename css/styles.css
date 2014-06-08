@@ -185,3 +185,8 @@ pre .comm {
 }
 
 [id^=___plusone] { width:75px !important; }
+
+.fb-share-button {
+    vertical-align: top;
+    margin-right: 15px;
+}
