@@ -82,28 +82,40 @@ title: HangFire – Background job processing for ASP.NET
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 quickstart">
-        <h3 style="margin-top: 0;"><span class="lead-digit">1.</span> Install using NuGet</h3>
-            <pre class="nuget">
-PM> Install-Package HangFire</pre>
-<h3><span class="lead-digit">2.</span> Enqueue any method call</h3>
-<pre><span class="keywd">public</span> <span class="type">ActionResult</span> Create()
-{
-    <span class="type">BackgroundJob</span>.Enqueue(<br class="visible-xs"><span class="hidden-sm hidden-md hidden-lg">        </span>() => <span class="type">Console</span>.WriteLine(<span class="string">&quot;Hello<span class="hidden-xs">, world!</span>&quot;</span>));
-    <span class="keywd">return</span> View();
-}</pre>
-<h3><span class="lead-digit">3.</span> Start the processing</h3>
-<pre><span class="keywd">protected</span> Application_Start()
-{
-    _server = <br class="visible-xs"><span class="hidden-sm hidden-md hidden-lg">        </span><span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
-    _server.Start();
-}</pre>
+        <div class="col-md-4">
+            <h3>Fire and forget tasks</h3>
+<pre><span class="type">BackgroundJob</span>.Enqueue(
+  () => <span class="type">Console</span>.WriteLine(<span class="string">"Simple!"</span>));</pre>
+
+            <h3>Delayed tasks</h3>
+<pre><span class="type">BackgroundJob</span>.Schedule(
+  () => <span class="type">Console</span>.WriteLine(<span class="string">"Reliable!"</span>), 
+  <span class="type">TimeSpan</span>.FromDays(7));</pre>
+
+            <h3>Recurring tasks</h3>
+<pre><span class="type">RecurringJob</span>.AddOrUpdate(
+  () => <span class="type">Console</span>.WriteLine(<span class="string">"Transparent!"</span>), 
+  <span class="type">Cron</span>.Daily);</pre>
+
+        </div>
+        <div class="col-md-4">
+            <h3>Run them inside ASP.NET app</h3>
+            <p><em>Forget about AppDomain unloads – HangFire is reliable for ASP.NET from scratch.</em></p>
+<pre><span class="keywd">var</span> server = 
+  <span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
+server.Start();</pre>
+
+            <h3>… or anywhere else</h3>
+            <p><em>In console application, Windows Service, Azure Worker Role, etc.</em></p>
+<pre><span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">BackgroundJobServer</span>();
+server.Start();</pre>
         </div>
         <div class="col-md-4 hidden-xs hidden-sm">
             <a height="354" class="twitter-timeline" href="https://twitter.com/hangfire_net" data-widget-id="451027617567621120">Твиты пользователя @hangfire_net</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col-md-4 feature">
             <div class="feature-icon">

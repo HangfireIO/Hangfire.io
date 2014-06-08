@@ -1,4 +1,9 @@
 _site
+docs
+packages
+samples
+src
+tests
 
 # Windows image file caches
 Thumbs.db

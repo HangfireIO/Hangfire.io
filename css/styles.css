@@ -159,10 +159,9 @@ body {
     font-weight: bold;
 }
 
-.quickstart pre {
+pre {
     border-color: #eee;
     border: none;
-    padding: 5px 10px;
 }
 
 .quickstart hr {
