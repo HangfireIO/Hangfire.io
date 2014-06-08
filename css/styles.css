@@ -184,9 +184,9 @@ pre .comm {
     color: #319B44;
 }
 
-[id^=___plusone] { width:75px !important; }
+[id^=___plusone] { width:62px !important; }
 
 .fb-share-button {
     vertical-align: top;
-    margin-right: 15px;
+    margin-right: 5px;
 }
