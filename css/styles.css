@@ -162,6 +162,9 @@ body {
 pre {
     border-color: #eee;
     border: none;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
 }
 
 .quickstart hr {

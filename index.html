@@ -108,25 +108,24 @@ title: HangFire – Background job processing for ASP.NET
     <div class="row">
         <div class="col-md-4">
             <h3>Fire and forget tasks</h3>
-<pre><span class="type">BackgroundJob</span>.Enqueue(
-  () => <span class="type">Console</span>.WriteLine(<span class="string">"Simple!"</span>));</pre>
+<pre><span class="type">BackgroundJob</span>.Enqueue(<span class="hidden-sm">
+    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Simple!"</span>));</pre>
 
             <h3>Delayed tasks</h3>
-<pre><span class="type">BackgroundJob</span>.Schedule(
-  () => <span class="type">Console</span>.WriteLine(<span class="string">"Reliable!"</span>), 
-  <span class="type">TimeSpan</span>.FromDays(7));</pre>
+<pre><span class="type">BackgroundJob</span>.Schedule(<span class="hidden-sm">
+    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Reliable!"</span>), <span class="hidden-sm">
+    </span><span class="type">TimeSpan</span>.FromDays(7));</pre>
 
             <h3>Recurring tasks</h3>
-<pre><span class="type">RecurringJob</span>.AddOrUpdate(
-  () => <span class="type">Console</span>.WriteLine(<span class="string">"Transparent!"</span>), 
-  <span class="type">Cron</span>.Daily);</pre>
+<pre><span class="type">RecurringJob</span>.AddOrUpdate(<span class="hidden-sm">
+    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Transparent!"</span>), <span class="hidden-sm">
+    </span><span class="type">Cron</span>.Daily);</pre>
 
         </div>
         <div class="col-md-4">
             <h3>Run them inside ASP.NET app…</h3>
             <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – HangFire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
-<pre><span class="keywd">var</span> server = 
-  <span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
+<pre><span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
 server.Start();</pre>
 
             <h3>… or anywhere else</h3>
