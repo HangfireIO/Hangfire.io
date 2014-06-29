@@ -8,7 +8,7 @@ title: Hangfire – Background job processing for ASP.NET
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <h1>HangFire</h1>
+                <h1>Hangfire</h1>
                 <p>
                     Incredibly easy way to perform fire-and-forget, delayed and recurring tasks inside ASP.NET applications. No Windows Service required.
                 </p>
@@ -58,37 +58,37 @@ title: Hangfire – Background job processing for ASP.NET
                     <div class="carousel-inner">
                         <div class="item active">
                             <a href="/img/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
-                                <img src="/img/dashboard-sm.png" alt="HangFire Dashboard">
+                                <img src="/img/dashboard-sm.png" alt="Hangfire Dashboard">
                             </a>
                         </div>
                         <div class="item">
                             <a href="/img/succeeded-job.png" data-lightbox="Screenshots" data-title="Succeeded Job">
-                                <img src="/img/succeeded-job-sm.png" alt="HangFire Succeeded Job">
+                                <img src="/img/succeeded-job-sm.png" alt="Hangfire Succeeded Job">
                             </a>
                         </div>
                         <div class="item">
                             <a href="/img/failed-job.png" data-lightbox="Screenshots" data-title="Failed Job">
-                                <img src="/img/failed-job-sm.png" alt="HangFire Failed Job">
+                                <img src="/img/failed-job-sm.png" alt="Hangfire Failed Job">
                             </a>
                         </div>
                         <div class="item">
                             <a href="/img/succeeded-jobs.png" data-lightbox="Screenshots" data-title="Succeeded Job List">
-                                <img src="/img/succeeded-jobs-sm.png" alt="HangFire Succeeded Job List">
+                                <img src="/img/succeeded-jobs-sm.png" alt="Hangfire Succeeded Job List">
                             </a>
                         </div>
                         <div class="item">
                             <a href="/img/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
-                                <img src="/img/failed-jobs-sm.png" alt="HangFire Failed Job List">
+                                <img src="/img/failed-jobs-sm.png" alt="Hangfire Failed Job List">
                             </a>
                         </div>
                         <div class="item">
                             <a href="/img/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
-                                <img src="/img/recurring-jobs-sm.png" alt="HangFire Recurring Jobs">
+                                <img src="/img/recurring-jobs-sm.png" alt="Hangfire Recurring Jobs">
                             </a>
                         </div>          
                         <div class="item">
                             <a href="/img/queues.png" data-lightbox="Screenshots" title="Queues">
-                                <img src="/img/queues-sm.png" alt="HangFire Queue List">
+                                <img src="/img/queues-sm.png" alt="Hangfire Queue List">
                             </a>
                         </div>                        
                     </div>
@@ -126,7 +126,7 @@ title: Hangfire – Background job processing for ASP.NET
         </div>
         <div class="col-md-4">
             <h3>Run them inside ASP.NET app…</h3>
-            <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – HangFire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
+            <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – Hangfire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
 <pre><span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
 server.Start();</pre>
 
@@ -180,7 +180,7 @@ server.Start();</pre>
                     Background tasks are being saved into a persistent storage and can survive the application pool recycling process.
                 </p>
                 <p>
-                    You can run <a href="http://docs.hangfire.io/en/latest/users-guide/running-multiple-server-instances.html" target="_blank">multiple instances</a> of HangFire Server, so Web Garden &amp; Web Farm environments are fully supported.
+                    You can run <a href="http://docs.hangfire.io/en/latest/users-guide/running-multiple-server-instances.html" target="_blank">multiple instances</a> of Hangfire Server, so Web Garden &amp; Web Farm environments are fully supported.
                 </p>
             </div>
         </div>
@@ -207,7 +207,7 @@ server.Start();</pre>
             <div class="feature-body">
                 <h3>Scalable</h3>
                 <p>
-                    Start with the simplest setup using SQL Server and grow your computational power by adding extra HangFire Server instances either inside ASP.NET apps or use separate Windows Services.
+                    Start with the simplest setup using SQL Server and grow your computational power by adding extra Hangfire Server instances either inside ASP.NET apps or use separate Windows Services.
                 </p>
                 <p>
                     Leverage multiple job storages to overcome the restrictions dictated by a single storage.
@@ -237,7 +237,7 @@ server.Start();</pre>
             <div class="feature-body">
                 <h3>Efficient</h3>
                 <p>
-                    Although the default installation uses SQL Server and polling technique to fetch jobs, you can leverage <a href="https://www.nuget.org/packages/HangFire.SqlServer.MSMQ/">MSMQ</a> or <a href="https://www.nuget.org/packages/HangFire.Redis/" target="_blank">Redis</a> extensions to reduce the processing latency to minimum.
+                    Although the default installation uses SQL Server and polling technique to fetch jobs, you can leverage <a href="https://www.nuget.org/packages/Hangfire.SqlServer.MSMQ/">MSMQ</a> or <a href="https://www.nuget.org/packages/Hangfire.Redis/" target="_blank">Redis</a> extensions to reduce the processing latency to minimum.
                 </p>                
             </div>
         </div>
@@ -248,7 +248,7 @@ server.Start();</pre>
             <div class="feature-body">
                 <h3>Self-maintainable</h3>
                 <p>
-                    You don't need to manually clear the storage – HangFire keeps it as clean as possible and removes old records automatically. 
+                    You don't need to manually clear the storage – Hangfire keeps it as clean as possible and removes old records automatically. 
                 </p>
             </div>
         </div>
@@ -259,10 +259,10 @@ server.Start();</pre>
             <div class="feature-body">
                 <h3>Open source</h3>
                 <p>
-                    HangFire is open source software and is completely free for commercial use. It is licensed under <a href="https://github.com/odinserj/HangFire/blob/master/LICENSE.md">LGPLv3 license</a>.
+                    Hangfire is open source software and is completely free for commercial use. It is licensed under <a href="https://github.com/HangfireIO/Hangfire/blob/master/LICENSE.md">LGPLv3 license</a>.
                 </p>
                 <p>
-                    Fork <a href="https://github.com/odinserj/HangFire" target="_blank">the project</a> and make contributions on GitHub!
+                    Fork <a href="https://github.com/HangfireIO/Hangfire" target="_blank">the project</a> and make contributions on GitHub!
                 </p>
             </div>
         </div>
