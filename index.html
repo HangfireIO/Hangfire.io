@@ -13,7 +13,7 @@ title: Hangfire – Background job processing for ASP.NET
                     Incredibly easy way to perform fire-and-forget, delayed and recurring tasks inside ASP.NET applications. No Windows Service required.
                 </p>
                 <p>
-                    Backed by Redis, SQL Server, SQL Azure or MSMQ.
+                    Backed by Redis, SQL Server, SQL Azure, MSMQ, RabbitMQ.
                 </p>
                 <p style="font-size: inherit;">
 
@@ -125,10 +125,12 @@ title: Hangfire – Background job processing for ASP.NET
 
         </div>
         <div class="col-md-4">
-            <h3>Run them inside ASP.NET app…</h3>
+            <h3>Run them inside a web app…</h3>
             <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – Hangfire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
-<pre><span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">AspNetBackgroundJobServer</span>();
-server.Start();</pre>
+<pre><span class="keywd">public</span> <span class="keywd">void</span> Configure(<span class="type">IAppBuilder</span> app)
+{
+    app.UseHangfire(cfg => cfg.UseServer());
+}</pre>
 
             <h3>… or anywhere else</h3>
             <p><em>In console application, Windows Service, Azure Worker Role, etc.</em></p>
