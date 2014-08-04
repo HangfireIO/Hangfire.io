@@ -126,7 +126,7 @@ title: Hangfire – Background job processing for ASP.NET
         <div class="col-md-4">
             <h3>Run them inside a web app…</h3>
             <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – Hangfire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
-<pre><span class="keywd">public</span> <span class="keywd">void</span> Configure(<span class="type">IAppBuilder</span> app)
+<pre><span class="keywd">public</span> <span class="keywd">void</span> Configuration(<span class="type">IAppBuilder</span> app)
 {
     app.UseHangfire(cfg => cfg.UseServer());
 }</pre>
