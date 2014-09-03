@@ -198,3 +198,7 @@ pre .comm {
 .lb-outerContainer {
     background: transparent;
 }
+
+.reddit_button {
+    vertical-align: super;
+}
