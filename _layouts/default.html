@@ -45,10 +45,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              {% if page.display_brand %}
               <a class="navbar-brand" href="/">
-                <span class="glyphicon glyphicon-fire"></span>
                 {{ site.name }}
               </a>
+              {% endif %}
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
