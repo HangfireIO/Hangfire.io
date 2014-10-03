@@ -202,3 +202,10 @@ pre .comm {
 .reddit_button {
     vertical-align: super;
 }
+
+footer {
+    background-color: #eee;
+    color: #747474;
+    margin-top: 20px;
+    padding: 20px 0 10px;
+}
