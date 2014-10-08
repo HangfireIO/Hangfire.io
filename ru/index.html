@@ -1,0 +1,283 @@
+---
+layout: default-ru
+title: Hangfire – обработка фоновых задач в приложениях ASP.NET
+---
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Hangfire</h1>
+                <p>
+                    Невероятно простой способ запуска и управления фоновыми задачами в приложениях ASP.NET. Службы Windows больше не требуются!
+                </p>
+                <p>
+                    Поддерживает Redis, SQL Server, SQL Azure, MSMQ, RabbitMQ.
+                </p>
+                <p style="font-size: inherit;">
+
+<span class="fb-share-button" data-href="http://hangfire.io" data-type="button_count"></span>
+
+<span class="g-plusone" data-size="medium"></span>
+
+                    <iframe src="http://ghbtns.com/github-btn.html?user=HangfireIO&repo=Hangfire&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="89" height="20"></iframe>
+
+<!-- Поместите этот тег за последним тегом виджета кнопка +1. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="hangfire_net">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </p>
+            </div>
+            <div class="col-md-5">
+                <div id="screenshots" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#screenshots" data-slide-to="0" class="active"></li>
+                        <li data-target="#screenshots" data-slide-to="1"></li>
+                        <li data-target="#screenshots" data-slide-to="2"></li>
+                        <li data-target="#screenshots" data-slide-to="3"></li>
+                        <li data-target="#screenshots" data-slide-to="4"></li>
+                        <li data-target="#screenshots" data-slide-to="5"></li>
+                        <li data-target="#screenshots" data-slide-to="6"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <a href="/img/dashboard.png" data-lightbox="Screenshots" data-title="Встроенный веб-интерфейс для мониторинга">
+                                <img src="/img/dashboard-sm.png" alt="Встроенный веб-интерфейс для мониторинга Hangfire">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/img/succeeded-job.png" data-lightbox="Screenshots" data-title="Выполненная задача">
+                                <img src="/img/succeeded-job-sm.png" alt="Выполненная задача Hangfire">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/img/failed-job.png" data-lightbox="Screenshots" data-title="Задача, завершившаяся ошибкой">
+                                <img src="/img/failed-job-sm.png" alt="Задача, завершившаяся ошибкой Hangfire">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/img/succeeded-jobs.png" data-lightbox="Screenshots" data-title="Список выполненных задач">
+                                <img src="/img/succeeded-jobs-sm.png" alt="Список выполненных задач Hangfire">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/img/failed-jobs.png" data-lightbox="Screenshots" data-title="Список задач, завершившихся ошибкой">
+                                <img src="/img/failed-jobs-sm.png" alt="Список задач, завершившихся ошибкой Hangfire">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/img/recurring-jobs.png" data-lightbox="Screenshots" data-title="Список задач по расписанию">
+                                <img src="/img/recurring-jobs-sm.png" alt="Список задач по расписанию">
+                            </a>
+                        </div>          
+                        <div class="item">
+                            <a href="/img/queues.png" data-lightbox="Screenshots" title="Список очередей задач">
+                                <img src="/img/queues-sm.png" alt="Список очередей задач Hangfire">
+                            </a>
+                        </div>                        
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#screenshots" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#screenshots" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Фоновые задачи</h3>
+<pre><span class="type">BackgroundJob</span>.Enqueue(<span class="hidden-sm">
+    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Simple!"</span>));</pre>
+
+            <h3>Отложенные задачи</h3>
+<pre><span class="type">BackgroundJob</span>.Schedule(<span class="hidden-sm">
+    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Reliable!"</span>), <span class="hidden-sm">
+    </span><span class="type">TimeSpan</span>.FromDays(7));</pre>
+
+            <h3>Задачи по расписанию</h3>
+<pre><span class="type">RecurringJob</span>.AddOrUpdate(<span class="hidden-sm">
+    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Transparent!"</span>), <span class="hidden-sm">
+    </span><span class="type">Cron</span>.Daily);</pre>
+
+        </div>
+        <div class="col-md-4">
+            <h3>В веб-приложении...</h3>
+            <p>
+                <em>Забудьте о <a href="http://haacked.com/archive/2011/10/16/the-dangers-of-implementing-recurring-background-tasks-in-asp-net.aspx/">проблемах обработки</a> фоновых задач в веб-приложениях – Hangfire надежнен для ASP.NET с нуля, даже на виртуальном хостинге!</em>
+            </p>
+<pre><span class="keywd">public</span> <span class="keywd">void</span> Configuration(<span class="type">IAppBuilder</span> app)
+{
+    app.UseHangfire(cfg => cfg.UseServer());
+}</pre>
+
+            <h3>... или любом другом</h3>
+            <p><em>В консольном приложении, службе Windows, Azure Worker Role, и т.д.</em></p>
+<pre><span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">BackgroundJobServer</span>();
+server.Start();</pre>
+        </div>
+        <div class="col-md-4 hidden-xs hidden-sm">
+            <a height="354" class="twitter-timeline" href="https://twitter.com/hangfire_net" data-widget-id="451027617567621120">Твиты пользователя @hangfire_net</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-send"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Простой</h3>
+                <p>
+                    <a href="http://docs.hangfire.io/en/latest/quickstart.html" target="_blank"> Простой в установке, простой в настройке</a>. Вы можете использовать обычные методы с обычными параметрами в качестве фоновых задач.
+                </p>
+                <p>
+                    Начните с простой обработки задач внутри приложения ASP.NET, и переходите к более сложным вариантам тогда, когда это действительно потребуется.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-tower"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Надежный</h3>
+                <p>                    
+                    Фоновые задачи удаляются из хранилища только после успешного выполнения. Прерванные задачи будут автоматически запущены снова после перезапуска программы.
+                </p>
+                <p>
+                    После того, как задача была создана, она будет выполнена <em>по крайней мере, один раз</em>, даже в случае неожиданного завершения процесса.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-ok"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Предназначен для ASP.NET</h3>
+                <p>
+                    Фоновые задачи хранятся в постоянной памяти и могут пережить процесс автоматической перезагрузки пула приложений.
+                </p>
+                <p>
+                    Вы можете запустить <a href="http://docs.hangfire.io/en/latest/users-guide/running-multiple-server-instances.html" target="_blank">несколько экземпляров</a> Hangfire-сервера – окружения Web Farm и Web Garden поддерживаются без дополнительной настройки.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-search"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Прозрачный</h3>
+                <p>
+                    Смотрите <a href="http://hangfire.io/img/dashboard.png" target="_blank">статистику</a>, знайте <a href="http://hangfire.io/img/failed-job.png" target="_blank">подробную историю</a> обработки задач, <a href="http://hangfire.io/img/failed-jobs.png" target="_blank">перезапускайте или удаляйте</a> любые задачи с помощью встроенного веб-интерфейса для мониторинга.
+                </p>
+                <p>
+                    <a href="http://docs.hangfire.io/en/latest/users-guide/adding-logging.html" target="_blank">Подключите</a> вашу любимую систему ведения логов для получения уведомлений о проблемах обработки фоновых задач.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-fullscreen"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Масштабируемый</h3>
+                <p>
+                    Запускайте несколько экземпляров Hangfire Server внутри одного приложения, на одной машине или на нескольких – каждый экземпляр является самостоятельным и использует распределенные блокировки для синхронизации.
+                </p>
+                <p>
+                    Нацелевайте Hangfire Server на разные хранилища, чтобы преодолеть ограничения, диктуемые системой хранения.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-th-large"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Расширяемый</h3>
+                <p>
+                    Пишите собственные обработчики, которые вызываются в момент создания/выполнения/изменения состояния фоновых задач с момощью системы фильтров, аналогичных ASP.NET MVC.
+                </p>
+                <p>
+                    Реализуйте поддержку хранилища, которое используется в инфраструктуре вашего проекта.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-flash"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Эффективный</h3>
+                <p>
+                    Несмотря на то, что установка по-умолчанию использует SQL Server и опрос с периодичностью в несколько секунд, вы можете установить расширения <a href="https://www.nuget.org/packages/Hangfire.SqlServer.MSMQ/">MSMQ</a> или <a href="https://www.nuget.org/packages/Hangfire.Redis/" target="_blank">Redis</a> для уменьшения задержек до минимума.
+                </p>                
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-cog"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Простой в обслуживании</h3>
+                <p>
+                    Вам не нужно вручную чистить хранилище - Hangfire держит его как можно более чистым и автоматически удаляет старые записи.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-user"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Открытый исходный код</h3>
+                <p>
+                    Hangfire является проектом открытым исходным кодом и полностью бесплатен для коммерческого использования. Предоставляется под лицензией <a href="https://github.com/HangfireIO/Hangfire/blob/master/LICENSE.md">LGPLv3</a>.
+                </p>
+                <p>
+                    Ответвляйте <a href="https://github.com/HangfireIO/Hangfire" target="_blank">проект</a> и делайте вклад в развитие проекта на GitHub!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <hr>
+            <div>
+                <a class="btn btn-primary btn-lg" href="http://docs.hangfire.io/en/latest/quickstart.html">Быстрый старт</a>
+                <br class="visible-xs">
+                <span class="btn btn-lg">или</span>
+                <br class="visible-xs">
+                <a class="btn btn-default btn-lg" href="http://docs.hangfire.io">Документация</a>
+            </div>
+        </div>
+    </div>
+</div>
