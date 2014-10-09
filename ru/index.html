@@ -3,104 +3,7 @@ layout: default-ru
 title: Hangfire – обработка фоновых задач в приложениях ASP.NET
 ---
 
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <h1>Hangfire</h1>
-                <p>
-                    Невероятно простой способ запуска и управления фоновыми задачами в приложениях ASP.NET. Службы Windows больше не требуются!
-                </p>
-                <p>
-                    Поддерживает Redis, SQL Server, SQL Azure, MSMQ, RabbitMQ.
-                </p>
-                <p style="font-size: inherit;">
-
-<span class="fb-share-button" data-href="http://hangfire.io" data-type="button_count"></span>
-
-<span class="g-plusone" data-size="medium"></span>
-
-                    <iframe src="http://ghbtns.com/github-btn.html?user=HangfireIO&repo=Hangfire&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="89" height="20"></iframe>
-
-<!-- Поместите этот тег за последним тегом виджета кнопка +1. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="hangfire_net">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                </p>
-            </div>
-            <div class="col-md-5">
-                <div id="screenshots" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#screenshots" data-slide-to="0" class="active"></li>
-                        <li data-target="#screenshots" data-slide-to="1"></li>
-                        <li data-target="#screenshots" data-slide-to="2"></li>
-                        <li data-target="#screenshots" data-slide-to="3"></li>
-                        <li data-target="#screenshots" data-slide-to="4"></li>
-                        <li data-target="#screenshots" data-slide-to="5"></li>
-                        <li data-target="#screenshots" data-slide-to="6"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <a href="/img/dashboard.png" data-lightbox="Screenshots" data-title="Встроенный веб-интерфейс для мониторинга">
-                                <img src="/img/dashboard-sm.png" alt="Встроенный веб-интерфейс для мониторинга Hangfire">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="/img/succeeded-job.png" data-lightbox="Screenshots" data-title="Выполненная задача">
-                                <img src="/img/succeeded-job-sm.png" alt="Выполненная задача Hangfire">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="/img/failed-job.png" data-lightbox="Screenshots" data-title="Задача, завершившаяся ошибкой">
-                                <img src="/img/failed-job-sm.png" alt="Задача, завершившаяся ошибкой Hangfire">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="/img/succeeded-jobs.png" data-lightbox="Screenshots" data-title="Список выполненных задач">
-                                <img src="/img/succeeded-jobs-sm.png" alt="Список выполненных задач Hangfire">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="/img/failed-jobs.png" data-lightbox="Screenshots" data-title="Список задач, завершившихся ошибкой">
-                                <img src="/img/failed-jobs-sm.png" alt="Список задач, завершившихся ошибкой Hangfire">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="/img/recurring-jobs.png" data-lightbox="Screenshots" data-title="Список задач по расписанию">
-                                <img src="/img/recurring-jobs-sm.png" alt="Список задач по расписанию">
-                            </a>
-                        </div>          
-                        <div class="item">
-                            <a href="/img/queues.png" data-lightbox="Screenshots" title="Список очередей задач">
-                                <img src="/img/queues-sm.png" alt="Список очередей задач Hangfire">
-                            </a>
-                        </div>                        
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#screenshots" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#screenshots" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include jumbotron.html %}
 
 <div class="container">
     <div class="row">
@@ -123,7 +26,7 @@ title: Hangfire – обработка фоновых задач в прилож
         <div class="col-md-4">
             <h3>В веб-приложении...</h3>
             <p>
-                <em>Забудьте о <a href="http://haacked.com/archive/2011/10/16/the-dangers-of-implementing-recurring-background-tasks-in-asp-net.aspx/">проблемах обработки</a> фоновых задач в веб-приложениях – Hangfire надежнен для ASP.NET с нуля, даже на виртуальном хостинге!</em>
+                <em>Забудьте о <a href="http://haacked.com/archive/2011/10/16/the-dangers-of-implementing-recurring-background-tasks-in-asp-net.aspx/" target="_blank">проблемах обработки</a> фоновых задач в веб-приложениях – Hangfire надежнен для ASP.NET с нуля, даже на виртуальном хостинге!</em>
             </p>
 <pre><span class="keywd">public</span> <span class="keywd">void</span> Configuration(<span class="type">IAppBuilder</span> app)
 {
@@ -272,7 +175,7 @@ server.Start();</pre>
         <div class="col-md-12" style="text-align: center;">
             <hr>
             <div>
-                <a class="btn btn-primary btn-lg" href="http://docs.hangfire.io/en/latest/quickstart.html">Быстрый старт</a>
+                <a class="btn btn-primary btn-lg" href="/ru/features.html">Возможности</a>
                 <br class="visible-xs">
                 <span class="btn btn-lg">или</span>
                 <br class="visible-xs">

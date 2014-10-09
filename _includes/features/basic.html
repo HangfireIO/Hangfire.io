@@ -1,0 +1,123 @@
+<a id="queue-based-processing" class="anchor"></a>
+<h3>Queue-based processing</h3>
+
+<p>
+    Instead of invoking a method synchronously, place it on a persistent queue, and Hangfire worker thread will take it and perform within its own execution context:
+</p>
+
+{% highlight csharp %}
+BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));
+{% endhighlight %}
+
+<p>
+    This method creates a job in the storage and immediately returns control to the caller. Hangfire guarantees that the specified method will be called even after the abnormal termination of the host process.
+</p>
+
+<a id="delayed-method-invocation" class="anchor"></a>
+<h3>Delayed method invocation</h3>
+
+<p>
+    Instead of invoking a method right now, you can postpone its execution for a specified time:
+</p>
+
+{% highlight csharp %}
+BackgroundJob.Schedule(() => Console.WriteLine("Hello, world!"), TimeSpan.FromMinutes(5));
+{% endhighlight %}
+
+<p>
+    This call also saves a job, but instead of placing it to a queue, it adds the job to a persistent schedule. When the given time elapsed, the job will be added to its queue. Meanwhile you can restart your application – it will be executed anyway.
+</p>
+
+<a id="recurring-tasks" class="anchor"></a>
+<h3>Recurring tasks</h3>
+
+<p>
+    Recurring job processing was never been easier. All you need is to call a single line of code:
+</p>
+
+{% highlight csharp %}
+RecurringJob.AddOrUpdate(() => Console.Write("Easy!"), Cron.Daily);
+{% endhighlight %}
+
+<p>
+    Hangfire uses NCrontab library to perform scheduling tasks, so you can use more complex CRON expressions:
+</p>
+
+{% highlight csharp %}
+RecurringJob.AddOrUpdate(() => Console.Write("Powerful!"), "0 12 * */2");
+{% endhighlight %}
+
+<a id="integrated-web-interface" class="anchor"></a>
+<h3>Integrated web interface</h3>
+
+<p>
+    Web interface will help you to track the execution of your jobs. See their processing state, watch the statistics. Look at screenshots on http://hangfire.io, and you’ll love it.
+</p>
+
+<a id="sql-redis-support" class="anchor"></a>
+<h3>SQL Server and Redis support</h3>
+
+<p>
+    Hangfire uses persistent storage to store jobs, queues and statistics and let them survive application restarts. The storage subsystem is abstracted enough to support both classic SQL Server and fast Redis.
+</p>
+
+<ul>
+    <li>SQL Server provides simplified installation together with usual maintenance plans.</li>
+    <li>Redis provides awesome speed, especially comparing to SQL Server, but requires additional knowledge.</li>
+</ul>
+
+<a id="automatic-retries" class="anchor"></a>
+<h3>Automatic retries</h3>
+
+<p>
+    If your method encounters a transient exception, don’t worry – it will be retried automatically in a few seconds. If all retry attempts are exhausted, you are able to restart it manually from integrated web interface.
+</p>
+
+<p>
+    You can also control the retry behavior with the AutomaticRetryAttribute class. Just apply it to your method to tell Hangfire the number of retry attempts:
+</p>
+
+{% highlight csharp %}
+[AutomaticRetry(100)]
+public static void GenerateStatistics() { }
+
+BackgroundJob.Enqueue(() => GenerateStatistics());
+{% endhighlight %}
+
+<a id="guaranteed-processing" class="anchor"></a>
+<h3>Guaranteed processing</h3>
+
+<p>
+    Hangfire was made with the knowledge that the hosting environment can kill all the threads on each line. So, it does not remove the job until it was successfully completed and contains different implicit retry logic to do the job when its processing was aborted.
+</p>
+
+<a id="instance-method-calls" class="anchor"></a>
+<h3>Instance method calls</h3>
+
+<p>
+    All the examples above uses static method invocation, but instance methods are supported as well:
+</p>
+
+{% highlight csharp %}
+public class EmailService
+{
+    public void Send() { }
+}
+
+BackgroundJob.Enqueue<EmailService>(x => x.Send());
+{% endhighlight %}
+
+<p>
+    When a worker sees that the given method is an instance-method, it will activate its class first. By default, the Activator.CreateInstace method is being used, so only classes with default constructors are supported by default. But you can plug in your IoC container and pass the dependencies through the constructor.
+</p>
+
+<a id="culture-capturing" class="anchor"></a>
+<h3>Culture capturing</h3>
+
+<p>
+    When you marshal your method invocation into another execution context, you should be able to preserve some environment settings. Some of them – Thread.CurrentCulture and Thread.CurrentUICulture are automatically being captured for you.
+</p>
+
+<p>
+    It is done by the PreserveCultureAttribute class that is applied to all of your methods by default.
+</p>
