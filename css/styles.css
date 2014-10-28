@@ -1,7 +1,3 @@
-body {
-    padding-top: 50px;
-}
-
 .navbar {
     margin-bottom: 0;
     background-color: #eee;
@@ -26,7 +22,8 @@ body {
 
 .jumbotron {
     padding-top: 10px;
-    padding-bottom: 18px;
+    padding-bottom: 20px;
+    border-bottom: solid 4px #ccc;
 }
 
 @media(max-width: 991px) {
@@ -219,7 +216,7 @@ a.anchor {
 
 .features-sidebar.affix {
     position: fixed;
-    top: 80px;
+    top: 10px;
 }
 
 .features-sidebar.affix-bottom {
