@@ -55,3 +55,57 @@ public static async Task HighlightAsync(int snippetId)
     await Context.SaveChangesAsync();
 }
 {% endhighlight %}
+
+## Feature comparison
+
+<table class="table">
+    <colgroup>
+        <col>
+        <col>
+        <col style="background-color: #f5f5f5;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Hangfire</th>
+            <th>Hangfire Pro</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Background job processing</th>
+            <td><i class="glyphicon glyphicon-ok"></i></td>
+            <td><i class="glyphicon glyphicon-ok"></i></td>
+        </tr>
+        <tr>
+            <th>Management UI</th>
+            <td><i class="glyphicon glyphicon-ok"></i></td>
+            <td><i class="glyphicon glyphicon-ok"></i></td>
+        </tr>
+        <tr>
+            <th>Low latency &amp; high throughput processing</th>
+            <td></td>
+            <td><i class="glyphicon glyphicon-ok"></i></td>
+        </tr>
+        <tr>
+            <th>Proactive monitoring</th>
+            <td></td>
+            <td><i class="glyphicon glyphicon-ok"></i></td>
+        </tr>
+        <tr>
+            <th>Continuations <span class="label label-default">Not ready</span></th>
+            <td></td>
+            <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+        </tr>
+        <tr>
+            <th>Parallel Processing <span class="label label-default">Not ready</span></th>
+            <td></td>
+            <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+        </tr>
+        <tr>
+            <th>Async methods support <span class="label label-default">Not ready</span></th>
+            <td></td>
+            <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+        </tr>
+    </tbody>
+</table>
