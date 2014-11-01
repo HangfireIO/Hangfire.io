@@ -1,0 +1,33 @@
+---
+layout: default
+display_brand: true
+active: products
+---
+
+<div class="jumbotron jumbotron-small underlined">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="pull-left">Hangfire Core</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="well">
+                <ul class="nav nav-pills nav-stacked">
+                    <li {% if page.sub_active == 'overview' %}class="active"{% endif %}><a href="/core/">Overview</a></li>
+                    <li {% if page.sub_active == 'features' %}class="active"{% endif %}><a href="/core/features.html">Features</a></li>
+                    <li {% if page.sub_active == 'license' %}class="active"{% endif %}><a href="/core/license.html">Licensing</a></li>
+                    <li {% if page.sub_active == 'download' %}class="active"{% endif %}><a href="/core/download.html">Downloads</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+            {{ content }}
+        </div>
+    </div>
+</div>

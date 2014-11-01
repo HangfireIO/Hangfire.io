@@ -1,3 +1,12 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 80px;
+}
+
 .navbar {
     margin-bottom: 0;
     background-color: #eee;
@@ -8,8 +17,8 @@
     background-color: #333;
 }
 
-.navbar-nav .active a,
-.navbar-nav .active a:hover {
+.navbar-nav .active>a,
+.navbar-nav .active>a:hover {
     background-color: #ccc;
     color: #fff;
 }
@@ -19,6 +28,18 @@
 .navbar .navbar-nav>.open>a:focus {
     background-color: #ddd;
     color: #555;
+}
+
+.navbar ul.nav li.dropdown.dropdown-auto:hover>a {
+    background-color: #ddd;
+}
+
+.navbar ul.nav li.dropdown.dropdown-auto:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.navbar.underlined {
+    margin-bottom: 20px;
 }
 
 .jumbotron {
@@ -213,6 +234,12 @@ footer {
     color: #747474;
     margin-top: 20px;
     padding: 20px 0 10px;
+
+    position: absolute;
+bottom: 0;
+width: 100%;
+/* Set the fixed height of the footer here */
+height: 60px;
 }
 
 a.anchor { 
@@ -320,4 +347,24 @@ a.anchor {
     padding: 10px 40px;
     text-transform: uppercase;
     font-weight: lighter;
+}
+
+.product {
+    display: block;
+    border: solid 1px #ccc;
+    padding: 20px 30px;
+    height: 150px;
+}
+
+.product:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+
+.product .product-heading {
+    font-size: 32px;
+}
+
+.product .product-body {
+    color: #777;
 }
