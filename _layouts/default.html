@@ -15,7 +15,8 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-  <script>
+
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -27,7 +28,6 @@
 </script>
     </head>
     <body>
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -53,41 +53,14 @@
               {% endif %}
             </div>
             <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown dropdown-auto {% if page.active == 'products' %}active{% endif %}">
-                  <a href="/products.html">Products</a>
-                  <ul class="dropdown-menu dropdown-menu-left" role="menu">
-                    <li><a href="/core/">Hangfire Core</a></li>
-                    <li><a href="/pro/">Hangfire Pro</a></li>
-                    <li><a href="/extensions/">Extensions</a></li>
-                  </ul>
-                </li>
-                <li {% if page.active == 'purchase' %}class="active"{% endif %}><a href="/purchase.html">Purchase</a></li>
-                <li {% if page.active == 'documentation' %}class="active"{% endif %}><a href="/documentation.html">Documentation</a></li>
-                <li {% if page.active == 'support' %}class="active"{% endif %}><a href="/support.html">Support</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="http://odinserj.net">Blog</a></li>
-                    <li><a href="http://discuss.hangfire.io">Forum</a></li>
-                    <li><a href="https://www.nuget.org/packages?q=Hangfire">NuGet Packages</a></li>
-                    <li><a href="https://github.com/HangfireIO">Sources on GitHub</a></li>
-                  </ul>
-                </li>
-              </ul>
+              {% include nav.html %}
             </div>
           </div>
         </nav>
 
         {{ content }}        
         
-        <footer>
-          <div class="container">
-            <p>
-              Hangfire &copy; 2013-2014 <a href="https://github.com/odinserj">Sergey Odinokov</a>
-            </p>
-          </div>
-        </footer> 
+        {% include footer.html %}
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

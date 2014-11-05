@@ -5,6 +5,8 @@ display_brand: true
 sub_active: features
 ---
 
+### Any kind of background job
+
 ### Queue-based processing
 
 Instead of invoking a method synchronously, place it on a persistent queue, and Hangfire worker thread will take it and perform within its own execution context:

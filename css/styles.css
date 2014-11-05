@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    margin-bottom: 80px;
+    margin-bottom: 220px;
 }
 
 .navbar {
@@ -40,6 +40,19 @@ body {
 
 .navbar.underlined {
     margin-bottom: 20px;
+}
+
+footer {
+    background-color: #eee;
+    color: #747474;
+    margin-top: 20px;
+    padding: 20px 0 10px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 185px;
 }
 
 .jumbotron {
@@ -92,6 +105,10 @@ body {
     width: 450px;
     max-height: 267px;
     background-color: transparent;
+}
+
+.glyphicon-small {
+    font-size: 85%;
 }
 
 .nuget-install {
@@ -227,19 +244,6 @@ pre .comm {
 
 .reddit_button {
     vertical-align: super;
-}
-
-footer {
-    background-color: #eee;
-    color: #747474;
-    margin-top: 20px;
-    padding: 20px 0 10px;
-
-    position: absolute;
-bottom: 0;
-width: 100%;
-/* Set the fixed height of the footer here */
-height: 60px;
 }
 
 a.anchor { 
