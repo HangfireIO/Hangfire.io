@@ -1,8 +1,9 @@
 ---
-layout: pro
-title: Features – Hangfire Pro
+layout: products
+title: End-user License Agreement – Hangfire Pro
 display_brand: true
-sub_active: license
+product_name: Hangfire Pro
+sub_active: pro-license
 ---
 
 <p>THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.</p>

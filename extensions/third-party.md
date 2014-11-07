@@ -1,9 +1,15 @@
 ---
-layout: extensions
+layout: products
 title: Third Party – Hangfire Extensions
 display_brand: true
-sub_active: third-party
+product_name: Hangfire Extensions
+sub_active: ext-3rdparty
 ---
+
+## Storages
+
+* http://www.nuget.org/packages/Hangfire.PostgreSql/
+* https://bitbucket.org/actoas/hangfire.compositec1
 
 ## IoC Containers
 

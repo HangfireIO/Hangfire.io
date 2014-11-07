@@ -1,8 +1,9 @@
 ---
-layout: core
-title: Download – Hangfire Core
+layout: products
+title: Downloads – Hangfire Core
 display_brand: true
-sub_active: download
+product_name: Hangfire Core
+sub_active: core-download
 ---
 
 Hangfire Core is published as a NuGet package, as are nearly all of the extensions. If you have NuGet installed, you can right-click on your project and choose `Add Library Package Reference`. Search for <a href="https://www.nuget.org/packages?q=Hangfire">Hangfire</a>, and you should see a list of packages. Click *Install*, and you're done. Here is the list of Hangfire Core packages:

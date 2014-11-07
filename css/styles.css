@@ -357,7 +357,7 @@ a.anchor {
     display: block;
     border: solid 1px #ccc;
     padding: 20px 30px;
-    height: 150px;
+    height: 170px;
 }
 
 .product:hover {
@@ -371,4 +371,12 @@ a.anchor {
 
 .product .product-body {
     color: #777;
+}
+
+.screenshots img {
+    width: 100%;
+}
+
+.page-header {
+    margin-top: 0;
 }

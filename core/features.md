@@ -1,11 +1,10 @@
 ---
-layout: core
+layout: products
 title: Features – Hangfire Core
 display_brand: true
-sub_active: features
+product_name: Hangfire Core
+sub_active: core-features
 ---
-
-### Any kind of background job
 
 ### Queue-based processing
 

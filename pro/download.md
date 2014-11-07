@@ -1,7 +1,8 @@
 ---
-layout: pro
-title: Download – Hangfire Pro
+layout: products
+title: Downloads – Hangfire Pro
 display_brand: true
-sub_active: download
+product_name: Hangfire Pro
+sub_active: pro-download
 ---
 

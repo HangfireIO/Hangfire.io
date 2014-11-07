@@ -1,8 +1,9 @@
 ---
-layout: extensions
+layout: products
 title: Official – Hangfire Extensions
 display_brand: true
-sub_active: official
+product_name: Hangfire Extensions
+sub_active: ext-official
 ---
 
 ## Authorization Filters

@@ -1,9 +1,16 @@
 ---
-layout: pro
-title: Features – Hangfire Pro
+layout: products
+title: Hangfire Pro
 display_brand: true
-sub_active: features
+product_name: Hangfire Pro
+sub_active: pro-overview
 ---
+
+<p>
+    Hangfire Pro is an extension which adds a few nice features to Hangfire.  Hangfire is open source and free for all to use but unfortunately it takes a lot of my time to maintain and support.  Hangfire Pro is a way for you to purchase really useful functionality while also ensuring Hangfire will be supported for years to come.
+</p>
+
+## Features
 
 ### Low latency & high throughput processing
 
@@ -12,6 +19,8 @@ With `Hangfire.Redis` package your job processing throughput will be much faster
 ### Proactive monitoring
 
 Proactive monitoring allows you to use usual tools for application monitoring.
+
+## Coming soon
 
 ### Continuations
 
