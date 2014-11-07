@@ -35,27 +35,25 @@ sub_active: core-overview
 
 Hangfire supports all kind of background tasks – short-running and long-running, CPU intensive and I/O intensive, constantly running and task-based, one shot and recurrent. You don't need to reinvent the wheel – it is ready to use.
 
+---
+
 <div class="row">
     <div class="col-md-6">
         <h4>Fire-and-forget</h4>
         <p>
             These jobs are being executed <strong>only once</strong> and almost <strong>immediately</strong> after they fired.
         </p>
-{% highlight csharp %}
-BackgroundJob.Enqueue(
-    () => Console.WriteLine("Fire-and-forget!"));
-{% endhighlight %}
+<pre><span class="type">BackgroundJob</span>.Enqueue(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Fire-and-forget!"</span>));</pre>
     </div>
     <div class="col-md-6">
         <h4>Delayed</h4>
         <p>
             Delayed jobs are being executed <strong>only once</strong> too, but not immediately – only after the <strong>specified time interval</strong>.
         </p>
-{% highlight csharp %}
-BackgroundJob.Schedule(
-    () => Console.WriteLine("Delayed!"),
-    TimeSpan.FromDays(7));
-{% endhighlight %}
+<pre><span class="type">BackgroundJob</span>.Schedule(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Delayed!"</span>),
+    <span class="type">TimeSpan</span>.FromDays(7));</pre>
     </div>
 </div>
 
@@ -65,24 +63,22 @@ BackgroundJob.Schedule(
         <p>
             Recurring jobs fired <strong>many times</strong> on the specified <strong>CRON schedule</strong>.
         </p>
-{% highlight csharp %}
-RecurringJob.AddOrUpdate(
-    () => Console.WriteLine("Recurring!"),
-    Cron.Daily);
-{% endhighlight %}
+<pre><span class="type">RecurringJob</span>.AddOrUpdate(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Recurring!"</span>),
+    <span class="type">Cron</span>.Daily);</pre>
     </div>
     <div class="col-md-6">
         <h4>Background Process</h4>
         <p>
             Use it if you need to run background processes <strong>continously</strong> throught the <strong>lifetime</strong> of your application.
         </p>
-{% highlight csharp %}
-// Coming soon
-var server = new BackgroundJobServer();
-server.AddProcess<CustomQueueHandler>();
-{% endhighlight %}
+<pre><span class="comm">// Coming soon</span>
+<span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">BackgroundJobServer</span>();
+server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
     </div>
 </div>
+
+---
 
 ### Backed by Persistent Storage
 
@@ -98,7 +94,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. In enim tempora omnis,
 
 Want more? Implement it!
 
-### Automatic retries on unexpected exceptions and shutdown
+### Automatic retries after Exceptions and Unexpected Shutdowns
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, voluptatibus at, sed voluptate dolorum, nam laboriosam quis qui quas aspernatur ducimus! Repellat tempore quia optio odio officia dolorum quisquam facere.
 
