@@ -1,0 +1,40 @@
+---
+layout: default
+display_brand: true
+active: products
+nav_underlined: true
+---
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="well">
+                <h4>Hangfire Core</h4>
+                <ul class="nav nav-pills nav-stacked nav-compact">
+                    <li {% if page.sub_active == 'core-overview' %}class="active"{% endif %}><a href="/core/">Overview</a></li>
+                    <li {% if page.sub_active == 'core-features' %}class="active"{% endif %}><a href="/core/features.html">Features</a></li>
+                    <li {% if page.sub_active == 'core-license' %}class="active"{% endif %}><a href="/core/license.html">Licensing</a></li>
+                    <li {% if page.sub_active == 'core-download' %}class="active"{% endif %}><a href="/core/download.html">Downloads</a></li>
+                </ul>
+                <h4>Hangfire Pro <small>Alpha</small></h4>
+                <ul class="nav nav-pills nav-stacked nav-compact">
+                    <li {% if page.sub_active == 'pro-overview' %}class="active"{% endif %}><a href="/pro/">Overview</a></li>
+                    <li {% if page.sub_active == 'pro-license' %}class="active"{% endif %}><a href="/pro/license.html">License</a></li>
+                </ul>
+                <h4>Extensions</h4>
+                <ul class="nav nav-pills nav-stacked nav-compact">
+                    <li {% if page.sub_active == 'ext-official' %}class="active"{% endif %}><a href="/extensions/">Official</a></li>
+                    <li {% if page.sub_active == 'ext-3rdparty' %}class="active"{% endif %}><a href="/extensions/third-party.html">Third-Party</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h1 class="page-header">
+                {{ page.title }} {% if page.beta %}<small>Alpha</small>{% endif %}
+            </h1>
+
+            {{ content }}
+        </div>
+    </div>
+</div>

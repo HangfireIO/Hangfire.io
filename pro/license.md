@@ -1,23 +1,13 @@
 ---
-layout: default
-title: Hangfire Pro License
+layout: products
+title: End-user License Agreement – Hangfire Pro
+beta: true
 display_brand: true
+product_name: Hangfire Pro
+sub_active: pro-license
 ---
 
-<div class="jumbotron jumbotron-small">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Hangfire Pro EULA</h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <p>THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.</p>
+<p>THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.</p>
 
 <p>1. OWNERSHIP, LICENSE GRANT</p>
 
@@ -90,6 +80,3 @@ display_brand: true
 <p>This License Agreement is governed by the law of the State of Oregon, United States (notwithstanding conflicts of laws provisions), and all parties irrevocably submit to the jurisdiction of the courts of the State of Oregon and further agree to commence any litigation which may arise hereunder in the state or federal courts located in the judicial district of Multnomah County, Oregon, US.</p>
 
 <p>If the Software or any related documentation is licensed to the U.S. government or any agency thereof, it will be deemed to be &ldquo;commercial computer software&rdquo; or &ldquo;commercial computer software documentation,&rdquo; pursuant to DFAR Section 227.7202 and FAR Section 12.212. Any use of the Software or related documentation by the U.S. government will be governed solely by the terms of this License Agreement.</p>
-        </div>
-    </div>
-</div>
