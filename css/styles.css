@@ -485,3 +485,8 @@ a.anchor {
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
 }
+
+.nav-compact>li>a {
+    padding-top: 5px;
+    padding-bottom: 5px;    
+}

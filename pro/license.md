@@ -1,6 +1,7 @@
 ---
 layout: products
 title: End-user License Agreement – Hangfire Pro
+beta: true
 display_brand: true
 product_name: Hangfire Pro
 sub_active: pro-license

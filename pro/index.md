@@ -1,6 +1,7 @@
 ---
 layout: products
 title: Hangfire Pro
+beta: true
 display_brand: true
 product_name: Hangfire Pro
 sub_active: pro-overview
@@ -12,13 +13,49 @@ sub_active: pro-overview
 
 ## Features
 
-### Low latency & high throughput processing
+<div class="row">
+    <div class="col-md-6">
+        <h3>High throughput with Redis</h3>
 
-With `Hangfire.Redis` package your job processing throughput will be much faster than SQL Server based.
+        <p>
+            Hangfire Pro comes with <code>Hangfire.Redis</code> package that uses <a href="http://redis.io/">Redis</a> server to persist background jobs and other data. 
+        </p>
 
-### Proactive monitoring
+        <div class="alert alert-info">
+            This package is <strong>merged</strong> with ServiceStack.Redis package, so your <strong>application can use any version</strong> of <a href="https://servicestack.net/" target="_blank">ServiceStack</a> packages.
+        </div>
 
-Proactive monitoring allows you to use usual tools for application monitoring.
+        <p>
+            Redis is famous for its outstanding <a href="http://redis.io/topics/benchmarks">performance</a> nd here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages:
+        </p>
+        
+        <p>
+            <img src="/img/storage-compare.png" alt="Background Jobs Throughput" width="100%">
+        </p>
+        
+        <p>
+            This is a dirty benchmark that was made on developer machine with non-SSD drive.     
+        </p>
+    </div>
+    <div class="col-md-6">
+        <h3>Proactive monitoring</h3>
+
+        <p>
+            <code>Hangfire.PerformanceCounters</code> package allows Hangfire to publish its internal metrics to Windows Performance Counters – the standard way to monitor Windows applications and services.
+        </p>
+
+        <p>
+            So, you can use existing tools like <a href="http://www.nagios.org/" target="_blank">Nagios</a>, <a href="http://newrelic.com/" target="_blank">New Relic</a>, <a href="https://www.serverdensity.com/" target="_blank">Server Density</a> and others to proactively monitor the health of your services.
+        </p>
+        <img src="/img/perfmon.png" alt="Performance Monitor" width="444">
+    </div>
+</div>
+
+<div class="text-center">
+    <hr>
+    <a class="btn btn-lg btn-success" href="/subscriptions.html">Get a subscription</a>
+    <hr>
+</div>
 
 ## Coming soon
 
