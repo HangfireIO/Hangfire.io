@@ -20,7 +20,7 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 <pre class="nuget-install">PM> Install-Package Hangfire</pre>
 
-[More details about Package Manager Console](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console)
+<a href="http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 
 ### Package Manager Dialog (Visual Studio)
 
@@ -29,4 +29,4 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 3. Search for "Hangfire", using the search bar at the top right
 4. Select "Hangfire" and choose Install
 
-[More details on how to use Package Manager Dialog](http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog)
+<a href="http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>

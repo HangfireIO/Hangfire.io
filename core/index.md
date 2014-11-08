@@ -68,6 +68,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <span class="type">Cron</span>.Daily);</pre>
     </div>
     <div class="col-md-6">
+    <!--
         <h4>Background Process</h4>
         <p>
             Use it if you need to run background processes <strong>continously</strong> throught the <strong>lifetime</strong> of your application.
@@ -75,6 +76,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
 <pre><span class="comm">// Coming soon</span>
 <span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">BackgroundJobServer</span>();
 server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
+    -->
     </div>
 </div>
 
@@ -82,7 +84,7 @@ server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
 
 ### Backed by Persistent Storage
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. In enim tempora omnis, delectus magnam minima, quasi amet ipsum soluta earum facilis quae voluptatibus iste non. Repudiandae ratione, distinctio alias explicabo.
+Background jobs is very important part of an application and Hangfire ensures that any job is being performed **at least once**. To persist background job information between application restarts, all of it is being saved into your favorite persistent storage. Currently three major storages are supported:
 
 <table style="width: 100%; margin: 20px 0;" class="text-center">
     <tr>
@@ -92,25 +94,85 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. In enim tempora omnis,
     </tr>
 </table>
 
-Want more? Implement it!
+Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite database system is not supported yet, you can implement it. It is cheaper that implement background job system from scratch!
 
-### Automatic retries after Exceptions and Unexpected Shutdowns
+### Automatic Retries
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, voluptatibus at, sed voluptate dolorum, nam laboriosam quis qui quas aspernatur ducimus! Repellat tempore quia optio odio officia dolorum quisquam facere.
+If your background job face with a problem during its execution, it will be retried automatically after some delay. Hangfire successfully deals with the following problems:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse fugit, vero sunt totam commodi tenetur quibusdam quasi doloribus culpa possimus officia earum nostrum quisquam beatae perferendis delectus assumenda, nulla dolorum.
+* Exceptions
+* Application shutdowns
+* Unexpected process terminations
 
-### Optional Distributed Processing
+You are also able to retry any background job manually through the programming code or the Dashboard UI:
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae magni sapiente enim soluta! Numquam natus fuga accusantium, delectus necessitatibus fugit totam iure rerum mollitia aliquam quae! Dolores, harum, quae? Expedita!
+<div class="row">
+    <div class="col-md-6">
+{% highlight csharp %}
+var jobId = BackgroundJob.Enqueue(
+    () => Console.WriteLine("Hello"));
 
-<div class="text-center">
-    <img src="/img/workflow.png" alt="Hangfire Workflow" style="padding: 40px;">
+var succeeded = BackgroundJob.Requeue(jobId);
+{% endhighlight %}
+    </div>
+    <div class="col-md-6">
+        <a href="/img/retry.png" data-lightbox="Screenshots" data-title="Succeeded Job">
+            <img src="/img/retry.png" alt="Dashboard Retry" width="379" class="img-thumbnail">
+        </a>
+    </div>
 </div>
 
-You can host any part of Hangfire in any application – Web application, Console application, Windows Service, Azure Worker Role, etc.
+### Scale as You Grow
 
-### Integrated web monitoring UI
+You are not required to make any architecture decisions to start using Hangfire. You can begin with simple setup, where background processing is being implemented on the web application side.
+
+Later, when you face with performance problems, you can separate the processing among different processes or servers – Hangfire uses distributed locks to handle synchronization issues.
+
+<div class="tabbable tabs-left">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#process" role="tab" data-toggle="tab">Single Process</a>
+        </li>
+        <li role="presentation">
+            <a href="#garden" role="tab" data-toggle="tab">Web Garden</a>
+        </li>
+        <li role="presentation">
+            <a href="#farm" role="tab" data-toggle="tab">Web Farm</a>
+        </li>
+        <li role="presentation">
+            <a href="#service" role="tab" data-toggle="tab">Separate Service</a>
+        </li>
+        <li role="presentation">
+            <a href="#server" role="tab" data-toggle="tab">Separate Server</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content tab-content-center text-center">
+        <div role="tabpanel" class="tab-pane active" id="process">
+            <img src="/img/process.png" alt="Single Process">
+        </div>
+        <div role="tabpanel" class="tab-pane" id="garden">
+            <img src="/img/garden.png" alt="Web Garden">
+        </div>
+        <div role="tabpanel" class="tab-pane" id="farm">
+            <img src="/img/farm.png" alt="Web Farm">
+        </div>
+        <div role="tabpanel" class="tab-pane" id="service">
+            <img src="/img/service.png" alt="Separate Service">
+        </div>
+        <div role="tabpanel" class="tab-pane" id="server">
+          <img src="/img/server.png" alt="Separate Server">
+        </div>
+    </div>
+</div>
+
+### Integrated Monitoring UI
+
+Hangfire is shipped with an awesome tool – Web Monitoring UI. It is implemented as an OWIN extensions and though can be hosted inside any application – ASP.NET, Console or Windows Service. Monitoring UI allows you to see and control any aspect of background job processing, including statistics, exceptions and background job history.
+
+Just look at the screenshots below, and you'll love it!
 
 <div class="row screenshots">
     <div class="col-md-4">

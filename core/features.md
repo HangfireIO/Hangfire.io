@@ -40,10 +40,6 @@ Hangfire uses NCrontab library to perform scheduling tasks, so you can use more 
 RecurringJob.AddOrUpdate(() => Console.Write("Powerful!"), "0 12 * */2");
 {% endhighlight %}
 
-### Integrated web interface
-
-Web interface will help you to track the execution of your jobs. See their processing state, watch the statistics. Look at screenshots on http://hangfire.io, and you’ll love it.
-
 ### SQL Server and Redis support
 
 Hangfire uses persistent storage to store jobs, queues and statistics and let them survive application restarts. The storage subsystem is abstracted enough to support both classic SQL Server and fast Redis.
