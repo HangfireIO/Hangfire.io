@@ -1,6 +1,6 @@
 <ul class="nav navbar-nav navbar-right">
   <li class="dropdown dropdown-auto {% if page.active == 'products' %}active{% endif %}">
-    <a href="/core/">Products <span class="caret"></a>
+    <a href="/core/">Products <span class="caret"></span></a>
     <ul class="dropdown-menu dropdown-menu-left" role="menu">
       <li><a href="/core/">Hangfire Core</a></li>
       <li><a href="/pro/">Hangfire Pro</a></li>
@@ -8,10 +8,10 @@
     </ul>
   </li>
   <li {% if page.active == 'subscriptions' %}class="active"{% endif %}>
-    <a href="/subscriptions.html">Subscriptions</a>
+    <a href="/subscriptions/">Subscriptions</a>
   </li>
-  <li {% if page.active == 'docs-n-support' %}class="active"{% endif %}>
-    <a href="/docs-n-support.html">Docs &amp; Support</a>
+  <li {% if page.active == 'support' %}class="active"{% endif %}>
+    <a href="/support/">Docs &amp; Support</a>
   </li>
   <li class="dropdown dropdown-auto">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>

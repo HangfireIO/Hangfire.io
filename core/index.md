@@ -33,7 +33,7 @@ sub_active: core-overview
 
 ### All Types of Background Jobs
 
-Hangfire supports all kind of background tasks – short-running and long-running, CPU intensive and I/O intensive, constantly running and task-based, one shot and recurrent. You don't need to reinvent the wheel – it is ready to use.
+Hangfire supports all kind of background tasks – short-running and long-running, CPU intensive and I/O intensive, one shot and recurrent. You don't need to reinvent the wheel – it is ready to use.
 
 ---
 
@@ -84,7 +84,7 @@ server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
 
 ### Backed by Persistent Storage
 
-Background jobs is very important part of an application and Hangfire ensures that any job is being performed **at least once**. To persist background job information between application restarts, all of it is being saved into your favorite persistent storage. Currently three major storages are supported:
+Background jobs is very important part of an application and Hangfire ensures that any job is being performed **at least once**. To persist background job information between application restarts, all the information is being saved in your favorite persistent storage. Currently the following storages are supported:
 
 <table style="width: 100%; margin: 20px 0;" class="text-center">
     <tr>
@@ -94,7 +94,7 @@ Background jobs is very important part of an application and Hangfire ensures th
     </tr>
 </table>
 
-Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite database system is not supported yet, you can implement it. It is cheaper that implement background job system from scratch!
+Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite database system is not supported yet, you can implement it. It is cheaper that implement background job system from scratch.
 
 ### Automatic Retries
 
@@ -219,3 +219,11 @@ Just look at the screenshots below, and you'll love it!
     <div class="col-md-4"></div>
     <div class="col-md-4"></div>
 </div>
+
+<hr>
+<div class="text-center">
+    <a class="btn btn-primary btn-lg" href="http://docs.hangfire.io/en/latest/quickstart.html">Quick Start</a>
+    <span class="btn btn-lg">or</span>
+    <a class="btn btn-default btn-lg" href="/pro/">Hangfire Pro</a>
+</div>
+<hr>

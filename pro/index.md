@@ -8,7 +8,7 @@ sub_active: pro-overview
 ---
 
 <p>
-    Hangfire Pro is an extension which adds a few nice features to Hangfire.  Hangfire is open source and free for all to use but unfortunately it takes a lot of my time to maintain and support.  Hangfire Pro is a way for you to purchase really useful functionality while also ensuring Hangfire will be supported for years to come.
+    Hangfire Pro is an extension which adds a few nice features to Hangfire Core.  Hangfire is open source and free for all to use but unfortunately it takes a lot of my time to maintain and support. Hangfire Pro is a way for you to purchase really useful functionality while also ensuring Hangfire will be supported for years to come.
 </p>
 
 ## Features
@@ -34,7 +34,7 @@ sub_active: pro-overview
         </p>
         
         <p>
-            This is a dirty benchmark that was made on developer machine with non-SSD drive.     
+            This is a dirty benchmark that was made on developer machine with non-SSD drive. Empty methods used to calculate the throughput.    
         </p>
     </div>
     <div class="col-md-6">
@@ -53,11 +53,11 @@ sub_active: pro-overview
 
 <div class="text-center">
     <hr>
-    <a class="btn btn-lg btn-success" href="/subscriptions.html">Get a subscription</a>
+    <a class="btn btn-lg btn-success" href="/subscriptions/">Get a subscription</a>
     <hr>
 </div>
 
-## Coming soon
+## Coming Soon
 
 ### Continuations
 
@@ -155,3 +155,9 @@ public static async Task HighlightAsync(int snippetId)
         </tr>
     </tbody>
 </table>
+
+<div class="text-center">
+    <hr>
+    <a class="btn btn-lg btn-success" href="/subscriptions/">Get a subscription</a>
+    <hr>
+</div>

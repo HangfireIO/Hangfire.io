@@ -2,7 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url> 
+  <url>
     <loc>http://hangfire.io/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+  	<loc>http://hangfire.io/core/</loc>
+  	<priority>0.6</priority>
+  </url>
+  <url>
+  	<loc>http://hangfire.io/pro/</loc>
+  	<priority>0.6</priority>
+  </url>
+  <url>
+  	<loc>http://hangfire.io/extensions/</loc>
+  	<priority>0.6</priority>
+  </url>
+  <url>
+  	<loc>http://hangfire.io/support/</loc>
+  	<priority>0.6</priority>
+  </url>
+  <url>
+  	<loc>http://hangfire.io/subscriptions/</loc>
+  	<priority>0.6</priority>
+  </url>
+  <url>
+  	<loc>http://hangfire.io/core/features.html</loc>
+  </url>
+  <url>
+    <loc>http://hangfire.io/core/license.html</loc>
+  </url>
+  <url>
+    <loc>http://hangfire.io/core/download.html</loc>
+  </url>
+  <url>
+    <loc>http://hangfire.io/pro/license.html</loc>
+  </url>
+  <url>
+    <loc>http://hangfire.io/extensions/third-party.html</loc>
   </url>
 </urlset>
