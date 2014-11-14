@@ -6,9 +6,7 @@ product_name: Hangfire Pro
 sub_active: pro-overview
 ---
 
-<p class="lead">
-    Hangfire Pro is a set of extensions packages that boost the performance and simplify the maintenance of background job processing in large applications. 
-</p>
+Hangfire Pro is a set of extensions packages that boost the performance and simplify the maintenance of background job processing in large applications. Hangfire Pro packages are available under paid [subscriptions](/subscriptions/). After purchase, you receive binaries and access to the private repository on GitHub.
 
 ## Packages
 
@@ -25,7 +23,7 @@ Redis is famous for its outstanding [performance](http://redis.io/topics/benchma
 #### What's new in 2.0
 
 * [ServiceStack](https://servicestack.net/) packages are merged and internalized, so you can use either v3 or v4 versions of ServiceStack framework in your project.
-* Prefix for Redis keys is now configurable, you can use the same database for different environments, e.g. staging and production.
+* Prefix for Redis keys is now configurable, you can now use the same database for different environments, e.g. staging and production.
 
 <div class="clearfix"></div>
 
