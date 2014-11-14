@@ -13,7 +13,7 @@ sub_active: ext-3rdparty
 		<a href="http://www.nuget.org/packages/Hangfire.PostgreSql/" target="_blank">Hangfire.PostgreSql</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 	</li>
 	<li>
-		<a href="https://bitbucket.org/actoas/hangfire.compositec1" target="_blank">Hangfire.CompositeC1</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+		<a href="https://www.nuget.org/packages/Hangfire.CompositeC1" target="_blank">Hangfire.CompositeC1</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 	</li>
 </ul>
 
