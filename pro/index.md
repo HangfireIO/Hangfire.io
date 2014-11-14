@@ -1,55 +1,45 @@
 ---
 layout: products
 title: Hangfire Pro
-beta: true
 display_brand: true
 product_name: Hangfire Pro
 sub_active: pro-overview
 ---
 
-<p>
-    Hangfire Pro is an extension which adds a few nice features to Hangfire Core.  Hangfire is open source and free for all to use but unfortunately it takes a lot of my time to maintain and support. Hangfire Pro is a way for you to purchase really useful functionality while also ensuring Hangfire will be supported for years to come.
+<p class="lead">
+    Hangfire Pro is a set of extensions packages that boost the performance and simplify the maintenance of background job processing in large applications. 
 </p>
 
-## Features
+## Packages
 
-<div class="row">
-    <div class="col-md-6">
-        <h3>High throughput with Redis</h3>
+### Hangfire.Redis 2.0
 
-        <p>
-            Hangfire Pro comes with <code>Hangfire.Redis</code> package that uses <a href="http://redis.io/">Redis</a> server to persist background jobs and other data. 
-        </p>
+<a class="pull-right" style="margin-left: 10px;" href="/img/storage-compare.png" data-lightbox="Screenshots">
+    <img src="/img/storage-compare.png" alt="Background Jobs Throughput" width="222">
+</a>
 
-        <div class="alert alert-info">
-            This package is <strong>merged</strong> with ServiceStack.Redis package, so your <strong>application can use any version</strong> of <a href="https://servicestack.net/" target="_blank">ServiceStack</a> packages.
-        </div>
+Hangfire Pro comes with `Hangfire.Redis` package that uses [Redis](http://redis.io/) server to persist background jobs and other data. 
 
-        <p>
-            Redis is famous for its outstanding <a href="http://redis.io/topics/benchmarks">performance</a> nd here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages:
-        </p>
-        
-        <p>
-            <img src="/img/storage-compare.png" alt="Background Jobs Throughput" width="100%">
-        </p>
-        
-        <p>
-            This is a dirty benchmark that was made on developer machine with non-SSD drive. Empty methods used to calculate the throughput.    
-        </p>
-    </div>
-    <div class="col-md-6">
-        <h3>Proactive monitoring</h3>
+Redis is famous for its outstanding [performance](http://redis.io/topics/benchmarks) and here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages.
 
-        <p>
-            <code>Hangfire.PerformanceCounters</code> package allows Hangfire to publish its internal metrics to Windows Performance Counters – the standard way to monitor Windows applications and services.
-        </p>
+#### What's new in 2.0
 
-        <p>
-            So, you can use existing tools like <a href="http://www.nagios.org/" target="_blank">Nagios</a>, <a href="http://newrelic.com/" target="_blank">New Relic</a>, <a href="https://www.serverdensity.com/" target="_blank">Server Density</a> and others to proactively monitor the health of your services.
-        </p>
-        <img src="/img/perfmon.png" alt="Performance Monitor" width="444">
-    </div>
-</div>
+* [ServiceStack](https://servicestack.net/) packages are merged and internalized, so you can use either v3 or v4 versions of ServiceStack framework in your project.
+* Prefix for Redis keys is now configurable, you can use the same database for different environments, e.g. staging and production.
+
+<div class="clearfix"></div>
+
+### Hangfire.PerformanceCounters 0.1
+
+<a class="pull-right" style="margin-left: 10px;" href="/img/perfmon.png" data-lightbox="Screenshots">
+    <img src="/img/perfmon.png" alt="Performance Monitor" width="222">
+</a>
+
+`Hangfire.PerformanceCounters` package allows Hangfire to publish its internal metrics to Windows Performance Counters – the standard way to monitor Windows applications and services.
+
+So, you can use existing tools like <a href="http://www.nagios.org/" target="_blank">Nagios</a>, <a href="http://newrelic.com/" target="_blank">New Relic</a>, <a href="https://www.serverdensity.com/" target="_blank">Server Density</a> and others to proactively monitor the health of your services.
+
+<div class="clearfix"></div>
 
 <div class="text-center">
     <hr>
@@ -63,11 +53,8 @@ sub_active: pro-overview
 
 Continuations allow you to perform one jobs after others.
 
-{% highlight csharp %}
-BatchJob
-    .Create(() => Console.Write("Hello, "))
-    .ContinueWith(() => Console.WriteLine("world!"));
-{% endhighlight %}
+<pre><span class="type">BatchJob</span>.Create(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;Hello, &quot;</span>))
+        .ContinueWith(() =&gt; <span class="type">Console</span>.WriteLine(<span class="string">&quot;world!&quot;</span>));</pre>
 
 *This API is for preview purposes only, it is subject to change after the final implementation.*
 
@@ -75,16 +62,14 @@ BatchJob
 
 With parallel processing you can split your work into a couple of small sub-jobs that will be processed in parallel. This feature together with continuations allows you to build more complex, but still reliable workflows with Hangfire.
 
-{% highlight csharp %}
-BatchJob
-    .Create(x =>
+<pre><span class="type">BatchJob</span>
+    .Create(x =&gt;
     {
-        x.Enqueue(() => Console.Write("Messy"));
-        x.Enqueue(() => Console.Write("Output"));
-        x.Enqueue(() => Console.Write("With"));
+        x.Enqueue(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;Messy&quot;</span>));
+        x.Enqueue(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;Output&quot;</span>));
+        x.Enqueue(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;With&quot;</span>));
     })
-    .ContinueWith(() => Console.WriteLine("Predictable continuation!"));
-{% endhighlight %}
+    .ContinueWith(() =&gt; <span class="type">Console</span>.WriteLine(<span class="string">&quot;Predictable continuation&quot;</span>));</pre>
 
 *This API is for preview purposes only, it is subject to change after the final implementation.*
 
@@ -92,15 +77,13 @@ BatchJob
 
 You don't need to guess the correct number of worker to handle I/O intensive jobs efficiently. Hangfire will be able to do other job while async operations pending to complete.
 
-{% highlight csharp %}
-public static async Task HighlightAsync(int snippetId)
+<pre><span class="keywd">public</span> <span class="keywd">static</span> <span class="keywd">async</span> <span class="type">Task</span> HighlightAsync(<span class="keywd">int</span> snippetId)
 {
-    var snippet = await Context.Snippets.SingleOrDefaultAsync(snippetId);
-    snippet.Code = await RemoveService.HighlightAsync(snippet.Code);
+    <span class="keywd">var</span> snippet = <span class="keywd">await</span> <span class="type">Context</span>.Snippets.SingleOrDefaultAsync(snippetId);
+    snippet.Code = <span class="keywd">await</span> <span class="type">RemoteService</span>.HighlightAsync(snippet.Code);
 
-    await Context.SaveChangesAsync();
-}
-{% endhighlight %}
+    <span class="keywd">await</span> Context.SaveChangesAsync();
+}</pre>
 
 ## Feature comparison
 
