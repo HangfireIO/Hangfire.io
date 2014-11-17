@@ -10,7 +10,7 @@ Hangfire Pro is a set of extensions packages that boost the performance and simp
 
 ## Packages
 
-### Hangfire.Redis 2.0
+### Hangfire.Pro.Redis
 
 <a class="pull-right" style="margin-left: 10px;" href="/img/storage-compare.png" data-lightbox="Screenshots">
     <img src="/img/storage-compare.png" alt="Background Jobs Throughput" width="222">
@@ -20,14 +20,14 @@ Hangfire Pro comes with `Hangfire.Redis` package that uses [Redis](http://redis.
 
 Redis is famous for its outstanding [performance](http://redis.io/topics/benchmarks) and here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages.
 
-#### What's new in 2.0
+#### What's new in Pro
 
 * [ServiceStack](https://servicestack.net/) packages are merged and internalized, so you can use either v3 or v4 versions of ServiceStack framework in your project.
 * Prefix for Redis keys is now configurable, you can now use the same database for different environments, e.g. staging and production.
 
 <div class="clearfix"></div>
 
-### Hangfire.PerformanceCounters 0.1
+### Hangfire.Pro.PerformanceCounters
 
 <a class="pull-right" style="margin-left: 10px;" href="/img/perfmon.png" data-lightbox="Screenshots">
     <img src="/img/perfmon.png" alt="Performance Monitor" width="222">
