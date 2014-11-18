@@ -490,3 +490,14 @@ a.anchor {
     padding-top: 5px;
     padding-bottom: 5px;    
 }
+
+.nav-side {
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.nav-side h4 {
+    margin-bottom: 5px;
+    color: #555;
+}
