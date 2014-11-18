@@ -1,16 +1,17 @@
 ---
 layout: default
+redirect_from: "/subscriptions"
 title: Hangfire Subscriptions
 display_brand: true
 nav_underlined: true
-active: subscriptions
+active: pricing
 ---
 
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1 class="page-header">
-                Subscriptions
+                Plans &amp; Pricing
             </h1>
             <p class="lead">
                 Prices below are <strong>per organization</strong> with no royalties, no hidden fees and no psychological pricing. We provide <strong>30 day</strong> unconditional money back guarantee.
