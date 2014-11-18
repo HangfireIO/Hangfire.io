@@ -33,7 +33,6 @@ active: pricing
                         <li>Forum support</li>
                         <li class="plan-item-spacer"></li>
                         <li class="plan-item-spacer"></li>
-                        <li class="plan-item-spacer"></li>
                     </ul>
                     <div class="plan-price">
                         <h3>Free</h3>
