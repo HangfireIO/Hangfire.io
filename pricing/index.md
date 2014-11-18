@@ -28,6 +28,7 @@ active: pricing
                         <li>
                             <a href="/core/">Hangfire Core</a> (under <abbr class="initialism">LGPL</abbr>)
                         </li>
+                        <li>Commercial use</li>
                         <li>Documentation</li>
                         <li>Forum support</li>
                         <li class="plan-item-spacer"></li>
