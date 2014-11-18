@@ -4,3 +4,6 @@ pygments: true
 
 kramdown:
   input: GFM
+
+gems:
+  - jekyll-redirect-from
