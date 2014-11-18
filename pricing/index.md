@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hangfire Subscriptions
+title: Hangfire Pricing
 display_brand: true
 nav_underlined: true
 active: pricing
