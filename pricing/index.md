@@ -1,6 +1,5 @@
 ---
 layout: default
-redirect_from: "/subscriptions"
 title: Hangfire Subscriptions
 display_brand: true
 nav_underlined: true
