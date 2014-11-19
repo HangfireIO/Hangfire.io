@@ -136,4 +136,66 @@ active: pricing
         </p>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Feature comparison</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-hover table-striped">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col style="background-color: #f5f5f5;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Core</th>
+                        <th>Core + Pro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Background job processing</th>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Management UI</th>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Support for blazing fast <a href="http://redis.io" target="_blank">Redis</a> storage</th>
+                        <td></td>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Proactive monitoring</th>
+                        <td></td>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Continuations <span class="label label-default">Not ready</span></th>
+                        <td></td>
+                        <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Parallel Processing <span class="label label-default">Not ready</span></th>
+                        <td></td>
+                        <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Async methods support <span class="label label-default">Not ready</span></th>
+                        <td></td>
+                        <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
