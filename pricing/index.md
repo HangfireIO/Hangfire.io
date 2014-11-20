@@ -26,7 +26,7 @@ active: pricing
                 <div class="plan-body">
                     <ul class="plan-items">
                         <li>
-                            <a href="/core/">Hangfire Core</a> (under <abbr class="initialism">LGPL</abbr>)
+                            <a href="/overview.html">Hangfire</a> (under <abbr class="initialism">LGPL</abbr>)
                         </li>
                         <li>Commercial use</li>
                         <li>Documentation</li>
@@ -38,7 +38,7 @@ active: pricing
                         <h3>Free</h3>
                         <h4>Always and Forever</h4>
                     </div>
-                    <a class="btn btn-default" href="/core/download.html">Download</a>
+                    <a class="btn btn-default" href="/downloads.html">Download</a>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@ active: pricing
                 <div class="plan-body">
                     <ul class="plan-items">
                         <li>
-                            <a href="/core/">Hangfire Core</a> (under <abbr class="initialism">LGPL</abbr>)
+                            <a href="/overview.html">Hangfire</a> (under <abbr class="initialism">LGPL</abbr>)
                         </li>
                         <li>
                             <a href="/pro/">Hangfire Pro</a> (under <abbr class="initialism">EULA</abbr>)
@@ -76,7 +76,7 @@ active: pricing
                 <div class="plan-body">
                     <ul class="plan-items">
                         <li>
-                            <a href="/core/">Hangfire Core</a> (under <abbr class="initialism">EULA</abbr>)
+                            <a href="/overview.html">Hangfire</a> (under <abbr class="initialism">EULA</abbr>)
                         </li>
                         <li>
                             <a href="/pro/">Hangfire Pro</a> (under <abbr class="initialism">EULA</abbr>)
@@ -144,7 +144,7 @@ active: pricing
     </div>
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
             <table class="table table-hover table-striped">
                 <colgroup>
                     <col>
@@ -154,8 +154,8 @@ active: pricing
                 <thead>
                     <tr>
                         <th>Feature</th>
-                        <th>Core</th>
-                        <th>Core + Pro</th>
+                        <th>Hangfire</th>
+                        <th>Hangfire + Hangfire Pro</th>
                     </tr>
                 </thead>
                 <tbody>
