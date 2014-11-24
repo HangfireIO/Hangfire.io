@@ -12,8 +12,9 @@ active: pricing
             <h1 class="page-header">
                 Plans &amp; Pricing
             </h1>
-            <p class="lead">
-                Prices below are <strong>per organization</strong> with no royalties, no hidden fees and no psychological pricing. I provide <strong>30 day</strong> unconditional money back guarantee.
+            <p class="lead" style="margin-bottom: 40px;">
+                Hangfire is <strong>completely free</strong> even for commercial use. Subscriptions below allow you to use additional options while ensuring the project will stay here for years to come.
+                I provide <strong>30 day</strong> unconditional money back guarantee.
             </p>
         </div>
     </div>
@@ -106,7 +107,7 @@ active: pricing
             </p>
 
             <p>
-                Subscriptions allow you to use additional functionality offered by <a href="/pro/">Hangfire Pro</a> extension libraries and contact private e-mail support. This is also the way to ensure that Hangfire project will stay here in a long term.
+                Subscriptions allow you to use additional functionality offered by <a href="/pro/">Hangfire Pro</a> extension libraries and contact private e-mail support. This is also the way to ensure that Hangfire project will stay here for a long term.
             </p>
 
             <h3>Is this a subscription or a perpetual license?</h3>
