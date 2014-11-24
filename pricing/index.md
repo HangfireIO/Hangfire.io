@@ -100,40 +100,66 @@ active: pricing
 
     <div class="row">
         <div class="col-md-6">
+            <h3>What am I buying?</h3>
+            <p>
+                Hangfire is an open-source software product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and and you can use it even in commercial and/or properietary applications.
+            </p>
+
+            <p>
+                Subscriptions allow you to use additional functionality offered by <a href="/pro/">Hangfire Pro</a> extension libraries and contact private e-mail support. This is also the way to ensure that Hangfire project will stay here in a long term.
+            </p>
+
+            <h3>Is this a subscription or a perpetual license?</h3>
+
+            <p>
+                Perpetual, with a yearly maintenance renewal. You are allowed to use any
+                release of Hangfire Pro that was available when you purchased the subscription, as well as any future releases (including new features, bug fixes, etc.) for 1 year from the date of purchase.
+            </p>
+
+            <p>
+                After that 1 year, you can continue to use the version you have forever, or you can choose to renew your subscription for another 12 months to continue getting updates. By renewing annually, you help me to continue to innovate and add new features to the product.
+            </p>
+
+            <h3>What if I am not satisfied?</h3>
+            <p>
+                All orders are covered by our 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with our product.
+            </p>
+
+            
+        </div>
+        <div class="col-md-6">
             <h3>Is there a trial version?</h3>
             <p>
                 There's no free trial but I do offer a 30 day period with full refund if Pro does not work for you.
             </p>
 
-            <h3>What happens if my subscription lapses?</h3>
+            <h3>Can I view the EULA?</h3>
+
             <p>
-                You lose access to Pro updates, bug fixes and priority support. You retain the right to run the version you have.
+                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
             </p>
 
-            <h3>Can you transfer a license?</h3>
+            <h3>What is the buying process?</h3>
             <p>
-                Licenses are <strong>not</strong> transferrable to another company.  I will transfer the license from a user-specific email to a group email address (e.g. john_smith@example.com &rarr; tech@example.com) but only for <strong>the same domain</strong>.  It is strongly recommended that you buy the license using a group email address so the license is not attached to any one employee's email address.
+                Click the <em>Buy Now</em> button and put in your info.  Your license will be associated with the email address you use.  I'll generate your download URL and email it to you within 24 hours.
             </p>
-        </div>
-        <div class="col-md-6">
-            <h3>How many licenses do I need to buy?</h3>
-        <p>
-            Every organization that runs Hangfire Pro for their own benefit must purchase a license.
-        </p>
 
-        <h3>What is the buying process?</h3>
-        <p>
-            Click the <em>Buy Now</em> button and put in your info.  Your license will be associated with the email address you use.  I'll generate your download URL and email it to you within 24 hours.
-        </p>
+            <h3>Which currencies do you accept?</h3>
+            <p>
+                All prices on this page are in USD, however when you generate a quote or purchase you can choose between USD, AUD, GBP and EUR.
+            </p>
 
-        <p>
-            You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
-        </p>
+            <h3>What if I need to change a subscription?</h3>
 
-        <h3>Can I get a refund?</h3>
-        <p>
-            Yes, up to 30 days after purchase.  Let me know the reason and maybe I can help but either way it's not a problem.  Email <a href="mailto:support@hangfire.io">support@hangfire.io</a>.
-        </p>
+            <p>
+                Not a problem. Just <a href="mailto:support@hangfire.io">let me know</a>, and I'll create a custom invoice so that you only pay the difference.You'll never be any worse off.
+            </p>
+
+            <p>
+                You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
+            </p>
+
+            
         </div>
     </div>
 
