@@ -13,7 +13,7 @@ active: pricing
                 Plans &amp; Pricing
             </h1>
             <p class="lead">
-                Prices below are <strong>per organization</strong> with no royalties, no hidden fees and no psychological pricing. We provide <strong>30 day</strong> unconditional money back guarantee.
+                Prices below are <strong>per organization</strong> with no royalties, no hidden fees and no psychological pricing. I provide <strong>30 day</strong> unconditional money back guarantee.
             </p>
         </div>
     </div>
@@ -102,7 +102,7 @@ active: pricing
         <div class="col-md-6">
             <h3>What am I buying?</h3>
             <p>
-                Hangfire is an open-source software product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and and you can use it even in commercial and/or properietary applications. Hangfire is fully functional and ready to use.
+                Hangfire is an open-source software product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and you can use it even in commercial and/or properietary applications. Hangfire is fully functional and ready to use.
             </p>
 
             <p>
