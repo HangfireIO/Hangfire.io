@@ -123,7 +123,7 @@ active: pricing
 
             <h3>What if I am not satisfied?</h3>
             <p>
-                All orders are covered by our 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with our product.
+                All orders are covered by 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
             </p>
 
             
