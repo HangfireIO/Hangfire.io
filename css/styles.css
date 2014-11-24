@@ -501,3 +501,8 @@ a.anchor {
     margin-bottom: 5px;
     color: #555;
 }
+
+mark {
+    padding: .2em;
+    background-color: #fcf8e3;
+}
