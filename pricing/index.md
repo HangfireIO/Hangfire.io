@@ -10,8 +10,9 @@ active: pricing
             <h1 class="page-header">
                 Plans &amp; Pricing
             </h1>
-            <p class="lead">
-                Prices below are <strong>per organization</strong> with no royalties, no hidden fees and no psychological pricing. We provide <strong>30 day</strong> unconditional money back guarantee.
+            <p class="lead" style="margin-bottom: 40px;">
+                Hangfire is <strong>completely free</strong> even for commercial use. Subscriptions below allow you to use additional options while ensuring the project will stay here for years to come.
+                I provide <strong>30 day</strong> unconditional money back guarantee.
             </p>
         </div>
     </div>
@@ -82,7 +83,7 @@ active: pricing
                         <li>Documentation</li>
                         <li>Forum support</li>
                         <li>Private e-mail support</li>
-                        <li>One Business Day SLA</li>
+                        <li>Priority technical support</li>
                     </ul>
                     <div class="plan-price">
                         <h3><span class="symbol">$</span>5000</h3>
@@ -100,11 +101,11 @@ active: pricing
         <div class="col-md-6">
             <h3>What am I buying?</h3>
             <p>
-                Hangfire is an open-source software product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and and you can use it even in commercial and/or properietary applications.
+                Hangfire is an open-source software product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and you can use it even in commercial and/or properietary applications. Hangfire is fully functional and ready to use.
             </p>
 
             <p>
-                Subscriptions allow you to use additional functionality offered by <a href="/pro/">Hangfire Pro</a> extension libraries and contact private e-mail support. This is also the way to ensure that Hangfire project will stay here in a long term.
+                Subscriptions allow you to use additional functionality offered by <a href="/pro/">Hangfire Pro</a> extension libraries and contact private e-mail support. This is also the way to ensure that Hangfire project will stay here for a long term.
             </p>
 
             <h3>Is this a subscription or a perpetual license?</h3>
@@ -120,7 +121,7 @@ active: pricing
 
             <h3>What if I am not satisfied?</h3>
             <p>
-                All orders are covered by our 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with our product.
+                All orders are covered by 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
             </p>
 
             
@@ -128,7 +129,7 @@ active: pricing
         <div class="col-md-6">
             <h3>Is there a trial version?</h3>
             <p>
-                There's no free trial but I do offer a 30 day period with full refund if Pro does not work for you.
+                There is no free trial version available for Hangfire Pro. However I do offer a 30 day period with full refund if Pro does not work for you.
             </p>
 
             <h3>Can I view the EULA?</h3>
@@ -139,7 +140,7 @@ active: pricing
 
             <h3>What is the buying process?</h3>
             <p>
-                Click the <em>Buy Now</em> button and put in your info.  Your license will be associated with the email address you use.  I'll generate your download URL and email it to you within 24 hours.
+                Click the <em>Buy Now</em> button and put in your info.  Your license will be associated with the email address you use. You'll receive the latest Hangfire Pro immediately, and I'll generate your credentials for a private NuGet server and email them to you within 24 hours. I can also give you access to the private GitHub repository on your request.
             </p>
 
             <h3>Which currencies do you accept?</h3>
