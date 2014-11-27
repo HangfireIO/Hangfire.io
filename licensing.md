@@ -1,7 +1,6 @@
 ---
 layout: products
 title: Hangfire Licensing
-display_brand: true
 product_name: Hangfire
 sub_active: licensing
 ---

@@ -1,0 +1,149 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 220px;
+}
+
+footer {
+    background-color: #eee;
+    color: #747474;
+    margin-top: 20px;
+    padding: 20px 0 10px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    height: 185px;
+}
+
+.navbar-hangfire {
+    margin-bottom: 20px;
+    background-color: #eee;
+    border-bottom: solid 2px #ccc;
+}
+
+.navbar-hangfire .icon-bar {
+    background-color: #333;
+}
+
+.navbar-hangfire ul.nav li.dropdown.dropdown-auto:hover>a {
+    background-color: #ddd;
+}
+
+.navbar-hangfire ul.nav li.dropdown.dropdown-auto:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.nav-side {
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.nav-side h4 {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.bs-sidenav form, .bs-sidenav #sourcelink {
+  padding: 5px 20px;
+}
+
+.bs-sidenav.affix {
+  position: static;
+}
+
+/* First level of nav */
+.bs-sidenav {
+  padding-top:    10px;
+  padding-bottom: 10px;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.bs-sidenav h4 {
+  margin: 5px 20px 7px;
+  color: #888;
+  font-size: 20px;
+  padding-bottom: 7px;
+  border-bottom: solid 1px #ddd;
+}
+
+.bs-sidenav > .nav {
+  margin-bottom: 10px;
+}
+
+/* All levels of nav */
+.bs-sidenav .nav > li > a {
+  display: block;
+  color: #428bca;
+  padding: 5px 20px;
+}
+.bs-sidenav .nav > li > a:hover,
+.bs-sidenav .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #e5e3e9;
+  border-right: 1px solid #dbd8e0;
+}
+
+.bs-sidenav .nav .nav > li > a {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  padding-left: 40px;
+  font-size: 90%;
+}
+
+.bs-sidenav .nav .nav .nav > li > a {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  padding-left: 40px;
+  font-size: 90%;
+}
+
+.bs-sidenav .nav .nav .nav .nav > li > a {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  padding-left: 50px;
+  font-size: 90%;
+}
+
+/* Show and affix the side nav when space allows it */
+@media screen and (min-width: 992px) {
+  /* Widen the fixed sidenav */
+  .bs-sidenav.affix,
+  .bs-sidenav.affix-bottom {
+    width: 213px;
+  }
+  .bs-sidenav.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 80px;
+  }
+  .bs-sidenav.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+  .bs-sidenav.affix-bottom .bs-sidenav,
+  .bs-sidenav.affix .bs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* Widen the fixed sidenav again */
+  .bs-sidenav.affix-bottom,
+  .bs-sidenav.affix {
+    width: 263px;
+  }
+}
+
+.bs-sidenav .nav > li.active > a,
+.bs-sidenav .nav > li.active > a:hover,
+.bs-sidenav .nav > li.active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+  text-shadow: none;
+}

@@ -9,6 +9,7 @@
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/lightbox.css" rel="stylesheet">
         <link href="/css/highlight.css" rel="stylesheet">
+        <link href="/css/hangfire.css" rel="stylesheet">
         <link href="/css/styles.css" rel="stylesheet">
 
         <!--[if lt IE 9]>
@@ -37,7 +38,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-        <nav class="navbar {% if page.nav_underlined %}underlined{% endif %}" role="navigation">
+        <nav class="navbar navbar-hangfire {% if page.jumbotron != null %}navbar-jumbotron{% endif %}" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              {% if page.display_brand %}
+              {% if page.jumbotron == null %}
               <a class="navbar-brand" href="/">
                 {{ site.name }}
               </a>

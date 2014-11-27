@@ -1,58 +1,6 @@
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    margin-bottom: 220px;
-}
-
-.navbar {
-    margin-bottom: 0;
-    background-color: #eee;
+.navbar-jumbotron {
     border-bottom: none;
-}
-
-.navbar .icon-bar {
-    background-color: #333;
-}
-
-.navbar-nav .active>a,
-.navbar-nav .active>a:hover {
-    background-color: #ccc;
-    color: #fff;
-}
-
-.navbar .navbar-nav>.open>a, 
-.navbar .navbar-nav>.open>a:hover, 
-.navbar .navbar-nav>.open>a:focus {
-    background-color: #ddd;
-    color: #555;
-}
-
-.navbar ul.nav li.dropdown.dropdown-auto:hover>a {
-    background-color: #ddd;
-}
-
-.navbar ul.nav li.dropdown.dropdown-auto:hover > ul.dropdown-menu {
-    display: block;
-}
-
-.navbar.underlined {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #eee;
-    color: #747474;
-    margin-top: 20px;
-    padding: 20px 0 10px;
-
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 185px;
+    margin-bottom: 0;
 }
 
 .jumbotron {
@@ -64,7 +12,7 @@ footer {
     margin-top: 0px;
 }
 
-.underlined {
+.jumbotron-underlined {
     border-bottom: solid 2px #ccc;
 }
 
@@ -489,15 +437,4 @@ a.anchor {
 .nav-compact>li>a {
     padding-top: 5px;
     padding-bottom: 5px;    
-}
-
-.nav-side {
-    padding: 15px 20px;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-}
-
-.nav-side h4 {
-    margin-bottom: 5px;
-    color: #555;
 }

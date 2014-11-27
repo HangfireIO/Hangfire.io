@@ -1,7 +1,6 @@
 ---
 layout: products
 title: Hangfire Features
-display_brand: true
 product_name: Hangfire
 sub_active: features
 ---

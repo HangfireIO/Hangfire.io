@@ -1,7 +1,6 @@
 ---
 layout: products
 title: Third Party – Hangfire Extensions
-display_brand: true
 product_name: Hangfire Extensions
 sub_active: ext-3rdparty
 ---
