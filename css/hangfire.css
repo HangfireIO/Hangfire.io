@@ -26,6 +26,12 @@ footer {
     border-bottom: solid 2px #ccc;
 }
 
+.navbar-hangfire .navbar-nav .active>a, 
+.navbar-hangfire .navbar-nav .active>a:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
 .navbar-hangfire .icon-bar {
     background-color: #333;
 }
