@@ -1,5 +1,6 @@
 name: Hangfire
-highlighter: rouge
+markdown: redcarpet
+pygments: true
 
 kramdown:
   input: GFM
