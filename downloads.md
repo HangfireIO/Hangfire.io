@@ -30,6 +30,8 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 <a href="http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 
+<a id="ci-feed"></a>
+
 ## Continuous Integration Feed
 
 Can't wait for a new release? Not a problem as there is a continuous integration feed for Hangfire packages hosted in [AppVeyor](http://www.appveyor.com/). After each successful commit to the `master` or `dev` branches or any open pull request based on these branches, pre-release packages are being pushed to the feed automatically. Here is its url:
