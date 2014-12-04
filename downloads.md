@@ -29,3 +29,36 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 4. Select "Hangfire" and choose Install
 
 <a href="http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+
+## Continuous Integration Feed
+
+Can't wait for a new release? Not a problem as there is a continuous integration feed for Hangfire packages hosted in [AppVeyor](http://www.appveyor.com/). After each successful commit to the `master` or `dev` branches or any open pull request based on these branches, pre-release packages are being pushed to the feed automatically. Here is its url:
+
+```
+https://ci.appveyor.com/nuget/hangfire-6d3854sflnyb
+```
+
+### Adding the feed
+
+To configure a CI feed in Visual Studio open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed.
+
+![Package Sources Window](/img/pkg-source.png)
+
+To configure a project NuGet feed on your development machine run this command:
+
+```
+nuget sources add -Name hangfire-ci -Source https://ci.appveyor.com/nuget/hangfire-6d3854sflnyb
+```
+
+### Updating packages
+
+After adding the feed, use the NuGet Package Manager to obtain new versions of packages. In Visual Studio Solution Explorer, right-click the **References** node and click **Manage NuGet Packages...** and ensure that **Include Prerelease** option is turned on.
+
+<div class="alert alert-warning">
+	<h4>Read release notes carefully</h4>
+	<p>
+		Please read the release notes before updating a package. Since a package can be built after a commit to a pull request based on an outdated code, you may receive a <strong>downgraded version</strong> of a package.
+	</p>
+</div>
+
+<img src="/img/pkg-manager-ci.png" alt="Package Manager Window" style="max-width: 100%;">

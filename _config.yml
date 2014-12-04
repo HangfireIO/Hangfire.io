@@ -1,6 +1,13 @@
 name: Hangfire
-markdown: redcarpet
+
+# For Windows environment
+# highlighter: rouge
+
+# For other environments (Linux, OS X, etc.)
 pygments: true
+markdown: redcarpet
 
 kramdown:
   input: GFM
+
+github_repo_root: https://github.com/HangfireIO/HangfireIO.github.io
