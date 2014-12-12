@@ -5,6 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if page.keywords %}
+        <meta name="keywords" content="{{ page.keywords }}">
+        {% endif %}
+        {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+        {% endif %}
 
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link href="/css/lightbox.css" rel="stylesheet">
