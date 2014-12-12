@@ -21,12 +21,12 @@ Hangfire uses source code from thirs parties. All this code contains a LGPL or L
 
 **Hangfire**
 
+* Includes [LibLog](https://github.com/damianh/LibLog) library that is copyrighted by Damian Hickey and released under the **MIT License**.
 * Includes [ncrontab](https://code.google.com/p/ncrontab/) library copyrighted by Atif Aziz and released under the **Apache License 2.0**.
 * Includes *Microsoft.Owin* library that is a part of [Katana Project](https://katanaproject.codeplex.com/) copyrighted by  Microsoft Open Technologies, Inc. and released under the **Apache License 2.0**.
 * Includes [Cron Expression Descriptor](https://github.com/bradyholt/cron-expression-descriptor) library copyrighted by Brady Holt and released under the **MIT License**.
 * Uses [OWIN](https://github.com/owin-contrib/owin-hosting/) library that is copyrighted by Monkey Square, Inc. and released under the **Apache License 2.0**.
 * Uses [Newtonsoft.Json](http://james.newtonking.com/json) library copyrighted by James Newton-King and released under the **MIT License**.
-* Uses [Common.Logging](https://github.com/net-commons/common-logging) library that is released under the **Apache License 2.0**.
 * Files in directory `Common\ExpressionUtil` as well as `CachedExpressionCompiler.cs` are copyrighted by Microsoft Open Technologies, Inc. and released under the **Apache License 2.0**.
 
 **Dashboard UI**
