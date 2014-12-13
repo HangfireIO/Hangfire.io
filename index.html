@@ -109,7 +109,8 @@ description: Incredibly easy way to perform fire-and-forget, delayed and recurri
     <div class="row">
         <div class="col-md-4">
             <h3>Fire and forget tasks</h3>
-<pre><span class="type">BackgroundJob</span>.Enqueue(<span class="hidden-sm">
+<pre><span class="comm">// There are non-static methods as well</span>
+<span class="type">BackgroundJob</span>.Enqueue(<span class="hidden-sm">
     </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Simple!"</span>));</pre>
 
             <h3>Delayed tasks</h3>
