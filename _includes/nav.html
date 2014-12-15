@@ -1,11 +1,6 @@
 <ul class="nav navbar-nav navbar-right">
-  <li class="dropdown dropdown-auto {% if page.active == 'products' %}active{% endif %}">
-    <a href="/overview.html">Products <span class="caret"></span></a>
-    <ul class="dropdown-menu dropdown-menu-left" role="menu">
-      <li><a href="/overview.html">Hangfire</a></li>
-      <li><a href="/pro/">Hangfire Pro</a></li>
-      <li><a href="/extensions/">Extensions</a></li>
-    </ul>
+  <li {% if page.active == 'overview' %}class="active"{% endif %}>
+    <a href="/overview.html">Overview</a>
   </li>
   <li {% if page.active == 'pricing' %}class="active"{% endif %}>
     <a href="/pricing/">Pricing</a>
