@@ -85,13 +85,23 @@ server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
 
 Background jobs is very important part of an application and Hangfire ensures that any job is being performed **at least once**. To persist background job information between application restarts, all the information is being saved in your favorite persistent storage. Currently the following storages are supported:
 
-<table style="width: 100%; margin: 20px 0;" class="text-center">
+<table style="width: 100%; margin-top: 20px;" class="text-center">
     <tr>
         <td width="33%"><img src="/img/sqlserver.png" alt="SQL Server" width="150"></td>
         <td width="33%"><img src="/img/redis.png" alt="Redis" width="180"></td>
         <td width="33%"><img src="/img/postgresql.png" alt="PostgreSQL" width="250"></td>
     </tr>
 </table>
+<table style="width: 100%; margin-bottom: 20px;" class="text-center">
+    <tr>
+        <td width="16%">&nbsp;</td>
+        <td width="33%"><img src="/img/mongodb.png" alt="MongoDB" width="250"></td>
+        <td width="33%"><img src="/img/composite-c1.png" alt="Composite C1 CMS" width="250" style="margin-top:23px;"></td>
+        <td width="16%">&nbsp;</td>
+    </tr>
+</table>
+
+<em>All product names, logos, and brands are property of their respective owners, and are in no way associated or affiliated with Hangfire.</em>
 
 Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite database system is not supported yet, you can implement it. It is cheaper that implement background job system from scratch.
 
