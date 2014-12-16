@@ -21,7 +21,7 @@ footer {
 }
 
 .navbar-hangfire {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: #eee;
     border-bottom: solid 2px #ccc;
 }
@@ -34,14 +34,6 @@ footer {
 
 .navbar-hangfire .icon-bar {
     background-color: #333;
-}
-
-.navbar-hangfire ul.nav li.dropdown.dropdown-auto:hover>a {
-    background-color: #ddd;
-}
-
-.navbar-hangfire ul.nav li.dropdown.dropdown-auto:hover > ul.dropdown-menu {
-    display: block;
 }
 
 .nav-side {
