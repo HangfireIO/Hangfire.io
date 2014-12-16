@@ -87,16 +87,34 @@ Background jobs is very important part of an application and Hangfire ensures th
 
 <table style="width: 100%; margin-top: 20px;" class="text-center">
     <tr>
-        <td width="33%"><img src="/img/sqlserver.png" alt="SQL Server" width="150"></td>
-        <td width="33%"><img src="/img/redis.png" alt="Redis" width="180"></td>
-        <td width="33%"><img src="/img/postgresql.png" alt="PostgreSQL" width="250"></td>
+        <td width="33%">
+            <img src="/img/sqlserver.png" alt="SQL Server" width="150">
+        </td>
+        <td width="33%">
+            <a href="/pro/">
+                <img src="/img/redis.png" alt="Redis" width="180">
+            </a>
+        </td>
+        <td width="33%">
+            <a href="https://github.com/frankhommers/Hangfire.PostgreSql" target="_blank">
+                <img src="/img/postgresql.png" alt="PostgreSQL" width="250">
+            </a>
+        </td>
     </tr>
 </table>
 <table style="width: 100%; margin-bottom: 20px;" class="text-center">
     <tr>
         <td width="16%">&nbsp;</td>
-        <td width="33%"><img src="/img/mongodb.png" alt="MongoDB" width="250"></td>
-        <td width="33%"><img src="/img/composite-c1.png" alt="Composite C1 CMS" width="250" style="margin-top:23px;"></td>
+        <td width="33%">
+            <a href="https://github.com/sergun/Hangfire.Mongo" target="_blank">
+                <img src="/img/mongodb.png" alt="MongoDB" width="250">
+            </a>
+        </td>
+        <td width="33%">
+            <a href="https://www.nuget.org/packages/Hangfire.CompositeC1" target="_blank">
+                <img src="/img/composite-c1.png" alt="Composite C1 CMS" width="250" style="margin-top:23px;">
+            </a>
+        </td>
         <td width="16%">&nbsp;</td>
     </tr>
 </table>
