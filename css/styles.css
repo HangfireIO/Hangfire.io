@@ -92,64 +92,6 @@
     margin-bottom: 5px;
 }
 
-.callout {
-    margin: 20px 0;
-    padding: 20px;
-    border-left: 3px solid #eee;
-}
-
-.callout h4 {
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.callout p:last-child {
-    margin-bottom: 0;
-}
-
-.callout-info {
-    background-color: #f4f8fa;
-    border-color: #5bc0de;
-}
-
-.callout-info h4 {
-    color: #5bc0de;
-}
-
-.callout-warning {
-    background-color: #fcf8f2;
-    border-color: #f0ad4e;
-}
-
-.callout-warning h4 {
-    color: #f0ad4e;
-}
-
-.features-sidenav {
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.features-sidenav.affix {
-    margin-top: 10px;
-}
-
-.main-twitter-button {
-    vertical-align: bottom;
-    display: inline-block;
-}
-
-.quickstart h3 {
-    font-size: 20px;
-    color: #999;
-    margin-top: 15px;
-    font-weight: lighter;
-}
-
-.quickstart .lead-digit {
-    font-weight: bold;
-}
-
 pre {
     border-color: #eee;
     border: none;
@@ -180,47 +122,19 @@ pre .comm {
 
 [id^=___plusone] { width:62px !important; }
 
+.main-twitter-button {
+    vertical-align: bottom;
+    display: inline-block;
+}
+
 .fb-share-button {
-    vertical-align: top;
+    vertical-align: bottom;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 
 .lb-outerContainer {
     background: transparent;
-}
-
-a.anchor { 
-    display: block; 
-    position: relative; 
-    top: -50px; 
-    visibility: hidden;
-}
-
-.features-sidebar.affix {
-    position: fixed;
-    top: 10px;
-}
-
-.features-sidebar.affix-bottom {
-    position: absolute;
-}
-
-.features-sidebar {
-    width: 263px;
-}
-
-.nav-sidebar>li>a {
-    padding: 5px 20px;
-}
-
-.nav-sidebar>li.active>a {
-    background-color: #428bca;
-    color: #fff;
-}
-
-.first-header {
-    margin-top: 0;
 }
 
 @media (min-width:1200px) {
@@ -301,26 +215,6 @@ a.anchor {
     padding: 10px 40px;
     text-transform: uppercase;
     font-weight: lighter;
-}
-
-.product {
-    display: block;
-    border: solid 1px #ccc;
-    padding: 20px 30px;
-    height: 170px;
-}
-
-.product:hover {
-    background-color: #f0f0f0;
-    text-decoration: none;
-}
-
-.product .product-heading {
-    font-size: 32px;
-}
-
-.product .product-body {
-    color: #777;
 }
 
 .screenshots img {
@@ -434,9 +328,4 @@ a.anchor {
 .tabs-right > .nav-tabs .active > a:focus {
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff;
-}
-
-.nav-compact>li>a {
-    padding-top: 5px;
-    padding-bottom: 5px;    
 }
