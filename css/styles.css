@@ -181,17 +181,13 @@ pre .comm {
 [id^=___plusone] { width:62px !important; }
 
 .fb-share-button {
-    vertical-align: bottom;
+    vertical-align: top;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 
 .lb-outerContainer {
     background: transparent;
-}
-
-.reddit_button {
-    vertical-align: super;
 }
 
 a.anchor { 
