@@ -11,34 +11,27 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://hangfire.io/features.html</loc>
+    <loc>http://hangfire.io/pro/</loc>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>http://hangfire.io/licensing.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://hangfire.io/pricing/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>http://hangfire.io/features.html</loc>
   </url>
   <url>
     <loc>http://hangfire.io/downloads.html</loc>
   </url>
   <url>
-  	<loc>http://hangfire.io/pro/</loc>
-  	<priority>0.6</priority>
-  </url>
-  <url>
-  	<loc>http://hangfire.io/extensions/</loc>
-  	<priority>0.6</priority>
-  </url>
-  <url>
-  	<loc>http://hangfire.io/support/</loc>
-  	<priority>0.6</priority>
-  </url>
-  <url>
-  	<loc>http://hangfire.io/subscriptions/</loc>
-  	<priority>0.6</priority>
+    <loc>http://hangfire.io/extensions.html</loc>
   </url>
   <url>
     <loc>http://hangfire.io/pro/license.html</loc>
-  </url>
-  <url>
-    <loc>http://hangfire.io/extensions/third-party.html</loc>
   </url>
 </urlset>
