@@ -208,17 +208,17 @@ active: pricing
                     <tr>
                         <th>Continuations</th>
                         <td></td>
-                        <td><span class="label label-default">Soon</span></td>
+                        <td><span class="label label-success">Coming next</span></td>
                     </tr>
                     <tr>
                         <th>Parallel Processing</th>
                         <td></td>
-                        <td><span class="label label-default">Soon</span></td>
+                        <td><span class="label label-success">Coming next</span></td>
                     </tr>
                     <tr>
                         <th>Async methods support</th>
                         <td></td>
-                        <td><span class="label label-default">Not ready</span></td>
+                        <td><span class="label label-default">Coming later</span></td>
                     </tr>
                 </tbody>
             </table>
