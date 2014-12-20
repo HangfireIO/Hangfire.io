@@ -17,7 +17,7 @@ active: pricing
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3" style="margin-left: 130px;">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-lg-offset-1-5">
             <div class="plan">
                 <div class="plan-title">
                     <h2>Open</h2>
@@ -41,7 +41,7 @@ active: pricing
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="plan">
                 <div class="plan-title" style="background-color: #5cb85c;">
                     <h2>Business</h2>
@@ -67,7 +67,8 @@ active: pricing
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-3 visible-sm"></div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="plan">
                 <div class="plan-title" style="background-color: #f0ad4e">
                     <h2>Enterprise</h2>

@@ -227,6 +227,12 @@ a.anchor {
     margin-top: 0;
 }
 
+@media (min-width:1200px) {
+    .col-lg-offset-1-5 {
+        margin-left: 12.5%
+    }
+}
+
 .plan {
     text-align: center;
     background-color: #fff;
