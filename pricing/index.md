@@ -206,19 +206,19 @@ active: pricing
                         <td><i class="glyphicon glyphicon-ok"></i></td>
                     </tr>
                     <tr>
-                        <th>Continuations <span class="label label-default">Not ready</span></th>
+                        <th>Continuations</th>
                         <td></td>
-                        <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+                        <td><span class="label label-default">Soon</span></td>
                     </tr>
                     <tr>
-                        <th>Parallel Processing <span class="label label-default">Not ready</span></th>
+                        <th>Parallel Processing</th>
                         <td></td>
-                        <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+                        <td><span class="label label-default">Soon</span></td>
                     </tr>
                     <tr>
-                        <th>Async methods support <span class="label label-default">Not ready</span></th>
+                        <th>Async methods support</th>
                         <td></td>
-                        <td><i class="glyphicon glyphicon-cog" title="Under construction"></i></td>
+                        <td><span class="label label-default">Not ready</span></td>
                     </tr>
                 </tbody>
             </table>
