@@ -55,10 +55,6 @@ footer {
   padding: 5px 20px;
 }
 
-.bs-sidenav.affix {
-  position: static;
-}
-
 /* First level of nav */
 .bs-sidenav {
   padding-top:    10px;
@@ -113,34 +109,6 @@ footer {
   padding-bottom: 3px;
   padding-left: 50px;
   font-size: 90%;
-}
-
-/* Show and affix the side nav when space allows it */
-@media screen and (min-width: 992px) {
-  /* Widen the fixed sidenav */
-  .bs-sidenav.affix,
-  .bs-sidenav.affix-bottom {
-    width: 213px;
-  }
-  .bs-sidenav.affix {
-    position: fixed; /* Undo the static from mobile first approach */
-    top: 80px;
-  }
-  .bs-sidenav.affix-bottom {
-    position: absolute; /* Undo the static from mobile first approach */
-  }
-  .bs-sidenav.affix-bottom .bs-sidenav,
-  .bs-sidenav.affix .bs-sidenav {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  /* Widen the fixed sidenav again */
-  .bs-sidenav.affix-bottom,
-  .bs-sidenav.affix {
-    width: 263px;
-  }
 }
 
 .bs-sidenav .nav > li.active > a,
