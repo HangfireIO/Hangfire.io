@@ -125,18 +125,20 @@ active: pricing
                 All orders are covered by 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
             </p>
 
-            
+            <h3>Can I view the EULA?</h3>
+            <p>
+                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
+            </p>
         </div>
         <div class="col-md-6">
+            <h3>How many licenses do I need to buy?</h3>
+            <p>
+                Each license allows you to embed Hangfire Pro within software that is being developed by one company/organization.
+            </p>
+
             <h3>Is there a trial version?</h3>
             <p>
                 There is no free trial version available for Hangfire Pro. However I do offer a 30 day period with full refund if Pro does not work for you.
-            </p>
-
-            <h3>Can I view the EULA?</h3>
-
-            <p>
-                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
             </p>
 
             <h3>What is the buying process?</h3>
