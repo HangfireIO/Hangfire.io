@@ -1,0 +1,37 @@
+---
+layout: default
+active: blog
+comments: true
+---
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<ol class="breadcrumb">
+				<li><a href="/">Home</a></li>
+  				<li><a href="/blog/">Blog</a></li>
+  				<li class="active">{{ page.title }}</li>
+			</ol>
+
+			<hgroup class="page-header">
+				<h1>{{ page.title }}</h1>
+				{% include blog/subtitle.html %}
+			</hgroup>
+			
+
+			<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  				{{ content }}
+			</article>
+
+			{% if site.disqus_short_name and page.comments == true %}
+			<section id="comment">
+    			<h1 class="title">Comments</h1>
+    			<div id="disqus_thread" aria-live="polite">{% include blog/disqus_thread.html %}</div>
+			</section>
+			{% endif %}
+		</div>
+		<div class="col-md-4">
+			{% include blog/sidebar.html %}
+		</div>
+	</div>
+</div>

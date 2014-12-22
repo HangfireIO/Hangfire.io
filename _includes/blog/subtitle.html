@@ -1,0 +1,8 @@
+<ul class="post-meta">
+	<li>{% include blog/date.html %}</li>
+	<li>{% include blog/tags.html %}</li>
+	{% if site.disqus_short_name and site.disqus_show_comment_count == true %}
+	<li>{% include blog/comments.html %}</li>
+	{% endif %}
+	<li class="pull-right">{% include edit.html %}</li>
+</ul>

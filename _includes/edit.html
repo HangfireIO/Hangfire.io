@@ -1,0 +1,7 @@
+{% if post.url %}
+  {% assign path = post.path %}
+{% else %}
+  {% assign path = page.path %}
+{% endif %}
+
+<i class="glyphicon glyphicon-pencil"></i>&nbsp;<a href="{{ site.github_repo }}/edit/gh-pages/{{ path }}">Edit on GitHub</a>

@@ -1,0 +1,5 @@
+{% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
+
+{% if date %}
+  <i class="glyphicon glyphicon-calendar"></i>&nbsp;<time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished">{{ date | date: "%B %e, %Y" }}</time>
+{% endif %}
