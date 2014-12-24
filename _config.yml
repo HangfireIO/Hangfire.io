@@ -1,11 +1,11 @@
 name: Hangfire
 
 # For Windows environment
-# highlighter: rouge
+highlighter: rouge
 
 # For other environments (Linux, OS X, etc.)
-pygments: true
-markdown: redcarpet
+# pygments: true
+# markdown: redcarpet
 
 kramdown:
   input: GFM
