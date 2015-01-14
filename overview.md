@@ -121,7 +121,7 @@ Background jobs is very important part of an application and Hangfire ensures th
 
 <em>All product names, logos, and brands are property of their respective owners, and are in no way associated or affiliated with Hangfire.</em>
 
-Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite database system is not supported yet, you can implement it. It is cheaper that implement background job system from scratch.
+Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite database system is not supported yet, you can implement it. It is cheaper than implementing a background job system from scratch.
 
 ### Automatic Retries
 
