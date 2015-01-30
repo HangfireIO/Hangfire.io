@@ -9,7 +9,7 @@ kramdown:
   auto_ids: true
   input:    GFM
 
-highlighter: rouge
+# highlighter: rouge
 
 github_repo:   https://github.com/HangfireIO/HangfireIO.github.io
 github_branch: master
