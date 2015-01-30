@@ -1,16 +1,15 @@
 name: Hangfire
+title: Hangfire Blog
 url: http://hangfire.io
 
 author:
   name: 'odinserj'
   url:  https://twitter.com/odinserj
 
-kramdown:
-  auto_ids: true
-  input:    GFM
-  use_coderay: true
+redcarpet:
+  extensions: ["no_intra_emphasis", "autolink", "tables", "with_toc_data"]
 
-# highlighter: rouge
+highlighter: rouge
 
 github_repo:   https://github.com/HangfireIO/HangfireIO.github.io
 github_branch: master

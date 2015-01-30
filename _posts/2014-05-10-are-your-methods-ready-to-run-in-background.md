@@ -5,9 +5,9 @@ title: Are your methods ready to run in background?
 
 Hangfire takes regular classes and regular methods to perform them in the background, because it is simple to use them:
 
-```csharp
+{% highlight csharp %}
 BackgroundJob.Enqueue(() => Console.WriteLine("Hi!"));
-```
+{% endhighlight %}
 
 This snippet says that the `Console.WriteLine` method will be *called* in background. But notice that the name of the method is `Enqueue`, and not the `Call`, `Invoke` and so on. 
 
@@ -23,10 +23,10 @@ Before creating a background job, the information about the given method (its ty
 
 Arguments are also serialized to string, but arguments serialization process uses the `TypeConverter` class. All standard classes like numbers, strings, dates and so on already have the corresponding `TypeConverter` implementation, but if you want to pass an instance of a custom class as an argument, you should write the custom converter first.
 
-```csharp
+{% highlight csharp %}
 // Does not work until you implement the custom TypeConverter.
 BackgroundJob.Enqueue(() => CheckArticle(new Article()));
-```
+{% endhighlight %}
 
 Furthermore, serialized arguments can take more space, and it often is more efficient to pass database identifiers or file names instead of their contents.
 
@@ -38,7 +38,7 @@ So, the *execution context* term includes not only thread context, request conte
 
 That is why if you are querying data inside a background job that corresponds to the execution context where the job was enqueued, it may fail. If you need to pass the current state to a job, use arguments or shared storage.
 
-```csharp
+{% highlight csharp %}
 public void Method()
 {
     // Does not work, use distributed locks.
@@ -50,7 +50,7 @@ public void Method()
         // Processing
     }
 }
-```
+{% endhighlight %}
 
 #### Delayed invocation
 
@@ -83,7 +83,7 @@ You can disable automatic retry on failure, but there is another problem – sin
 
 So, validate your arguments early, and instead of doing this:
 
-```csharp
+{% highlight csharp %}
 public ActionResult CreateComment(string message)
 {
     BackgroundJob.Enqueue(() => CheckComment(message));
@@ -99,11 +99,11 @@ public void CheckComment(string message)
 
     // Processing
 }
-```
+{% endhighlight %}
 
 Do this:
 
-```csharp
+{% highlight csharp %}
 public ActionResult CreateComment(string message)
 {
     if (message == null)
@@ -119,7 +119,7 @@ public void CheckComment(string message)
     // But you can leave the guard condition here.
     // Processing
 }
-```
+{% endhighlight %}
 
 #### Method can be called multiple times
 
@@ -131,7 +131,7 @@ You can always disable the automatic retry feature by applying the `[Retry(0)]` 
 
 But as a general rule remember, that your job will be performed **at least once**. You can test your job for idempotence by calling it multiple times and compare the result:
 
-```csharp
+{% highlight csharp %}
 public void TestIdempotence()
 {
    // Arrange
@@ -144,7 +144,7 @@ public void TestIdempotence()
    // Assert
    // For example, check that records were not duplicated.
 }
-```
+{% endhighlight %}
 
 #### Method may become unavailable
 
@@ -164,7 +164,7 @@ You can safely change parameter names, but the following things will lead to a b
 
 Of course you can do all the above things, if there are no jobs in a storage. But instead of doing this, add a new method without touching the old one and call the new method from the old one until all old jobs become processed:
 
-```csharp
+{% highlight csharp %}
 public void OldMethod(string arg1, int arg2) 
 { 
     // Redirect
@@ -175,7 +175,7 @@ public void NewMethod(stirng arg1, int arg2, double arg3)
 {
     // Real processing
 }
-```
+{% endhighlight %}
 
 ### Summary
 
