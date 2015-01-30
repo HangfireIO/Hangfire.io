@@ -65,7 +65,7 @@ footer {
     margin-bottom: 20px;
 }
 
-.bs-sidenav div {
+.bs-sidenav > div {
     margin: 5px 20px 7px;
     color: #888;
 }
