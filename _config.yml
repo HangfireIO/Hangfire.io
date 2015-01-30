@@ -8,6 +8,7 @@ author:
 kramdown:
   auto_ids: true
   input:    GFM
+  use_coderay: true
 
 # highlighter: rouge
 
