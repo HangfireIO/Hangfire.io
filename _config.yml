@@ -1,12 +1,12 @@
 name: Hangfire
 url: http://hangfire.io
 
+author:
+  name: 'odinserj'
+  url:  https://twitter.com/odinserj
+
 # For Windows environment
 # highlighter: rouge
-
-# For other environments (Linux, OS X, etc.)
-# pygments: true
-# markdown: redcarpet
 
 kramdown:
   auto_ids: true
