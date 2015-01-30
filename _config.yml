@@ -5,17 +5,18 @@ url: http://hangfire.io
 # highlighter: rouge
 
 # For other environments (Linux, OS X, etc.)
-pygments: true
-markdown: redcarpet
+# pygments: true
+# markdown: redcarpet
 
 kramdown:
-  input: GFM
+  auto_ids: true
+  input:    GFM
 
-github_repo: https://github.com/HangfireIO/HangfireIO.github.io
+github_repo:   https://github.com/HangfireIO/HangfireIO.github.io
 github_branch: master
 
-paginate: 5
+paginate:      5
 paginate_path: "blog/page:num/"
 
-disqus_short_name: hangfire
+disqus_short_name:         hangfire
 disqus_show_comment_count: true
