@@ -19,7 +19,7 @@ sub_active: extensions
 
 * [Hangfire.Autofac](https://github.com/HangfireIO/Hangfire.Autofac)
 * [Hangfire.Ninject](https://github.com/HangfireIO/Hangfire.Ninject)
-* [Hangfire.TinyIoC](https://github.com/richclement/HangFire.TinyIoC) by [@richclement](https://github.com/richclement)
+* [Hangfire.TinyIoC](https://github.com/richclement/Hangfire.TinyIoC) by [@richclement](https://github.com/richclement)
 * [Hangfire.Windsor](https://github.com/BredStik/Hangfire.Windsor) by [@BredStik](https://github.com/BredStik)
 * [Hangfire.SimpleInjector](https://github.com/devmondo/Hangfire.SimpleInjector) by [@devmondo](https://github.com/devmondo/Hangfire.SimpleInjector)
 * [Hangfire.Unity](https://github.com/phenixdotnet/Hangfire.Unity) by [@phenixdotnet](https://github.com/phenixdotnet)

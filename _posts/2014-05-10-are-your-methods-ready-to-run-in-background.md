@@ -3,7 +3,7 @@ layout: post
 title: Are your methods ready to run in background?
 ---
 
-HangFire takes regular classes and regular methods to perform them in the background, because it is simple to use them:
+Hangfire takes regular classes and regular methods to perform them in the background, because it is simple to use them:
 
 ```csharp
 BackgroundJob.Enqueue(() => Console.WriteLine("Hi!"));
@@ -32,7 +32,7 @@ Furthermore, serialized arguments can take more space, and it often is more effi
 
 #### Execution context is being changed
 
-In the simplest case, such as using `ThreadPool.QueueUserWorkItem` or `Task.Factory.StartNew` methods, only thread is being changed. But in HangFire, you can use different process, or different server to process background jobs.
+In the simplest case, such as using `ThreadPool.QueueUserWorkItem` or `Task.Factory.StartNew` methods, only thread is being changed. But in Hangfire, you can use different process, or different server to process background jobs.
 
 So, the *execution context* term includes not only thread context, request context and so on, but also static data, including local locks, local filesystem, etc.
 
@@ -127,7 +127,7 @@ Your method can be retried manually (through the Monitor interface) or automatic
 
 So, be prepared for this situation. Try to do all your background job methods [idempotent](http://en.wikipedia.org/wiki/Idempotence). If it is impossible, be prepared that in very rare cases it can fire multiple times.
 
-You can always disable the automatic retry feature by applying the `[Retry(0)]` filter to the exact method or globally. But to successfully fight with ASP.NET unexpected application domain unload in the middle of a job processing, HangFire retries them automatically despite of the given attribute. But don't worry too much, these cases happen very rarely.
+You can always disable the automatic retry feature by applying the `[Retry(0)]` filter to the exact method or globally. But to successfully fight with ASP.NET unexpected application domain unload in the middle of a job processing, Hangfire retries them automatically despite of the given attribute. But don't worry too much, these cases happen very rarely.
 
 But as a general rule remember, that your job will be performed **at least once**. You can test your job for idempotence by calling it multiple times and compare the result:
 
