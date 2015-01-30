@@ -58,7 +58,7 @@ As I already said, Hangfire Pro will solve performance/usability/monitoring issu
 
 Batch jobs will help to build more complex workflows with Hangfire. They will give you the power of **parallel processing** and **continuations**, you can look at this code snippet:
 
-{% highlight csharp %}
+```csharp
 BatchJob
     .Create(x =>
     {
@@ -67,7 +67,7 @@ BatchJob
         x.Enqueue(() => Console.Write("With"));
     })
     .ContinueWith(() => Console.WriteLine("Predictable continuation"));
-{% endhighlight %}
+```
 
 Three first tasks will be executed in parallel, end the continuation will be invoked only after successful run of the first tasks.
 
@@ -75,7 +75,7 @@ Three first tasks will be executed in parallel, end the continuation will be inv
 
 As with [async controllers](http://msdn.microsoft.com/en-us/library/ee728598(v=vs.100).aspx) in ASP.NET MVC, this feature enables you to improve overall throughput keeping the lowest number of workers in the pool. Instead of waiting for an outstanding I/O operation, they will be able to process other background jobs as well.
 
-{% highlight csharp %}
+```csharp
 public static async Task HighlightAsync(int snippetId)
 {
     var snippet = await Context.Snippets.SingleOrDefaultAsync(snippetId);
@@ -83,7 +83,7 @@ public static async Task HighlightAsync(int snippetId)
 
     await Context.SaveChangesAsync();
 }
-{% endhighlight %}
+```
 
 ### What are you waiting for?
 
