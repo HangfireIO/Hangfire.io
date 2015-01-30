@@ -9,12 +9,9 @@ author:
 # Windows environments
 # highlighter: rouge
 
-# Other environments
-markdown: redcarpet
-pygments: true
-
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+kramdown:
+  auto_ids: true
+  input:    GFM
 
 github_repo:   https://github.com/HangfireIO/HangfireIO.github.io
 github_branch: master
