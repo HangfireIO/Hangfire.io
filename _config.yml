@@ -5,12 +5,11 @@ author:
   name: 'odinserj'
   url:  https://twitter.com/odinserj
 
-# For Windows environment
-# highlighter: rouge
-
 kramdown:
   auto_ids: true
   input:    GFM
+
+highlighter: rouge
 
 github_repo:   https://github.com/HangfireIO/HangfireIO.github.io
 github_branch: master
