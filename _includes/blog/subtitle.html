@@ -1,4 +1,13 @@
 <ul class="post-meta">
+	{% capture author %}{{ page.author }}{{ post.author }}{% endcapture %}
+	{% if author.size > 0 %}
+	<li>
+		<img src="https://github.com/{{ author }}.png" alt="{{ author }}" style="width: 30px;">
+		by
+		<a style="font-weight: bold;" href="https://github.com/{{ author }}/">@{{ author }}</a>
+	</li>
+	{% endif %}
+
 	{% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
 	{% if date.size > 0 %}
 	<li>		
@@ -6,7 +15,7 @@
 	</li>
 	{% endif %}
 
-	{% capture tags %}{{ page.tags | join: ', ' }}{{ post.tags | join: ', ' }}{% endcapture %}
+	{% capture tags %}{{ page.categories | join: ', ' }}{{ post.categories | join: ', ' }}{% endcapture %}
 	{% if tags.size > 0 %}
 	<li>
 		<i class="glyphicon glyphicon-tag"></i>&nbsp;<span>{{ tags }}</span>

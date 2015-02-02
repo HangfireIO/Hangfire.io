@@ -1,0 +1,33 @@
+---
+layout: default
+active: blog
+---
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+		<h1 class="page-header">{{ page.title }}</h1>
+			<div class="posts">
+				{{ content }}
+			</div>
+
+			<nav>
+  				<ul class="pager">
+  				{% if paginator.next_page %}
+  					<li class="previous">
+	  					<a href="{{ paginator.next_page_path }}"><span aria-hidden="true">&larr;</span> Older</a>
+	  				</li>
+	  			{% endif %}
+	  			{% if paginator.previous_page %}
+	  				<li class="next">
+	  					<a href="{{ paginator.previous_page_path }}">Newer <span aria-hidden="true">&rarr;</span></a>
+	  				</li>
+	  			{% endif %}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-md-4">
+			{% include blog/sidebar.html %}
+		</div>
+	</div>
+</div>

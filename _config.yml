@@ -7,7 +7,7 @@ author:
   url:  https://twitter.com/odinserj
 
 # Windows environments
-# highlighter: rouge
+highlighter: rouge
 
 kramdown:
   auto_ids: true

@@ -334,6 +334,7 @@ pre .comm {
     padding: 0;
     list-style: none;
     color: #999;
+    line-height: 32px;
 }
 
 .post-meta a {

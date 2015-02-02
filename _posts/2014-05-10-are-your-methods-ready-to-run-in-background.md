@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Are your methods ready to run in background?
+author: odinserj
 ---
 
 Hangfire takes regular classes and regular methods to perform them in the background, because it is simple to use them:

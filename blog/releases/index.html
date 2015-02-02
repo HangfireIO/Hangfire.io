@@ -1,8 +1,8 @@
 ---
 layout: blog
-title: Hangfire Blog
+title: Hangfire Releases
 ---
 
-{% for post in paginator.posts %}
+{% for post in site.categories.release %}
 	{% include blog/post_item.html %}
 {% endfor %}
