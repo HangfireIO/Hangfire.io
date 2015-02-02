@@ -353,3 +353,14 @@ pre .comm {
 .post-separator {
     margin: 40px 0;
 }
+
+.rss-link {
+    float: right;
+    font-size: 16px;
+    margin-top: 16px;
+    color: #bbb;
+}
+
+.rss-link a {
+    color: #bbb;
+}
