@@ -136,15 +136,15 @@ active: pricing
                 After that 1 year, you can continue to use the version you have forever, or you can choose to renew your subscription for another 12 months to continue getting updates. By renewing annually, you help me to continue to innovate and add new features to the product.
             </p>
 
+            <h3>What payment methods are supported?</h3>
+            <p>
+                We are accepting credit cards and PayPal. If you want to purchase Hangfire via bank wire transfer, mail/check or purchase order, please <a href="mailto:support@hangfire.io">contact me</a>, and I'll send you the details.
+            </p>     
+
             <h3>What if I am not satisfied?</h3>
             <p>
                 All orders are covered by 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
-            </p>
-
-            <h3>Can I view the EULA?</h3>
-            <p>
-                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
-            </p>
+            </p>                           
         </div>
         <div class="col-md-6">
             <h3>How many licenses do I need to buy?</h3>
@@ -152,9 +152,9 @@ active: pricing
                 Each license allows you to embed Hangfire Pro within software that is being developed by one company/organization.
             </p>
 
-            <h3>Is there a trial version?</h3>
+            <h3>Can I view the EULA?</h3>
             <p>
-                There is no free trial version available for Hangfire Pro. However I do offer a 30 day period with full refund if Pro does not work for you.
+                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
             </p>
 
             <h3>What is the buying process?</h3>
@@ -167,6 +167,11 @@ active: pricing
                 All prices on this page are in USD, however when you generate a quote or purchase you can choose between USD, AUD, GBP and EUR.
             </p>
 
+            <h3>Is there a trial version?</h3>
+            <p>
+                There is no free trial version available for Hangfire Pro. However I do offer a 30 day period with full refund if Pro does not work for you.
+            </p>    
+
             <h3>What if I need to change a subscription?</h3>
 
             <p>
@@ -176,8 +181,6 @@ active: pricing
             <p>
                 You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
             </p>
-
-            
         </div>
     </div>
 
