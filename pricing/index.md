@@ -118,68 +118,64 @@ active: pricing
         <div class="col-md-6">
             <h3>What am I buying?</h3>
             <p>
-                Hangfire is an open-source software product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and you can use it even in commercial and/or properietary applications. Hangfire is fully functional and ready to use.
+                Hangfire is an <strong>open-source software</strong> product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and you can use it even in commercial and/or properietary applications. Hangfire is fully functional and ready to use.
             </p>
 
             <p>
-                Subscriptions allow you to use additional functionality offered by <a href="/pro/">Hangfire Pro</a> extension libraries and contact private e-mail support. This is also the way to ensure that Hangfire project will stay here for a long term.
-            </p>
-
-            <h3>Is this a subscription or a perpetual license?</h3>
-
-            <p>
-                Perpetual, with a yearly maintenance renewal. You are allowed to use any
-                release of Hangfire Pro that was available when you purchased the subscription, as well as any future releases (including new features, bug fixes, etc.) for 1 year from the date of purchase.
-            </p>
-
-            <p>
-                After that 1 year, you can continue to use the version you have forever, or you can choose to renew your subscription for another 12 months to continue getting updates. By renewing annually, you help me to continue to innovate and add new features to the product.
+                Subscriptions allow you to use <strong>additional functionality</strong> offered by <a href="/pro/">Hangfire Pro</a> extension libraries and contact private <strong>e-mail support</strong>. This is also the way to ensure that Hangfire project will stay here for a long term.
             </p>
 
             <h3>What payment methods are supported?</h3>
             <p>
-                We are accepting credit cards and PayPal. If you want to purchase Hangfire via bank wire transfer, mail/check or purchase order, please <a href="mailto:support@hangfire.io">contact me</a>, and I'll send you the details.
+                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire via bank <strong>wire transfer</strong>, mail/check or purchase order, please <a href="mailto:support@hangfire.io">contact me</a>, and I'll send you the details.
             </p>     
 
             <h3>What if I am not satisfied?</h3>
             <p>
-                All orders are covered by 30-days, no-questions-asked money back policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
-            </p>                           
-        </div>
-        <div class="col-md-6">
-            <h3>How many licenses do I need to buy?</h3>
-            <p>
-                Each license allows you to embed Hangfire Pro within software that is being developed by one company/organization.
-            </p>
-
-            <h3>Can I view the EULA?</h3>
-            <p>
-                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
-            </p>
+                All orders are covered by <strong>30-days</strong>, no-questions-asked <strong>money back</strong> policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
+            </p>   
 
             <h3>What is the buying process?</h3>
             <p>
                 Click the <em>Buy Now</em> button and put in your info.  Your license will be associated with the email address you use. You'll receive the latest Hangfire Pro immediately, and I'll generate your credentials for a private NuGet server and email them to you within 24 hours. I can also give you access to the private GitHub repository on your request.
-            </p>
+            </p>       
 
+            <h3>How many licenses do I need to buy?</h3>
+            <p>
+                Each license allows you to embed Hangfire Pro within software that is being developed by one company/organization.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3>Is this a subscription or a perpetual license?</h3>
+            <p>
+                <strong>Perpetual, with a yearly maintenance renewal</strong>. You are allowed to use any
+                release of Hangfire Pro that was available when you purchased the subscription, as well as any future releases (including new features, bug fixes, etc.) for 1 year from the date of purchase.
+            </p>
+            <p>
+                After that 1 year, you can continue to use the version you have forever, or you can choose to renew your subscription for another 12 months to continue getting updates. By renewing annually, you help me to continue to innovate and add new features to the product.
+            </p>
+ 
             <h3>Which currencies do you accept?</h3>
             <p>
                 All prices on this page are in USD, however when you generate a quote or purchase you can choose between USD, AUD, GBP and EUR.
             </p>
 
-            <h3>Is there a trial version?</h3>
-            <p>
-                There is no free trial version available for Hangfire Pro. However I do offer a 30 day period with full refund if Pro does not work for you.
-            </p>    
-
             <h3>What if I need to change a subscription?</h3>
-
             <p>
                 Not a problem. Just <a href="mailto:support@hangfire.io">let me know</a>, and I'll create a custom invoice so that you only pay the difference.You'll never be any worse off.
             </p>
-
             <p>
                 You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
+            </p>
+
+            <h3>Is there a trial version?</h3>
+            <p>
+                There is no free trial version available for Hangfire Pro. However I do offer a 30 day period with full refund if Pro does not work for you.
+            </p>   
+            
+            <h3>Can I view the EULA?</h3>
+            <p>
+                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
             </p>
         </div>
     </div>
