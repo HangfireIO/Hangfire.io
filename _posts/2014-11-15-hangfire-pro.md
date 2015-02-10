@@ -2,6 +2,7 @@
 layout: post
 title: Introducing Hangfire Pro
 author: odinserj
+redirect_from: /2014/11/15/hangfire-pro.html
 ---
 
 As an ASP.NET developer, I always wanted to have something simple to handle scenarios where you need to build a long-running async task and show a loader to a user:
