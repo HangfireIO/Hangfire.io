@@ -27,3 +27,4 @@ paginate_path: "blog/page:num/"
 gems:
   - jekyll-redirect-from
   - jekyll-mentions
+  - jekyll-sitemap
