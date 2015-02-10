@@ -3,6 +3,7 @@ layout: products
 title: Hangfire Features
 product_name: Hangfire
 sub_active: features
+redirect_from: /core/features.html
 ---
 
 ### Queue-based processing

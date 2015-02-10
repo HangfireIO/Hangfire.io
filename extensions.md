@@ -3,6 +3,9 @@ layout: products
 title: Hangfire Extensions
 product_name: Hangfire Extensions
 sub_active: extensions
+redirect_from:
+- /extensions/
+- /extensions/third-party.html
 ---
 
 ## Authorization

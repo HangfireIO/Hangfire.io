@@ -2,6 +2,7 @@
 layout: default
 title: Hangfire Pricing
 active: pricing
+redirect_from: /subscriptions/
 ---
 
 <div class="container">
