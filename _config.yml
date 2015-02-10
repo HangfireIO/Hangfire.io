@@ -21,3 +21,7 @@ paginate_path: "blog/page:num/"
 
 disqus_short_name:         hangfire
 disqus_show_comment_count: true
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-mentions
