@@ -96,23 +96,7 @@ redirect_from: /subscriptions/
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <p class="text-muted text-center" style="font-size: 14px;">
-                We use industry-standard encryption to protect the confidentiality of your personal information.
-                <br>
-                Purchase and product fulfillment are through <a href="http://www.fastspring.com/purchasing-through-fastspring.php?_ga=1.41043042.1105368288.1409137638" target="_blank">FastSpring</a>, a trusted reseller for <a href="http://hangfire.io">http://hangfire.io</a>
-                <br> 
-                <a href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=sites.fastspring.com&lang=en" target="_blank">
-                <img src="https://dcnz2rrcot657.cloudfront.net/seal/nortonseal.png" alt="Norton Secured"></a>
-                &nbsp;
-                <a href="http://www.fastspring.com/purchasing-through-fastspring.php?_ga=1.41043042.1105368288.1409137638" target="_blank">
-                <img src="https://dxezhqhj7t42i.cloudfront.net/78a6a4d4-c033-4c22-af93-a950471d3958/fs_secure-ordering.png" alt="Secure ordering by FastSpring"></a>
-            </p>
-        </div>
-    </div>
-
+    
     <h2>Frequently asked questions</h2>
 
     <div class="row">
