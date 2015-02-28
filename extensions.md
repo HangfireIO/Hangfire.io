@@ -20,7 +20,8 @@ Project | Author | Latest Version
 --- | --- | ---
 [Hangfire.PostgreSql](https://github.com/frankhommers/Hangfire.PostgreSql) | [@frankhommers](https://github.com/frankhommers) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.PostgreSql.svg) 
 [Hangfire.Mongo](https://github.com/sergun/Hangfire.Mongo) | [@sergun](https://github.com/sergun) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.Mongo.svg) 
-[Hangfire.CompositeC1](https://www.nuget.org/packages/Hangfire.CompositeC1) |  [@burningice](http://www.nuget.org/profiles/burningice) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.CompositeC1.svg) 
+[Hangfire.CompositeC1](https://www.nuget.org/packages/Hangfire.CompositeC1) |  [@burningice](http://www.nuget.org/profiles/burningice) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.CompositeC1.svg) |
+[Hangfire.Firebird](https://github.com/rsegerink/Hangfire.Firebird) | [@rsegerink](https://github.com/rsegerink) |
 
 ## IoC Containers
 
