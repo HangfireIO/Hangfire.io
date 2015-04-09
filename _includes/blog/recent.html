@@ -5,14 +5,14 @@
             <a href="/blog/">All Posts</a>
         </li>
         <li class="{% if page.title == 'Hangfire Releases' %}active{% endif %}">
-            <a href="/blog/releases.html">Hangfire Releases</a>
+            <a href="/blog/releases.html">Releases</a>
         </li>
     </ul>
     <div><h4>Recent Releases</h4></div>
     <ul class="nav">
         {% for post in site.categories.release limit:5 %}
         <li class="{% if page.title == post.title %}active{% endif %}">
-            <a href="{{ post.url }}">Version {{ post.version }}</a>
+            <a href="{{ post.url }}">{{ post.version }}</a>
         </li>
         {% endfor %}
     </ul>
