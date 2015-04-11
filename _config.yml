@@ -1,5 +1,5 @@
 title: Hangfire
-description: Incredibly easy way to perform fire-and-forget, delayed and recurring tasks inside ASP.NET applications.
+description: An easy way to perform fire-and-forget, delayed and recurring tasks inside ASP.NET applications.
 url: http://hangfire.io
 
 author:
