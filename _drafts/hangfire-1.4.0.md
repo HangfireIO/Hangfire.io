@@ -6,7 +6,9 @@ version: 1.4.0
 author: odinserj
 ---
 
-About 4 months passed since last major release of Hangfire 1.3, and I'm pleased to introduce a pre-release version of Hangfire 1.4 with a lot of new features added, and a lot of stability improvements made. This is the most important upgrade since 1.0 version released.
+About 4 months passed since release of Hangfire 1.3, and I'm pleased to introduce the next major release&nbsp;– Hangfire 1.4 with a lot of new features added and a lot of stability improvements made. This is the most important upgrade since version 1.0.
+
+First of all, I would like to thank all users and contributors
 
 ### Global Configuration
 
@@ -15,16 +17,16 @@ OWIN bootstrapper, `JobStorage.Current`-like properties and simple instances lik
 {% highlight csharp %}
 GlobalConfiguration.Configuration
     .UseNLog()
-    .UseAutofac()
-    .UseRedis();
+    .UseAutofacActivator()
+    .UseRedisStorage();
 {% endhighlight %}
 
 Moreover, this is a single plugging point for extensions that may add new filters, new dashboard pages, etc:
 
 {% highlight csharp %}
 GlobalConfiguration.Configuration
-    .UseRedis()
-    .UseBatches(); // Adds a menu item, a couple of pages as well as different filters
+    .UseRedisStorage()
+    .UseBatches(); 
 {% endhighlight %}
 
 ### Time Zone Support
@@ -45,6 +47,10 @@ RecurringJob.AddOrUpdate(
 ### Continuations
 
 Continuations allow you to chain multiple jobs together and run one jobs only after another's completion. This may drastically improve job composition and make your jobs re-usable.
+
+{% highlight csharp %}
+GlobalConfiguration.Configuration.UseContinuations();
+{% endhighlight %}
 
 {% highlight csharp %}
 var jobId = BackgroundJob.Enqueue(() => Console.Write("Hello, "));
@@ -70,4 +76,4 @@ Dashboard was redesigned, new navigation, less colors, more accents. It also bec
 
 ### And much more!
 
-Full release notes are here: https://github.com/HangfireIO/Hangfire/releases/tag/v1.4.0-beta1
+Please see raw release notes for versions [1.4.0-beta1](/blog/2015/04/06/hangfire-1.4.0-beta1.html) and [1.4.0-rc1](/blog/2015/04/09/hangfire-1.4.0-rc1.html).
