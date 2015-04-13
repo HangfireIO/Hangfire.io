@@ -131,13 +131,15 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – Hangfire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
 <pre><span class="keywd">public</span> <span class="keywd">void</span> Configuration(<span class="type">IAppBuilder</span> app)
 {
-    app.UseHangfire(cfg => cfg.UseServer());
+    app.UseHangfireServer();
 }</pre>
 
             <h3>… or anywhere else</h3>
             <p><em>In console application, Windows Service, Azure Worker Role, etc.</em></p>
-<pre><span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">BackgroundJobServer</span>();
-server.Start();</pre>
+<pre><span class="keywd">using</span> (<span class="keywd">new</span> <span class="type">BackgroundJobServer</span>())
+{
+    <span class="comm">/* ... */</span>
+}</pre>
         </div>
         <div class="col-md-4 hidden-xs hidden-sm">
             <a height="387" class="twitter-timeline" href="https://twitter.com/hangfireio" data-widget-id="451027617567621120">Твиты пользователя @hangfireio</a>
