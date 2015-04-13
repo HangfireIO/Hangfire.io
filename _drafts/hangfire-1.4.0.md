@@ -6,32 +6,36 @@ version: 1.4.0
 author: odinserj
 ---
 
-About 4 months passed since release of Hangfire 1.3, and I'm pleased to introduce the next major release&nbsp;– Hangfire 1.4 with a lot of new features added and a lot of stability improvements made. This is the most important upgrade since version 1.0.
+About 4 months passed since release of version 1.3, and I'm pleased to introduce the next major release&nbsp;– Hangfire 1.4 with a lot of new features added and a lot of stability improvements made. This is the most important upgrade since version 1.0.
 
-First of all, I would like to thank all users and contributors
+### New Configuration
 
-### Global Configuration
+Prior to 1.4, there were a lot of classes that drove the configuration – `JobStorage`, `JobActivator`, `LogProvider` and a couple of others. And it was very hard to explore them – as this approach requires you to dig into documentation, look into different namespaces, etc. I tried to resolve this using extension methods for OWIN's `IAppBuilder` interface, however sometimes (for example, in [always running mode](http://docs.hangfire.io/en/latest/deployment-to-production/making-aspnet-app-always-running.html)) OWIN context is not applicable.
 
-OWIN bootstrapper, `JobStorage.Current`-like properties and simple instances like `var storage = new SqlServerStorage` bring a lot of confusion, especially when trying to make Always Running mode working. With the latest release, only global and non-global settings are used through the `GlobalConfiguration` class:
+`GlobalConfiguration` class is aimed to solve these issues and provide an entry point for all configuration options (plus allowing you to define custom ones):
 
 {% highlight csharp %}
 GlobalConfiguration.Configuration
-    .UseNLog()
+    .UseNLogLogProvider()
     .UseAutofacActivator()
     .UseRedisStorage();
 {% endhighlight %}
 
-Moreover, this is a single plugging point for extensions that may add new filters, new dashboard pages, etc:
+OWIN's `IAppBuilder` interface extension methods were also updated and now as simple as:
 
 {% highlight csharp %}
-GlobalConfiguration.Configuration
-    .UseRedisStorage()
-    .UseBatches(); 
+public void Configuration(IAppBuilder app)
+{
+    app.UseHangfireServer();
+    app.UseHangfireDashboard();
+}
 {% endhighlight %}
+
+Previous configuration methods still working, but some of them marked with the `ObsoleteAttribute`.
 
 ### Time Zone Support
 
-Recurring job received some love and it is now possible to specify time zone:
+Time zone support has been added for recurring jobs. It is based on BCL's `TimeZoneInfo` class, and the usage is pretty simple:
 
 {% highlight csharp %}
 RecurringJob.AddOrUpdate(() => Console.Write(), "15 18 * * *", TimeZoneInfo.Utc);
@@ -44,20 +48,18 @@ RecurringJob.AddOrUpdate(
     TimeZoneInfo.FindSystemTimeZoneById("Hawaiian Standard Time"));
 {% endhighlight %}
 
+By default, UTC is being used to schedule recurring jobs, but this will be changed in 2.0 release to correspond other default values of other schedulers. Please note that time zone identifiers don't match between Windows and non-Windows machines.
+
 ### Continuations
 
 Continuations allow you to chain multiple jobs together and run one jobs only after another's completion. This may drastically improve job composition and make your jobs re-usable.
-
-{% highlight csharp %}
-GlobalConfiguration.Configuration.UseContinuations();
-{% endhighlight %}
 
 {% highlight csharp %}
 var jobId = BackgroundJob.Enqueue(() => Console.Write("Hello, "));
 BackgroundJob.ContinueWith(jobId, () => Console.WriteLine("world!"));
 {% endhighlight %}
 
-By default, a continuation will be enqueued after parent job completion. However, you can schedule it as well:
+By default, continuation will be *enqueued* after parent job completion. However, you can create a background job in any other state to implement more complex workflows:
 
 {% highlight csharp %}
 var jobId = BackgroundJob.Enqueue(() => Console.Write("Hello, "));
@@ -68,12 +70,14 @@ BackgroundJob.ContinueWith(
     new ScheduledState(TimeSpan.Minutes(1)));
 {% endhighlight %}
 
+Please note you can't access parent job's return value as this requires some architectural changes. Hope this will be implemented in version 2.0.
+
 ### Redesigned Dashboard
 
-Dashboard was redesigned, new navigation, less colors, more accents. It also become extensible, so you can add new pages and modify navigation menus. Even if you slightly look at the picture below, you'll get all the problems you have – 1573 items in queues, no active servers and one failed jobs you have to re-queue or delete.
+Dashboard was redesigned, new navigation, less colors, more accents. It also became extensible, so you can add new pages and modify navigation menus. Just look at this:
 
 [![New Dashboard](/img/new-dashboard.png)](/img/new-dashboard.png)
 
 ### And much more!
 
-Please see raw release notes for versions [1.4.0-beta1](/blog/2015/04/06/hangfire-1.4.0-beta1.html) and [1.4.0-rc1](/blog/2015/04/09/hangfire-1.4.0-rc1.html).
+Please see raw release notes for versions [1.4.0-beta1](/blog/2015/04/06/hangfire-1.4.0-beta1.html), [1.4.0-rc1](/blog/2015/04/09/hangfire-1.4.0-rc1.html) and [1.4.0-rc2](/blog/2015/04/11/hangfire-1.4.0-rc2.html).
