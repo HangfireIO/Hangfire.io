@@ -210,12 +210,12 @@ redirect_from: /subscriptions/
                     <tr>
                         <th>Continuations</th>
                         <td></td>
-                        <td><span class="label label-success">Coming next</span></td>
+                        <td><span class="label label-success">Release Candidate available</span></td>
                     </tr>
                     <tr>
                         <th>Parallel Processing</th>
                         <td></td>
-                        <td><span class="label label-success">Coming next</span></td>
+                        <td><span class="label label-success">Release Candidate available</span></td>
                     </tr>
                     <tr>
                         <th>Async methods support</th>
