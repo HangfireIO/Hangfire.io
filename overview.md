@@ -43,7 +43,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
         <p>
             These jobs are being executed <strong>only once</strong> and almost <strong>immediately</strong> after they fired.
         </p>
-<pre><span class="type">BackgroundJob</span>.Enqueue(
+<pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Enqueue(
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Fire-and-forget!"</span>));</pre>
     </div>
     <div class="col-md-6">
@@ -51,7 +51,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
         <p>
             Delayed jobs are being executed <strong>only once</strong> too, but not immediately – only after the <strong>specified time interval</strong>.
         </p>
-<pre><span class="type">BackgroundJob</span>.Schedule(
+<pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Schedule(
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Delayed!"</span>),
     <span class="type">TimeSpan</span>.FromDays(7));</pre>
     </div>
@@ -68,7 +68,17 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <span class="type">Cron</span>.Daily);</pre>
     </div>
     <div class="col-md-6">
-    <!--
+        <h4>Continuations</h4>
+        <p>
+            Continuations fired when parent job <strong>has been finished</strong>.
+        </p>
+<pre><span class="type">BackgroundJob</span>.ContinueWith(
+    jobId, <span class="comment">// from previous examples</span>
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Continuation!"</span>));</pre>
+    </div>
+</div>
+<!-- div class="row">
+    <div class="col-md-6">
         <h4>Background Process</h4>
         <p>
             Use it if you need to run background processes <strong>continously</strong> throught the <strong>lifetime</strong> of your application.
@@ -76,9 +86,8 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
 <pre><span class="comm">// Coming soon</span>
 <span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">BackgroundJobServer</span>();
 server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
-    -->
     </div>
-</div>
+</div-->
 
 ---
 
@@ -136,12 +145,10 @@ You are also able to retry any background job manually through the programming c
 
 <div class="row">
     <div class="col-md-6">
-{% highlight csharp %}
-var jobId = BackgroundJob.Enqueue(
-    () => Console.WriteLine("Hello"));
+<pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Enqueue(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Hello"</span>));
 
-var succeeded = BackgroundJob.Requeue(jobId);
-{% endhighlight %}
+<span class="keywd">var</span> succeeded = <span class="type">BackgroundJob</span>.Requeue(jobId);</pre>
     </div>
     <div class="col-md-6">
         <a href="/img/retry.png" data-lightbox="Screenshots" data-title="Succeeded Job">
