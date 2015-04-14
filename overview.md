@@ -86,7 +86,7 @@ server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
 
 Background jobs are very important part of an application and Hangfire ensures that any job is being performed **at least once**. To persist background job information between application restarts, all the information is being saved in your favorite persistent storage. Currently the following storages are supported:
 
-<table style="width: 100%; margin-top: 20px;" class="text-center">
+<table class="text-center supported-storages">
     <tr>
         <td width="33%">
             <img src="/img/sqlserver.png" alt="SQL Server" width="150">
@@ -103,7 +103,7 @@ Background jobs are very important part of an application and Hangfire ensures t
         </td>
     </tr>
 </table>
-<table style="width: 100%; margin-bottom: 20px;" class="text-center">
+<table class="text-center supported-storages">
     <tr>
         <td width="16%">&nbsp;</td>
         <td width="33%">

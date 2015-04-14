@@ -395,3 +395,12 @@ table>colgroup+thead>tr:first-child>td,
 table>thead:first-child>tr:first-child>td {
     border-top: 0;
 }
+
+.supported-storages {
+    width: 100%; 
+    margin-top: 20px;
+}
+
+.supported-storages td {
+    vertical-align: middle;
+}
