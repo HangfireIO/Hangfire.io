@@ -18,20 +18,23 @@ active: overview
                 <h4>Hangfire Pro</h4>
                 <ul class="nav nav-list">
                     <li {% if page.sub_active == 'pro-overview' %}class="active"{% endif %}><a href="/pro/">Overview</a></li>
-                    <li {% if page.sub_active == 'pro-license' %}class="active"{% endif %}><a href="/pro/license.html">License</a></li>
+                    <li {% if page.sub_active == 'pro-downloads' %}class="active"{% endif %}><a href="/pro/downloads.html">Downloads</a></li>
+                    <li {% if page.sub_active == 'pro-license' %}class="active"{% endif %}><a href="/pro/license.html">Licensing</a></li>
                 </ul>
             </div>
         </div>
         <div class="col-md-9" role="main">
-            <h1 class="page-header">
-                {{ page.title }}
-            </h1>
+            <article>
+                <h1 class="page-header">
+                    {{ page.title }}
+                </h1>
 
-            {{ content }}
+                {{ content }}
 
-            <div class="alert alert-info hidden-print" style="margin-top: 20px;margin-bottom:0;">
-            Did you know that you can <a href="{{ site.github_repo }}/edit/{{ site.github_branch }}/{{ page.path }}" target="_blank">edit this page on GitHub</a> and send a Pull Request?
-        </div>
+                <div class="alert alert-info hidden-print" style="margin-top: 20px;margin-bottom:0;">
+                    Did you know that you can <a href="{{ site.github_repo }}/edit/{{ site.github_branch }}/{{ page.path }}" target="_blank">edit this page on GitHub</a> and send a Pull Request?
+                </div>
+            </article>
         </div>
     </div>
 </div>
