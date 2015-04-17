@@ -208,14 +208,14 @@ redirect_from: /subscriptions/
                         <td><i class="glyphicon glyphicon-ok"></i></td>
                     </tr>
                     <tr>
-                        <th>Continuations</th>
+                        <th>Atomic Background Job Creation</th>
                         <td></td>
-                        <td><span class="label label-success">Release Candidate available</span></td>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
                     </tr>
                     <tr>
-                        <th>Parallel Processing</th>
+                        <th>Complex Workflows</th>
                         <td></td>
-                        <td><span class="label label-success">Release Candidate available</span></td>
+                        <td><i class="glyphicon glyphicon-ok"></i></td>
                     </tr>
                     <tr>
                         <th>Async methods support</th>

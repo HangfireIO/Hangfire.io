@@ -9,6 +9,62 @@ Hangfire Pro is a set of extensions packages that boost the performance and simp
 
 ## Packages
 
+### Hangfire.Pro
+
+#### Atomic Background Job Creation
+
+Batches allow you to create a bunch of background jobs atomically. This means that if there was an exception during the creation of background jobs, none of them will be processed. Consider you want to send 1000 emails to your clients, and they really want to receive these emails. Here is the old way:
+
+<pre><span class="keywd">for</span> (<span class="keywd">var</span> i = 0; i &lt; 1000; i++)
+{
+    <span class="type">BackgroundJob</span>.Enqueue(() => SendEmail(i));
+    <span class="comm">// What to do on exception?</span>
+}</pre>
+
+But what if storage become unavailable on `i == 500`? 500 emails may be already sent, because worker threads will pick up and process jobs once they created. If you re-execute this code, some of your clients may receive annoying duplicates. So if you want to handle this correctly, you should write more code to track what emails were sent. 
+
+But here is a much simpler method:
+
+<pre><span class="type">BatchJob</span>.StartNew(x =>
+{
+    <span class="keywd">for</span> (<span class="keywd">var</span> i = 0; i &lt; 1000; i++)
+    {
+        x.Enqueue(() => SendEmail(i));
+    }
+});</pre>
+
+In case of exception, you may show an error to a user, and simply ask to retry her action after some minutes. No other code required!
+
+#### Chaining Batches
+
+Continuations allow you to chain multiple batches together. They will be executed once *all background jobs* of a parent batch finished. Consider the previous example where you have 1000 emails to send. If you want to make final action after sending, just add a continuation:
+
+<pre><span class="keywd">var</span> id1 = <span class="type">BatchJob</span>.StartNew(<span class="comm">/* for (var i = 0; i &lt; 1000... */</span>);
+<span class="keywd">var</span> id2 = <span class="type">BatchJob</span>.ContinueWith(id, x => 
+{
+    x.Enqueue(() => MarkCampaignFinished());
+    x.Enqueue(() => NotifyAdministrator());
+});</pre>
+
+So batches and batch continuations allow you to define workflows and configure what actions will be executed in parallel. This is very useful for heavy computational methods as they can be distributed to a diffirent machines.
+
+#### Complex Workflows
+
+Create action does not restrict you to create jobs only in *Enqueued* state. You can schedule jobs to execute later, add continuations, add continuations to continuations, etc..
+
+<pre><span class="keywd">var</span> batchId = <span class="type">BatchJob</span>.StartNew(x =>
+{
+    x.Enqueue(() => <span class="type">Console</span>.Write(<span class="string">"1a... "</span>));
+    <span class="keywd">var</span> id1 = x.Schedule(() => <span class="type">Console</span>.Write(<span class="string">"1b... "</span>), <span class="type">TimeSpan</span>.FromSeconds(1));
+    <span class="keywd">var</span> id2 = x.ContinueWith(id1, () => <span class="type">Console</span>.Write(<span class="string">"2... "</span>));
+    x.ContinueWith(id2, () => <span class="type">Console</span>.Write(<span class="string">"3... "</span>));
+});
+
+<span class="type">BatchJob</span>.ContinueWith(batchId, x =>
+{
+    x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"4..."</span>));
+});</pre>
+
 ### Hangfire.Pro.Redis
 
 <a class="pull-right" style="margin-left: 10px;" href="/img/storage-compare.png" data-lightbox="Screenshots">
@@ -45,30 +101,6 @@ So, you can use existing tools like <a href="http://www.nagios.org/" target="_bl
 </div>
 
 ## Coming Soon
-
-### Continuations
-
-Continuations allow you to perform one jobs after others.
-
-<pre><span class="type">BatchJob</span>.Create(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;Hello, &quot;</span>))
-        .ContinueWith(() =&gt; <span class="type">Console</span>.WriteLine(<span class="string">&quot;world!&quot;</span>));</pre>
-
-*This API is for preview purposes only, it is subject to change after the final implementation.*
-
-### Parallel processing
-
-With parallel processing you can split your work into a couple of small sub-jobs that will be processed in parallel. This feature together with continuations allows you to build more complex, but still reliable workflows with Hangfire.
-
-<pre><span class="type">BatchJob</span>
-    .Create(x =&gt;
-    {
-        x.Enqueue(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;Messy&quot;</span>));
-        x.Enqueue(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;Output&quot;</span>));
-        x.Enqueue(() =&gt; <span class="type">Console</span>.Write(<span class="string">&quot;With&quot;</span>));
-    })
-    .ContinueWith(() =&gt; <span class="type">Console</span>.WriteLine(<span class="string">&quot;Predictable continuation&quot;</span>));</pre>
-
-*This API is for preview purposes only, it is subject to change after the final implementation.*
 
 ### Async methods support
 
