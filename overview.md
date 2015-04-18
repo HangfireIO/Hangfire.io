@@ -211,48 +211,56 @@ Just look at the screenshots below, and you'll love it!
 
 <div class="row screenshots">
     <div class="col-md-4">
-        <a href="/img/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
-            <img src="/img/dashboard-sm.png" alt="Hangfire Dashboard">
+        <a href="/img/ui/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
+            <img src="/img/ui/dashboard-sm.png" alt="Dashboard">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/succeeded-job.png" data-lightbox="Screenshots" data-title="Succeeded Job">
-            <img src="/img/succeeded-job-sm.png" alt="Hangfire Succeeded Job">
+        <a href="/img/ui/queues.png" data-lightbox="Screenshots" data-title="Queue List">
+            <img src="/img/ui/queues-sm.png" alt="Queue List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/failed-job.png" data-lightbox="Screenshots" data-title="Failed Job">
-            <img src="/img/failed-job-sm.png" alt="Hangfire Failed Job">
+        <a href="/img/ui/job-details.png" data-lightbox="Screenshots" data-title="Job Details">
+            <img src="/img/ui/job-details-sm.png" alt="Job Details">
         </a>
     </div>
 </div>
 
 <div class="row screenshots">
     <div class="col-md-4">
-        <a href="/img/succeeded-jobs.png" data-lightbox="Screenshots" data-title="Succeeded Job List">
-            <img src="/img/succeeded-jobs-sm.png" alt="Hangfire Succeeded Job List">
+        <a href="/img/ui/retries.png" data-lightbox="Screenshots" data-title="Retry List">
+            <img src="/img/ui/retries-sm.png" alt="Retry List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
-            <img src="/img/failed-jobs-sm.png" alt="Hangfire Failed Job List">
+        <a href="/img/ui/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
+            <img src="/img/ui/failed-jobs-sm.png" alt="Failed Job List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
-            <img src="/img/recurring-jobs-sm.png" alt="Hangfire Recurring Jobs">
+        <a href="/img/ui/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
+            <img src="/img/ui/recurring-jobs-sm.png" alt="Recurring Jobs">
         </a>
     </div>
 </div>
 
 <div class="row screenshots">
     <div class="col-md-4">
-        <a href="/img/queues.png" data-lightbox="Screenshots" title="Queues">
-            <img src="/img/queues-sm.png" alt="Hangfire Queue List">
+        <a href="/img/ui/batches.png" data-lightbox="Screenshots" title="Batch List">
+            <img src="/img/ui/batches-sm.png" alt="Batch List">
         </a>
     </div>
-    <div class="col-md-4"></div>
-    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <a href="/img/ui/batch-details.png" data-lightbox="Screenshots" title="Batch Details">
+            <img src="/img/ui/batch-details-sm.png" alt="Batch Details">
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="/img/ui/batch-jobs.png" data-lightbox="Screenshots" title="Batch Jobs">
+            <img src="/img/ui/batch-jobs-sm.png" alt="Batch Jobs">
+        </a>
+    </div>
 </div>
 
 <hr>
