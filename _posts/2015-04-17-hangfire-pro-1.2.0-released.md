@@ -88,7 +88,7 @@ Batches require to add some additional job filters, some new pages to the Dashbo
 
 ### Only in Pro
 
-Batches are a part of Hangfire Pro package set and available on for Hangfire Pro subscribers.
+Batches are a part of Hangfire Pro package set and available onдн for Hangfire Pro subscribers.
 
 <div class="text-center">
     <hr>
