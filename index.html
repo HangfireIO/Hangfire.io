@@ -167,24 +167,10 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <div class="feature-body">
                 <h3>Simple</h3>
                 <p>
-                    <a href="http://docs.hangfire.io/en/latest/quickstart.html" target="_blank">Easy to setup, easy to configure</a>. You don't need to run additional services or console programs for background job processing.
+                    <a href="http://docs.hangfire.io/en/latest/quickstart.html" target="_blank">Easy to set up, easy to use</a>. No Windows Service, no Windows Scheduler, no separate applications required.
                 </p>
                 <p>
-                    You can call regular static or instance .NET methods in background and pass arguments as usual.
-                </p>
-            </div>
-        </div>
-        <div class="col-md-4 feature">
-            <div class="feature-icon">
-                <span class="glyphicon glyphicon-tower"></span>
-            </div>
-            <div class="feature-body">
-                <h3>Reliable</h3>
-                <p>
-                    Background jobs are being deleted from the storage only on successful execution. Abruptly aborted jobs will be requeued after application restart.
-                </p>
-                <p>
-                    Once a job was created, it will be performed <em>at least once</em>, even if the host process was terminated.
+                    Background jobs are regular static or instance .NET methods with regular arguments – no base class or interface implementation required.
                 </p>
             </div>
         </div>
@@ -193,17 +179,15 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
                 <span class="glyphicon glyphicon-ok"></span>
             </div>
             <div class="feature-body">
-                <h3>Designed for ASP.NET</h3>
+                <h3>Persistent</h3>
                 <p>
-                    Background tasks are being saved into a persistent storage and can survive the application pool recycling process.
+                    Background jobs are saved into a persistent storage&nbsp;– <a href="https://www.nuget.org/packages/HangFire.SqlServer/">SQL Server</a>, <a href="http://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis/1.2.1">Redis</a>, <a href="https://www.nuget.org/packages/Hangfire.PostgreSql/">PostgreSQL</a>, <a href="https://www.nuget.org/packages/HangFire.Mongo/">MongoDB</a> and <a href="http://localhost:4000/extensions.html#storages">others</a>.
                 </p>
                 <p>
-                    You can run <a href="http://docs.hangfire.io/en/latest/users-guide/running-multiple-server-instances.html" target="_blank">multiple instances</a> of Hangfire Server, so Web Garden &amp; Web Farm environments are fully supported.
+                    You can safely restart your application and use Hangfire with ASP.NET without worrying about application pool recycles.
                 </p>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-md-4 feature">
             <div class="feature-icon">
                 <span class="glyphicon glyphicon-search"></span>
@@ -211,10 +195,26 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <div class="feature-body">
                 <h3>Transparent</h3>
                 <p>
-                    Watch the <a href="http://hangfire.io/img/dashboard.png" target="_blank">statistics</a>, know the <a href="http://hangfire.io/img/failed-job.png" target="_blank">detailed history</a> of job processing, manually <a href="http://hangfire.io/img/failed-jobs.png" target="_blank">retry or delete</a> any job from the integrated web monitoring UI.
+                    Built-in web interface allow you to see the whole picture of background processing as well as observe the state of each background job.
                 </p>
                 <p>
-                    <a href="http://docs.hangfire.io/en/latest/users-guide/adding-logging.html" target="_blank">Plug in</a> your logging framework to get notifications about problems in background job processing.
+                    Out of the box support for popular <a href="http://docs.hangfire.io/en/latest/configuration/configuring-logging.html">logging frameworks</a> allows you to catch errors early with zero configuration.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 feature">
+            <div class="feature-icon">
+                <span class="glyphicon glyphicon-tower"></span>
+            </div>
+            <div class="feature-body">
+                <h3>Reliable</h3>
+                <p>
+                    Once a background job created and placed into a storage without exceptions, Hangfire takes the responsibility to process it <em>at least</em> once.
+                </p>
+                <p>
+                    You are free to throw unhandled exceptions or kill your application – background jobs will be re-tried automatically.
                 </p>
             </div>
         </div>
