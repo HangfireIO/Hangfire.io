@@ -23,6 +23,8 @@ comments: true
   				{{ content }}
 			</article>
 
+			{% include blog/newsletter.html %}
+
 			{% if site.disqus_short_name and page.comments == true %}
 			<section id="comment">
     			<h2 class="title">Comments</h2>
