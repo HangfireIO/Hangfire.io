@@ -176,7 +176,7 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
         </div>
         <div class="col-md-4 feature">
             <div class="feature-icon">
-                <span class="glyphicon glyphicon-ok"></span>
+                <span class="glyphicon glyphicon-floppy-saved"></span>
             </div>
             <div class="feature-body">
                 <h3>Persistent</h3>
@@ -223,12 +223,12 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
                 <span class="glyphicon glyphicon-fullscreen"></span>
             </div>
             <div class="feature-body">
-                <h3>Scalable</h3>
+                <h3>Distributed</h3>
                 <p>
-                    Start with the simplest setup using SQL Server and grow your computational power by adding extra Hangfire Server instances either inside ASP.NET apps or use separate Windows Services.
+                    Background method calls and their arguments are serialized and may overcome the process boundaries.
                 </p>
                 <p>
-                    Leverage multiple job storages to overcome the restrictions dictated by a single storage.
+                    You can use Hangfire on different machines to get more processing power with no configuration – synchronization is performed automatically.
                 </p>
             </div>
         </div>
@@ -239,10 +239,10 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <div class="feature-body">
                 <h3>Extensible</h3>
                 <p>
-                    Intercept the creation/performance/state change pipeline to add extra functionality using filters that are similar to ASP.NET MVC Filters.
+                    Job filters allow you to add custom features to the background processing in a way similar to ASP.NET MVC action filters.
                 </p>
                 <p>
-                    Implement the support of persistent storage which is being used in your project environment – it is also abstracted.
+                    Job storage access is fully abstracted and you can implement the support for your favorite storage. Dashboard supports modifications too.
                 </p>
             </div>
         </div>
