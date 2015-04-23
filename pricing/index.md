@@ -96,8 +96,46 @@ redirect_from: /subscriptions/
             </div>
         </div>
     </div>
+
+    <h2>Happy Customers</h2>
+
+    <div class="row customers">
+        <div class="col-md-4">
+            <p>
+                <a href="https://www.kcftech.com/" target="_blank" rel="nofollow"><img src="/img/customers/kcf-tech.png" alt="KCF Technologies"></a>                
+            </p>
+            <blockquote>
+                <p>After years of struggling with developing, deploying and monitoring messy Windows Services, we simply queue up jobs in Hangfire and publish our website!</p>
+                <footer><cite title="Source Title">Mark Edwards</cite>, Software Engineering Manager</footer>
+            </blockquote>
+        </div>
+        <div class="col-md-4">
+            <p>
+                <a href="http://www.rightsline.com/" target="_blank" rel="nofollow"><img src="/img/customers/rightsline.png" alt="RightsLine"></a>                
+            </p>
+            <blockquote>
+                <p>Hangfire has proven to be a robust approach for managing our scheduled tasks, while giving better visibility into the progress of long running tasks to our developers and end users.</p>
+                <footer><cite title="Source Title">Cory Kissinger</cite>, Head of Engineering</footer>
+            </blockquote>
+        </div>
+        <div class="col-md-4">
+            <p>
+                <a href="http://www.socialsolutions.com/" target="_blank" rel="nofollow"><img src="/img/customers/social-solutions.png" alt="Social Solutions"></a>                
+            </p>
+            <blockquote>
+                <p>Using Hangfire has allowed us to easily take advantage of the failover and scalability built into a process hosted in IIS.</p>
+                <footer><cite title="Source Title">Robert Evans</cite>, Team Lead / Architect</footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            ...and tens of other companies!
+        </div>
+    </div>
     
-    <h2>Frequently asked questions</h2>
+    <h2>Frequently Asked Questions</h2>
 
     <div class="row">
         <div class="col-md-6">
