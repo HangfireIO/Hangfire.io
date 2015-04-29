@@ -26,6 +26,10 @@
     display: inline-block;
 }
 
+.jumbotron .carousel {
+    z-index: 1; /* Use separate layer for animated element to prevent font changes during transition */
+}
+
 @media(min-width: 992px) {
     .jumbotron .carousel {
         float: right;
