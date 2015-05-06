@@ -74,6 +74,7 @@
 
 /* NAVIGATION */
 
+@media (min-width: 768px) {
 #imagelightbox-nav
 {
     background-color: #444;
@@ -103,6 +104,7 @@
     {
         background-color: #fff;
     }
+}
 
 #imagelightbox-loading,
 #imagelightbox-nav
