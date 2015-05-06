@@ -45,13 +45,10 @@ $(function () {
       };
 
   var selector = 'a[data-lightbox]';
-
-  if ( screen.width >= 768 ) {
-    var instance = $( selector ).imageLightbox({
-      onStart:   function() { overlayOn(); navigationOn( instance, selector ); },
-      onEnd:     function() { overlayOff(); navigationOff(); activityIndicatorOff(); },
-      onLoadStart: function() { activityIndicatorOn(); },
-      onLoadEnd:   function() { navigationUpdate( selector ); activityIndicatorOff(); }
-    });
-  }
+  var instance = $( selector ).imageLightbox({
+    onStart:   function() { overlayOn(); navigationOn( instance, selector ); },
+    onEnd:     function() { overlayOff(); navigationOff(); activityIndicatorOff(); },
+    onLoadStart: function() { activityIndicatorOn(); },
+    onLoadEnd:   function() { navigationUpdate( selector ); activityIndicatorOff(); }
+  });
 });
