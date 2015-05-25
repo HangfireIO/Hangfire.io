@@ -135,7 +135,7 @@ Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If 
 
 ### Automatic Retries
 
-If your background job face with a problem during its execution, it will be retried automatically after some delay. Hangfire successfully deals with the following problems:
+If your background job encounters a problem during its execution, it will be retried automatically after some delay. Hangfire successfully deals with the following problems:
 
 * Exceptions
 * Application shutdowns
