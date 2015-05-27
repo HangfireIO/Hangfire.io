@@ -4,6 +4,7 @@ title: Hangfire Pro 1.2.2
 category: release
 version: Hangfire Pro 1.2.2
 author: odinserj
+hide_subscribe: true
 ---
 
 This is a correcting release that fixes job prioritization via queue ordering in an instance of the `BackgroundJobServerOptions` class and adds support for symbol packages.
