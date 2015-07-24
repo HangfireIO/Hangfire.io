@@ -20,6 +20,11 @@ But what if storage become unavailable on `i == 500`? 500 emails may be already 
 
 But here is a much simpler method:
 
+<div class="alert alert-warning">
+    <h4>Configuration required</h4>
+    <p>Before using batches, please call the <code>GlobalConfiguration.Configuration.UseBatches</code> method as written in <a href="http://docs.hangfire.io/en/latest/background-methods/using-batches.html#installation">the docs</a>.</p>
+</div>
+
 <pre><span class="type">BatchJob</span>.StartNew(x =>
 {
     <span class="keywd">for</span> (<span class="keywd">var</span> i = 0; i &lt; 1000; i++)

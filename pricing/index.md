@@ -55,7 +55,7 @@ redirect_from: /subscriptions/
                         <li>
                             <a href="/pro/">Hangfire Pro</a> (under <abbr class="initialism">EULA</abbr>)
                         </li>
-                        <li>Documentaion</li>
+                        <li>Documentation</li>
                         <li>Forum support</li>
                         <li>Private e-mail support</li>
                         <li class="plan-item-spacer"></li>
