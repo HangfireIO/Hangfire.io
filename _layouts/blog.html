@@ -7,9 +7,13 @@ active: blog
 	<div class="row">
 		<div class="col-md-8">
 			<h1 class="page-header">
-				<span class="rss-link">
+				<span class="sub-header">
 					<i class="fa fa-rss"></i>
 					<a href="http://feeds.feedburner.com/hangfireio">rss feed</a>
+				</span>
+				<span class="sub-header">
+					<i class="fa fa-file-text-o"></i>
+					<a id="new-post-link" href="#" target="_blank">new post</a>
 				</span>
 				{{ page.title }}
 			</h1>
@@ -37,3 +41,7 @@ active: blog
 		</div>
 	</div>
 </div>
+
+<script>
+	document.getElementById("new-post-link").setAttribute('href', "{{ site.github_repo }}/new/master/_posts?filename=" + new Date().toISOString().slice(0,10) + "-new-post.md");
+</script>

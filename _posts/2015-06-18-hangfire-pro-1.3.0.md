@@ -1,10 +1,7 @@
 ---
-layout: post
 title: Hangfire Pro 1.3.0
 category: release
-version: Hangfire Pro 1.3.0
 author: odinserj
-hide_subscribe: true
 ---
 
 This release makes some hard-coded values (like maximum succeeded job list length) configurable through the `RedisStorageOptions` class. It also helps to re-queue aborted background jobs earlier – instead of waiting for invisibility timeout after non-graceful shutdown, we are re-queueing aborted background jobs right after its server becomes inactive.

@@ -24,6 +24,14 @@ permalink: /blog/:year/:month/:day/:title.html
 paginate:      5
 paginate_path: "blog/page:num/"
 
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 gems:
   - jekyll-redirect-from
   - jekyll-mentions

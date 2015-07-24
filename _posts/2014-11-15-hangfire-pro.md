@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Introducing Hangfire Pro
 author: odinserj
 redirect_from: /2014/11/15/hangfire-pro.html

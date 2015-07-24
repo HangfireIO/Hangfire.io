@@ -358,14 +358,15 @@ pre .comm {
     margin: 40px 0;
 }
 
-.rss-link {
+.sub-header {
     float: right;
     font-size: 16px;
     margin-top: 16px;
     color: #bbb;
+    margin-left: 10px;
 }
 
-.rss-link a {
+.sub-header a {
     color: #bbb;
 }
 

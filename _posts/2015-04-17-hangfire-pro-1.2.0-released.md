@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Hangfire Pro 1.2.0
 category: release
-version: Hangfire Pro 1.2.0
 author: odinserj
 ---
 
