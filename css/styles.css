@@ -131,10 +131,8 @@ pre .comm {
     display: inline-block;
 }
 
-.fb-share-button {
-    vertical-align: bottom;
-    margin-right: 5px;
-    margin-bottom: 5px;
+.fb-share-button > span {
+    vertical-align: inherit!important;
 }
 
 .lb-outerContainer {
