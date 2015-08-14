@@ -36,6 +36,7 @@ Project | Author | Latest Version
 [Hangfire.SimpleInjector](https://github.com/devmondo/Hangfire.SimpleInjector) | [@devmondo](https://github.com/devmondo/Hangfire.SimpleInjector) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.SimpleInjector.svg) 
 [Hangfire.Unity](https://github.com/phenixdotnet/Hangfire.Unity) | [@phenixdotnet](https://github.com/phenixdotnet) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.Unity.svg) 
 [Hangfire.MEF](https://github.com/Excommunicated/Hangfire.MEF) | [@Excommunicated](https://github.com/Excommunicated) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.CompositeC1.svg) 
+[Hangfire.Funq](https://github.com/apilavakis/Hangfire.Funq) | [@Excommunicated](https://github.com/apilavakis) | ![Latest version](https://img.shields.io/nuget/v/Hangfire.Funq.svg) 
 
 ## .NET 4.0 Support
 
