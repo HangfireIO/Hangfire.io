@@ -148,3 +148,8 @@ article img {
     text-align: center;
     max-width: 100%;
 }
+
+code {
+    background: rgba(0,0,0,0.04);
+    color: inherit;
+}
