@@ -37,6 +37,7 @@ Hangfire uses source code from thirs parties. All this code contains a LGPL or L
 * Uses [Moment.js](http://momentjs.com/) to deal with dates. It is copyrighted by Tim Wood, Iskren Chernev, Moment.js contributors and released under the **MIT License**.
 * Uses [D3.js](http://d3js.org/) that is copyrighted by Michael Bostock and released under the **three clause BSD license**.
 * Uses [jQuery](https://jquery.org/) that is released under the **MIT License**.
+* Uses stack trace highlighting code from [ELMAH](https://code.google.com/p/elmah/), released under the **Apache License 2.0**, copyright © 2004-9 Atif Aziz.
 
 **Hangfire.SqlServer**
 
