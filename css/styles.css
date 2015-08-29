@@ -131,7 +131,7 @@ pre .comm {
     display: inline-block;
 }
 
-.fb-share-button {
+.fb-share-button, .twitter-share-button {
     margin-right: 5px;
 }
 
