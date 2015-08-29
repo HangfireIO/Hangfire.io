@@ -53,11 +53,4 @@ To configure a project NuGet feed on your development machine run this command:
 
 After adding the feed, use the NuGet Package Manager to obtain new versions of packages. In Visual Studio Solution Explorer, right-click the **References** node and click **Manage NuGet Packages...** and ensure that **Include Prerelease** option is turned on.
 
-<div class="alert alert-warning">
-	<h4>Read release notes carefully</h4>
-	<p>
-		Please read the release notes before updating a package. Since a package can be built after a commit to a pull request based on an outdated code, you may receive a <strong>downgraded version</strong> of a package.
-	</p>
-</div>
-
 <img src="/img/pkg-manager-ci.png" alt="Package Manager Window" style="max-width: 100%;">
