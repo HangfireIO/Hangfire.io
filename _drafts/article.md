@@ -1,4 +1,5 @@
 ---
+layout: blog
 title: Deploying Hangfire while a job is running
 category: feature
 author: odinserj
@@ -56,7 +57,7 @@ In our example, this method is called when you press <kbd>Enter</kbd>. In web ap
 When you call the `Dispose` method, Hangfire cancels the shutdown cancellation token and waits some time (15 seconds by default), the option is configurable here. If your job does not finish in time, ungraceful shutdown is applied. If it uses cancellation token, graceful shutdown is applied, so it is better to use cancellation tokens where possible.
 
 {% highlight csharp %}
-public void LongRunning(IJobCancellationToken cancellationToken)
+public void LongRunning(CancellationToken cancellationToken)
 {
     for (var i = 0; i < 100000; i++) 
     { 
@@ -64,13 +65,6 @@ public void LongRunning(IJobCancellationToken cancellationToken)
         cancellationToken.ThrowIfCancellationRequested();
     }
 }
-{% endhighlight %}
-
-If is also possible to use `IJobCancellationToken.ShutdownToken` to pass it to inner operations that use regular `CancellationToken` class:
-
-{% highlight csharp %}
-CancellationToken token = cancellationToken.ShutdownToken;
-token.ThrowIfCancellationRequested();
 {% endhighlight %}
 
 When a worker receives the `OperationCancelledException`, it re-queues a background job back to the queue. On any exception during the re-queueing process, ungraceful shutdown scenario is applied.
