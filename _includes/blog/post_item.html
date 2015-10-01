@@ -4,7 +4,9 @@
 </hgroup>
 
 <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	{{ post.content }}
+	{{ post.excerpt }}
+	
+	<a class="btn btn-sm btn-default" href="{{ post.url }}">Read more &rarr;</a>
 </article>
 
 <hr class="post-separator">
