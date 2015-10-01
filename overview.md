@@ -57,6 +57,8 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     </div>
 </div>
 
+---
+
 <div class="row">
     <div class="col-md-6">
         <h4>Recurring</h4>
@@ -70,24 +72,58 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-6">
         <h4>Continuations</h4>
         <p>
-            Continuations fired when parent job <strong>has been finished</strong>.
+            Continuations are executed when parent job <strong>has been finished</strong>.
         </p>
 <pre><span class="type">BackgroundJob</span>.ContinueWith(
-    jobId, <span class="comment">// from previous examples</span>
+    jobId,
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Continuation!"</span>));</pre>
     </div>
 </div>
-<!-- div class="row">
+
+---
+
+<div class="row">
     <div class="col-md-6">
+        <h4>Batches</h4>
+        <p>
+            Batch is a group of background jobs <strong>created atomically</strong>.
+            <pre><code><span class="keywd">var</span> batchId = <span class="type">Batch</span>.StartNew(x =>
+{
+    x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Job 1"</span>));
+    x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Job 2"</span>));
+});</code></pre>
+        </p>
+    </div>
+    <div class="col-md-6">
+        <h4>Batch Continuations</h4>
+        <p>
+            Batch continuation is fired <strong>when all</strong> background jobs in a parent batch <strong>finished</strong>.
+        </p>
+        <pre><code><span class="type">Batch</span>.ContinueWith(batchId, x =>
+{
+    x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Last Job"</span>));
+});</code></pre>
+    </div>
+</div>
+
+---
+
+<div class="row">
+    <div class="col-md-12">
         <h4>Background Process</h4>
         <p>
-            Use it if you need to run background processes <strong>continously</strong> throught the <strong>lifetime</strong> of your application.
+            Use them when you need to run background processes <strong>continously</strong> throught the <strong>lifetime</strong> of your application.
         </p>
-<pre><span class="comm">// Coming soon</span>
-<span class="keywd">var</span> server = <span class="keywd">new</span> <span class="type">BackgroundJobServer</span>();
-server.AddProcess&lt;<span class="type">CustomQueueHandler</span>&gt;();</pre>
+<pre><code><span class="keywd">public</span> <span class="keywd">class</span> <span class="type">CleanTempDirectoryProcess</span> : <span class="type">IBackgroundProcess</span>
+{
+    <span class="keywd">public</span> <span class="keywd">void</span> Execute(<span class="type">BackgroundProcessContext</span> context)
+    {
+        <span class="type">Directory</span>.CleanUp(<span class="type">Directory</span>.GetTempDirectory());
+        context.Wait(<span class="type">TimeSpan</span>.FromHours(1));
+    }
+}</code></pre>
     </div>
-</div-->
+</div>
 
 ---
 
