@@ -7,7 +7,7 @@ redirect_from: /core/
 ---
 
 <p>
-    Hangfire is a set of <strong>open-source</strong> libraries that help you to create, process and manage your background jobs, i.e. operations you don't want to put in your request processing pipeline:
+    Hangfire is an <strong>open-source</strong> framework that help you to create, process and manage your background jobs, i.e. operations you don't want to put in your request processing pipeline:
 </p>
 
 <div class="row">
