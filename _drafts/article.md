@@ -5,7 +5,7 @@ category: feature
 author: odinserj
 ---
 
-Let's consider the following method as a long-running background job, where `Thread.Sleep` emulates a real task. `IJobCancellationToken` is briefly described in the [documentation](http://docs.hangfire.io/en/latest/background-methods/using-cancellation-tokens.html).
+Let's consider the following method as a long-running background job, where `Thread.Sleep` emulates a real task.
 
 {% highlight csharp %}
 
@@ -32,9 +32,9 @@ public static void Main()
 
 What we can do to stop calls to the `Thread.Sleep` method? We can wait till the end of the loop, we can press <kbd>Enter</kbd> to and we can kill the process. Hangfire guarantees *at least once* processing, but what does this mean? Let's start with the worst case. 
 
-**What happens when I kill Hangfire Server process?**
+### Ungraceful Shutdown
 
-I.e. ungraceful shutdown
+> What happens when I kill Hangfire Server process?
 
 We are expecting that Hangfire will start processing again after ungraceful termination of our Hangfire Server, so we want a job to be re-queued. But let's be honest – Hangfire is unable to re-queue a job on a process termination, we can't call any additional code in this case.
 
@@ -48,9 +48,9 @@ So a worker will fetch an aborted background job anyway, but sometimes **not imm
 
 Out of memory, thread abort, ...
 
-**What happens when I call BackgroundJobServer.Dispose?**
+### Graceful Shutdown
 
-I.e. graceful shutdown
+> What happens when I call BackgroundJobServer.Dispose?
 
 In our example, this method is called when you press <kbd>Enter</kbd>. In web applications it is called automatically on application shutdown, but **only if you are using** `IAppBuilder.UseHangfireServer` or `HangfireBootstrapper` class from the [documentation](http://docs.hangfire.io/en/latest/deployment-to-production/making-aspnet-app-always-running.html) (it implements the `IRegisteredObject` interface to listen the shutdown event). If you don't call the `Dispose method`, the ungraceful shutdown scenario happens.
 
@@ -71,7 +71,9 @@ When a worker receives the `OperationCancelledException`, it re-queues a backgro
 
 When a cancellation token throws due to state change (other worker began to do the job), etc, 
 
-**What happens when a method finishes its execution?**
+### Completion
+
+> What happens when a method finishes its execution?
 
 When execution is finished, the background job is moved to the *succeeded* state, and its identifier is removed from the queue. In case of an exception, ungraceful shutdown is applied.
 
