@@ -416,3 +416,8 @@ table>thead:first-child>tr:first-child>td {
     font-size: 16px;
     padding: 10px 18px;
 }
+
+.table-extensions td {
+    vertical-align: middle!important;
+}
+

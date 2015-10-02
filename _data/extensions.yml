@@ -1,0 +1,115 @@
+# Don't hesitate to add your project here by creating a pull-request
+# on GitHub. Please use the most specific category where possible,
+# or create your own if you wish :-) Projects are sorted alphabetically.
+
+- name: Common
+  projects:
+    - name: Hangfire.Dashboard.Authorization
+      description: Role/claims-based and basic authorization for Dashboard
+      url: https://github.com/HangfireIO/Hangfire.Dashboard.Authorization
+      author: HangfireIO
+    
+- name: Storages
+  description: The following projects enable you to use your favorite storage.
+               Each storage has its own benefits and drawbacks, but you are
+               free to change it at any time, since Hangfire is abstracted
+               from a concrete storage.
+  projects:
+    - name: Hangfire.Azure.ServiceBusQueue
+      url: https://github.com/HangfireIO/Hangfire.Azure.ServiceBusQueue
+      author: barclayadam
+
+    - name: Hangfire.CompositeC1
+      url: https://www.nuget.org/packages/Hangfire.CompositeC1
+      author: burningice
+      authorUrl: http://www.nuget.org/profiles/burningice
+      
+    - name: Hangfire.Firebird
+      url: https://github.com/rsegerink/Hangfire.Firebird
+      author: rsegerink
+ 
+    - name: Hangfire.MemoryStorage
+      url: https://github.com/perrich/Hangfire.MemoryStorage
+      author: perrich
+      
+    - name: Hangfire.Mongo
+      url: https://github.com/sergun/Hangfire.Mongo
+      author: sergeyzwezdin
+      
+    - name: Hangfire.MySql
+      url: https://github.com/chrislove/Hangfire.MySql
+      author: chrislove
+      
+    - name: Hangfire.PostgreSql
+      url: https://github.com/frankhommers/Hangfire.PostgreSql
+      author: frankhommers
+      
+    - name: Hangfire.SQLite
+      url: https://github.com/vip32/Hangfire.SQLite
+      author: vip32
+      nuget: n/a
+  
+- name: IoC Containers
+  description: These projects simplify the integration between Hangfire and
+               your favorite IoC Container. They provide custom implementation
+               of <code>JobActivator</code> class as well as registration extensions
+               that allow you to use unit of work pattern or deterministic disposal
+               in your background jobs.
+  projects:
+    - name: Hangfire.Autofac
+      url: https://github.com/HangfireIO/Hangfire.Autofac
+      author: HangfireIO
+      
+    - name: Hangfire.Funq
+      url: https://github.com/apilavakis/Hangfire.Funq
+      author: apilavakis
+      
+    - name: Hangfire.MEF
+      url: https://github.com/Excommunicated/Hangfire.MEF
+      author: Excommunicated
+      
+    - name: Hangfire.Ninject
+      url: https://github.com/HangfireIO/Hangfire.Ninject
+      author: HangfireIO
+      
+    - name: Hangfire.TinyIoC
+      url: https://github.com/richclement/Hangfire.TinyIoC
+      author: richclement
+      
+    - name: Hangfire.SimpleInjector
+      url: https://github.com/devmondo/Hangfire.SimpleInjector
+      author: devmondo
+      
+    - name: Hangfire.Unity
+      url: https://github.com/phenixdotnet/Hangfire.Unity
+      author: phenixdotnet
+      
+    - name: Hangfire.Windsor
+      url: https://github.com/BredStik/Hangfire.Windsor
+      author: BredStik
+      
+- name: Unofficial .NET 4.0 Support
+  projects:
+    - name: Hangfire_Net40
+      url: https://www.nuget.org/packages/Hangfire_net40/
+      author: phillcampbell
+      
+    - name: Hangfire_Net40.Core
+      url: https://www.nuget.org/packages/Hangfire_net40.Core/
+      author: phillcampbell
+      
+    - name: Hangfire_Net40.SqlServer
+      url: https://www.nuget.org/packages/Hangfire_net40.SqlServer/
+      author: phillcampbell
+      
+    - name: Hangfire_Net40.SqlServer.MSMQ
+      url: https://www.nuget.org/packages/Hangfire_net40.SqlServer.MSMQ/
+      author: phillcampbell
+      
+    - name: Hangfire_Net40.SqlServer.RabbitMQ
+      url: https://www.nuget.org/packages/Hangfire_net40.SqlServer.RabbitMQ/
+      author: phillcampbell
+      
+    - name: Hangfire_Net40.Redis
+      url: https://www.nuget.org/packages/Hangfire_net40.Redis/
+      author: phillcampbell
