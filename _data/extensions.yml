@@ -47,7 +47,6 @@
     - name: Hangfire.SQLite
       url: https://github.com/vip32/Hangfire.SQLite
       author: vip32
-      nuget: n/a
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
