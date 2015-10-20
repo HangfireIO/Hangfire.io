@@ -97,7 +97,7 @@ redirect_from: /subscriptions/
         </div>
     </div>
 
-    <h2>Happy Customers</h2>
+    <h2 style="margin-bottom: 30px;">Happy Customers</h2>
 
     <div class="row customers">
         <div class="col-md-4">
