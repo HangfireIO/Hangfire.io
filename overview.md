@@ -247,54 +247,54 @@ Just look at the screenshots below, and you'll love it!
 
 <div class="row screenshots">
     <div class="col-md-4">
-        <a href="/img/ui/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
-            <img src="/img/ui/dashboard-sm.png" alt="Dashboard">
+        <a href="//cdn.hangfire.io/img/ui/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
+            <img src="//cdn.hangfire.io/img/ui/dashboard-sm.png" alt="Dashboard">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/ui/queues.png" data-lightbox="Screenshots" data-title="Queue List">
-            <img src="/img/ui/queues-sm.png" alt="Queue List">
+        <a href="//cdn.hangfire.io/img/ui/queues.png" data-lightbox="Screenshots" data-title="Queue List">
+            <img src="//cdn.hangfire.io/img/ui/queues-sm.png" alt="Queue List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/ui/job-details.png" data-lightbox="Screenshots" data-title="Job Details">
-            <img src="/img/ui/job-details-sm.png" alt="Job Details">
-        </a>
-    </div>
-</div>
-
-<div class="row screenshots">
-    <div class="col-md-4">
-        <a href="/img/ui/retries.png" data-lightbox="Screenshots" data-title="Retry List">
-            <img src="/img/ui/retries-sm.png" alt="Retry List">
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="/img/ui/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
-            <img src="/img/ui/failed-jobs-sm.png" alt="Failed Job List">
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="/img/ui/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
-            <img src="/img/ui/recurring-jobs-sm.png" alt="Recurring Jobs">
+        <a href="//cdn.hangfire.io/img/ui/job-details.png" data-lightbox="Screenshots" data-title="Job Details">
+            <img src="//cdn.hangfire.io/img/ui/job-details-sm.png" alt="Job Details">
         </a>
     </div>
 </div>
 
 <div class="row screenshots">
     <div class="col-md-4">
-        <a href="/img/ui/batches.png" data-lightbox="Screenshots" title="Batch List">
-            <img src="/img/ui/batches-sm.png" alt="Batch List">
+        <a href="//cdn.hangfire.io/img/ui/retries.png" data-lightbox="Screenshots" data-title="Retry List">
+            <img src="//cdn.hangfire.io/img/ui/retries-sm.png" alt="Retry List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/ui/batch-details.png" data-lightbox="Screenshots" title="Batch Details">
-            <img src="/img/ui/batch-details-sm.png" alt="Batch Details">
+        <a href="//cdn.hangfire.io/img/ui/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
+            <img src="//cdn.hangfire.io/img/ui/failed-jobs-sm.png" alt="Failed Job List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="/img/ui/batch-jobs.png" data-lightbox="Screenshots" title="Batch Jobs">
-            <img src="/img/ui/batch-jobs-sm.png" alt="Batch Jobs">
+        <a href="//cdn.hangfire.io/img/ui/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
+            <img src="//cdn.hangfire.io/img/ui/recurring-jobs-sm.png" alt="Recurring Jobs">
+        </a>
+    </div>
+</div>
+
+<div class="row screenshots">
+    <div class="col-md-4">
+        <a href="//cdn.hangfire.io/img/ui/batches.png" data-lightbox="Screenshots" title="Batch List">
+            <img src="//cdn.hangfire.io/img/ui/batches-sm.png" alt="Batch List">
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="//cdn.hangfire.io/img/ui/batch-details.png" data-lightbox="Screenshots" title="Batch Details">
+            <img src="//cdn.hangfire.io/img/ui/batch-details-sm.png" alt="Batch Details">
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="//cdn.hangfire.io/img/ui/batch-jobs.png" data-lightbox="Screenshots" title="Batch Jobs">
+            <img src="//cdn.hangfire.io/img/ui/batch-jobs-sm.png" alt="Batch Jobs">
         </a>
     </div>
 </div>
