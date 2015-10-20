@@ -128,6 +128,15 @@ redirect_from: /subscriptions/
             </blockquote>
         </div>
     </div>
+    
+    <div class="row">
+        <div class="col-md-12 text-center">
+            {% for customer in site.data.customers %}
+            <a href="{{ customer.url }}" target="_blank" title="{{ customer.title }}">
+                <img class="customer-logo" alt="{{ customer.title }}" src="//cdn.hangfire.io/img/customers/{{ customer.img }}"></a>
+            {% endfor %}
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-12 text-center">

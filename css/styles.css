@@ -421,3 +421,8 @@ table>thead:first-child>tr:first-child>td {
     vertical-align: middle!important;
 }
 
+.customer-logo {
+    height: 50px; 
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
