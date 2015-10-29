@@ -69,11 +69,11 @@ Create action does not restrict you to create jobs only in *Enqueued* state. You
 
 As other parts of Hangfire, batches are fully transparent, so you can observe them in the Dashboard. Here is a list of started batches, for example:
 
-![Batch List]({{ site.url }}/img/batch-list.png)
+![Batch List]({{ site.cdn }}/img/batch-list.png)
 
 And this is a batch details page, that is like job details, but for batches. You can see all the data related to a batch as well as all related background jobs.
 
-![Batch Details]({{ site.url }}/img/batch-details.png)
+![Batch Details]({{ site.cdn }}/img/batch-details.png)
 
 ### Installation
 

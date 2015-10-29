@@ -43,7 +43,7 @@ I understand that this step breaks your expectations, and I'm sorry for this. Th
 
 Hangfire Pro already includes previously mentioned new version of **Hangfire Redis** package and a completely new **Hangfire.PerformanceCounters** package. The latter pushes internal metrics to Windows Performance Counters to proactively monitor issues with background job processing:
 
-![Performance Monitor with Hangfire counters](http://hangfire.io/img/perfmon.png)
+![Performance Monitor with Hangfire counters]({{ site.cdn }}/img/perfmon.png)
 
 Hangfire Pro is available through the subscriptions you can buy at the [official site](http://hangfire.io/subscriptions/). After purchasing a subscription, you will be able to do the following things:
 
