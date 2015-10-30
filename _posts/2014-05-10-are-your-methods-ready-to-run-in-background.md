@@ -182,4 +182,4 @@ public void NewMethod(stirng arg1, int arg2, double arg3)
 
 There are a lot of differences between local and background method invocation, but you likely know the most of them, because they relate to asynchronous and concurrent programming as well.
 
-If you have any questions, ask them in the comments form below the post or start a new topic on http://discuss.hangfire.io if you want to share code snippets.
+If you have any questions, ask them in the comments form below the post or start a new topic on https://discuss.hangfire.io if you want to share code snippets.

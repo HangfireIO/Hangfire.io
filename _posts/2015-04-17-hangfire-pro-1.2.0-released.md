@@ -77,7 +77,7 @@ And this is a batch details page, that is like job details, but for batches. You
 
 ### Installation
 
-Batches are available in the [`Hangfire.Pro`](http://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro/) package, and you can install it using NuGet Package Manager Console window as usually:
+Batches are available in the [`Hangfire.Pro`](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro/) package, and you can install it using NuGet Package Manager Console window as usually:
 
 <pre class="nuget-install">PM> Install-Package Hangfire.Pro</pre>
 

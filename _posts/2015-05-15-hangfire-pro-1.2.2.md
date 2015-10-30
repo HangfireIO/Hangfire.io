@@ -10,5 +10,5 @@ If you are using multiple queues for prioritization, **please read the [bug deta
 
 ### Release Notes
 
-* **Added** – Source symbol packages available at http://nuget.hangfire.io/symbols/hangfire-pro.
+* **Added** – Source symbol packages available at https://nuget.hangfire.io/symbols/hangfire-pro.
 * **Fixed** – Jobs fetched in a wrong order from multiple queues.
