@@ -11,7 +11,7 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en/sdk.js#xfbml=1&version=v2.0";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -28,20 +28,14 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
                     Backed by persistent storages. Open and free for commercial use.
                 </p>
                    
-                <a href="https://www.nuget.org/packages/Hangfire/">
+                <a href="https://www.nuget.org/packages/Hangfire/" target="_blank">
                     <img style="display: inline-block;vertical-align: inherit;margin-right:5px;" src="https://img.shields.io/nuget/v/Hangfire.svg?style=flat"></a>
+                    
+                <a href="https://www.nuget.org/packages/Hangfire.Core/" target="_blank">
+                    <img style="display: inline-block;vertical-align: inherit;margin-right:5px;" src="https://img.shields.io/nuget/dt/Hangfire.Core.svg?style=flat"></a>
+                    
+                <span class="fb-like" data-href="http://hangfire.io" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></span>
                 
-                <span class="fb-share-button" data-href="http://hangfire.io" data-type="button_count"></span>
-                
-                <span class="g-plusone" data-size="medium" data-href="http://hangfire.io"></span>
-                <script type="text/javascript">
-                    (function() {
-                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                        po.src = 'https://apis.google.com/js/platform.js';
-                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                    })();
-                </script>
-
                 <iframe src="https://ghbtns.com/github-btn.html?user=HangfireIO&repo=Hangfire&type=watch&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="97" height="20"></iframe>
 
