@@ -87,6 +87,10 @@
       url: https://github.com/BredStik/Hangfire.Windsor
       author: BredStik
       
+    - name: Hangfire.LightInject
+      url: https://github.com/sbosell/Hangfire.LightInject
+      author: sbosell
+      
 - name: Unofficial .NET 4.0 Support
   projects:
     - name: Hangfire_Net40
