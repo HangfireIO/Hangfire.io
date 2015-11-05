@@ -47,6 +47,10 @@
     - name: Hangfire.SQLite
       url: https://github.com/vip32/Hangfire.SQLite
       author: vip32
+      
+    - name: Hangfire.RavenDB
+      url: https://github.com/axial/hangfire-ravendb
+      author: AndrewMarkley
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
@@ -86,6 +90,10 @@
     - name: Hangfire.Windsor
       url: https://github.com/BredStik/Hangfire.Windsor
       author: BredStik
+      
+    - name: Hangfire.LightInject
+      url: https://github.com/sbosell/Hangfire.LightInject
+      author: sbosell
       
 - name: Unofficial .NET 4.0 Support
   projects:
