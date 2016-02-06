@@ -140,7 +140,7 @@ redirect_from: /subscriptions/
 
     <div class="row">
         <div class="col-md-12 text-center">
-            ...and tens of other companies!
+            ...and 100+ of other companies!
         </div>
     </div>
     

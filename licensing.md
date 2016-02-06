@@ -18,7 +18,7 @@ You should have received a copy of the GNU Lesser General Public License along w
 
 ### Third party files and licenses
 
-Hangfire uses source code from thirs parties. All this code contains a LGPL or LGPL-compatible license. The following is a list of third party files and information about their copyright.
+Hangfire uses source code from third parties. All this code contains a LGPL or LGPL-compatible license. The following is a list of third party files and information about their copyright.
 
 **Hangfire**
 
