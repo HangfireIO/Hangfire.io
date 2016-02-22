@@ -102,7 +102,7 @@ redirect_from: /subscriptions/
     <div class="row customers">
         <div class="col-md-4">
             <p>
-                <a href="https://www.kcftech.com/" target="_blank" rel="nofollow"><img src="//cdn.hangfire.io/img/customers/kcf-tech.png" alt="KCF Technologies"></a>                
+                <a href="https://www.kcftech.com/" target="_blank" rel="nofollow"><img src="{{ site.cdn }}/img/customers/kcf-tech.png" alt="KCF Technologies"></a>                
             </p>
             <blockquote>
                 <p>After years of struggling with developing, deploying and monitoring messy Windows Services, we simply queue up jobs in Hangfire and publish our website!</p>
@@ -111,7 +111,7 @@ redirect_from: /subscriptions/
         </div>
         <div class="col-md-4">
             <p>
-                <a href="http://www.rightsline.com/" target="_blank" rel="nofollow"><img src="//cdn.hangfire.io/img/customers/rightsline.png" alt="RightsLine"></a>                
+                <a href="http://www.rightsline.com/" target="_blank" rel="nofollow"><img src="{{ site.cdn }}/img/customers/rightsline.png" alt="RightsLine"></a>                
             </p>
             <blockquote>
                 <p>Hangfire has proven to be a robust approach for managing our scheduled tasks, while giving better visibility into the progress of long running tasks to our developers and end users.</p>
@@ -120,7 +120,7 @@ redirect_from: /subscriptions/
         </div>
         <div class="col-md-4">
             <p>
-                <a href="http://www.socialsolutions.com/" target="_blank" rel="nofollow"><img src="//cdn.hangfire.io/img/customers/social-solutions.png" alt="Social Solutions"></a>                
+                <a href="http://www.socialsolutions.com/" target="_blank" rel="nofollow"><img src="{{ site.cdn }}/img/customers/social-solutions.png" alt="Social Solutions"></a>                
             </p>
             <blockquote>
                 <p>Using Hangfire has allowed us to easily take advantage of the failover and scalability built into a process hosted in IIS.</p>
@@ -133,7 +133,7 @@ redirect_from: /subscriptions/
         <div class="col-md-12 text-center">
             {% for customer in site.data.customers %}
             <a href="{{ customer.url }}" target="_blank" title="{{ customer.title }}">
-                <img class="customer-logo" alt="{{ customer.title }}" src="//cdn.hangfire.io/img/customers/{{ customer.img }}"></a>
+                <img class="customer-logo" alt="{{ customer.title }}" src="{{ site.cdn }}/img/customers/{{ customer.img }}"></a>
             {% endfor %}
         </div>
     </div>
