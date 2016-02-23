@@ -112,7 +112,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-12">
         <h4>Background Process</h4>
         <p>
-            Use them when you need to run background processes <strong>continously</strong> throught the <strong>lifetime</strong> of your application.
+            Use them when you need to run background processes <strong>continuously</strong> throught the <strong>lifetime</strong> of your application.
         </p>
 <pre><code><span class="keywd">public</span> <span class="keywd">class</span> <span class="type">CleanTempDirectoryProcess</span> : <span class="type">IBackgroundProcess</span>
 {
