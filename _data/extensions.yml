@@ -48,7 +48,7 @@
       url: https://github.com/vip32/Hangfire.SQLite
       author: vip32
       
-    - name: Hangfire.RavenDB
+    - name: Hangfire.Raven
       url: https://github.com/axial/hangfire-ravendb
       author: AndrewMarkley
   
