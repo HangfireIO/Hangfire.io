@@ -20,9 +20,8 @@
       author: barclayadam
 
     - name: Hangfire.CompositeC1
-      url: https://www.nuget.org/packages/Hangfire.CompositeC1
-      author: burningice
-      authorUrl: http://www.nuget.org/profiles/burningice
+      url: https://github.com/burningice2866/Hangfire.CompositeC1
+      author: burningice2866
       
     - name: Hangfire.Firebird
       url: https://github.com/rsegerink/Hangfire.Firebird
