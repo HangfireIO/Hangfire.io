@@ -4,23 +4,25 @@ author: odinserj
 redirect_from: /2014/05/10/are-your-methods-ready-to-run-in-background.html
 ---
 
-Hangfire takes regular classes and regular methods to perform them in the background, because it is simple to use them:
+Hangfire takes regular classes and regular methods to perform them in the background, because it is simple:
 
 {% highlight csharp %}
 BackgroundJob.Enqueue(() => Console.WriteLine("Hi!"));
 {% endhighlight %}
 
-This snippet says that the `Console.WriteLine` method will be *called* in background. But notice that the name of the method is `Enqueue`, and not the `Call`, `Invoke` and so on. 
+This snippet says that the `Console.WriteLine` method will be *called* in background. But note that the name of the method is `Enqueue`, and not the `Call`, `Invoke` and so on. 
 
-The name of the method was choosed to highlight that invocation of a given method is only being *queued* in the current execution context and returns the control to a calling thread immediately after enqueueing. It will be invoked in a *different* execution context. 
+I've chosen the name of this method to highlight, that invocation of a given method is only *queued in the current execution context* and returns the control to a calling thread immediately after queueing. Hangfire will invoke the method in a *different* execution context. 
 
 What does this mean? Several things, that may break your usual expectations about method invocation process. You should be aware of them.
 
 ### Differences between local and background method invocation
 
-#### Method invocation is being serialized
+#### Method invocation is serialized
 
-Before creating a background job, the information about the given method (its type, method name and parameter types) is being serialized to strings. MethodInfo serialization process is absolutely invisible to a user, unlike arguments serialization. 
+Before creating a background job, Hangfire serializes the information about the given method (its type, method name and parameter types) to a string. MethodInfo serialization process is invisible to a user, unlike the arguments serialization.
+
+**NOTE**. Since Hangfire 1.1, the Json.NET package is used to serialize all the things, including custom classes. The information below is obsolete.
 
 Arguments are also serialized to string, but arguments serialization process uses the `TypeConverter` class. All standard classes like numbers, strings, dates and so on already have the corresponding `TypeConverter` implementation, but if you want to pass an instance of a custom class as an argument, you should write the custom converter first.
 
@@ -31,11 +33,9 @@ BackgroundJob.Enqueue(() => CheckArticle(new Article()));
 
 Furthermore, serialized arguments can take more space, and it often is more efficient to pass database identifiers or file names instead of their contents.
 
-#### Execution context is being changed
+#### Execution context is changed
 
-In the simplest case, such as using `ThreadPool.QueueUserWorkItem` or `Task.Factory.StartNew` methods, only thread is being changed. But in Hangfire, you can use different process, or different server to process background jobs.
-
-So, the *execution context* term includes not only thread context, request context and so on, but also static data, including local locks, local filesystem, etc.
+In the simplest case, such as using `ThreadPool.QueueUserWorkItem` or `Task.Factory.StartNew` methods, only thread is changed. But in Hangfire, you can use different process, or different server to process background jobs. So, the *execution context* term includes not only thread context, request context and so on, but also static data, including local locks, local filesystem, etc.
 
 That is why if you are querying data inside a background job that corresponds to the execution context where the job was enqueued, it may fail. If you need to pass the current state to a job, use arguments or shared storage.
 
@@ -55,11 +55,11 @@ public void Method()
 
 #### Delayed invocation
 
-Background job method is not being invoked immediately. It is placed on a queue and waits until any worker pick it up. This leads to undefined start time and end time.
+Background job method is not invoked immediately. It is placed on a queue and waits until any worker pick it up. This leads to undefined start time and end time.
 
 ##### Undefined start-up time
 
-Your method can be invoked tomorrow, after two weeks or six monthes (always true for scheduled jobs, but works with "fail-deploy-retry" practice as well). If it is true even for regular method calls, that application data can be changed or arguments can become stale during the method invocation, especially in a highly concurrent web applications, the probability of these situations in background job processing is very high.
+Your method can be invoked tomorrow, after two weeks or six months (always true for scheduled jobs, but works with "fail-deploy-retry" practice as well). If it is true even for regular method calls, that application data can be changed or arguments can become stale during the method invocation, especially in a highly concurrent web applications, the probability of these situations in background job processing is very high.
 
 Always double-check the data that you pass as arguments and think about its changing nature. Here are some examples:
 
