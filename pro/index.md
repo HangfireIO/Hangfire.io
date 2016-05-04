@@ -45,7 +45,7 @@ In case of exception, you may show an error to a user, and simply ask to retry h
 Continuations allow you to chain multiple batches together. They will be executed once *all background jobs* of a parent batch finished. Consider the previous example where you have 1000 emails to send. If you want to make final action after sending, just add a continuation:
 
 <pre><span class="keywd">var</span> id1 = <span class="type">BatchJob</span>.StartNew(<span class="comm">/* for (var i = 0; i &lt; 1000... */</span>);
-<span class="keywd">var</span> id2 = <span class="type">BatchJob</span>.ContinueWith(id, x => 
+<span class="keywd">var</span> id2 = <span class="type">BatchJob</span>.ContinueWith(id1, x => 
 {
     x.Enqueue(() => MarkCampaignFinished());
     x.Enqueue(() => NotifyAdministrator());
