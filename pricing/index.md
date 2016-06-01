@@ -164,7 +164,7 @@ redirect_from: /subscriptions/
 
             <h3>What if I am not satisfied?</h3>
             <p>
-                All orders are covered by <strong>30-days</strong>, no-questions-asked <strong>money back</strong> policy. If you aren't happy with the software, email me (support@hangfire.io) and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
+                All orders are covered by <strong>30-days</strong>, no-questions-asked <strong>money back</strong> policy. If you aren't happy with the software, email <a href="mailto:sales@hangfire.io">sales@hangfire.io</a> and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
             </p>   
 
             <h3>What is the buying process?</h3>
@@ -194,7 +194,7 @@ redirect_from: /subscriptions/
 
             <h3>What if I need to change a subscription?</h3>
             <p>
-                Not a problem. Just <a href="mailto:sales@hangfire.io">let me know</a>, and I'll create a custom invoice so that you only pay the difference.You'll never be any worse off.
+                Not a problem. Just <a href="mailto:sales@hangfire.io">let me know</a>, and I'll create a custom invoice so that you only pay the difference. You'll never be any worse off.
             </p>
             <p>
                 You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
