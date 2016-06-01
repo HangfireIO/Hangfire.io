@@ -159,7 +159,7 @@ redirect_from: /subscriptions/
 
             <h3>What payment methods are supported?</h3>
             <p>
-                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire via bank <strong>wire transfer</strong>, mail/check or purchase order, please <a href="mailto:support@hangfire.io">contact me</a>, and I'll send you the details.
+                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire via bank <strong>wire transfer</strong>, mail/check or purchase order, please contact <a href="mailto:sales@hangfire.io">sales@hangfire.io</a>, and I'll send you the details.
             </p>     
 
             <h3>What if I am not satisfied?</h3>
@@ -194,7 +194,7 @@ redirect_from: /subscriptions/
 
             <h3>What if I need to change a subscription?</h3>
             <p>
-                Not a problem. Just <a href="mailto:support@hangfire.io">let me know</a>, and I'll create a custom invoice so that you only pay the difference.You'll never be any worse off.
+                Not a problem. Just <a href="mailto:sales@hangfire.io">let me know</a>, and I'll create a custom invoice so that you only pay the difference.You'll never be any worse off.
             </p>
             <p>
                 You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
