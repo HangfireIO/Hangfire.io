@@ -24,11 +24,11 @@ Instead of invoking a method right now, you can postpone its execution for a spe
 BackgroundJob.Schedule(() => Console.WriteLine("Hello, world!"), TimeSpan.FromMinutes(5));
 {% endhighlight %}
 
-This call also saves a job, but instead of placing it to a queue, it adds the job to a persistent schedule. When the given time elapsed, the job will be added to its queue. Meanwhile you can restart your application – it will be executed anyway.
+This call also saves a job, but instead of placing it to a queue, it adds the job to a persistent schedule. When the given time has elapsed, the job will be added to its queue. Meanwhile, you can restart your application – it will be executed anyway.
 
 ### Recurring tasks
 
-Recurring job processing was never been easier. All you need is to call a single line of code:
+Recurring job processing has never been easier. All you need is a single line of code:
 
 {% highlight csharp %}
 RecurringJob.AddOrUpdate(() => Console.Write("Easy!"), Cron.Daily);
@@ -62,7 +62,7 @@ BackgroundJob.Enqueue(() => GenerateStatistics());
 
 ### Guaranteed processing
 
-Hangfire was made with the knowledge that the hosting environment can kill all the threads on each line. So, it does not remove the job until it was successfully completed and contains different implicit retry logic to do the job when its processing was aborted.
+Hangfire was made with the knowledge that the hosting environment can kill all the threads on each line. So, it does not remove the job until it is successfully completed and contains different implicit retry logic to do the job when its processing was aborted.
 
 ### Instance method calls
 
@@ -140,7 +140,7 @@ The order is important, workers will fetch jobs from the critical queue first, a
 
 ### Concurrency level control
 
-Hangfire uses its own fixed worker thread pool to consume queued jobs. Default worker count is set to Environment.ProcessorCount * 5. This number is optimized both for CPU-intensive and I/O intensive tasks. If you experience excessive waits or context switches, you can configure amount of workers manually:
+Hangfire uses its own fixed worker thread pool to consume queued jobs. Default worker count is set to Environment.ProcessorCount * 5. This number is optimized both for CPU-intensive and I/O intensive tasks. If you experience excessive waits or context switches, you can configure the amount of workers manually:
 
 {% highlight csharp %}
 app.UseHangfire(config =>
@@ -154,11 +154,11 @@ var server = new BackgroundJobServer(100);
 
 ### Process jobs anywhere
 
-By default, the job processing is made within an ASP.NET application. But you can process jobs either in the console application, Windows Service or anywhere else.
+By default, the job processing is made within an ASP.NET application. But you can process jobs either in a console application, Windows Service, or anywhere else.
 
 ### Extensibility
 
-Hangfire is build to be as generic as possible. You can extend the following parts:
+Hangfire is built to be as generic as possible. You can extend the following parts:
 
 * storage implementation;
 * states subsystem (including the creation of new states);
