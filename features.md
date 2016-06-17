@@ -54,7 +54,7 @@ If your method encounters a transient exception, don’t worry – it will be re
 You can also control the retry behavior with the AutomaticRetryAttribute class. Just apply it to your method to tell Hangfire the number of retry attempts:
 
 {% highlight csharp %}
-[AutomaticRetry(100)]
+[AutomaticRetry(Attempts = 100)]
 public static void GenerateStatistics() { }
 
 BackgroundJob.Enqueue(() => GenerateStatistics());
