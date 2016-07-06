@@ -25,7 +25,7 @@ To configure a private feed in Visual Studio open **Tools &rarr; NuGet Package M
 
 Alternatively, you can run the following command to add a new package source using command line:
 
-    nuget sources add -Name "Hangfire Pro" -Source https://nuget.hangfire.io/nuget/hangfire-pro
+    nuget sources add -Name "Hangfire Pro" -Source https://nuget.hangfire.io/nuget/hangfire-pro -UserName user -Password secret
 
 Installing Packages
 --------------------
