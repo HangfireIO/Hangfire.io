@@ -2,6 +2,7 @@
 layout: products
 title: Hangfire Licensing
 product_name: Hangfire
+active: overview
 sub_active: licensing
 redirect_from: /core/license.html
 ---

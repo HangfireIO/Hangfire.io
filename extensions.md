@@ -2,6 +2,7 @@
 layout: products
 title: Hangfire Extensions
 product_name: Hangfire Extensions
+active: overview
 sub_active: extensions
 redirect_from:
 - /extensions/

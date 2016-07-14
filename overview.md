@@ -2,6 +2,7 @@
 layout: products
 title: Hangfire Overview
 product_name: Hangfire
+active: overview
 sub_active: overview
 redirect_from: /core/
 ---
