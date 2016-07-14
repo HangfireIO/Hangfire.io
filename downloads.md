@@ -38,7 +38,7 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 Can't wait for a new release? Not a problem as there is a continuous integration feed for Hangfire packages hosted in [AppVeyor](http://www.appveyor.com/). After each successful commit to the `master` or `dev` branches or any open pull request based on these branches, pre-release packages are being pushed to the feed automatically. Here is its url:
 
-    https://ci.appveyor.com/nuget/hangfire-6d3854sflnyb
+    https://ci.appveyor.com/nuget/hangfire
 
 ### Adding the feed
 
