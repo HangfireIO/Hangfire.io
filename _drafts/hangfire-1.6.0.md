@@ -6,6 +6,8 @@ author: odinserj
 
 Hangfire 1.6 released with async methods support, experimental multiplatform support via .NET Core, deep integration with ASP.NET Core, etc, etc. It's worth checking, I promise! Works even on Ubuntu 14.04 and OS X El Capitan!
 
+## What's New
+
 ### Async Methods Support
 
 Async programming became very popular in .NET a long time ago. With the `await` keyword it won an even greater success. Some libraries even don't provide synchronous API (like [Microsoft.Net.Http](https://www.nuget.org/packages/Microsoft.Net.Http/)), so we can't ignore this movement.
@@ -44,7 +46,7 @@ public static async Task HighlightAsync(int snippetId, CancellationToken token) 
 BackgroundJob.Enqueue(() => HighlightAsync(snippetId, CancellationToken.None));
 {% endhighlight %}
 
-### .NET Core Support
+### Experimental .NET Core Support
 
 [.NET Standard](https://docs.microsoft.com/en-us/dotnet/articles/standard/library) 1.3, 
 Linux, OS X,
@@ -55,15 +57,27 @@ Still experimental, no unit tests
 
 ### ASP.NET Core Integration
 
+Supports .NET Core and .NET Framework &ge; 4.5.1
+
 * Logging
 * Dependency Injection
 * Dashboard
+
+Install-Package Hangfire.AspNetCore
+
+services.AddHangfire(x => x.UseSqlServer("connection string"));
+app.UseHangfireServer();
+app.UseHangfireDashboard();
 
 ### A lot of other changes
 
 See GitHub release.
 
-### Acknowledgments
+## Upgrading
+
+IAuthorizationFilter is deprecated
+
+## Acknowledgments
 
 Derek @tuespetre async
 @Excommunicated latency
