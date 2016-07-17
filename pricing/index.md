@@ -264,11 +264,6 @@ redirect_from: /subscriptions/
                         <td></td>
                         <td><i class="glyphicon glyphicon-ok"></i></td>
                     </tr>
-                    <tr>
-                        <th>Async methods support</th>
-                        <td></td>
-                        <td><span class="label label-default">Coming later</span></td>
-                    </tr>
                 </tbody>
             </table>
         </div>
