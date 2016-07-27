@@ -106,16 +106,3 @@ So, you can use existing tools like <a href="http://www.nagios.org/" target="_bl
     <hr>
 </div>
 
-## Coming Soon
-
-### Async methods support
-
-You don't need to guess the correct number of worker to handle I/O intensive jobs efficiently. Hangfire will be able to do other job while async operations pending to complete.
-
-<pre><span class="keywd">public</span> <span class="keywd">static</span> <span class="keywd">async</span> <span class="type">Task</span> HighlightAsync(<span class="keywd">int</span> snippetId)
-{
-    <span class="keywd">var</span> snippet = <span class="keywd">await</span> <span class="type">Context</span>.Snippets.SingleOrDefaultAsync(snippetId);
-    snippet.Code = <span class="keywd">await</span> <span class="type">RemoteService</span>.HighlightAsync(snippet.Code);
-
-    <span class="keywd">await</span> Context.SaveChangesAsync();
-}</pre>

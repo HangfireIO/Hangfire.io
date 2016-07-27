@@ -82,6 +82,10 @@
       url: https://github.com/devmondo/Hangfire.SimpleInjector
       author: devmondo
       
+    - name: Hangfire.StructureMap
+      url: https://github.com/cocowalla/Hangfire.StructureMap
+      author: cocowalla
+      
     - name: Hangfire.Unity
       url: https://github.com/phenixdotnet/Hangfire.Unity
       author: phenixdotnet
