@@ -27,7 +27,7 @@
 .navbar-hangfire {
     margin-bottom: 30px;
     background-color: #eee;
-    border-bottom: solid 2px #ccc;
+    border: none;
 }
 
 .navbar-hangfire .navbar-nav .active>a, 
