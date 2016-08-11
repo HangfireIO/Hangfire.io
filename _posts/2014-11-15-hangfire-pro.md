@@ -16,7 +16,7 @@ As an ASP.NET developer, I always wanted to have something simple to handle scen
 
 But every time I faced Windows Services, message queues and other difficult-to-understand problems and hard-to-maintain solutions, my head exploded into a billion pieces. At the same time I looked at Rails' [Sidekiq](http://sidekiq.org) and wished to have a simple .NET alternative for background job processing. That is why I began to develop [Hangfire](http://hangfire.io) (yep, just for the loader).
 
-Slightly more than a year passed from the [first commit](https://github.com/HangfireIO/Hangfire/tree/d58a619ebc487ef28bef8c6e7f4df8e1d51ee8c5) and [first version](https://www.nuget.org/packages/Hangfire/0.1.0) of Hangfire. This was my first open-source project that is being used more than in one organization, and it was an amazing experience for me to grow a project from scratch. I'm glad to see more and more people coming to the project and giving positive ratings and unvaluable feedback.
+Slightly more than a year passed from the [first commit](https://github.com/HangfireIO/Hangfire/tree/d58a619ebc487ef28bef8c6e7f4df8e1d51ee8c5) and [first version](https://www.nuget.org/packages/Hangfire/0.1.0) of Hangfire. This was my first open-source project that is used more than in one organization, and it was an amazing experience for me to grow a project from scratch. I'm glad to see more and more people coming to the project and giving positive ratings and unvaluable feedback.
 
 I want to keep Hangfire project as free as possible, but eliminate the most dangerous risk – the absence of time. There are many things to be done, including problems, new features, documentation, and I want to do them in a reasonable time.
 
@@ -36,7 +36,7 @@ I understand that this step breaks your expectations, and I'm sorry for this. Th
 
 [Most](https://github.com/HangfireIO/Hangfire/issues/122) [wanted](https://github.com/HangfireIO/Hangfire/issues/195) features were implemented in the next version of Hangfire.Redis package. It now includes:
 
-* **Compatibility with ServiceStack 4.0** libraries. It still uses ServiceStack v3 libraries, but `ILMerge /internalize` utility is being used to merge them into Hangfire.Redis assembly. So, you can use either Service v3 or v4 in your projects.
+* **Compatibility with ServiceStack 4.0** libraries. It still uses ServiceStack v3 libraries, but `ILMerge /internalize` utility is used to merge them into Hangfire.Redis assembly. So, you can use either Service v3 or v4 in your projects.
 * **Configurable prefix for keys**. You can use now the same database for different environments by setting corresponding prefix for keys in the `RedisStorageOptions.Prefix` property.
 
 ### Hangfire Pro Today

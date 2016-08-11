@@ -42,7 +42,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-6">
         <h4>Fire-and-forget</h4>
         <p>
-            These jobs are being executed <strong>only once</strong> and almost <strong>immediately</strong> after they fired.
+            These jobs are executed <strong>only once</strong> and almost <strong>immediately</strong> after they fired.
         </p>
 <pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Enqueue(
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Fire-and-forget!"</span>));</pre>
@@ -50,7 +50,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-6">
         <h4>Delayed</h4>
         <p>
-            Delayed jobs are being executed <strong>only once</strong> too, but not immediately – only after the <strong>specified time interval</strong>.
+            Delayed jobs are executed <strong>only once</strong> too, but not immediately – only after the <strong>specified time interval</strong>.
         </p>
 <pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Schedule(
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Delayed!"</span>),
@@ -130,7 +130,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
 
 ### Backed by Persistent Storage
 
-Background jobs are very important part of an application and Hangfire ensures that any job is being performed **at least once**. To persist background job information between application restarts, all the information is being saved in your favorite persistent storage. Currently the following storages are supported:
+Background jobs are very important part of an application and Hangfire ensures that any job is performed **at least once**. To persist background job information between application restarts, all the information is saved in your favorite persistent storage. Currently the following storages are supported:
 
 <table class="text-center supported-storages">
     <tr>
@@ -196,7 +196,7 @@ You are also able to retry any background job manually through the programming c
 
 ### Scale as You Grow
 
-You are not required to make any architecture decisions to start using Hangfire. You can begin with simple setup, where background processing is being implemented on the web application side.
+You are not required to make any architecture decisions to start using Hangfire. You can begin with simple setup, where background processing is implemented on the web application side.
 
 Later, when you face with performance problems, you can separate the processing among different processes or servers – Hangfire uses distributed locks to handle synchronization issues.
 

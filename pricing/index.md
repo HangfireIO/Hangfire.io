@@ -174,7 +174,7 @@ redirect_from: /subscriptions/
 
             <h3>How many licenses do I need to buy?</h3>
             <p>
-                Each license allows you to embed Hangfire Pro within software that is being developed by one company/organization.
+                Each license allows you to embed Hangfire Pro within software that is developed by one company/organization.
             </p>
         </div>
         <div class="col-md-6">

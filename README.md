@@ -1,7 +1,7 @@
 Hangfire Official Site
 ====================
 
-This repository hosts the Hangfire project organization pages. [Jekyll](https://github.com/mojombo/jekyll) is being used to manage page transformation in accordance with GitHub Pages usage.
+This repository hosts the Hangfire project organization pages. [Jekyll](https://github.com/mojombo/jekyll) is used to manage page transformation in accordance with GitHub Pages usage.
 
 [Visit Hangfire on GitHub.](https://github.com/HangfireIO/Hangfire)
 

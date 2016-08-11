@@ -78,17 +78,17 @@ public class EmailService
 BackgroundJob.Enqueue<EmailService>(x => x.Send());
 {% endhighlight %}
 
-When a worker sees that the given method is an instance-method, it will activate its class first. By default, the Activator.CreateInstace method is being used, so only classes with default constructors are supported by default. But you can plug in your IoC container and pass the dependencies through the constructor.
+When a worker sees that the given method is an instance-method, it will activate its class first. By default, the `Activator.CreateInstace` method is used, so only classes with default constructors are supported by default. But you can plug in your IoC container and pass the dependencies through the constructor.
 
 ### Culture capturing
 
-When you marshal your method invocation into another execution context, you should be able to preserve some environment settings. Some of them – Thread.CurrentCulture and Thread.CurrentUICulture are automatically being captured for you.
+When you marshal your method invocation into another execution context, you should be able to preserve some environment settings. Some of them – `Thread.CurrentCulture` and `Thread.CurrentUICulture` are automatically captured for you.
 
-It is done by the PreserveCultureAttribute class that is applied to all of your methods by default.
+It is done by the `PreserveCultureAttribute` class that is applied to all of your methods by default.
 
 ### Cancellation tokens
 
-Hangfire can tell your methods were aborted or canceled due to shutdown event, so you can stop them gracefully using job cancellation tokens that are similar to the regular CancellationToken class.
+Hangfire can tell your methods were aborted or canceled due to shutdown event, so you can stop them gracefully using job cancellation tokens that are similar to the regular `CancellationToken` class.
 
 {% highlight csharp %}
 public void Method(IJobCancellationToken token)
