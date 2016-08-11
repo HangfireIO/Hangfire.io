@@ -1,7 +1,6 @@
 ---
 layout: products
 title: Hangfire Extensions
-product_name: Hangfire Extensions
 active: overview
 sub_active: extensions
 redirect_from:
@@ -9,10 +8,7 @@ redirect_from:
 - /extensions/third-party.html
 ---
 
-<p>
-    
-</p>
-
+<h1 class="page-header">Extensions</h1>
 
 <div class="alert alert-warning">
     If you author an extension, please don't hesitate to post it here by editing

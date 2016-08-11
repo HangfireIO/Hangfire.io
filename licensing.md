@@ -1,11 +1,12 @@
 ---
 layout: products
 title: Hangfire Licensing
-product_name: Hangfire
 active: overview
 sub_active: licensing
 redirect_from: /core/license.html
 ---
+
+<h1 class="page-header">Licensing</h1>
 
 Hangfire is an **open source software** released under the terms of the **GNU Lesser General Public License**. Most of the Hangfire source code was written and is copyrighted by Sergey Odinokov. A list of other contributors can be found in the git history.
 

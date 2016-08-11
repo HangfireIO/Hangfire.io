@@ -1,11 +1,12 @@
 ---
 layout: products
 title: Hangfire Features
-product_name: Hangfire
 active: overview
 sub_active: features
 redirect_from: /core/features.html
 ---
+
+<h1 class="page-header">Features</h1>
 
 ### Queue-based processing
 

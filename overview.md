@@ -1,11 +1,12 @@
 ---
 layout: products
 title: Hangfire Overview
-product_name: Hangfire
 active: overview
 sub_active: overview
 redirect_from: /core/
 ---
+
+<h1 class="page-header">Overview</h1>
 
 <p>
     Hangfire is an <strong>open-source</strong> framework that helps you to create, process and manage your background jobs, i.e. operations you don't want to put in your request processing pipeline:

@@ -1,10 +1,11 @@
 ---
 layout: products
 title: Downloads
-product_name: Hangfire Pro
 active: overview
 sub_active: pro-downloads
 ---
+
+<h1 class="page-header">Hangfire Pro Downloads</h1>
 
 Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io/feeds/hangfire-pro). Package downloads are available only for [Hangfire Pro subscribers](http://hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give me 24 hours to generate your credentials for private NuGet server.
 

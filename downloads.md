@@ -1,11 +1,12 @@
 ---
 layout: products
 title: Hangfire Downloads
-product_name: Hangfire
 active: overview
 sub_active: downloads
 redirect_from: /core/download.html
 ---
+
+<h1 class="page-header">Downloads</h1>
 
 Hangfire is published as NuGet packages, as are nearly all of the extensions. If you have NuGet installed, you can right-click on your project and choose `Add Library Package Reference`. Search for <a href="https://www.nuget.org/packages?q=Hangfire">Hangfire</a>, and you should see a list of packages. Click *Install*, and you're done. Here is the list of Hangfire packages:
 
