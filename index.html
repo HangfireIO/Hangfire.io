@@ -20,12 +20,12 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
         <div class="row" itemscope itemtype="http://schema.org/SoftwareApplication">
             <div class="col-md-7">
                 <h1 itemprop="name">Hangfire</h1>
-                <p>
-                    {{ site.description }}
-                    No Windows Service required.
+                <p style="margin-bottom: 10px;">
+                    An easy way to perform background processing in your .NET and .NET Core applications.
+                    No Windows Service or separate process required.
                 </p>
                 <p>
-                    Backed by persistent storages. Open and free for commercial use.
+                    Backed by persistent storage. Open and free for commercial use.
                 </p>
                    
                 <a href="https://www.nuget.org/packages/Hangfire/" target="_blank">
@@ -121,45 +121,76 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
 </div>
 
 <div class="container">
+    
     <div class="row">
-        <div class="col-md-4">
-            <h3>Fire-and-forget tasks</h3>
-<pre><span class="comm">// Static methods are for demo purposes</span>
-<span class="type">BackgroundJob</span>.Enqueue(<span class="hidden-sm">
-    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Simple!"</span>));</pre>
-
-            <h3>Delayed tasks</h3>
-<pre><span class="type">BackgroundJob</span>.Schedule(<span class="hidden-sm">
-    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Reliable!"</span>), <span class="hidden-sm">
-    </span><span class="type">TimeSpan</span>.FromDays(7));</pre>
-
-            <h3>Recurring tasks</h3>
-<pre><span class="type">RecurringJob</span>.AddOrUpdate(<span class="hidden-sm">
-    </span>() => <span class="type">Console</span>.WriteLine(<span class="string">"Transparent!"</span>), <span class="hidden-sm">
-    </span><span class="type">Cron</span>.Daily);</pre>
-
-        </div>
-        <div class="col-md-4">
-            <h3>Run them inside a web app…</h3>
-            <p><em>Forget about AppDomain unloads, Web Garden &amp; Web Farm issues – Hangfire is reliable for ASP.NET from scratch, even on Shared Hosting!</em></p>
-<pre><span class="keywd">public</span> <span class="keywd">void</span> Configuration(<span class="type">IAppBuilder</span> app)
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Fire-and-forget jobs</h3>
+                    <p>
+                        Fire-and-forget jobs are executed <strong>only once</strong> and almost <strong>immediately</strong> after creation.
+                    </p>
+                    <pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Enqueue(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Fire-and-forget!"</span>));</pre>
+                                    </div>
+                <div class="col-md-6">
+                    <h3>Delayed jobs</h3>
+                    <p>
+                        Delayed jobs are executed <strong>only once</strong> too, but not immediately, after a certain <strong>time interval</strong>.
+                    </p>
+                    <pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Schedule(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Delayed!"</span>),
+    <span class="type">TimeSpan</span>.FromDays(7));</pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Recurring jobs</h3>
+                    <p>
+                        Recurring jobs fire <strong>many times</strong> on the specified <strong>CRON schedule</strong>.
+                    </p>
+                    <pre><span class="type">RecurringJob</span>.AddOrUpdate(
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Recurring!"</span>),
+    <span class="type">Cron</span>.Daily);</pre>
+                </div>
+                <div class="col-md-6">
+                    <h3>Continuations</h3>
+                    <p>
+                        Continuations are executed when its parent job <strong>has been finished</strong>.
+                    </p>
+                    <pre><span class="type">BackgroundJob</span>.ContinueWith(
+    jobId,
+    () => <span class="type">Console</span>.WriteLine(<span class="string">"Continuation!"</span>));</pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Batches <div class="label label-primary">Pro</div></h3>
+                    <p>Batch is a group of background jobs that is <strong>created atomically</strong> and considered as a single entity.</p>
+                    <pre><code><span class="keywd">var</span> batchId = <span class="type">Batch</span>.StartNew(x =>
 {
-    app.UseHangfireServer();
-}</pre>
-
-            <h3>… or anywhere else</h3>
-            <p><em>In console application, Windows Service, Azure Worker Role, etc.</em></p>
-<pre><span class="keywd">using</span> (<span class="keywd">new</span> <span class="type">BackgroundJobServer</span>())
+    x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Job 1"</span>));
+    x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Job 2"</span>));
+});</code></pre>
+                </div>
+                <div class="col-md-6">
+                    <h3>Batch Continuations <div class="label label-primary">Pro</div></h3>
+                    <p>
+                        Batch continuation is fired <strong>when all</strong> background jobs in a parent batch <strong>finished</strong>.
+                    </p>
+                    <pre><code><span class="type">Batch</span>.ContinueWith(batchId, x =>
 {
-    <span class="comm">/* ... */</span>
-}</pre>
+    x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Last Job"</span>));
+});</code></pre>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 hidden-xs hidden-sm">
-            <a height="410" data-chrome="noborders" class="twitter-timeline" href="https://twitter.com/hangfireio" data-widget-id="451027617567621120"></a>
+        <div class="col-md-3 hidden-xs hidden-sm">
+            <a height="600" data-chrome="noborders" class="twitter-timeline" href="https://twitter.com/hangfireio" data-widget-id="451027617567621120"></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
-    <br>
+    <hr>
     <div class="row">
         <div class="col-md-4 feature">
             <div class="feature-icon">
@@ -182,7 +213,7 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <div class="feature-body">
                 <h3>Persistent</h3>
                 <p>
-                    Background jobs are saved into a persistent storage&nbsp;– <a href="https://www.nuget.org/packages/HangFire.SqlServer/">SQL Server</a>, <a href="https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis/1.2.1">Redis</a>, <a href="https://www.nuget.org/packages/Hangfire.PostgreSql/">PostgreSQL</a>, <a href="https://www.nuget.org/packages/HangFire.Mongo/">MongoDB</a> and <a href="/extensions.html#storages">others</a>.
+                    Background jobs are created in a persistent storage&nbsp;– <a href="https://www.nuget.org/packages/HangFire.SqlServer/">SQL Server</a>, <a href="https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis/1.2.1">Redis</a>, <a href="https://www.nuget.org/packages/Hangfire.PostgreSql/">PostgreSQL</a>, <a href="https://www.nuget.org/packages/HangFire.Mongo/">MongoDB</a> and <a href="/extensions.html#storages">others</a>.
                 </p>
                 <p>
                     You can safely restart your application and use Hangfire with ASP.NET without worrying about application pool recycles.
@@ -196,7 +227,7 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <div class="feature-body">
                 <h3>Transparent</h3>
                 <p>
-                    Built-in web interface allow you to see the whole picture of background processing as well as observe the state of each background job.
+                    Built-in web interface allow you to see the whole picture of your background processing, as well as observe the state of each background job.
                 </p>
                 <p>
                     Out of the box support for popular <a href="http://docs.hangfire.io/en/latest/configuration/configuring-logging.html">logging frameworks</a> allows you to catch errors early with zero configuration.
@@ -212,10 +243,10 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <div class="feature-body">
                 <h3>Reliable</h3>
                 <p>
-                    Once a background job created and placed into a storage without exceptions, Hangfire takes the responsibility to process it <em>at least</em> once.
+                    Once a background job was created without any exception, Hangfire takes the responsibility to process it with the <em>at least once</em> semantics.
                 </p>
                 <p>
-                    You are free to throw unhandled exceptions or kill your application – background jobs will be re-tried automatically.
+                    You are free to throw unhandled exceptions or terminate your application – background jobs will be re-tried automatically.
                 </p>
             </div>
         </div>
@@ -267,7 +298,7 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
             <div class="feature-body">
                 <h3>Self-maintainable</h3>
                 <p>
-                    You don't need to manually clear the storage – Hangfire keeps it as clean as possible and removes old records automatically. 
+                    You don't need to perform manual storage clean-up&nbsp;– Hangfire keeps it as clean as possible and removes old records automatically. 
                 </p>
             </div>
         </div>
