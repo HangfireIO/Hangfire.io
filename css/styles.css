@@ -100,6 +100,10 @@ pre {
     white-space: pre;
 }
 
+pre code {
+    white-space: pre;
+}
+
 .quickstart hr {
     margin: 10px 0;
 }
