@@ -199,7 +199,7 @@ You are also able to retry any background job manually through the programming c
 
 You are not required to make any architecture decisions to start using Hangfire. You can begin with simple setup, where background processing is implemented on the web application side.
 
-Later, when you face with performance problems, you can separate the processing among different processes or servers – Hangfire uses distributed locks to handle synchronization issues.
+Later, when you face performance problems, you can separate the processing among different processes or servers – Hangfire uses distributed locks to handle synchronization issues.
 
 <div class="tabbable tabs-left">
     <!-- Nav tabs -->
