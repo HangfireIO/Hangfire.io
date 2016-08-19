@@ -426,3 +426,14 @@ table>thead:first-child>tr:first-child>td {
     margin-right: 30px;
     margin-bottom: 20px;
 }
+
+.div-thumbnail {
+        padding: 4px;
+    /* line-height: 1.42857143; */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
