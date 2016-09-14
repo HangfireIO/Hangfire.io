@@ -167,7 +167,7 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
                 <div class="col-md-6">
                     <h3>Batches <div class="label label-primary">Pro</div></h3>
                     <p>Batch is a group of background jobs that is <strong>created atomically</strong> and considered as a single entity.</p>
-                    <pre><code><span class="keywd">var</span> batchId = <span class="type">Batch</span>.StartNew(x =>
+                    <pre><code><span class="keywd">var</span> batchId = <span class="type">BatchJob</span>.StartNew(x =>
 {
     x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Job 1"</span>));
     x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Job 2"</span>));
@@ -178,7 +178,7 @@ description: An easy way to perform fire-and-forget, delayed and recurring tasks
                     <p>
                         Batch continuation is fired <strong>when all</strong> background jobs in a parent batch <strong>finished</strong>.
                     </p>
-                    <pre><code><span class="type">Batch</span>.ContinueWith(batchId, x =>
+                    <pre><code><span class="type">BatchJob</span>.ContinueWith(batchId, x =>
 {
     x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Last Job"</span>));
 });</code></pre>
