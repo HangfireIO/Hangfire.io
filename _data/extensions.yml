@@ -50,6 +50,10 @@
     - name: Hangfire.Raven
       url: https://github.com/cady-io/hangfire-ravendb
       author: cady-io
+      
+    - name: Hangfire.MySqlStorage
+      url: https://github.com/arnoldasgudas/Hangfire.MySqlStorage
+      author: arnoldasgudas
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
