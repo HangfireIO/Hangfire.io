@@ -48,8 +48,8 @@
       author: vip32
       
     - name: Hangfire.Raven
-      url: https://github.com/axial/hangfire-ravendb
-      author: AndrewMarkley
+      url: https://github.com/cady-io/hangfire-ravendb
+      author: cady-io
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
