@@ -43,10 +43,6 @@
       url: https://github.com/frankhommers/Hangfire.PostgreSql
       author: frankhommers
       
-    - name: Hangfire.SQLite
-      url: https://github.com/vip32/Hangfire.SQLite
-      author: vip32
-      
     - name: Hangfire.Raven
       url: https://github.com/cady-io/hangfire-ravendb
       author: cady-io
