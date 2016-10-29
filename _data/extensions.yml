@@ -1,18 +1,19 @@
 # Don't hesitate to add your project here by creating a pull-request
 # on GitHub. Please use the most specific category where possible,
-# or create your own if you wish :-) Projects are sorted alphabetically.
+# or create your own if you wish :-) Projects should be sorted 
+# alphabetically.
 
 - name: Common
   projects:
-    - name: Hangfire.Dashboard.Authorization
-      description: Role/claims-based and basic authorization for Dashboard
-      url: https://github.com/HangfireIO/Hangfire.Dashboard.Authorization
-      author: HangfireIO
-      
     - name: Hangfire.Console
       description: Job console extension for Hangfire
       url: https://github.com/pieceofsummer/Hangfire.Console
       author: pieceofsummer
+  
+    - name: Hangfire.Dashboard.Authorization
+      description: Role/claims-based and basic authorization for Dashboard
+      url: https://github.com/HangfireIO/Hangfire.Dashboard.Authorization
+      author: HangfireIO
     
 - name: Storages
   description: The following projects enable you to use your favorite storage.
@@ -48,13 +49,13 @@
       url: https://github.com/frankhommers/Hangfire.PostgreSql
       author: frankhommers
       
-    - name: Hangfire.SQLite
-      url: https://github.com/vip32/Hangfire.SQLite
-      author: vip32
-      
     - name: Hangfire.Raven
       url: https://github.com/cady-io/hangfire-ravendb
       author: cady-io
+      
+    - name: Hangfire.SQLite
+      url: https://github.com/vip32/Hangfire.SQLite
+      author: vip32
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
@@ -70,6 +71,10 @@
     - name: Hangfire.Funq
       url: https://github.com/apilavakis/Hangfire.Funq
       author: apilavakis
+      
+    - name: Hangfire.LightInject
+      url: https://github.com/sbosell/Hangfire.LightInject
+      author: sbosell
       
     - name: Hangfire.MEF
       url: https://github.com/Excommunicated/Hangfire.MEF
@@ -98,10 +103,6 @@
     - name: Hangfire.Windsor
       url: https://github.com/BredStik/Hangfire.Windsor
       author: BredStik
-      
-    - name: Hangfire.LightInject
-      url: https://github.com/sbosell/Hangfire.LightInject
-      author: sbosell
       
 - name: Unofficial .NET 4.0 Support
   projects:
