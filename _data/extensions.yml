@@ -8,6 +8,11 @@
       description: Role/claims-based and basic authorization for Dashboard
       url: https://github.com/HangfireIO/Hangfire.Dashboard.Authorization
       author: HangfireIO
+      
+    - name: Hangfire.Console
+      description: Job console extension for Hangfire
+      url: https://github.com/pieceofsummer/Hangfire.Console
+      author: pieceofsummer
     
 - name: Storages
   description: The following projects enable you to use your favorite storage.
