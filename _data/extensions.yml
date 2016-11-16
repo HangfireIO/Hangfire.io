@@ -66,6 +66,10 @@
     - name: Hangfire.SQLite
       url: https://github.com/vip32/Hangfire.SQLite
       author: vip32
+
+    - name: Hangfire.MySqlStorage
+      url: https://github.com/arnoldasgudas/Hangfire.MySqlStorage
+      author: arnoldasgudas
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
