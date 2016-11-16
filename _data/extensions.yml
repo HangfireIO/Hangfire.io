@@ -5,6 +5,11 @@
 
 - name: Common
   projects:
+    - name: Hangfire.RecurringJobExtensions
+      description: Build RecurringJob automatically
+      url: https://github.com/icsharp/Hangfire.RecurringJobExtensions
+      author: icsharp
+
     - name: Hangfire.Console
       description: Job console extension for Hangfire
       url: https://github.com/pieceofsummer/Hangfire.Console
