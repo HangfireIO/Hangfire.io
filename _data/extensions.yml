@@ -118,6 +118,10 @@
       url: https://github.com/BredStik/Hangfire.Windsor
       author: BredStik
       
+    - name: Hangfire.SpringNet
+      url: https://github.com/imranmomin/Hangfire.SpringNet
+      author: imranmomin
+      
 - name: Unofficial .NET 4.0 Support
   projects:
     - name: Hangfire_Net40
