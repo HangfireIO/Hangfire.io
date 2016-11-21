@@ -106,6 +106,10 @@
       url: https://github.com/devmondo/Hangfire.SimpleInjector
       author: devmondo
       
+    - name: Hangfire.SpringNet
+      url: https://github.com/imranmomin/Hangfire.SpringNet
+      author: imranmomin
+      
     - name: Hangfire.StructureMap
       url: https://github.com/cocowalla/Hangfire.StructureMap
       author: cocowalla
@@ -117,10 +121,6 @@
     - name: Hangfire.Windsor
       url: https://github.com/BredStik/Hangfire.Windsor
       author: BredStik
-      
-    - name: Hangfire.SpringNet
-      url: https://github.com/imranmomin/Hangfire.SpringNet
-      author: imranmomin
       
 - name: Unofficial .NET 4.0 Support
   projects:
