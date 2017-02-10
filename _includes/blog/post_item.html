@@ -6,7 +6,13 @@
 <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 	{{ post.excerpt }}
 	
+	{% if post.origin %}
+	<a class="btn btn-sm btn-default" href="{{ post.origin }}" target="_blank" style="border-color: #2e6da4">
+		Continue Reading on @{{ post.author }}'s Blog
+	</a>
+	{% else %}
 	<a class="btn btn-sm btn-default" href="{{ post.url }}">Continue Reading &rarr;</a>
+	{% endif %}
 </article>
 
 <hr class="post-separator">
