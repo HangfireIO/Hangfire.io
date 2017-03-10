@@ -39,6 +39,10 @@
       url: https://github.com/burningice2866/Hangfire.CompositeC1
       author: burningice2866
       
+    - name: Hangfire.Firebase
+      url: https://github.com/imranmomin/Hangfire.Firebase
+      author: imranmomin
+      
     - name: Hangfire.Firebird
       url: https://github.com/rsegerink/Hangfire.Firebird
       author: rsegerink
@@ -70,10 +74,6 @@
     - name: Hangfire.SQLite
       url: https://github.com/vip32/Hangfire.SQLite
       author: vip32
-      
-    - name: Hangfire.Firebase
-      url: https://github.com/imranmomin/Hangfire.Firebase
-      author: imranmomin
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
