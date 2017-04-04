@@ -42,7 +42,7 @@ Create a new file called `NuGet.config` in the root directory of your solution, 
 </configuration>
 ```
 
-The changes will take an effect only when you **close the solution and re-open it**. You can safely add this file to the solution control, since it does not contain any sensitive data. It's better to set environment variables for credentials then, to not to specify them each time.
+The changes will take an effect only when you **close the solution and re-open it**. You can safely **add this file to the solution control**, since it does not contain any sensitive data. It's better to set environment variables for credentials then, to not to specify them each time.
 
 #### Setting environment variables
 
