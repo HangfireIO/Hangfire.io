@@ -19,15 +19,80 @@ Avaliable Packages
 Configuring Feed
 -----------------
 
+There are several ways to add a NuGet feed, but the main difficulty is authentication. In modern environments with NuGet 3.5+ it is possible to [use environment variables](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file) to provide credentials, and it is the best way, since you'll have the same configuration for both development machines and build servers, and for all environments, including .NET Core projects.
+
+### Modern environments
+
+Apples to: **Visual Studio 2017, .NET Core CLI, NuGet.exe 3.5+**. This will also work in **Visual Studio 2015**, but you'll be prompted for credentials each time you install a package, when *HangfirePro* feed is selected.
+
+Create a new file called `NuGet.config` in the root directory of your solution, and add the following contents.
+
+```xml
+<!-- YourSolution\NuGet.config -->
+<configuration>
+    <packageSources>
+        <add key="HangfirePro" value="https://nuget.hangfire.io/nuget/hangfire-pro/" />
+    </packageSources>
+    <packageSourceCredentials>
+        <HangfirePro>
+            <add key="Username" value="%HANGFIRE_LOGIN%" />
+            <add key="ClearTextPassword" value="%HANGFIRE_PASSWORD%" />
+        </HangfirePro>
+    </packageSourceCredentials>
+</configuration>
+```
+
+The changes will take an effect only when you **close the solution and re-open it**. You can safely add this file to the solution control, since it does not contain any sensitive data. It's better to set environment variables for credentials then, to not to specify them each time.
+
+#### Setting environment variables
+
+On Windows, use the `setx` command to add the corresponding environment variables. It's also possible to set machine-wide variables using the `/s` switch. Alternatively you can set them using the *System properties* window, but don't forget to reopen the command prompt to use the new values.
+
+```bash
+setx HANGFIRE_LOGIN your_login
+setx HANGFIRE_PASSWORD your_password
+```
+
+On *nix systems it depends on your shell program. You can use the following commands to set environment variables when using Bash.
+
+```bash
+export HANGFIRE_LOGIN=your_login
+export HANGFIRE_PASSWORD=your_password
+```
+
+In TeamCity, use [Build Parameters](https://confluence.jetbrains.com/display/TCD9/Predefined+Build+Parameters), in AppVeyor use [secure variables](https://www.appveyor.com/docs/build-configuration/#secure-variables) in your `appveyor.yml` file, in Travis CI it's possible to use [encrypted variables](https://docs.travis-ci.com/user/environment-variables/) too. I believe other continuous integration servers also have an encryption feature.
+
+#### Troubleshooting
+
+**Package not found**: close the solution and open it again. **401 unauthorized** status returned: ensure your environment variables are set and use correct credentials. If package restore **prompts for credentials**, ensure environment variables are set, and you have the latest version of the NuGet client:
+
+```bash
+> NuGet.exe help
+...
+NuGet Version: 3.5.0.1996
+```
+
+If your version less than the specified one, just update the NuGet client:
+
+```bash
+NuGet.exe update -self
+```
+
+If you have any problems with the setup, send an email to <a href="mailto:support@hangfire.io">support@hangfire.io</a>, I'll be happy to help.
+
+### Visual Studio < 2015
+
 To configure a private feed in Visual Studio open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
 
     https://nuget.hangfire.io/nuget/hangfire-pro
 
 ![Package Manager Settings Window](/img/pkg-source-pro.png)
 
+### Build servers with NuGet < 3.5
+
 Alternatively, you can run the following command to add a new package source using command line:
 
-    nuget sources add -Name "Hangfire Pro" -Source https://nuget.hangfire.io/nuget/hangfire-pro -UserName user -Password secret
+    nuget sources add -Name "HangfirePro" -Source https://nuget.hangfire.io/nuget/hangfire-pro -UserName user -Password secret
 
 Installing Packages
 --------------------
