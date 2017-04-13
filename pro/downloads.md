@@ -21,6 +21,14 @@ Configuring Feed
 
 There are several ways to add a NuGet feed, but the main difficulty is authentication. In modern environments with NuGet 3.5+ it is possible to [use environment variables](https://docs.microsoft.com/en-us/nuget/schema/nuget-config-file) to provide credentials, and it is the best way, since you'll have the same configuration for both development machines and build servers, and for all environments, including .NET Core projects.
 
+### Simple Setup in Visual Studio
+
+This is the simplest way to start using Hangfire Pro feed, but it will not work with Continuous Integration. To configure a private feed in Visual Studio, open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
+
+    https://nuget.hangfire.io/nuget/hangfire-pro
+
+![Package Manager Settings Window](/img/pkg-source-pro.png)
+
 ### Modern environments
 
 Apples to: **Visual Studio 2017, .NET Core CLI, NuGet.exe 3.5+**. This will also work in **Visual Studio 2015**, but you'll be prompted for credentials each time you install a package, when *HangfirePro* feed is selected.
@@ -79,14 +87,6 @@ NuGet.exe update -self
 ```
 
 If you have any problems with the setup, send an email to <a href="mailto:support@hangfire.io">support@hangfire.io</a>, I'll be happy to help.
-
-### Visual Studio < 2015
-
-To configure a private feed in Visual Studio open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
-
-    https://nuget.hangfire.io/nuget/hangfire-pro
-
-![Package Manager Settings Window](/img/pkg-source-pro.png)
 
 ### Build servers with NuGet < 3.5
 
