@@ -1,7 +1,7 @@
 title: Hangfire
 description: "An easy way to perform background processing in .NET and .NET Core applications. No separate process required, uses persistent storage."
-url: http://hangfire.io
-cdn: //cdn.hangfire.io
+url: https://hangfire.io
+cdn: 
 
 author:
   name: 'odinserj'
