@@ -40,6 +40,10 @@
       url: https://github.com/HangfireIO/Hangfire.Azure.ServiceBusQueue
       author: barclayadam
 
+    - name: Hangfire.AzureDocumentDB
+      url: https://github.com/imranmomin/Hangfire.AzureDocumentDB
+      author: imranmomin
+      
     - name: Hangfire.CompositeC1
       url: https://github.com/burningice2866/Hangfire.CompositeC1
       author: burningice2866
