@@ -28,6 +28,8 @@ Hangfire uses source code from third parties. All this code contains a LGPL or L
 * Includes [ncrontab](https://code.google.com/p/ncrontab/) library copyrighted by Atif Aziz and released under the **Apache License 2.0**.
 * Includes *Microsoft.Owin* library that is a part of [Katana Project](https://katanaproject.codeplex.com/) copyrighted by  Microsoft Open Technologies, Inc. and released under the **Apache License 2.0**.
 * Includes [Cron Expression Descriptor](https://github.com/bradyholt/cron-expression-descriptor) library copyrighted by Brady Holt and released under the **MIT License**.
+* Includes [StackTraceParser](https://github.com/atifaziz/StackTraceParser) copyright (c) 2011 Atif Aziz, **Apache License 2.0**.
+* Includes [StackTraceFormatter](https://github.com/atifaziz/StackTraceFormatter) copyright (c) 2011 Atif Aziz, **Apache License 2.0**.
 * Uses [OWIN](https://github.com/owin-contrib/owin-hosting/) library that is copyrighted by Monkey Square, Inc. and released under the **Apache License 2.0**.
 * Uses [Newtonsoft.Json](http://james.newtonking.com/json) library copyrighted by James Newton-King and released under the **MIT License**.
 * Files in directory `Common\ExpressionUtil` as well as `CachedExpressionCompiler.cs` are copyrighted by Microsoft Open Technologies, Inc. and released under the **Apache License 2.0**.
@@ -39,8 +41,12 @@ Hangfire uses source code from third parties. All this code contains a LGPL or L
 * Uses [Moment.js](http://momentjs.com/) to deal with dates. It is copyrighted by Tim Wood, Iskren Chernev, Moment.js contributors and released under the **MIT License**.
 * Uses [D3.js](http://d3js.org/) that is copyrighted by Michael Bostock and released under the **three clause BSD license**.
 * Uses [jQuery](https://jquery.org/) that is released under the **MIT License**.
-* Uses stack trace highlighting code from [ELMAH](https://code.google.com/p/elmah/), released under the **Apache License 2.0**, copyright © 2004-9 Atif Aziz.
 
 **Hangfire.SqlServer**
 
 * Uses [Dapper](https://github.com/StackExchange/dapper-dot-net) library released under the **Apache License 2.0**.
+
+**Hangfire.Pro.Redis**
+
+* Includes [StackExchange.Redis](https://github.com/StackExchange/StackExchange.Redis) library licensed under **The MIT License**. Copyright (c) 2014 Stack Exchange.
+
