@@ -83,6 +83,10 @@
     - name: Hangfire.SQLite
       url: https://github.com/wanlitao/HangfireExtension
       author: wanlitao
+      
+      - name: Hangfire.SQLite.Core
+      url: https://github.com/tidusjar/HangfireExtension
+      author: tidusjar
   
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
