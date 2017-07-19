@@ -55,7 +55,7 @@ redirect_from: /subscriptions/
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li><a href="/pro/">Hangfire Pro</a> packages only</li>
+                        <li><a href="/pro/">Hangfire Pro</a> packages</li>
                         <li><a href="/pro/license.html">Standard <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
