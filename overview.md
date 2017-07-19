@@ -43,7 +43,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-6">
         <h4>Fire-and-forget</h4>
         <p>
-            These jobs are executed <strong>only once</strong> and almost <strong>immediately</strong> after they fired.
+            These jobs are executed <strong>only once</strong> and almost <strong>immediately</strong> after they are fired.
         </p>
 <pre><span class="keywd">var</span> jobId = <span class="type">BackgroundJob</span>.Enqueue(
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Fire-and-forget!"</span>));</pre>
@@ -65,7 +65,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-6">
         <h4>Recurring</h4>
         <p>
-            Recurring jobs fired <strong>many times</strong> on the specified <strong>CRON schedule</strong>.
+            Recurring jobs are fired <strong>many times</strong> on the specified <strong>CRON schedule</strong>.
         </p>
 <pre><span class="type">RecurringJob</span>.AddOrUpdate(
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Recurring!"</span>),
@@ -74,7 +74,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-6">
         <h4>Continuations</h4>
         <p>
-            Continuations are executed when parent job <strong>has been finished</strong>.
+            Continuations are executed when parent job <strong>has finished</strong>.
         </p>
 <pre><span class="type">BackgroundJob</span>.ContinueWith(
     jobId,
@@ -99,7 +99,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-6">
         <h4>Batch Continuations</h4>
         <p>
-            Batch continuation is fired <strong>when all</strong> background jobs in a parent batch <strong>finished</strong>.
+            Batch continuation is fired <strong>after all</strong> background jobs in a parent batch <strong>have finished</strong>.
         </p>
         <pre><code><span class="type">Batch</span>.ContinueWith(batchId, x =>
 {
@@ -114,7 +114,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
     <div class="col-md-12">
         <h4>Background Process</h4>
         <p>
-            Use them when you need to run background processes <strong>continuously</strong> throught the <strong>lifetime</strong> of your application.
+            Use them when you need to run background processes <strong>continuously</strong> throughout the <strong>lifetime</strong> of your application.
         </p>
 <pre><code><span class="keywd">public</span> <span class="keywd">class</span> <span class="type">CleanTempDirectoryProcess</span> : <span class="type">IBackgroundProcess</span>
 {
@@ -243,7 +243,7 @@ Later, when you face performance problems, you can separate the processing among
 
 ### Integrated Monitoring UI
 
-Hangfire is shipped with an awesome tool – Web Monitoring UI. It is implemented as an OWIN extensions and though can be hosted inside any application – ASP.NET, Console or Windows Service. Monitoring UI allows you to see and control any aspect of background job processing, including statistics, exceptions and background job history.
+Hangfire is shipped with an awesome tool – Web Monitoring UI. It is implemented as an OWIN extension and can be hosted inside any application – ASP.NET, Console or Windows Service. Monitoring UI allows you to see and control any aspect of background job processing, including statistics, exceptions and background job history.
 
 Just look at the screenshots below, and you'll love it!
 
