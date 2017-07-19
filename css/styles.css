@@ -179,14 +179,11 @@ pre .comm {
 .plan .plan-items {
     text-align: left;
     padding-left: 30px;
+    list-style-type: circle;
 }
 
 .plan .plan-items > * {
     margin-bottom: 10px;
-}
-
-.plan .plan-item-spacer {
-    visibility: hidden;
 }
 
 .plan .plan-price {
@@ -199,7 +196,6 @@ pre .comm {
     vertical-align: top;
     line-height: 1;
     font-weight: lighter;
-    text-transform: uppercase;
 }
 
 .plan .plan-price h3 span {

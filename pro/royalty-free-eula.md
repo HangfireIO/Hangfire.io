@@ -1,11 +1,11 @@
 ---
 layout: products
-title: Standard End-user License Agreement – Hangfire Pro
+title: Royalty-free End-user License Agreement – Hangfire Pro
 active: overview
-sub_active: pro-license
+sub_active: royalty-free-eula
 ---
 
-<h1 class="page-header">Standard End-user License Agreement</h1>
+<h1 class="page-header">Royalty-free End-user License Agreement</h1>
 
 <p>THIS LICENSE AGREEMENT DESCRIBES YOUR RIGHTS WITH RESPECT TO THE SOFTWARE AND ITS COMPONENTS.</p>
 
@@ -31,7 +31,7 @@ sub_active: pro-license
 
 <p>You may not, without Our prior written consent, redistribute the Software or Modifications other than by including the Software or a portion thereof within Your own product, which must have substantially different functionality than the Software or Modifications and must not allow any third party to use the Software or Modifications, or any portions thereof, for software development or application development purposes. You are explicitly not allowed to redistribute the Software or Modifications as part of any product that can be described as a development toolkit or library, an application builder, a website builder or any product that is intended for use by software, application, or website developers or designers. You may not change or remove the copyright notice from any of the files included in the Software or Modifications.</p>
 
-<p>You may not redistribute the Software as part of a product, &quot;appliance&quot; or &quot;virtual server&quot;. You may not redistribute the Software on any server which is not directly under Your control.</p>
+<p>You may redistribute the Software as part of Your own products.</p>
 
 <p>UNDER NO CIRCUMSTANCES MAY YOU USE THE SOFTWARE FOR A PRODUCT THAT IS INTENDED FOR SOFTWARE OR APPLICATION DEVELOPMENT PURPOSES.</p>
 

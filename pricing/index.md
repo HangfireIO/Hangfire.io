@@ -18,80 +18,135 @@ redirect_from: /subscriptions/
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-lg-offset-1-5">
+        <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="plan">
                 <div class="plan-title">
                     <h2>Open</h2>
                 </div>
                 <div class="plan-body">
+                <div class="plan-features">
+                    <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
                         <li>
-                            <a href="/overview.html">Hangfire</a> (under <abbr class="initialism">LGPL</abbr>)
+                            <a href="/overview.html">Hangfire Core</a> under <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank"><abbr class="initialism">LGPL</abbr> 3.0</a>
                         </li>
                         <li>Commercial use</li>
-                        <li>Documentation</li>
-                        <li>Forum support</li>
-                        <li class="plan-item-spacer"></li>
-                        <li class="plan-item-spacer"></li>
                     </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Community Support</h4>
+                    <ul class="plan-items">
+                        <li><a href="https://stackoverflow.com/questions/tagged/hangfire" target="_blank">StackOverflow Tag</a></li>
+                        <li>GitHub Issues</li>
+                    </ul>
+                    </div>
                     <div class="plan-price">
-                        <h3>Free</h3>
+                        <h3>free</h3>
                         <h4>Always and Forever</h4>
                     </div>
                     <a class="btn btn-default" href="/downloads.html">Download</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="plan">
+                <div class="plan-title" style="background-color: #337ab7;">
+                    <h2>Startup</h2>
+                </div>
+                <div class="plan-body">
+                <div class="plan-features">
+                    <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
+                    <ul class="plan-items">
+                        <li><a href="/pro/">Hangfire Pro</a> packages only</li>
+                        <li><a href="/pro/license.html">Standard <abbr class="initialism">EULA</abbr></a></li>
+                        <li>Perpetual license</li>
+                        <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
+                    <ul class="plan-items">
+                        <li>None</li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Purchasing</h4>
+                    <ul class="plan-items">
+                        <li>Credit Card / PayPal only</li>
+                    </ul>
+                    </div>
+                    <div class="plan-price">
+                        <h3><span class="symbol">$</span>500</h3>
+                        <h4>per <strong>organization</strong> / year</h4>
+                    </div>
+                    <a class="btn btn-primary" href="https://sites.fastspring.com/hangfire/instant/hangfire-startup2017-subscription" target="_top">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="plan">
                 <div class="plan-title" style="background-color: #5cb85c;">
                     <h2>Business</h2>
                 </div>
                 <div class="plan-body">
+                <div class="plan-features">
+                    <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li>
-                            <a href="/overview.html">Hangfire</a> (under <abbr class="initialism">LGPL</abbr>)
-                        </li>
-                        <li>
-                            <a href="/pro/">Hangfire Pro</a> (under <abbr class="initialism">EULA</abbr>)
-                        </li>
-                        <li>Documentation</li>
-                        <li>Forum support</li>
-                        <li>Private e-mail support</li>
-                        <li class="plan-item-spacer"></li>
+                        <li><a href="/overview.html">Hangfire Core</a> packages</li>
+                        <li><a href="/pro/">Hangfire Pro</a> packages</li>
+                        <li><a href="/pro/license.html">Standard <abbr class="initialism">EULA</abbr></a></li>
+                        <li>Perpetual license</li>
+                        <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
+                        <li>Access to source code</li>
                     </ul>
-                    <div class="plan-price">
-                        <h3><span class="symbol">$</span>500</h3>
-                        <h4>per year</h4>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
+                    <ul class="plan-items">
+                        <li><a href="mailto:support@hangfire.io">Email / HelpDesk</a></li>
+                        <li>3 business days response</li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Purchasing</h4>
+                    <ul class="plan-items">
+                        <li>Credit Card / PayPal only</li>
+                    </ul>
                     </div>
-                    <a class="btn btn-success" href="https://sites.fastspring.com/hangfire/instant/hf-business" target="_top">Buy Now</a>
+                    <div class="plan-price">
+                        <h3><span class="symbol">$</span>1500</h3>
+                        <h4>per <strong>developer</strong> / year</h4>
+                    </div>
+                    <a class="btn btn-success" href="https://sites.fastspring.com/hangfire/instant/hangfire-business2017-subscription" target="_top">Buy Now</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-3 visible-sm"></div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-3 col-sm-6">
             <div class="plan">
                 <div class="plan-title" style="background-color: #f0ad4e">
                     <h2>Enterprise</h2>
                 </div>
                 <div class="plan-body">
+                    <div class="plan-features">
+                    <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li>
-                            <a href="/overview.html">Hangfire</a> (under <abbr class="initialism">EULA</abbr>)
-                        </li>
-                        <li>
-                            <a href="/pro/">Hangfire Pro</a> (under <abbr class="initialism">EULA</abbr>)
-                        </li>
-                        <li>Documentation</li>
-                        <li>Forum support</li>
-                        <li>Private e-mail support</li>
-                        <li>Priority technical support</li>
+                        <li><a href="/overview.html">Hangfire Core</a> packages</li>
+                        <li><a href="/pro/">Hangfire Pro</a> packages</li>
+                        <li><a href="/pro/royalty-free-eula.html">Royalty-free <abbr class="initialism">EULA</abbr></a></li>
+                        <li>Perpetual license</li>
+                        <li>Custom license terms</li>
+                        <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
+                        <li>Access to source code</li>
                     </ul>
-                    <div class="plan-price">
-                        <h3><span class="symbol">$</span>5000</h3>
-                        <h4>per year</h4>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
+                    <ul class="plan-items">
+                        <li><a href="mailto:support@hangfire.io">Email / HelpDesk</a></li>
+                        <li>Next business day response</li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Purchasing</h4>
+                    <ul class="plan-items">
+                        <li>Credit Card / PayPal</li>
+                        <li>Invoice / Purchase Order</li>
+                    </ul>
                     </div>
-                    <a class="btn btn-warning" href="https://sites.fastspring.com/hangfire/instant/hf-enterprise" target="_top">Buy Now</a>
+                    <div class="plan-price">
+                        <h3><span class="symbol">$</span>4500</h3>
+                        <h4>per <strong>developer</strong> / year</h4>
+                    </div>
+                    <a class="btn btn-warning" href="https://sites.fastspring.com/hangfire/instant/hangfire-enterprise2017-subscription" target="_top">Buy Now</a>
+                    <br>
+                    or <a href="mailto:sales@hangfire.io?subject=Quote for Hangfire Enterprise subscription">request a quote</a>
                 </div>
             </div>
         </div>
@@ -174,7 +229,7 @@ redirect_from: /subscriptions/
 
             <h3>How many licenses do I need to buy?</h3>
             <p>
-                Each license allows you to embed Hangfire Pro within software that is developed by one company/organization.
+                For Startup subscription, you need to buy only one license for the whole organization that develops and use the software with Hangfire Pro packages. For Business and Enterprise subscriptions you need to buy as many licenses, as many developers will contact dedicated support. Number of users who has access to private GitHub repositories are also affected by the number of licenses.
             </p>
         </div>
         <div class="col-md-6">
@@ -207,65 +262,8 @@ redirect_from: /subscriptions/
             
             <h3>Can I view the EULA?</h3>
             <p>
-                Yes, you can read my <a href="/pro/license.html">End User License Agreement</a>.
+                Yes, you can read <a href="/pro/license.html">Standard End User License Agreement</a> or <a href="/pro/royalty-free-eula.html">Royalty-free End User License Agreement</a>, depending on needs to distribute the software to your customers.
             </p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Feature comparison</h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-10">
-            <table class="table table-hover table-striped">
-                <colgroup>
-                    <col>
-                    <col>
-                    <col style="background-color: #f5f5f5;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Hangfire</th>
-                        <th>Hangfire + Hangfire Pro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Background job processing</th>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                    </tr>
-                    <tr>
-                        <th>Management UI</th>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                    </tr>
-                    <tr>
-                        <th>Support for blazing fast <a href="http://redis.io" target="_blank">Redis</a> storage</th>
-                        <td></td>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                    </tr>
-                    <tr>
-                        <th>Proactive monitoring</th>
-                        <td></td>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                    </tr>
-                    <tr>
-                        <th>Atomic Background Job Creation</th>
-                        <td></td>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                    </tr>
-                    <tr>
-                        <th>Complex Workflows</th>
-                        <td></td>
-                        <td><i class="glyphicon glyphicon-ok"></i></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 </div>
