@@ -214,7 +214,7 @@ redirect_from: /subscriptions/
 
             <h3>What payment methods are supported?</h3>
             <p>
-                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire via bank <strong>wire transfer</strong>, mail/check or purchase order, please contact <a href="mailto:sales@hangfire.io">sales@hangfire.io</a>, and I'll send you the details.
+                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire Business or Enterprise subscription via <strong>wire transfer</strong>, mail/check or purchase order, please contact <a href="mailto:sales@hangfire.io">sales@hangfire.io</a>, and I'll send you the details.
             </p>     
 
             <h3>What if I am not satisfied?</h3>
