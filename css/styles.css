@@ -173,7 +173,6 @@ pre .comm {
 
 .plan .plan-title h2 {
     margin: 0;
-    font-weight: lighter;
 }
 
 .plan .plan-items {
@@ -195,7 +194,6 @@ pre .comm {
     font-size: 40px;
     vertical-align: top;
     line-height: 1;
-    font-weight: lighter;
 }
 
 .plan .plan-price h3 span {
@@ -209,14 +207,12 @@ pre .comm {
 .plan .plan-price h4 {
     color: #666;
     font-size: 14px;
-    font-weight: lighter;
     text-transform: lowercase;
 }
 
 .plan .btn {
     padding: 10px 40px;
     text-transform: uppercase;
-    font-weight: lighter;
 }
 
 .screenshots img {
