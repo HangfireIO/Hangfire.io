@@ -175,7 +175,7 @@ redirect_from: /subscriptions/
         </div>
         <div class="col-md-4">
             <p>
-                <a href="http://www.socialsolutions.com/" target="_blank" rel="nofollow"><img src="{{ site.cdn }}/img/customers/social-solutions.png" alt="Social Solutions"></a>                
+                <a href="http://www.socialsolutions.com/" target="_blank" rel="nofollow"><img src="{{ site.cdn }}/img/customers/social-solutions.png" alt="Social Solutions" style="max-width:100%;"></a>                
             </p>
             <blockquote>
                 <p>Using Hangfire has allowed us to easily take advantage of the failover and scalability built into a process hosted in IIS.</p>
