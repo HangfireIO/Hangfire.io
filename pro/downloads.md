@@ -31,7 +31,7 @@ This is the simplest way to start using Hangfire Pro feed, but it will not work 
 
 ### Modern environments
 
-Apples to: **Visual Studio 2017, .NET Core CLI, NuGet.exe 3.5+**. This will also work in **Visual Studio 2015**, but you'll be prompted for credentials each time you install a package, when *HangfirePro* feed is selected.
+Applies to: **Visual Studio 2017, .NET Core CLI, NuGet.exe 3.5+**. This will also work in **Visual Studio 2015**, but you'll be prompted for credentials each time you install a package, when *HangfirePro* feed is selected.
 
 Create a new file called `NuGet.config` in the root directory of your solution, and add the following contents.
 
