@@ -107,6 +107,10 @@
       url: https://github.com/Excommunicated/Hangfire.MEF
       author: Excommunicated
       
+    - name: Hangfire.MicrosoftDependencyInjection
+      url: https://github.com/adamyeager/Hangfire.MicrosoftDependencyInjection
+      author: adamyeager
+      
     - name: Hangfire.Ninject
       url: https://github.com/HangfireIO/Hangfire.Ninject
       author: HangfireIO
