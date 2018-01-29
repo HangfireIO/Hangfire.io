@@ -96,7 +96,7 @@ redirect_from: /subscriptions/
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
                         <li><a href="mailto:support@hangfire.io">Email / HelpDesk</a></li>
-                        <li>3 business days response</li>
+                        <li>Technical support</li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Purchasing</h4>
                     <ul class="plan-items">
@@ -105,7 +105,7 @@ redirect_from: /subscriptions/
                     </div>
                     <div class="plan-price">
                         <h3><span class="symbol">$</span>1500</h3>
-                        <h4>per <strong>developer</strong> / year</h4>
+                        <h4>per <strong>organization</strong> / year</h4>
                     </div>
                     <a class="btn btn-success" href="https://sites.fastspring.com/hangfire/instant/hangfire-business2017-subscription" target="_top">Buy Now</a>
                 </div>
@@ -132,7 +132,8 @@ redirect_from: /subscriptions/
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
                         <li><a href="mailto:support@hangfire.io">Email / HelpDesk</a></li>
-                        <li>Next business day response</li>
+                        <li>Technical support</li>
+                        <li>Priority support</li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Purchasing</h4>
                     <ul class="plan-items">
@@ -142,7 +143,7 @@ redirect_from: /subscriptions/
                     </div>
                     <div class="plan-price">
                         <h3><span class="symbol">$</span>4500</h3>
-                        <h4>per <strong>developer</strong> / year</h4>
+                        <h4>per <strong>organization</strong> / year</h4>
                     </div>
                     <a class="btn btn-warning" href="https://sites.fastspring.com/hangfire/instant/hangfire-enterprise2017-subscription" target="_top">Buy Now</a>
                     <br>
@@ -214,7 +215,7 @@ redirect_from: /subscriptions/
 
             <h3>What payment methods are supported?</h3>
             <p>
-                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire Business or Enterprise subscription via <strong>wire transfer</strong>, mail/check or purchase order, please contact <a href="mailto:sales@hangfire.io">sales@hangfire.io</a>, and I'll send you the details.
+                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire Enterprise subscription via <strong>wire transfer</strong>, mail/check or purchase order, please contact <a href="mailto:sales@hangfire.io">sales@hangfire.io</a>, and I'll send you the details.
             </p>     
 
             <h3>What if I am not satisfied?</h3>
@@ -229,7 +230,7 @@ redirect_from: /subscriptions/
 
             <h3>How many licenses do I need to buy?</h3>
             <p>
-                For Startup subscription, you need to buy only one license for the whole organization that develops and use the software with Hangfire Pro packages. For Business and Enterprise subscriptions you need to buy as many licenses, as many developers will contact dedicated support. Number of users who has access to private GitHub repositories are also affected by the number of licenses.
+                A single license allows you to use Hangfire Pro within software that is developed by one company/organization, regardless the number of developers.
             </p>
         </div>
         <div class="col-md-6">
