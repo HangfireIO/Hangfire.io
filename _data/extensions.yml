@@ -30,6 +30,11 @@
       url: https://github.com/icsharp/Hangfire.RecurringJobExtensions
       author: icsharp
     
+    - name: Hangfire.Extensions.Configuration
+      description: Functionality to read Hangfire configurations from key-value pair based configuration
+      url: https://github.com/Nevets82/Hangfire.Extensions.Configuration
+      author: nevets82
+    
 - name: Storages
   description: The following projects enable you to use your favorite storage.
                Each storage has its own benefits and drawbacks, but you are
