@@ -47,6 +47,10 @@
     - name: Hangfire.CompositeC1
       url: https://github.com/burningice2866/Hangfire.CompositeC1
       author: burningice2866
+
+    - name: Hangfire.Couchbase
+      url: https://github.com/imranmomin/Hangfire.Couchbase
+      author: imranmomin
       
     - name: Hangfire.Firebase
       url: https://github.com/imranmomin/Hangfire.Firebase
