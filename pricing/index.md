@@ -55,8 +55,8 @@ redirect_from: /subscriptions/
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li><a href="/pro/">Hangfire Pro</a> packages</li>
-                        <li><a href="/pro/license.html">Standard <abbr class="initialism">EULA</abbr></a></li>
+                        <li><a href="/pro/">Hangfire Pro</a> packages only</li>
+                        <li><a href="/licensing/standard.html">Standard <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
                     </ul>
@@ -88,7 +88,7 @@ redirect_from: /subscriptions/
                     <ul class="plan-items">
                         <li><a href="/overview.html">Hangfire Core</a> packages</li>
                         <li><a href="/pro/">Hangfire Pro</a> packages</li>
-                        <li><a href="/pro/license.html">Standard <abbr class="initialism">EULA</abbr></a></li>
+                        <li><a href="/licensing/standard.html">Standard <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
                         <li>Access to source code</li>
@@ -123,7 +123,7 @@ redirect_from: /subscriptions/
                     <ul class="plan-items">
                         <li><a href="/overview.html">Hangfire Core</a> packages</li>
                         <li><a href="/pro/">Hangfire Pro</a> packages</li>
-                        <li><a href="/pro/royalty-free-eula.html">Royalty-free <abbr class="initialism">EULA</abbr></a></li>
+                        <li><a href="/licensing/royalty-free.html">Royalty-free <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Custom license terms</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
@@ -206,7 +206,7 @@ redirect_from: /subscriptions/
         <div class="col-md-6">
             <h3>What am I buying?</h3>
             <p>
-                Hangfire is an <strong>open-source software</strong> product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing.html">LGPL</a> license and you can use it even in commercial and/or properietary applications. Hangfire is fully functional and ready to use.
+                Hangfire is an <strong>open-source software</strong> product which is freely available for <a href="/downloads.html">download</a>. It is licensed under the <a href="/licensing/lgpl.html">LGPL</a> license and you can use it even in commercial and/or properietary applications. Hangfire is fully functional and ready to use.
             </p>
 
             <p>
@@ -263,7 +263,7 @@ redirect_from: /subscriptions/
             
             <h3>Can I view the EULA?</h3>
             <p>
-                Yes, you can read <a href="/pro/license.html">Standard End User License Agreement</a> or <a href="/pro/royalty-free-eula.html">Royalty-free End User License Agreement</a>, depending on needs to distribute the software to your customers.
+                Yes, you can read <a href="/licensing/standard.html">Standard End User License Agreement</a> or <a href="/licensing/royalty-free.html">Royalty-free End User License Agreement</a>, depending on needs to distribute the software to your customers.
             </p>
         </div>
     </div>
