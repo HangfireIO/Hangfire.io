@@ -29,6 +29,11 @@
       description: Build RecurringJob automatically
       url: https://github.com/icsharp/Hangfire.RecurringJobExtensions
       author: icsharp
+      
+    - name: Hangfire.HttpJob
+      description: Build http jobs(BackgroundJob or RecurringJob) by hangfire web api Or dashbord
+      url: https://github.com/yuzd/Hangfire.HttpJob
+      author: yuzd
     
 - name: Storages
   description: The following projects enable you to use your favorite storage.
