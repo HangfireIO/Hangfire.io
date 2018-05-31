@@ -35,6 +35,11 @@
       url: https://github.com/icsharp/Hangfire.RecurringJobExtensions
       author: icsharp
       
+    - name: Hangfire.MaximumConcurrentExecutions
+      description: Throttle the number of concurrent jobs
+      url: https://github.com/alastairtree/Hangfire.MaximumConcurrentExecutions
+      author: alastairtree
+
     - name: Hangfire.HttpJob
       description: Build http jobs(BackgroundJob or RecurringJob) by hangfire web api Or dashbord
       url: https://github.com/yuzd/Hangfire.HttpJob
