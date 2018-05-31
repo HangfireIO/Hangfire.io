@@ -85,6 +85,10 @@
       url: https://github.com/xavierjefferson/Hangfire.FluentNHibernateStorage
       author: xavierjefferson
       
+    - name: Hangfire.LiteDB
+      url: https://github.com/codeyu/Hangfire.LiteDB
+      author: codeyu 
+      
     - name: Hangfire.MemoryStorage
       url: https://github.com/perrich/Hangfire.MemoryStorage
       author: perrich
