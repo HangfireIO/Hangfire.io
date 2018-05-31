@@ -24,6 +24,11 @@
       description: Shows the hangfire dashboard in a beautiful dark theme
       url: https://github.com/vip32/Hangfire.Dashboard.Dark
       author: vip32
+
+    - name: Hangfire.Heartbeat
+      description: Server utilization monitoring for Hangfire
+      url: https://github.com/ahydrax/Hangfire.Heartbeat
+      author: ahydrax
     
     - name: Hangfire.RecurringJobExtensions
       description: Build RecurringJob automatically
@@ -34,6 +39,16 @@
       description: Throttle the number of concurrent jobs
       url: https://github.com/alastairtree/Hangfire.MaximumConcurrentExecutions
       author: alastairtree
+
+    - name: Hangfire.HttpJob
+      description: Build http jobs(BackgroundJob or RecurringJob) by hangfire web api Or dashbord
+      url: https://github.com/yuzd/Hangfire.HttpJob
+      author: yuzd
+    
+    - name: Hangfire.Extensions.Configuration
+      description: Functionality to read Hangfire configurations from key-value pair based configuration
+      url: https://github.com/Nevets82/Hangfire.Extensions.Configuration
+      author: nevets82
     
 - name: Storages
   description: The following projects enable you to use your favorite storage.
@@ -52,6 +67,10 @@
     - name: Hangfire.CompositeC1
       url: https://github.com/burningice2866/Hangfire.CompositeC1
       author: burningice2866
+
+    - name: Hangfire.Couchbase
+      url: https://github.com/imranmomin/Hangfire.Couchbase
+      author: imranmomin
       
     - name: Hangfire.Firebase
       url: https://github.com/imranmomin/Hangfire.Firebase
@@ -61,6 +80,11 @@
       url: https://github.com/rsegerink/Hangfire.Firebird
       author: rsegerink
  
+    - name: Hangfire.FluentNHibernateStorage 
+      description: Supports SQL Server, Oracle, MySQL, Firebird, PostgreSQL, DB/2.
+      url: https://github.com/xavierjefferson/Hangfire.FluentNHibernateStorage
+      author: xavierjefferson
+      
     - name: Hangfire.MemoryStorage
       url: https://github.com/perrich/Hangfire.MemoryStorage
       author: perrich
@@ -81,6 +105,10 @@
       url: https://github.com/frankhommers/Hangfire.PostgreSql
       author: frankhommers
       
+    - name: Hangfire.PostgreSql.ahydrax
+      url: https://github.com/ahydrax/Hangfire.PostgreSql
+      author: ahydrax
+      
     - name: Hangfire.Raven
       url: https://github.com/cady-io/hangfire-ravendb
       author: cady-io
@@ -88,7 +116,7 @@
     - name: Hangfire.SQLite
       url: https://github.com/wanlitao/HangfireExtension
       author: wanlitao
-  
+
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
                your favorite IoC Container. They provide custom implementation
