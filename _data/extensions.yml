@@ -75,6 +75,11 @@
       url: https://github.com/rsegerink/Hangfire.Firebird
       author: rsegerink
  
+    - name: Hangfire.FluentNHibernateStorage 
+      description: Supports SQL Server, Oracle, MySQL, Firebird, PostgreSQL, DB/2.
+      url: https://github.com/xavierjefferson/Hangfire.FluentNHibernateStorage
+      author: xavierjefferson
+      
     - name: Hangfire.MemoryStorage
       url: https://github.com/perrich/Hangfire.MemoryStorage
       author: perrich
@@ -106,7 +111,7 @@
     - name: Hangfire.SQLite
       url: https://github.com/wanlitao/HangfireExtension
       author: wanlitao
-  
+
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
                your favorite IoC Container. They provide custom implementation
