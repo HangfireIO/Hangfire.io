@@ -24,6 +24,11 @@
       description: Shows the hangfire dashboard in a beautiful dark theme
       url: https://github.com/vip32/Hangfire.Dashboard.Dark
       author: vip32
+
+    - name: Hangfire.Heartbeat
+      description: Server utilization monitoring for Hangfire
+      url: https://github.com/ahydrax/Hangfire.Heartbeat
+      author: ahydrax
     
     - name: Hangfire.RecurringJobExtensions
       description: Build RecurringJob automatically
@@ -80,6 +85,10 @@
     - name: Hangfire.PostgreSql
       url: https://github.com/frankhommers/Hangfire.PostgreSql
       author: frankhommers
+      
+    - name: Hangfire.PostgreSql.ahydrax
+      url: https://github.com/ahydrax/Hangfire.PostgreSql
+      author: ahydrax
       
     - name: Hangfire.Raven
       url: https://github.com/cady-io/hangfire-ravendb
