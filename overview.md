@@ -136,16 +136,16 @@ Background jobs are very important part of an application and Hangfire ensures t
 <table class="text-center supported-storages">
     <tr>
         <td width="33%">
-            <img src="/img/sqlserver.png" alt="SQL Server" width="150">
+            <img src="{{ site.cdn }}/img/sqlserver.png" alt="SQL Server" width="150">
         </td>
         <td width="33%">
             <a href="/pro/">
-                <img src="/img/redis.png" alt="Redis" width="180">
+                <img src="{{ site.cdn }}/img/redis.png" alt="Redis" width="180">
             </a>
         </td>
         <td width="33%">
             <a href="https://github.com/frankhommers/Hangfire.PostgreSql" target="_blank">
-                <img src="/img/postgresql.png" alt="PostgreSQL" width="250">
+                <img src="{{ site.cdn }}/img/postgresql.png" alt="PostgreSQL" width="250">
             </a>
         </td>
     </tr>
@@ -155,12 +155,12 @@ Background jobs are very important part of an application and Hangfire ensures t
         <td width="16%">&nbsp;</td>
         <td width="33%">
             <a href="https://github.com/sergun/Hangfire.Mongo" target="_blank">
-                <img src="/img/mongodb.png" alt="MongoDB" width="250">
+                <img src="{{ site.cdn }}/img/mongodb.png" alt="MongoDB" width="250">
             </a>
         </td>
         <td width="33%">
             <a href="https://www.nuget.org/packages/Hangfire.CompositeC1" target="_blank">
-                <img src="/img/composite-c1.png" alt="Composite C1 CMS" width="250" style="margin-top:23px;">
+                <img src="{{ site.cdn }}/img/composite-c1.png" alt="Composite C1 CMS" width="250" style="margin-top:23px;">
             </a>
         </td>
         <td width="16%">&nbsp;</td>
@@ -189,8 +189,8 @@ You are also able to retry any background job manually through the programming c
 <span class="keywd">var</span> succeeded = <span class="type">BackgroundJob</span>.Requeue(jobId);</pre>
     </div>
     <div class="col-md-6">
-        <a href="/img/retry.png" data-lightbox="Screenshots" data-title="Succeeded Job">
-            <img src="/img/retry.png" alt="Dashboard Retry" width="379" class="img-thumbnail">
+        <a href="{{ site.cdn }}/img/retry.png" data-lightbox="Screenshots" data-title="Succeeded Job">
+            <img src="{{ site.cdn }}/img/retry.png" alt="Dashboard Retry" width="379" class="img-thumbnail">
         </a>
     </div>
 </div>
@@ -224,19 +224,19 @@ Later, when you face performance problems, you can separate the processing among
     <!-- Tab panes -->
     <div class="tab-content tab-content-center text-center">
         <div role="tabpanel" class="tab-pane active" id="process">
-            <img src="/img/process.png" alt="Single Process">
+            <img src="{{ site.cdn }}/img/process.png" alt="Single Process">
         </div>
         <div role="tabpanel" class="tab-pane" id="garden">
-            <img src="/img/garden.png" alt="Web Garden">
+            <img src="{{ site.cdn }}/img/garden.png" alt="Web Garden">
         </div>
         <div role="tabpanel" class="tab-pane" id="farm">
-            <img src="/img/farm.png" alt="Web Farm">
+            <img src="{{ site.cdn }}/img/farm.png" alt="Web Farm">
         </div>
         <div role="tabpanel" class="tab-pane" id="service">
-            <img src="/img/service.png" alt="Separate Service">
+            <img src="{{ site.cdn }}/img/service.png" alt="Separate Service">
         </div>
         <div role="tabpanel" class="tab-pane" id="server">
-          <img src="/img/server.png" alt="Separate Server">
+          <img src="{{ site.cdn }}/img/server.png" alt="Separate Server">
         </div>
     </div>
 </div>
@@ -249,54 +249,54 @@ Just look at the screenshots below, and you'll love it!
 
 <div class="row screenshots">
     <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
-            <img src="//cdn.hangfire.io/img/ui/dashboard-sm.png" alt="Dashboard">
+        <a href="{{ site.cdn }}/img/ui/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
+            <img src="{{ site.cdn }}/img/ui/dashboard-sm.png" alt="Dashboard">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/queues.png" data-lightbox="Screenshots" data-title="Queue List">
-            <img src="//cdn.hangfire.io/img/ui/queues-sm.png" alt="Queue List">
+        <a href="{{ site.cdn }}/img/ui/queues.png" data-lightbox="Screenshots" data-title="Queue List">
+            <img src="{{ site.cdn }}/img/ui/queues-sm.png" alt="Queue List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/job-details.png" data-lightbox="Screenshots" data-title="Job Details">
-            <img src="//cdn.hangfire.io/img/ui/job-details-sm.png" alt="Job Details">
-        </a>
-    </div>
-</div>
-
-<div class="row screenshots">
-    <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/retries.png" data-lightbox="Screenshots" data-title="Retry List">
-            <img src="//cdn.hangfire.io/img/ui/retries-sm.png" alt="Retry List">
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
-            <img src="//cdn.hangfire.io/img/ui/failed-jobs-sm.png" alt="Failed Job List">
-        </a>
-    </div>
-    <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
-            <img src="//cdn.hangfire.io/img/ui/recurring-jobs-sm.png" alt="Recurring Jobs">
+        <a href="{{ site.cdn }}/img/ui/job-details.png" data-lightbox="Screenshots" data-title="Job Details">
+            <img src="{{ site.cdn }}/img/ui/job-details-sm.png" alt="Job Details">
         </a>
     </div>
 </div>
 
 <div class="row screenshots">
     <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/batches.png" data-lightbox="Screenshots" title="Batch List">
-            <img src="//cdn.hangfire.io/img/ui/batches-sm.png" alt="Batch List">
+        <a href="{{ site.cdn }}/img/ui/retries.png" data-lightbox="Screenshots" data-title="Retry List">
+            <img src="{{ site.cdn }}/img/ui/retries-sm.png" alt="Retry List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/batch-details.png" data-lightbox="Screenshots" title="Batch Details">
-            <img src="//cdn.hangfire.io/img/ui/batch-details-sm.png" alt="Batch Details">
+        <a href="{{ site.cdn }}/img/ui/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
+            <img src="{{ site.cdn }}/img/ui/failed-jobs-sm.png" alt="Failed Job List">
         </a>
     </div>
     <div class="col-md-4">
-        <a href="//cdn.hangfire.io/img/ui/batch-jobs.png" data-lightbox="Screenshots" title="Batch Jobs">
-            <img src="//cdn.hangfire.io/img/ui/batch-jobs-sm.png" alt="Batch Jobs">
+        <a href="{{ site.cdn }}/img/ui/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
+            <img src="{{ site.cdn }}/img/ui/recurring-jobs-sm.png" alt="Recurring Jobs">
+        </a>
+    </div>
+</div>
+
+<div class="row screenshots">
+    <div class="col-md-4">
+        <a href="{{ site.cdn }}/img/ui/batches.png" data-lightbox="Screenshots" title="Batch List">
+            <img src="{{ site.cdn }}/img/ui/batches-sm.png" alt="Batch List">
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{{ site.cdn }}/img/ui/batch-details.png" data-lightbox="Screenshots" title="Batch Details">
+            <img src="{{ site.cdn }}/img/ui/batch-details-sm.png" alt="Batch Details">
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{{ site.cdn }}/img/ui/batch-jobs.png" data-lightbox="Screenshots" title="Batch Jobs">
+            <img src="{{ site.cdn }}/img/ui/batch-jobs-sm.png" alt="Batch Jobs">
         </a>
     </div>
 </div>
