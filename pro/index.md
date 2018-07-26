@@ -78,14 +78,9 @@ Create action does not restrict you to create jobs only in *Enqueued* state. You
     <img src="/img/storage-compare.png" alt="Background Jobs Throughput" width="222">
 </a>
 
-Hangfire Pro comes with `Hangfire.Redis` package that uses [Redis](http://redis.io/) server to persist background jobs and other data. 
+Hangfire Pro comes with `Hangfire.Pro.Redis` package that uses [Redis](http://redis.io/) server to persist background jobs and other data. 
 
-Redis is famous for its outstanding [performance](http://redis.io/topics/benchmarks) and here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages.
-
-#### What's new in Pro
-
-* [ServiceStack](https://servicestack.net/) packages are merged and internalized, so you can use either v3 or v4 versions of ServiceStack framework in your project.
-* Prefix for Redis keys is now configurable, you can now use the same database for different environments, e.g. staging and production.
+Redis is well known for its outstanding [performance](http://redis.io/topics/benchmarks) and here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages.
 
 <div class="clearfix"></div>
 
@@ -95,7 +90,7 @@ Redis is famous for its outstanding [performance](http://redis.io/topics/benchma
     <img src="/img/perfmon.png" alt="Performance Monitor" width="222">
 </a>
 
-`Hangfire.PerformanceCounters` package allows Hangfire to publish its internal metrics to Windows Performance Counters – the standard way to monitor Windows applications and services.
+`Hangfire.Pro.PerformanceCounters` package allows Hangfire to publish its internal metrics to Windows Performance Counters – the standard way to monitor Windows applications and services.
 
 So, you can use existing tools like <a href="http://www.nagios.org/" target="_blank">Nagios</a>, <a href="http://newrelic.com/" target="_blank">New Relic</a>, <a href="https://www.serverdensity.com/" target="_blank">Server Density</a> and others to proactively monitor the health of your services.
 
