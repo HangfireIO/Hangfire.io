@@ -197,3 +197,7 @@
     - name: Hangfire_Net40.Redis
       url: https://www.nuget.org/packages/Hangfire_net40.Redis/
       author: phillcampbell
+      
+    - name: Hangfire.Oracle
+      url: https://github.com/CharcoalUchiha/Hangfire.Oracle
+      author: Marcellus Stewart
