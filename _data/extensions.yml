@@ -50,6 +50,11 @@
       url: https://github.com/Nevets82/Hangfire.Extensions.Configuration
       author: nevets82
     
+    - name: Hangfire.Tags
+      description: Makes it possible to add tags to jobs, and filter jobs based on these tags.
+      url: https://github.com/face-it/Hangfire.Tags
+      author: faceit
+    
 - name: Storages
   description: The following projects enable you to use your favorite storage.
                Each storage has its own benefits and drawbacks, but you are
