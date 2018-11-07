@@ -102,10 +102,6 @@
       url: https://github.com/sergun/Hangfire.Mongo
       author: sergeyzwezdin
       
-    - name: Hangfire.MySql
-      url: https://github.com/chrislove/Hangfire.MySql
-      author: chrislove
-      
     - name: Hangfire.MySqlStorage
       url: https://github.com/arnoldasgudas/Hangfire.MySqlStorage
       author: arnoldasgudas
