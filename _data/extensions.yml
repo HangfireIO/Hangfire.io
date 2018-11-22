@@ -55,6 +55,11 @@
       url: https://github.com/face-it/Hangfire.Tags
       author: faceit
     
+    - name: Hangfire.Dashboard.RecurringJobExtensions
+      description: recurring job extensions for hangfire dashboard.
+      url: https://github.com/LabelZhou/Hangfire.Dashboard.RecurringJobExtensions
+      author: labelzhou
+    
 - name: Storages
   description: The following projects enable you to use your favorite storage.
                Each storage has its own benefits and drawbacks, but you are
