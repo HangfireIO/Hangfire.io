@@ -142,6 +142,10 @@
       url: https://github.com/apilavakis/Hangfire.Funq
       author: apilavakis
       
+    - name: Hangfire.Lamar
+      url: https://github.com/cocowalla/Hangfire.Lamar
+      author: cocowalla
+      
     - name: Hangfire.LightInject
       url: https://github.com/sbosell/Hangfire.LightInject
       author: sbosell
