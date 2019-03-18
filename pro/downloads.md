@@ -7,13 +7,13 @@ sub_active: pro-downloads
 
 <h1 class="page-header">Hangfire Pro Downloads</h1>
 
-Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io/feeds/hangfire-pro). Package downloads are available only for [Hangfire Pro subscribers](http://hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give me 24 hours to generate your credentials for private NuGet server.
+Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io/feeds/hangfire-pro). Package downloads are available only for [Hangfire Pro subscribers](https://hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give me 24 hours to generate your credentials for private NuGet server.
 
 Avaliable Packages
 -------------------
 
 * [Hangfire.Pro](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro/) – batches and batch continuations to create a bunch of background jobs atomically as well as add continuation after all batch jobs executed.
-* [Hangfire.Pro.Redis](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis/) – ultra-fast job storage for Hangfire based on key-value store [Redis](http://redis.io).
+* [Hangfire.Pro.Redis](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis/) – ultra-fast job storage for Hangfire based on key-value store [Redis](https://redis.io).
 * [Hangfire.Pro.Redis.StrongName](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis.StrongName/) – version that linked with StackExchange.Redis.StrongName.
 * [Hangfire.Pro.PerformanceCounters](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.PerformanceCounters/) – allows Hangfire to publish its metrics to Windows Performance Counters – the standard way to monitor Windows applications and services.
 

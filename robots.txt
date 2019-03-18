@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Host: hangfire.io
-Sitemap: http://hangfire.io/sitemap.xml
+Sitemap: https://www.hangfire.io/sitemap.xml

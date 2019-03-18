@@ -303,7 +303,7 @@ Just look at the screenshots below, and you'll love it!
 
 <hr>
 <div class="text-center">
-    <a class="btn btn-primary btn-lg" href="http://docs.hangfire.io/en/latest/quick-start.html">Quick Start</a>
+    <a class="btn btn-primary btn-lg" href="https://docs.hangfire.io/en/latest/quick-start.html">Quick Start</a>
     <span class="btn btn-lg">or</span>
     <a class="btn btn-default btn-lg" href="/pro/">Hangfire Pro</a>
 </div>

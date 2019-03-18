@@ -29,7 +29,7 @@ But here is a much simpler method:
 
 <div class="alert alert-warning">
     <h4>Configuration required</h4>
-    <p>Before using batches, please call the <code>GlobalConfiguration.Configuration.UseBatches</code> method as written in <a href="http://docs.hangfire.io/en/latest/background-methods/using-batches.html#installation">the docs</a>.</p>
+    <p>Before using batches, please call the <code>GlobalConfiguration.Configuration.UseBatches</code> method as written in <a href="https://docs.hangfire.io/en/latest/background-methods/using-batches.html#installation">the docs</a>.</p>
 </div>
 
 <pre><span class="type">BatchJob</span>.StartNew(x =>
@@ -78,9 +78,9 @@ Create action does not restrict you to create jobs only in *Enqueued* state. You
     <img src="/img/storage-compare.png" alt="Background Jobs Throughput" width="222">
 </a>
 
-Hangfire Pro comes with `Hangfire.Pro.Redis` package that uses [Redis](http://redis.io/) server to persist background jobs and other data. 
+Hangfire Pro comes with `Hangfire.Pro.Redis` package that uses [Redis](https://redis.io/) server to persist background jobs and other data. 
 
-Redis is well known for its outstanding [performance](http://redis.io/topics/benchmarks) and here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages.
+Redis is well known for its outstanding [performance](https://redis.io/topics/benchmarks) and here are the results of relative comparison between Hangfire.SqlServer and Hangfire.Redis storages.
 
 <div class="clearfix"></div>
 
