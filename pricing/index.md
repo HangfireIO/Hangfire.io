@@ -34,7 +34,7 @@ redirect_from: /subscriptions/
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Community Support</h4>
                     <ul class="plan-items">
-                        <li><a href="https://stackoverflow.com/questions/tagged/hangfire" target="_blank">StackOverflow Tag</a></li>
+                        <li><a href="https://stackoverflow.com/questions/tagged/hangfire" target="_blank">Stack Overflow Tag</a></li>
                         <li>GitHub Issues</li>
                     </ul>
                     </div>
