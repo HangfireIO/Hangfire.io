@@ -17,7 +17,7 @@
 
 	{% capture tags %}{{ page.categories | join: ', ' }}{{ post.categories | join: ', ' }}{% endcapture %}
 	{% if tags.size > 0 %}
-	<li>
+	<li class="hidden-xs">
 		<i class="glyphicon glyphicon-tag"></i>&nbsp;<span>{{ tags }}</span>
 	</li>
 	{% endif %}
@@ -28,7 +28,7 @@
 		{% else %}
   			{% assign disqus_identifier = page.disqus_identifier %}
 		{% endif %}
-	<li>
+	<li class="hidden-xs">
 		<i class="glyphicon glyphicon-comment"></i>&nbsp;<a href="{{ post.url }}#disqus_thread"{% if disqus_identifier %} data-disqus-identifier="{{ disqus_identifier }}"{% endif %}>0 Comments</a>
 	</li>
 	{% endif %}
