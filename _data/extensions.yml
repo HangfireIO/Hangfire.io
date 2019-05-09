@@ -187,6 +187,10 @@
       url: https://github.com/BredStik/Hangfire.Windsor
       author: BredStik
       
+    - name: Hangfire.Stashbox
+      url: https://github.com/z4kn4fein/stashbox-hangfire
+      author: z4kn4fein
+      
 - name: Unofficial .NET 4.0 Support
   projects:
     - name: Hangfire_Net40
