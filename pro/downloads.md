@@ -7,7 +7,7 @@ sub_active: pro-downloads
 
 <h1 class="page-header">Hangfire Pro Downloads</h1>
 
-Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io/feeds/hangfire-pro). Package downloads are available only for [Hangfire Pro subscribers](https://hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give me 24 hours to generate your credentials for private NuGet server.
+Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io). Package downloads are available only for [Hangfire Pro subscribers](https://www.hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give me 24 hours to generate your credentials for private NuGet server.
 
 Avaliable Packages
 -------------------
@@ -106,7 +106,7 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 <pre class="nuget-install">PM> Install-Package Hangfire.Pro</pre>
 
-<a href="http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+<a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 
 ### Package Manager Dialog (Visual Studio)
 
@@ -117,4 +117,4 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 ![Package Manager Window](/img/pkg-manager.png)
 
-<a href="http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+<a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
