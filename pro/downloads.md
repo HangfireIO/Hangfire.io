@@ -55,11 +55,11 @@ The changes will take an effect only when you **close the solution and re-open i
 
 #### Setting environment variables
 
-On Windows, use the `setx` command to add the corresponding environment variables. It's also possible to set machine-wide variables using the `/s` switch. Alternatively you can set them using the *System properties* window, but don't forget to reopen the command prompt to use the new values.
+On Windows, use the `setx` command to add the corresponding environment variables as shown below. Please note that these commands will add environment variables for all users and may require additional privileges. But you can remove the `/M` switch to set them for current user only. Alternatively you can set environment variables using the *System properties* window, but don't forget to re-open the command prompt to use the new values.
 
 ```bash
-setx HANGFIRE_LOGIN your_login
-setx HANGFIRE_PASSWORD your_password
+setx /M HANGFIRE_LOGIN your_login
+setx /M HANGFIRE_PASSWORD your_password
 ```
 
 On *nix systems it depends on your shell program. You can use the following commands to set environment variables when using Bash.
