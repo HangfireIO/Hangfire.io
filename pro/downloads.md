@@ -7,7 +7,7 @@ sub_active: pro-downloads
 
 <h1 class="page-header">Hangfire Pro Downloads</h1>
 
-Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io/feeds/hangfire-pro). Package downloads are available only for [Hangfire Pro subscribers](https://hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give me 24 hours to generate your credentials for private NuGet server.
+Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io). Package downloads are available only for [Hangfire Pro subscribers](https://www.hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give me 24 hours to generate your credentials for private NuGet server.
 
 Avaliable Packages
 -------------------
@@ -55,12 +55,14 @@ The changes will take an effect only when you **close the solution and re-open i
 
 #### Setting environment variables
 
-On Windows, use the `setx` command to add the corresponding environment variables. It's also possible to set machine-wide variables using the `/s` switch. Alternatively you can set them using the *System properties* window, but don't forget to reopen the command prompt to use the new values.
+On Windows, use the `setx` command to add the corresponding environment variables as shown below. Please note that these commands will add environment variables for all users and may require additional privileges, but you can remove the `/M` switch to set them for current user only. 
 
 ```bash
-setx HANGFIRE_LOGIN your_login
-setx HANGFIRE_PASSWORD your_password
+setx /M HANGFIRE_LOGIN your_login
+setx /M HANGFIRE_PASSWORD your_password
 ```
+
+Alternatively you can set environment variables using the *System properties* window, but don't forget to re-open the command prompt to use the new values.
 
 On *nix systems it depends on your shell program. You can use the following commands to set environment variables when using Bash.
 
@@ -106,7 +108,7 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 <pre class="nuget-install">PM> Install-Package Hangfire.Pro</pre>
 
-<a href="http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+<a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 
 ### Package Manager Dialog (Visual Studio)
 
@@ -117,4 +119,4 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 ![Package Manager Window](/img/pkg-manager.png)
 
-<a href="http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+<a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
