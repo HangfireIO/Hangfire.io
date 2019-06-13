@@ -35,6 +35,11 @@
       url: https://github.com/icsharp/Hangfire.RecurringJobExtensions
       author: icsharp
       
+    - name: Hangfire.RecurringJobCleanUpManager
+      description: Auto clean jobs that are not in the code
+      url: https://github.com/Ramon-Balaguer/Hangfire.RecurringJobCleanUpManager
+      author: ramon-balaguer
+      
     - name: Hangfire.MaximumConcurrentExecutions
       description: Throttle the number of concurrent jobs
       url: https://github.com/alastairtree/Hangfire.MaximumConcurrentExecutions
