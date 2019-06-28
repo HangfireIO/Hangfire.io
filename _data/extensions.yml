@@ -12,8 +12,8 @@
       
     - name: Hangfire.Core.Dashboard.Management
       description: Adds a management dashboard to manually queue jobs.
-      url: https://github.com/tracstarr/Hangfire.Core.Dashboard.Management
-      author: tracstarr
+      url: https://github.com/pjrharley/Hangfire.Core.Dashboard.Management
+      author: tracstarr / pjrharley
   
     - name: Hangfire.Dashboard.Authorization
       description: Role/claims-based and basic authorization for Dashboard
