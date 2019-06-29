@@ -9,7 +9,7 @@
       description: Job console extension for Hangfire
       url: https://github.com/pieceofsummer/Hangfire.Console
       author: pieceofsummer
-      
+          
     - name: Hangfire.Core.Dashboard.Management
       description: Adds a management dashboard to manually queue jobs.
       url: https://github.com/pjrharley/Hangfire.Core.Dashboard.Management
@@ -30,9 +30,34 @@
       url: https://github.com/mccj/Hangfire.Core.Dashboard.Management
       author: mccj
 
+    - name: Hangfire.Dashboard.RecurringJobExtensions
+      description: recurring job extensions for hangfire dashboard.
+      url: https://github.com/LabelZhou/Hangfire.Dashboard.RecurringJobExtensions
+      author: labelzhou
+
+    - name: Hangfire.Extensions.Configuration
+      description: Functionality to read Hangfire configurations from key-value pair based configuration
+      url: https://github.com/Nevets82/Hangfire.Extensions.Configuration
+      author: nevets82
+
     - name: Hangfire.Heartbeat
       description: Server utilization monitoring for Hangfire
       url: https://github.com/ahydrax/Hangfire.Heartbeat
+      author: ahydrax
+
+    - name: Hangfire.HttpJob
+      description: Build http jobs(BackgroundJob or RecurringJob) by hangfire web api Or dashbord
+      url: https://github.com/yuzd/Hangfire.HttpJob
+      author: yuzd
+
+    - name: Hangfire.MaximumConcurrentExecutions
+      description: Throttle the number of concurrent jobs
+      url: https://github.com/alastairtree/Hangfire.MaximumConcurrentExecutions
+      author: alastairtree
+
+    - name: Hangfire.MissionControl
+      description: A plugin for Hangfire that enables you to launch jobs manually.
+      url: https://github.com/ahydrax/Hangfire.MissionControl 
       author: ahydrax
     
     - name: Hangfire.RecurringJobExtensions
@@ -44,22 +69,7 @@
       description: Auto clean jobs that are not in the code
       url: https://github.com/Ramon-Balaguer/Hangfire.RecurringJobCleanUpManager
       author: ramon-balaguer
-      
-    - name: Hangfire.MaximumConcurrentExecutions
-      description: Throttle the number of concurrent jobs
-      url: https://github.com/alastairtree/Hangfire.MaximumConcurrentExecutions
-      author: alastairtree
-
-    - name: Hangfire.HttpJob
-      description: Build http jobs(BackgroundJob or RecurringJob) by hangfire web api Or dashbord
-      url: https://github.com/yuzd/Hangfire.HttpJob
-      author: yuzd
-    
-    - name: Hangfire.Extensions.Configuration
-      description: Functionality to read Hangfire configurations from key-value pair based configuration
-      url: https://github.com/Nevets82/Hangfire.Extensions.Configuration
-      author: nevets82
-    
+   
     - name: Hangfire.StackTrace
       description: Improved stack traces rendering for failed jobs
       url: https://github.com/pieceofsummer/Hangfire.StackTrace
@@ -69,12 +79,7 @@
       description: Makes it possible to add tags to jobs, and filter jobs based on these tags.
       url: https://github.com/face-it/Hangfire.Tags
       author: faceit
-    
-    - name: Hangfire.Dashboard.RecurringJobExtensions
-      description: recurring job extensions for hangfire dashboard.
-      url: https://github.com/LabelZhou/Hangfire.Dashboard.RecurringJobExtensions
-      author: labelzhou
-    
+
 - name: Storages
   description: The following projects enable you to use your favorite storage.
                Each storage has its own benefits and drawbacks, but you are
