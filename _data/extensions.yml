@@ -121,6 +121,10 @@
       url: https://github.com/arnoldasgudas/Hangfire.MySqlStorage
       author: arnoldasgudas
       
+    - name: Hv.Hangfire.SqlServer.Memory
+      url: https://github.com/minhhungit/Hv.Hangfire.SqlServer.Memory
+      author: minhhungit
+      
     - name: Hangfire.PostgreSql
       url: https://github.com/frankhommers/Hangfire.PostgreSql
       author: frankhommers
