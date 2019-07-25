@@ -126,6 +126,11 @@
       url: https://github.com/arnoldasgudas/Hangfire.MySqlStorage
       author: arnoldasgudas
       
+    - name: Hangfire.Storage.MySql
+      description: Fork of Hangfire.MySqlStorage addressing deadlocks and performance issues
+      url: https://github.com/MiloszKrajewski/Hangfire.Storage.MySql
+      author: MiloszKrajewski
+      
     - name: Hangfire.PostgreSql
       url: https://github.com/frankhommers/Hangfire.PostgreSql
       author: frankhommers
