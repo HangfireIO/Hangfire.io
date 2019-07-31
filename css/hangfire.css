@@ -64,6 +64,10 @@
     margin-bottom: 20px;
 }
 
+.bs-sidenav > div {
+    margin: 5px 20px 7px;
+}
+
 .bs-sidenav > h4 {
     margin: 5px 20px 4px;
     color: #888;
