@@ -2,20 +2,17 @@
 layout: products
 title: Downloads
 active: overview
-sub_active: pro-downloads
+sub_active: ace-downloads
 ---
 
-<h1 class="page-header">Hangfire Pro Downloads</h1>
+<h1 class="page-header">Hangfire Ace Downloads</h1>
 
-Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io). Package downloads are available only for [Hangfire Pro subscribers](https://www.hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give us 24 hours to generate your credentials for private NuGet server.
+Hangfire Ace packages are hosted on a [private ProGet Server](https://nuget.hangfire.io). Package downloads are available only for [Hangfire Ace subscribers](https://www.hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Ace binaries (non-NuGet based). Please give us 24 hours to generate your credentials for private NuGet server.
 
 Avaliable Packages
 -------------------
 
-* [Hangfire.Pro](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro/) – batches and batch continuations to create a bunch of background jobs atomically as well as add continuation after all batch jobs executed.
-* [Hangfire.Pro.Redis](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis/) – ultra-fast job storage for Hangfire based on key-value store [Redis](https://redis.io).
-* [Hangfire.Pro.Redis.StrongName](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.Redis.StrongName/) – version that linked with StackExchange.Redis.StrongName.
-* [Hangfire.Pro.PerformanceCounters](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro.PerformanceCounters/) – allows Hangfire to publish its metrics to Windows Performance Counters – the standard way to monitor Windows applications and services.
+* [Hangfire.Throttling](https://nuget.hangfire.io/feeds/hangfire-ace/Hangfire.Throttling/) – concurrency and rate limiting that don't force your workers to wait.
 
 Configuring Feed
 -----------------
@@ -24,15 +21,15 @@ There are several ways to add a NuGet feed, but the main difficulty is authentic
 
 ### Simple Setup in Visual Studio
 
-This is the simplest way to start using Hangfire Pro feed, but it will not work with Continuous Integration. To configure a private feed in Visual Studio, open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
+This is the simplest way to start using Hangfire Ace feed, but it will not work with Continuous Integration. To configure a private feed in Visual Studio, open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
 
-    https://nuget.hangfire.io/nuget/hangfire-pro
+    https://nuget.hangfire.io/nuget/hangfire-ace
 
-![Package Manager Settings Window](/img/pkg-source-pro.png)
+![Package Manager Settings Window](/img/pkg-source-ace.png)
 
 ### Modern environments
 
-Applies to: **Visual Studio 2017, .NET Core CLI, NuGet.exe 3.5+**. This will also work in **Visual Studio 2015**, but you'll be prompted for credentials each time you install a package, when *HangfirePro* feed is selected.
+Applies to: **Visual Studio 2017, .NET Core CLI, NuGet.exe 3.5+**. This will also work in **Visual Studio 2015**, but you'll be prompted for credentials each time you install a package, when *HangfireAce* feed is selected.
 
 Create a new file called `NuGet.config` in the root directory of your solution, and add the following contents.
 
@@ -40,13 +37,13 @@ Create a new file called `NuGet.config` in the root directory of your solution, 
 <!-- YourSolution\NuGet.config -->
 <configuration>
     <packageSources>
-        <add key="HangfirePro" value="https://nuget.hangfire.io/nuget/hangfire-pro/" />
+        <add key="HangfireAce" value="https://nuget.hangfire.io/nuget/hangfire-ace/" />
     </packageSources>
     <packageSourceCredentials>
-        <HangfirePro>
+        <HangfireAce>
             <add key="Username" value="%HANGFIRE_LOGIN%" />
             <add key="ClearTextPassword" value="%HANGFIRE_PASSWORD%" />
-        </HangfirePro>
+        </HangfireAce>
     </packageSourceCredentials>
 </configuration>
 ```
@@ -95,18 +92,18 @@ If you have any problems with the setup, send an email to <a href="mailto:suppor
 
 Alternatively, you can run the following command to add a new package source using command line:
 
-    nuget sources add -Name "HangfirePro" -Source https://nuget.hangfire.io/nuget/hangfire-pro -UserName user -Password secret
+    nuget sources add -Name "HangfireAce" -Source https://nuget.hangfire.io/nuget/hangfire-ace -UserName user -Password secret
 
 Installing Packages
 --------------------
 
-After configuring private NuGet feed, use your favourite method to install Hangfire Pro NuGet packages.
+After configuring private NuGet feed, use your favorite method to install Hangfire Ace NuGet packages.
 
 ### Package Manager Console
 
 The Package Manage Console can be opened in Visual Studio through `Tools` &rarr; `Library Package Manager` &rarr; `Package Manager Console`. 
 
-<pre class="nuget-install">PM> Install-Package Hangfire.Pro</pre>
+<pre class="nuget-install">PM> Install-Package Hangfire.Throttling</pre>
 
 <a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 

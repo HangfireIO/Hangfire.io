@@ -7,7 +7,7 @@ sub_active: pro-overview
 
 <h1 class="page-header">Hangfire Pro</h1>
 
-Hangfire Pro is a set of extension packages that boost the performance and simplify the maintenance of background job processing in large applications. Hangfire Pro packages are available under paid [subscriptions](/subscriptions/). After purchase, you receive binaries and access to the private repository on GitHub.
+Hangfire Pro is a set of extension packages that boost the performance and simplify the maintenance of background job processing in large applications. Hangfire Pro packages are available under paid [subscriptions](/subscriptions/). After purchase, you receive binaries, access to the private NuGet feed and private repository on GitHub.
 
 ## Packages
 

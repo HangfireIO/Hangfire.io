@@ -8,7 +8,7 @@
             <a href="/blog/releases.html">Releases</a>
         </li>
     </ul>
-    <div><h4>Recent Releases</h4></div>
+    <h4>Recent Releases</h4>
     <ul class="nav">
         {% for post in site.categories.release limit:5 %}
         <li class="{% if page.title == post.title %}active{% endif %}">
@@ -16,7 +16,7 @@
         </li>
         {% endfor %}
     </ul>
-    <div><h4>Other Posts</h4></div>
+    <h4>Other Posts</h4>
     <ul class="nav">
         {% for post in site.posts %}
         {% unless post.categories contains 'release' %}

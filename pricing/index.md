@@ -55,7 +55,8 @@ redirect_from: /subscriptions/
                 <div class="plan-features">
                     <h4 style="padding-left:12px;margin-top:0;text-align:left;">Licensing</h4>
                     <ul class="plan-items">
-                        <li><a href="/pro/">Hangfire Pro</a> packages only</li>
+                        <li><a href="/overview.html">Hangfire Core</a> under <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank"><abbr class="initialism">LGPL</abbr> 3.0</a></li>
+                        <li><a href="/pro/">Hangfire Pro</a> under EULA</li>
                         <li><a href="/licensing/standard.html">Standard <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
@@ -88,6 +89,7 @@ redirect_from: /subscriptions/
                     <ul class="plan-items">
                         <li><a href="/overview.html">Hangfire Core</a> packages</li>
                         <li><a href="/pro/">Hangfire Pro</a> packages</li>
+                        <li><a href="/ace/">Hangfire Ace</a> packages</li>
                         <li><a href="/licensing/standard.html">Standard <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
@@ -123,6 +125,7 @@ redirect_from: /subscriptions/
                     <ul class="plan-items">
                         <li><a href="/overview.html">Hangfire Core</a> packages</li>
                         <li><a href="/pro/">Hangfire Pro</a> packages</li>
+                        <li><a href="/ace/">Hangfire Ace</a> packages</li>
                         <li><a href="/licensing/royalty-free.html">Royalty-free <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Custom license terms</li>
