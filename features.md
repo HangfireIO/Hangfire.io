@@ -89,7 +89,7 @@ It is done by the `PreserveCultureAttribute` class that is applied to all of you
 
 ### Cancellation tokens
 
-Hangfire can tell your methods were aborted or canceled due to shutdown event, so you can stop them gracefully using job cancellation tokens that are similar to the regular `CancellationToken` class.
+Hangfire can tell your methods were aborted or cancelled due to shutdown event, so you can stop them gracefully using job cancellation tokens that are similar to the regular `CancellationToken` class.
 
 {% highlight csharp %}
 public void Method(IJobCancellationToken token)
