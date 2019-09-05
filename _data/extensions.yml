@@ -84,6 +84,11 @@
       description: Makes it possible to add tags to jobs, and filter jobs based on these tags.
       url: https://github.com/face-it/Hangfire.Tags
       author: faceit
+      
+    - name: Hangfire.Tags.MySql
+      description: (use MySql) Makes it possible to add tags to jobs, and filter jobs based on these tags.
+      url: https://github.com/shenjielx/Hangfire.Tags.MySql
+      author: shenjielx
 
 - name: Storages
   description: The following projects enable you to use your favorite storage.
