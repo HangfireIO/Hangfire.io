@@ -157,6 +157,10 @@
       url: https://github.com/cady-io/hangfire-ravendb
       author: cady-io
       
+    - name: Hangfire.Realm
+      url: https://github.com/gottscj/Hangfire.Realm
+      author: gottscj
+      
     - name: Hangfire.SQLite
       url: https://github.com/wanlitao/HangfireExtension
       author: wanlitao
