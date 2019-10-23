@@ -84,6 +84,11 @@
       description: Makes it possible to add tags to jobs, and filter jobs based on these tags.
       url: https://github.com/face-it/Hangfire.Tags
       author: faceit
+      
+    - name: Hangfire.RecurringJobAdmin
+      description: A simple dashboard to manage Hangfire's recurring jobs.
+      url: https://github.com/bamotav/Hangfire.RecurringJobAdmin
+      author: bamotav
 
 - name: Storages
   description: The following projects enable you to use your favorite storage.
@@ -156,6 +161,10 @@
     - name: Hangfire.Raven
       url: https://github.com/cady-io/hangfire-ravendb
       author: cady-io
+      
+    - name: Hangfire.Realm
+      url: https://github.com/gottscj/Hangfire.Realm
+      author: gottscj
       
     - name: Hangfire.SQLite
       url: https://github.com/wanlitao/HangfireExtension

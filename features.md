@@ -79,7 +79,7 @@ public class EmailService
 BackgroundJob.Enqueue<EmailService>(x => x.Send());
 {% endhighlight %}
 
-When a worker sees that the given method is an instance-method, it will activate its class first. By default, the `Activator.CreateInstace` method is used, so only classes with default constructors are supported by default. But you can plug in your IoC container and pass the dependencies through the constructor.
+When a worker sees that the given method is an instance-method, it will activate its class first. By default, the `Activator.CreateInstance` method is used, so only classes with default constructors are supported by default. But you can plug in your IoC container and pass the dependencies through the constructor.
 
 ### Culture capturing
 
