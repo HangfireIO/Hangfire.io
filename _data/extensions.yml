@@ -89,6 +89,11 @@
       description: A simple dashboard to manage Hangfire's recurring jobs.
       url: https://github.com/bamotav/Hangfire.RecurringJobAdmin
       author: bamotav
+      
+    - name: Hangfire.JobsLogger
+      description: A Hangfire extension to store a log during job execution.
+      url: https://github.com/raisedapp/Hangfire.JobsLogger
+      author: felixclase      
 
 - name: Storages
   description: The following projects enable you to use your favorite storage.
