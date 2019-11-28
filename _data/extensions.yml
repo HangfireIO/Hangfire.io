@@ -89,6 +89,11 @@
       description: A simple dashboard to manage Hangfire's recurring jobs.
       url: https://github.com/bamotav/Hangfire.RecurringJobAdmin
       author: bamotav
+      
+    - name: Hangfire.JobsLogger
+      description: A Hangfire extension to store a log during job execution.
+      url: https://github.com/raisedapp/Hangfire.JobsLogger
+      author: felixclase      
 
 - name: Storages
   description: The following projects enable you to use your favorite storage.
@@ -169,6 +174,11 @@
     - name: Hangfire.SQLite
       url: https://github.com/wanlitao/HangfireExtension
       author: wanlitao
+      
+    - name: Hangfire.Storage.SQLite
+      description: An Alternative SQLite Storage for Hangfire.
+      url: https://github.com/raisedapp/Hangfire.Storage.SQLite
+      author: felixclase         
 
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
