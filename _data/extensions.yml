@@ -5,6 +5,11 @@
 
 - name: Common
   projects:
+    - name: Elmah.Io.Heartbeats.Hangfire
+      description: Logging heartbeats from Hangfire to elmah.io
+      url: https://github.com/elmahio/Elmah.Io.Heartbeats.Hangfire
+      author: elmahio
+  
     - name: Hangfire.Console
       description: Job console extension for Hangfire
       url: https://github.com/pieceofsummer/Hangfire.Console
