@@ -176,10 +176,6 @@
       url: https://github.com/gottscj/Hangfire.Realm
       author: gottscj
       
-    - name: Hangfire.SQLite
-      url: https://github.com/wanlitao/HangfireExtension
-      author: wanlitao
-      
     - name: Hangfire.Storage.SQLite
       description: An Alternative SQLite Storage for Hangfire.
       url: https://github.com/raisedapp/Hangfire.Storage.SQLite
