@@ -76,7 +76,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
         <p>
             Continuations are executed when parent job <strong>has finished</strong>.
         </p>
-<pre><span class="type">BackgroundJob</span>.ContinueWith(
+<pre><span class="type">BackgroundJob</span>.ContinueJobWith(
     jobId,
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Continuation!"</span>));</pre>
     </div>
