@@ -47,7 +47,7 @@ In case of exception, you may show an error to a user, and simply ask to retry h
 Continuations allow you to chain multiple batches together. They will be executed once *all background jobs* of a parent batch finished. Consider the previous example where you have 1000 emails to send. If you want to make final action after sending, just add a continuation:
 
 <pre><span class="keywd">var</span> id1 = <span class="type">BatchJob</span>.StartNew(<span class="comm">/* for (var i = 0; i &lt; 1000... */</span>);
-<span class="keywd">var</span> id2 = <span class="type">BatchJob</span>.ContinueWith(id1, x => 
+<span class="keywd">var</span> id2 = <span class="type">BatchJob</span>.ContinueBatchWith(id1, x => 
 {
     x.Enqueue(() => MarkCampaignFinished());
     x.Enqueue(() => NotifyAdministrator());
@@ -63,11 +63,11 @@ Create action does not restrict you to create jobs only in *Enqueued* state. You
 {
     x.Enqueue(() => <span class="type">Console</span>.Write(<span class="string">"1a... "</span>));
     <span class="keywd">var</span> id1 = x.Schedule(() => <span class="type">Console</span>.Write(<span class="string">"1b... "</span>), <span class="type">TimeSpan</span>.FromSeconds(1));
-    <span class="keywd">var</span> id2 = x.ContinueWith(id1, () => <span class="type">Console</span>.Write(<span class="string">"2... "</span>));
-    x.ContinueWith(id2, () => <span class="type">Console</span>.Write(<span class="string">"3... "</span>));
+    <span class="keywd">var</span> id2 = x.ContinueJobWith(id1, () => <span class="type">Console</span>.Write(<span class="string">"2... "</span>));
+    x.ContinueJobWith(id2, () => <span class="type">Console</span>.Write(<span class="string">"3... "</span>));
 });
 
-<span class="type">BatchJob</span>.ContinueWith(batchId, x =>
+<span class="type">BatchJob</span>.ContinueBatchWith(batchId, x =>
 {
     x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"4..."</span>));
 });</pre>

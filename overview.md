@@ -101,7 +101,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
         <p>
             Batch continuation is fired <strong>after all</strong> background jobs in a parent batch <strong>have finished</strong>.
         </p>
-        <pre><code><span class="type">Batch</span>.ContinueWith(batchId, x =>
+        <pre><code><span class="type">Batch</span>.ContinueBatchWith(batchId, x =>
 {
     x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Last Job"</span>));
 });</code></pre>

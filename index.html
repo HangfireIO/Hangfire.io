@@ -143,7 +143,7 @@ description: An easy way to perform background processing in .NET and .NET Core 
                     <p>
                         Continuations are executed when its parent job <strong>has been finished</strong>.
                     </p>
-                    <pre><span class="type">BackgroundJob</span>.ContinueWith(
+                    <pre><span class="type">BackgroundJob</span>.ContinueJobWith(
     jobId,
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Continuation!"</span>));</pre>
                 </div>
@@ -163,7 +163,7 @@ description: An easy way to perform background processing in .NET and .NET Core 
                     <p>
                         Batch continuation is fired <strong>when all</strong> background jobs in a parent batch <strong>finished</strong>.
                     </p>
-                    <pre><code><span class="type">BatchJob</span>.ContinueWith(batchId, x =>
+                    <pre><code><span class="type">BatchJob</span>.ContinueBatchWith(batchId, x =>
 {
     x.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Last Job"</span>));
 });</code></pre>
