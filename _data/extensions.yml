@@ -37,7 +37,7 @@
 
     - name: Hangfire.Dashboard.Management
       description: Adds a management dashboard to manually queue jobs.
-      url: https://github.com/mccj/Hangfire.Core.Dashboard.Management
+      url: https://github.com/mccj/Hangfire.Dashboard.Management
       author: mccj
 
     - name: Hangfire.Dashboard.RecurringJobExtensions
