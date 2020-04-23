@@ -35,7 +35,7 @@ In the following example mutexes are created dynamically, depending on a concret
 
 In the yet another example we are creating a semaphore with the limit of 20 concurrent executions...
 
-<pre>throttlingManager.AddOrUpdateSemaphore(<span class="string">"github"</span>, <span class="keywd">new</span> <span class="type">SemaphoreOptions</span>(20));</pre>
+<pre>throttlingManager.AddOrUpdateSemaphore(<span class="string">"newsletter"</span>, <span class="keywd">new</span> <span class="type">SemaphoreOptions</span>(20));</pre>
 
 ... and applying the newly created semaphore to a background job method so we have maximum 20 background jobs that send a newsletter. 
 
@@ -48,7 +48,7 @@ In the yet another example we are creating a semaphore with the limit of 20 conc
 
 Different window types use different interval types, please see their documentation for details. And in the following example we are using a sliding window counter to limit how many requests issue to GitHub per hour. First we are creating a sliding window and setting its options...
 
-<pre>throttlingManager.AddOrUpdateSlidingWindow(<span class="string">"newsletter"</span>, <span class="keywd">new</span> <span class="type">SlidingWindowOptions</span>(
+<pre>throttlingManager.AddOrUpdateSlidingWindow(<span class="string">"github"</span>, <span class="keywd">new</span> <span class="type">SlidingWindowOptions</span>(
     <span class="comm">limit:</span> 5000,
     <span class="comm">interval:</span> <span class="type">TimeSpan</span>.FromHours(1),
     <span class="comm">buckets:</span> 60));</pre>
