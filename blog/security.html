@@ -1,0 +1,35 @@
+---
+layout: blog
+title: Hangfire Security Announcements
+subtitle: Security Announcements
+active: blog
+---
+
+<article>
+<div class="alert alert-warning">
+    <h4>Reporting</h4>
+    <p>In order to give the community time to respond and upgrade we strongly urge you report
+    all security issues privately. Please email us at <a href="mailto:security@hangfire.io">security@hangfire.io</a> 
+    with details and we will respond ASAP. Security issues always take precedence over bug 
+    fixes and feature work.</p>
+</div>
+
+<div class="alert" style="background-color:whitesmoke;">
+    <h4>Newsletter</h4>
+    <div>
+        <p>Subscribe to receive security announcements by email as soon as possible. Very low traffic, unsubscribe at any time.</p>
+        <form action="https://hangfire.us9.list-manage.com/subscribe/post?u=d2f4abd4cd4d3b1db1b06dc02&amp;id=228ce6c6b1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate style="padding:0;margin-bottom:10px;">
+            <div class="input-group">
+                <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="me@example.com">
+                <span class="input-group-btn">
+                    <input type="submit" value="Subscribe" name="subscribe" class="btn btn-default">
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+</article>
+
+{% for post in site.categories.security %}
+	{% include blog/post_item.html %}
+{% endfor %}

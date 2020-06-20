@@ -1,0 +1,33 @@
+---
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }} Security Announcements</title>
+  <description>{{ site.description }}</description>
+  <link href="{{ site.url }}/atom-security.xml" rel="self"/>
+  <link href="{{ site.url }}/"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}</id>
+  <author>
+    <name>{{ site.author.name }}</name>
+    <uri>{{ site.author.url }}</uri>
+  </author>
+ 
+  {% for post in site.categories.security %}
+  <entry>
+  	<id>{{ site.url }}{{ post.id }}</id>
+    <title>{{ post.title | xml_escape }}</title>
+    <author>{{ post.author | xml_escape }}</author>
+    <link href="{{ site.url }}{{ post.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    {% for tag in post.tags %}
+    <category>{{ tag | xml_escape }}</category>
+    {% endfor %}
+    {% for cat in post.categories %}
+    <category>{{ cat | xml_escape }}</category>
+    {% endfor %}
+    <content type="html">{{ post.excerpt | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>
