@@ -60,6 +60,11 @@
       url: https://github.com/yuzd/Hangfire.HttpJob
       author: yuzd
 
+    - name: Hangfire.MAMQSqlExtension
+      description: Allow Multi-App, Multi-Server, Multi-Queue sharing a single Database
+      url: https://github.com/GeXiaoguo/Hangfire.MAMQSqlExtension
+      author: GeXiaoguo
+
     - name: Hangfire.MaximumConcurrentExecutions
       description: Throttle the number of concurrent jobs
       url: https://github.com/alastairtree/Hangfire.MaximumConcurrentExecutions
