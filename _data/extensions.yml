@@ -119,6 +119,10 @@
       url: https://github.com/imranmomin/Hangfire.AzureDocumentDB
       author: imranmomin
       
+    - name: Hangfire.AzureCosmosDb
+      url: https://github.com/imranmomin/Hangfire.AzureCosmosDb
+      author: imranmomin
+      
     - name: Hangfire.CompositeC1
       url: https://github.com/burningice2866/Hangfire.CompositeC1
       author: burningice2866
