@@ -27,7 +27,7 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 ### Package Manager Dialog (Visual Studio)
 
 1. Right-click on your project and click "Manage NuGet Packages".
-2. Select "NuGet Offical Package Source"
+2. Select "NuGet Official Package Source"
 3. Search for "Hangfire", using the search bar at the top right
 4. Select "Hangfire" and choose Install
 
