@@ -1,5 +1,5 @@
 ---
-title: Hangfire.Throttling 1.1.0
+title: Hangfire.Throttling 1.1.1
 category: release
 author: odinserj
 ---
