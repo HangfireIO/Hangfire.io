@@ -9,7 +9,7 @@ sub_active: pro-downloads
 
 Hangfire Pro packages are hosted on a [private ProGet Server](https://nuget.hangfire.io). Package downloads are available only for [Hangfire Pro subscribers](https://www.hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Pro binaries (non-NuGet based). Please give us 24 hours to generate your credentials for private NuGet server.
 
-Avaliable Packages
+Available Packages
 -------------------
 
 * [Hangfire.Pro](https://nuget.hangfire.io/feeds/hangfire-pro/Hangfire.Pro/) – batches and batch continuations to create a bunch of background jobs atomically as well as add continuation after all batch jobs executed.

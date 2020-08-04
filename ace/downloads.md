@@ -9,7 +9,7 @@ sub_active: ace-downloads
 
 Hangfire Ace packages are hosted on a [private ProGet Server](https://nuget.hangfire.io). Package downloads are available only for [Hangfire Ace subscribers](https://www.hangfire.io/pricing/). After paying, you'll instantly receive a link to download the Hangfire Ace binaries (non-NuGet based). Please give us 24 hours to generate your credentials for private NuGet server.
 
-Avaliable Packages
+Available Packages
 -------------------
 
 * [Hangfire.Throttling](https://nuget.hangfire.io/feeds/hangfire-ace/Hangfire.Throttling/) – concurrency and rate limiting that don't force your workers to wait.

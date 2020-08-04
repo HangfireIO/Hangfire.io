@@ -172,7 +172,7 @@ public void OldMethod(string arg1, int arg2)
     NewMethod(arg1, arg2, DefaultValueForArg3);
 }
 
-public void NewMethod(stirng arg1, int arg2, double arg3)
+public void NewMethod(string arg1, int arg2, double arg3)
 {
     // Real processing
 }
