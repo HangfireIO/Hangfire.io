@@ -9,4 +9,4 @@ So I've made some changes to the pricing policy. I've added the new Startup plan
 
 New subscription plans are available on the [Pricing page](https://www.hangfire.io/pricing/) as always. **Current subscriptions and quotes are not affected by these changes**, and their renewal price and terms will be the same, unless you want to upgrade your subscriptions manually.
 
-If you recently wanted to buy a Hangfire subscription at a previous price, don't worry – just send an email to [sales@hangfire.io](mailto:sales@hangfire.io) before Aug, 19 2017, and I'll generate an order for you!
+If you recently wanted to buy a Hangfire subscription at a previous price, don't worry – just send an email to [support@hangfire.io](mailto:support@hangfire.io) before Aug, 19 2017, and I'll generate an order for you!
