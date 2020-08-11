@@ -13,7 +13,7 @@ redirect_from: /subscriptions/
             </h1>
             <p class="lead" style="margin-bottom: 40px;">
                 Hangfire is <strong>completely free</strong> even for commercial use. Subscriptions below allow you to use additional options while ensuring the project will stay here for years to come.
-                I provide <strong>30 day</strong> unconditional money back guarantee.
+                We provide <strong>30 day</strong> unconditional money back guarantee.
             </p>
         </div>
     </div>
@@ -150,7 +150,7 @@ redirect_from: /subscriptions/
                     </div>
                     <a class="btn btn-warning" href="https://sites.fastspring.com/hangfire/instant/hangfire-enterprise2017-subscription" target="_top">Buy Now</a>
                     <br>
-                    or <a href="mailto:sales@hangfire.io?subject=Quote for Hangfire Enterprise subscription">request a quote</a>
+                    or <a href="mailto:support@hangfire.io?subject=Quote for Hangfire Enterprise subscription">request a quote</a>
                 </div>
             </div>
         </div>
@@ -218,17 +218,17 @@ redirect_from: /subscriptions/
 
             <h3>What payment methods are supported?</h3>
             <p>
-                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire Enterprise subscription via <strong>wire transfer</strong>, mail/check or purchase order, please contact <a href="mailto:sales@hangfire.io">sales@hangfire.io</a>, and I'll send you the details.
+                We are accepting <strong>credit cards</strong> <strong>and PayPal</strong>. If you want to purchase Hangfire Enterprise subscription via <strong>wire transfer</strong>, mail/check or purchase order, please contact <a href="mailto:support@hangfire.io">support@hangfire.io</a>, and we'll send you the details.
             </p>     
 
             <h3>What if I am not satisfied?</h3>
             <p>
-                All orders are covered by <strong>30-days</strong>, no-questions-asked <strong>money back</strong> policy. If you aren't happy with the software, email <a href="mailto:sales@hangfire.io">sales@hangfire.io</a> and I'll refund the order. I don't want your money if you aren't completely satisfied with the product.
+                All orders are covered by <strong>30-days</strong>, no-questions-asked <strong>money back</strong> policy. If you aren't happy with the software, email <a href="mailto:support@hangfire.io">support@hangfire.io</a> and we'll refund the order. We don't want your money if you aren't completely satisfied with the product.
             </p>   
 
             <h3>What is the buying process?</h3>
             <p>
-                Click the <em>Buy Now</em> button and put in your info.  Your license will be associated with the email address you use. You'll receive the latest Hangfire Pro immediately, and I'll generate your credentials for a private NuGet server and email them to you within 24 hours. I can also give you access to the private GitHub repository on your request.
+                Click the <em>Buy Now</em> button and put in your info.  Your license will be associated with the email address you use. You'll receive the latest Hangfire Pro immediately, and we'll generate your credentials for a private NuGet server and email them to you within 24 hours. We can also give you access to the private GitHub repository on your request.
             </p>       
 
             <h3>How many licenses do I need to buy?</h3>
@@ -253,7 +253,7 @@ redirect_from: /subscriptions/
 
             <h3>What if I need to change a subscription?</h3>
             <p>
-                Not a problem. Just <a href="mailto:sales@hangfire.io">let me know</a>, and I'll create a custom invoice so that you only pay the difference. You'll never be any worse off.
+                Not a problem. Just <a href="mailto:support@hangfire.io">let us know</a>, and we'll create a custom invoice so that you only pay the difference. You'll never be any worse off.
             </p>
             <p>
                 You'll receive a confirmation email upon purchase which can be used as an invoice/receipt.
@@ -261,7 +261,7 @@ redirect_from: /subscriptions/
 
             <h3>Is there a trial version?</h3>
             <p>
-                There is no free trial version available for Hangfire Pro. However I do offer a 30 day period with full refund if Pro does not work for you.
+                There is no free trial version available for Hangfire Pro. However we do offer a 30 day period with full refund if Pro does not work for you.
             </p>   
             
             <h3>Can I view the EULA?</h3>
