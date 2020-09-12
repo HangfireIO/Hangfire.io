@@ -23,7 +23,7 @@ There are several ways to add a NuGet feed, but the main difficulty is authentic
 
 This is the simplest way to start using Hangfire Ace feed, but it will not work with Continuous Integration. To configure a private feed in Visual Studio, open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
 
-    https://nuget.hangfire.io/nuget/hangfire-ace
+    https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json
 
 ![Package Manager Settings Window](/img/pkg-source-ace.png)
 
@@ -37,7 +37,7 @@ Create a new file called `NuGet.config` in the root directory of your solution, 
 <!-- YourSolution\NuGet.config -->
 <configuration>
     <packageSources>
-        <add key="HangfireAce" value="https://nuget.hangfire.io/nuget/hangfire-ace/" />
+        <add key="HangfireAce" value="https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json" />
     </packageSources>
     <packageSourceCredentials>
         <HangfireAce>
