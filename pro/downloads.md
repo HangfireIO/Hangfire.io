@@ -26,7 +26,7 @@ There are several ways to add a NuGet feed, but the main difficulty is authentic
 
 This is the simplest way to start using Hangfire Pro feed, but it will not work with Continuous Integration. To configure a private feed in Visual Studio, open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
 
-    https://nuget.hangfire.io/nuget/hangfire-pro
+    https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json
 
 ![Package Manager Settings Window](/img/pkg-source-pro.png)
 
@@ -40,7 +40,7 @@ Create a new file called `NuGet.config` in the root directory of your solution, 
 <!-- YourSolution\NuGet.config -->
 <configuration>
     <packageSources>
-        <add key="HangfirePro" value="https://nuget.hangfire.io/nuget/hangfire-pro/" />
+        <add key="HangfirePro" value="https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json" />
     </packageSources>
     <packageSourceCredentials>
         <HangfirePro>
