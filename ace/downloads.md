@@ -23,6 +23,12 @@ There are several ways to add a NuGet feed, but the main difficulty is authentic
 
 This is the simplest way to start using Hangfire Ace feed, but it will not work with Continuous Integration. To configure a private feed in Visual Studio, open **Tools &rarr; NuGet Package Manager &rarr; Package Manager Settings** and add a new feed with the following URL:
 
+#### NuGet V3 Feed Endpoint
+
+    https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json
+    
+#### NuGet V2 Feed Endpoint (for older systems)
+
     https://nuget.hangfire.io/nuget/hangfire-ace
 
 ![Package Manager Settings Window](/img/pkg-source-ace.png)
