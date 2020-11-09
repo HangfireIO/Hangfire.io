@@ -14,6 +14,16 @@
       description: Job console extension for Hangfire
       url: https://github.com/pieceofsummer/Hangfire.Console
       author: pieceofsummer
+  
+    - name: Hangfire.Console.Extensions
+      description: Makes it easier to use Hangfire.Console with .net core dependency injection
+      url: https://github.com/AnderssonPeter/Hangfire.Console.Extensions
+      author: AnderssonPeter
+  
+    - name: Hangfire.Console.Extensions.Serilog
+      description: Allows you combine Hangfire.Console with Serilog
+      url: https://github.com/AnderssonPeter/Hangfire.Console.Extensions
+      author: AnderssonPeter
 
     - name: Hangfire.Core.Dashboard.Management
       description: Adds a management dashboard to manually queue jobs.
