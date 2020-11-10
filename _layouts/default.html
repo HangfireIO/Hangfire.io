@@ -32,17 +32,8 @@
 
         <script async defer data-domain="hangfire.io" src="https://plausible.io/js/plausible.js"></script>
 
-        <style id="antiClickjack">
-          body{display:none !important;}
-        </style>
-        <script type="text/javascript">
-          if (self === top) {
-              var antiClickjack = document.getElementById("antiClickjack");
-              antiClickjack.parentNode.removeChild(antiClickjack);
-          } else {
-              top.location = self.location;
-          }
-        </script>
+        <style id="acj">body{display:none !important;}</style>
+        <script type="text/javascript">if (self === top) {document.getElementById("acj").parentNode.removeChild(acj);} else {top.location = self.location;}</script>
     </head>
     <body>
         <nav class="navbar navbar-hangfire {% if page.jumbotron != null %}navbar-jumbotron{% endif %}" role="navigation">
