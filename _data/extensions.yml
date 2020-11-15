@@ -120,6 +120,11 @@
       url: https://github.com/raisedapp/Hangfire.JobsLogger
       author: felixclase      
 
+    - name: Hangfire.Extensions.ApplicationInsights
+      description: ApplicationInsights integration to track Jobs as Operations.
+      url: https://github.com/coolhome/Hangfire.Extensions.ApplicationInsights
+      author: coolhome
+
 - name: Storages
   description: The following projects enable you to use your favorite storage.
                Each storage has its own benefits and drawbacks, but you are
