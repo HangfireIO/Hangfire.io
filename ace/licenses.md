@@ -11,7 +11,7 @@ Hangfire Ace is a **proprietary software** without an OSS license available. It 
 
 * Hangfire.Throttling
 
-Copyright &copy; 2017–2020 Sergey Odinokov. All rights reserved.
+Copyright &copy; 2017–2021 Sergey Odinokov. All rights reserved.
 
 ### Commercial Licenses
 

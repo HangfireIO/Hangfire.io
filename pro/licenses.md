@@ -14,7 +14,7 @@ Hangfire Pro is a **proprietary software** without an OSS license available. It 
 * Hangfire.Pro.Redis.StrongName
 * Hangfire.Pro.PerformanceCounters
 
-Copyright &copy; 2014–2020 Sergey Odinokov. All rights reserved.
+Copyright &copy; 2014–2021 Sergey Odinokov. All rights reserved.
 
 ### Commercial Licenses
 
