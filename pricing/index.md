@@ -32,6 +32,11 @@ redirect_from: /subscriptions/
                         </li>
                         <li>Commercial use</li>
                     </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Storages</h4>
+                    <ul class="plan-items">
+                        <li>SQL Server 2008 R2+</li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
+                    </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Community Support</h4>
                     <ul class="plan-items">
                         <li><a href="https://stackoverflow.com/questions/tagged/hangfire" target="_blank">Stack Overflow Tag</a></li>
@@ -60,6 +65,12 @@ redirect_from: /subscriptions/
                         <li><a href="/licensing/standard.html">Standard <abbr class="initialism">EULA</abbr></a></li>
                         <li>Perpetual license</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Storages</h4>
+                    <ul class="plan-items">
+                        <li>SQL Server 2008 R2+</li>
+                        <li>Redis 2.6.12+</li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
@@ -94,6 +105,12 @@ redirect_from: /subscriptions/
                         <li>Perpetual license</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
                         <li>Access to source code</li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Storages</h4>
+                    <ul class="plan-items">
+                        <li>SQL Server 2008 R2+</li>
+                        <li>Redis 2.6.12+</li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
@@ -131,6 +148,12 @@ redirect_from: /subscriptions/
                         <li>Custom license terms</li>
                         <li>Access to private <a href="https://nuget.hangfire.io" target="_blank">NuGet feed</a></li>
                         <li>Access to source code</li>
+                    </ul>
+                    <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Storages</h4>
+                    <ul class="plan-items">
+                        <li>SQL Server 2008 R2+</li>
+                        <li>Redis 2.6.12+</li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
