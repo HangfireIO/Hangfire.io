@@ -4,6 +4,7 @@ title: Standard End-user License Agreement
 active: overview
 sub_active: standard
 redirect_from: /pro/license.html
+article_type: eula
 ---
 
 <h1 class="page-header">Standard End-user License Agreement</h1>

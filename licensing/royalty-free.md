@@ -4,6 +4,7 @@ title: Royalty-free End-user License Agreement
 active: overview
 sub_active: royalty-free
 redirect_from: /royalty-free-eula.html
+article_type: eula
 ---
 
 <h1 class="page-header">Royalty-free End-user License Agreement</h1>

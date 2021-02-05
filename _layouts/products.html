@@ -37,7 +37,7 @@ active: overview
             </div>
         </div>
         <div class="col-lg-9 col-md-8" role="main">
-            <article>
+            <article {% if page.article_type %}class="{{ page.article_type }}"{% endif %}>
                 {{ content }}
 
                 <div class="alert alert-info hidden-print" style="margin-top: 20px;margin-bottom:0;">

@@ -429,3 +429,7 @@ table>thead:first-child>tr:first-child>td {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+
+article.eula {
+    text-align: justify;
+}

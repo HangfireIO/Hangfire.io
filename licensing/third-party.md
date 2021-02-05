@@ -3,6 +3,7 @@ layout: products
 title: Third Party Software Notices
 active: overview
 sub_active: third-party
+article_type: eula
 ---
 
 <h1 class="page-header">Third Party Software Notices</h1>

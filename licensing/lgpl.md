@@ -3,6 +3,7 @@ layout: products
 title: GNU Lesser General Public License V3
 active: overview
 sub_active: lgpl
+article_type: eula
 ---
 
 <h1 class="page-header">GNU Lesser General Public License</h1>
