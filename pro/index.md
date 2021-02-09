@@ -13,6 +13,11 @@ Hangfire Pro is a set of extension packages that boost the performance and simpl
 
 ### Hangfire.Pro
 
+<div class="alert alert-warning">
+    <h4>Limited storage support</h4>
+    <p>Please note, Hangfire.Pro package is officially supported only when using <a href="https://docs.hangfire.io/en/latest/configuration/using-sql-server.html">Hangfire.SqlServer</a>, <a href="https://docs.hangfire.io/en/latest/configuration/using-redis.html">Hangfire.Pro.Redis</a> or <a href="https://github.com/HangfireIO/Hangfire.InMemory">Hangfire.InMemory</a> package as a job storage. We can not guarantee that batches will work properly with other storages, since processing guarantees heavily depend on a concrete storage implementation.</p>
+</div>
+
 #### Atomic Background Job Creation
 
 Batches allow you to create a bunch of background jobs atomically. This means that if there was an exception during the creation of background jobs, none of them will be processed. Consider you want to send 1000 emails to your clients, and they really want to receive these emails. Here is the old way:
@@ -27,7 +32,7 @@ But what if storage become unavailable on `i == 500`? 500 emails may be already 
 
 But here is a much simpler method:
 
-<div class="alert alert-warning">
+<div class="alert alert-info">
     <h4>Configuration required</h4>
     <p>Before using batches, please call the <code>GlobalConfiguration.Configuration.UseBatches</code> method as written in <a href="https://docs.hangfire.io/en/latest/background-methods/using-batches.html#installation">the docs</a>.</p>
 </div>

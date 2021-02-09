@@ -13,6 +13,11 @@ Hangfire Ace is a set of extension packages that bring advanced features for bac
 
 ### Hangfire.Throttling
 
+<div class="alert alert-warning">
+    <h4>Limited storage support</h4>
+    <p>Please note, Hangfire.Throttling package is officially supported only when using <a href="https://docs.hangfire.io/en/latest/configuration/using-sql-server.html">Hangfire.SqlServer</a>, <a href="https://docs.hangfire.io/en/latest/configuration/using-redis.html">Hangfire.Pro.Redis</a> or <a href="https://github.com/HangfireIO/Hangfire.InMemory">Hangfire.InMemory</a> package as a job storage. We can not guarantee that throttlers will work properly with other storages, since processing guarantees heavily depend on a concrete storage implementation.</p>
+</div>
+
 [Hangfire.Throttling](/ace/downloads.html) package contains advanced types and methods to apply concurrency and rate limits directly to our background jobs without touching any logic related to queues, workers, servers or using additional services. So you can control how many particular background jobs are running at the same point of time or within a specific time window.
 
 Throttling is performed asynchronously by rescheduling jobs to a later time or deleting them when throttling condition is met, depending on the configured behavior. And while throttled jobs are waiting for their turn, your workers are free to process other enqueued background jobs.
