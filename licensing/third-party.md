@@ -215,6 +215,8 @@ THE SOFTWARE.
 
 ### [Rickshaw](https://github.com/shutterstock/rickshaw) (MIT License)
 
+<div class="alert alert-info">Only in Hangfire.Core package &lt; 1.7.0. Replaced with Chart.js library with MIT License in version 1.7.0.</div>
+
 Copyright (C) 2011-2014 by Shutterstock Images, LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -249,6 +251,8 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 ### [Data Driven Documents (D3)](https://github.com/d3/d3) (BSD 3-Clause License)
+
+<div class="alert alert-info">Only in Hangfire.Core package &lt; 1.7.0. Replaced with Chart.js library with MIT License in version 1.7.0.</div>
 
 Copyright 2010-2017 Mike Bostock
 All rights reserved.
