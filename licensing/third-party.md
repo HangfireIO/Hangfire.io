@@ -179,18 +179,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Third Party Licenses:
-
-The Redis project (http://redis.io/) is independent of this client library, and
-is licensed separately under the three clause BSD license. The full license
-information can be viewed here: http://redis.io/topics/license
-
-This tool makes use of the "redis-doc" library from http://redis.io/documentation
-in the intellisense comments, which is licensed under the
-Creative Commons Attribution-ShareAlike 4.0 International license; full
-details are available here:
-https://github.com/antirez/redis-doc/blob/master/COPYRIGHT
-
 ### [Bootstrap](https://github.com/twbs/bootstrap) (MIT License)
 
 Copyright (c) 2011-2015 Twitter, Inc
