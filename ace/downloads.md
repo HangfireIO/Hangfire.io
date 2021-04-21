@@ -43,7 +43,7 @@ Create a new file called `NuGet.config` in the root directory of your solution, 
 <!-- YourSolution\NuGet.config -->
 <configuration>
     <packageSources>
-        <add key="HangfireAce" value="https://nuget.hangfire.io/nuget/hangfire-ace/" />
+        <add key="HangfireAce" value="https://nuget.hangfire.io/nuget/hangfire-ace/v3/index.json" />
     </packageSources>
     <packageSourceCredentials>
         <HangfireAce>

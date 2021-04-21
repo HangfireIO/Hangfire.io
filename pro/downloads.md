@@ -46,7 +46,7 @@ Create a new file called `NuGet.config` in the root directory of your solution, 
 <!-- YourSolution\NuGet.config -->
 <configuration>
     <packageSources>
-        <add key="HangfirePro" value="https://nuget.hangfire.io/nuget/hangfire-pro/" />
+        <add key="HangfirePro" value="https://nuget.hangfire.io/nuget/hangfire-pro/v3/index.json" />
     </packageSources>
     <packageSourceCredentials>
         <HangfirePro>
