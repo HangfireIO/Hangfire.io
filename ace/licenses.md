@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Hangfire Ace Licenses
+title: Licenses — Hangfire Ace
 active: overview
 sub_active: ace-licenses
 ---

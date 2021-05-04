@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Third Party Software Notices
+title: Third Party Software Notices — Hangfire
 active: overview
 sub_active: third-party
 article_type: eula

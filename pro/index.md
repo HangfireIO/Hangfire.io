@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Hangfire Pro
+title: Overview — Hangfire Pro
 active: overview
 sub_active: pro-overview
 ---

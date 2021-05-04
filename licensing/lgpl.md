@@ -1,6 +1,6 @@
 ---
 layout: products
-title: GNU Lesser General Public License V3
+title: GNU LGPLv3 — Hangfire
 active: overview
 sub_active: lgpl
 article_type: eula

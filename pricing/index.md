@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hangfire Pricing
+title: Pricing — Hangfire
 active: pricing
 redirect_from: /subscriptions/
 ---

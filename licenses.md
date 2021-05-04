@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Hangfire Licenses
+title: Licenses — Hangfire Core
 active: overview
 sub_active: licenses
 redirect_from: 

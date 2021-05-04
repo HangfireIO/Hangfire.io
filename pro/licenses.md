@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Hangfire Pro Licenses
+title: Licenses — Hangfire Pro
 active: overview
 sub_active: pro-licenses
 ---

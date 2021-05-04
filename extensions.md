@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Hangfire Extensions
+title: Extensions — Hangfire Core
 active: overview
 sub_active: extensions
 redirect_from:

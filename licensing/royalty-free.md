@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Royalty-free End-user License Agreement
+title: Royalty-free EULA — Hangfire
 active: overview
 sub_active: royalty-free
 redirect_from: /royalty-free-eula.html

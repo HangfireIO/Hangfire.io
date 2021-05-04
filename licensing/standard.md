@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Standard End-user License Agreement
+title: Standard EULA — Hangfire
 active: overview
 sub_active: standard
 redirect_from: /pro/license.html

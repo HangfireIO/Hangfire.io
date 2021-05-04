@@ -1,6 +1,6 @@
 ---
 layout: products
-title: Hangfire Downloads
+title: Downloads — Hangfire Core
 active: overview
 sub_active: downloads
 redirect_from: /core/download.html
