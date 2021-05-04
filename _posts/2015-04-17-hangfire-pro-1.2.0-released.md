@@ -46,7 +46,7 @@ Continuations allow you to chain multiple batches together. They will be execute
     x.Enqueue(() => NotifyAdministrator());
 });</pre>
 
-So batches and batch continuations allow you to define workflows and configure what actions will be executed in parallel. This is very useful for heavy computational methods as they can be distributed to a diffirent machines.
+So batches and batch continuations allow you to define workflows and configure what actions will be executed in parallel. This is very useful for heavy computational methods as they can be distributed to a different machines.
 
 ### Complex Workflows
 

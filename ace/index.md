@@ -49,7 +49,7 @@ In the yet another example we are creating a semaphore with the limit of 20 conc
 
 #### Rate Limiters
 
-[Fixed window counters](https://docs.hangfire.io/en/latest/background-processing/throttling.html#fixed-window-counters), [sliding window counters](https://docs.hangfire.io/en/latest/background-processing/throttling.html#sliding-window-counters) and [dynamic window counters](https://docs.hangfire.io/en/latest/background-processing/throttling.html#dynamic-window-counters) provide a way to limit how many background job executions are allowed to run within some time interval. Background job executions that exceed the configured threshold will be re-scheduled to the next window interval or deleted, depending on the configured behavior.
+[Fixed window counters](https://docs.hangfire.io/en/latest/background-processing/throttling.html#fixed-window-counters), [sliding window counters](https://docs.hangfire.io/en/latest/background-processing/throttling.html#sliding-window-counters) and [dynamic window counters](https://docs.hangfire.io/en/latest/background-processing/throttling.html#dynamic-window-counters) provide a way to limit how many background job executions are allowed to run within some time interval. Background job executions that exceed the configured threshold will be rescheduled to the next window interval or deleted, depending on the configured behavior.
 
 Different window types use different interval types, please see their documentation for details. And in the following example we are using a sliding window counter to limit how many requests issue to GitHub per hour. First we are creating a sliding window and setting its options...
 
