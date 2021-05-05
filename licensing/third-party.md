@@ -16,6 +16,8 @@ In the event that we accidentally failed to list a required notice, please bring
 
 ### [LibLog](https://github.com/damianh/LibLog) (MIT License)
 
+<span class="label label-success">Hangfire.Core</span>
+
 Copyright (C) 2011-2017 Damian Hickey. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -25,6 +27,8 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### [NCrontab](https://github.com/atifaziz/NCrontab) (Apache License 2.0)
+
+<span class="label label-default">Hangfire.Core &lt; 1.7.0 (unused now)</span>
 
 Copyright (c) 2008 Atif Aziz. All rights reserved.
 
@@ -41,6 +45,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ### Microsoft.Owin (Apache License 2.0)
+
+<span class="label label-success">Hangfire.Core</span>
 
 Part of Katana Project (http://katanaproject.codeplex.com/)
 
@@ -59,6 +65,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ### [Cron Expression Descriptor](https://github.com/bradymholt/cron-expression-descriptor) (MIT License)
+
+<span class="label label-success">Hangfire.Core</span>
 
 Copyright (c) 2013 Brady Holt
 
@@ -79,6 +87,8 @@ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### [Stack Trace Parser](https://github.com/atifaziz/StackTraceParser) (Apache License 2.0)
 
+<span class="label label-success">Hangfire.Core</span>
+
 Copyright (c) 2011 Atif Aziz. All rights reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -94,6 +104,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ### [Stack Trace Formatter](https://github.com/atifaziz/StackTraceFormatter) (Apache License 2.0)
+
+<span class="label label-success">Hangfire.Core</span>
 
 Copyright (c) 2011 Atif Aziz. All rights reserved.
 
@@ -111,6 +123,8 @@ limitations under the License.
 
 ### MoreLINQ - Extensions to LINQ to Objects (Apache License 2.0)
 
+<span class="label label-success">Hangfire.Core</span>
+
 Copyright (c) 2008 Jonathan Skeet. All rights reserved.
  
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -126,6 +140,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ### [ExpressionUtil from ASP.NET MVC](https://github.com/aspnet/AspNetWebStack/tree/v3.0/src/Microsoft.Web.Mvc/ExpressionUtil) (Apache License 2.0)
+
+<span class="label label-success">Hangfire.Core</span>
 
 Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. 
 
@@ -143,6 +159,8 @@ and limitations under the License.
 
 ### [Dapper](https://github.com/StackExchange/Dapper) (Apache License 2.0)
 
+<span class="label label-success">Hangfire.SqlServer</span>
+
 Copyright (c) 2017 Stack Exchange, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -158,6 +176,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ### [StackExchange.Redis](https://github.com/StackExchange/StackExchange.Redis) (MIT License)
+
+<span class="label label-success">Hangfire.Pro.Redis</span>
 
 Copyright (c) 2014 Stack Exchange
 
@@ -181,6 +201,8 @@ SOFTWARE.
 
 ### [Bootstrap](https://github.com/twbs/bootstrap) (MIT License)
 
+<span class="label label-success">Hangfire.Core</span>
+
 Copyright (c) 2011-2015 Twitter, Inc
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -203,7 +225,7 @@ THE SOFTWARE.
 
 ### [Rickshaw](https://github.com/shutterstock/rickshaw) (MIT License)
 
-<div class="alert alert-info">Only in Hangfire.Core package &lt; 1.7.0. Replaced with Chart.js library with MIT License in version 1.7.0.</div>
+<span class="label label-default">Hangfire.Core &lt; 1.7.0 (unused now)</span>
 
 Copyright (C) 2011-2014 by Shutterstock Images, LLC
 
@@ -214,6 +236,8 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### [Moment.js](https://github.com/moment/moment) (MIT License)
+
+<span class="label label-success">Hangfire.Core</span>
 
 Copyright (c) 2011-2013 Tim Wood, Iskren Chernev, Moment.js contributors
 
@@ -240,7 +264,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ### [Data Driven Documents (D3)](https://github.com/d3/d3) (BSD 3-Clause License)
 
-<div class="alert alert-info">Only in Hangfire.Core package &lt; 1.7.0. Replaced with Chart.js library with MIT License in version 1.7.0.</div>
+<span class="label label-default">Hangfire.Core &lt; 1.7.0 (unused now)</span>
 
 Copyright 2010-2017 Mike Bostock
 All rights reserved.
@@ -272,6 +296,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ### [jQuery](https://github.com/jquery/jquery) (MIT License)
 
+<span class="label label-success">Hangfire.Core</span>
+
 Copyright 2014 jQuery Foundation and other contributors
 http://jquery.com/
 
@@ -296,6 +322,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### MSMQ API Extensions (MIT License)
 
+<span class="label label-success">Hangfire.SqlServer.Msmq</span>
+
 Copyright (c) 2014 Philip Hoppe
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -318,6 +346,8 @@ SOFTWARE.
 
 ### [Chart.js](https://www.chartjs.org/) (MIT License)
 
+<span class="label label-success">Hangfire.Core</span>
+
 The MIT License (MIT)
 
 Copyright (c) 2018 Chart.js Contributors
@@ -329,6 +359,8 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### [chartjs-plugin-streaming](https://github.com/nagix/chartjs-plugin-streaming) (MIT License)
+
+<span class="label label-success">Hangfire.Core</span>
 
 Copyright (c) 2018 Akihiko Kusanagi
 
