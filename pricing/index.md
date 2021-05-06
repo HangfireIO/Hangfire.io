@@ -222,7 +222,7 @@ redirect_from: /subscriptions/
 
     <div class="row">
         <div class="col-md-12 text-center">
-            ...and 100+ of other companies!
+            ...and 700+ of other companies from 50+ countries!
         </div>
     </div>
     
