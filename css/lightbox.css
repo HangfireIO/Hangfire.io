@@ -84,7 +84,8 @@
     z-index: 10001;
     left: 50%;
     bottom: 3.75em; /* 60 */
-    padding: 0.313em; /* 5 */
+    padding: 0.5em; /* 7 */
+    line-height: 0;
 
     -webkit-transform: translateX( -50% );
     -ms-transform: translateX( -50% );
@@ -99,7 +100,9 @@
         border-radius: 50%;
         display: inline-block;
         margin: 0 0.313em; /* 5 */
+        padding: 0;
     }
+
     #imagelightbox-nav button.active
     {
         background-color: #fff;
