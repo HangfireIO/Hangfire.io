@@ -5,8 +5,8 @@ active: overview
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 col-md-4" role="complementary">
-            <div class="bs-sidenav hidden-print">
+        <div class="col-lg-3 col-md-4" id="sticky-wrapper" role="complementary">
+            <div class="bs-sidenav hidden-print h-sidenav" id="sticky-target">
                 <h4>Hangfire Core</h4>
                 <ul class="nav">
                     <li {% if page.sub_active == 'overview' %}class="active"{% endif %}><a href="/overview.html">Overview</a></li>
@@ -36,7 +36,7 @@ active: overview
                 </ul>
             </div>
         </div>
-        <div class="col-lg-9 col-md-8" role="main">
+        <div class="col-lg-9 col-md-8 js-content" role="main">
             <article {% if page.article_type %}class="{{ page.article_type }}"{% endif %}>
                 {{ content }}
 
@@ -47,3 +47,63 @@ active: overview
         </div>
     </div>
 </div>
+
+<script>
+    window.onload = function() {
+        var target = document.querySelector('#sticky-target');
+        var wrapper = document.querySelector('#sticky-wrapper');
+        var STICKY_OFFSET_PX = 10;
+
+        var wrapperOffsetTop;
+        var wrapperOffsetHeight;
+        var targetOffsetHeight;
+        var targetInitialWidth;
+        var targetInitialCssText = target.style.cssText || '';
+        
+        function onScroll() {
+            var scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            
+            if (scrollTop >= wrapperOffsetTop - STICKY_OFFSET_PX) {
+                if (scrollTop + targetOffsetHeight + STICKY_OFFSET_PX > wrapperOffsetTop + wrapperOffsetHeight) {
+                    target.style.cssText = targetInitialCssText 
+                        + 'position: absolute; bottom: 0; width: ' + targetInitialWidth + 'px;';
+                } else {
+                    target.style.cssText = targetInitialCssText 
+                        + 'position: fixed; top: ' + STICKY_OFFSET_PX + 'px; width: ' + targetInitialWidth + 'px;';
+                }
+            } else {
+                target.style.cssText = targetInitialCssText;
+            }
+        }
+
+        function startStickyBehaviour() {
+            document.removeEventListener('scroll', onScroll);
+
+            target.style.cssText = targetInitialCssText;
+
+            if (!window.matchMedia("(min-width: 992px)").matches || window.innerHeight < target.offsetHeight + STICKY_OFFSET_PX) {
+                wrapper.style.height = 'initial';
+
+                return;
+            }
+
+            var contentEl = document.querySelector('.js-content');
+            var contentHeight = contentEl.offsetHeight;
+
+            wrapper.style.height = contentHeight + 'px';
+
+            wrapperOffsetTop = wrapper.offsetTop;
+            wrapperOffsetHeight = wrapper.offsetHeight;
+            targetOffsetHeight = target.offsetHeight;
+            targetInitialWidth = target.offsetWidth;
+
+            onScroll();
+            
+            document.addEventListener('scroll', onScroll);
+        }
+
+        window.addEventListener('resize', startStickyBehaviour);
+
+        startStickyBehaviour();
+    }
+</script>
