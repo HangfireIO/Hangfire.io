@@ -151,3 +151,12 @@ code {
     background: rgba(0,0,0,0.04);
     color: inherit;
 }
+
+/* Overrides */
+
+@media (min-width:992px){
+    .h-sidenav {
+        margin-bottom: 0;
+        position: relative;
+    }
+}
