@@ -5,8 +5,8 @@ active: overview
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 col-md-4" id="sticky-wrapper" role="complementary">
-            <div class="bs-sidenav hidden-print h-sidenav" id="sticky-target">
+        <div class="col-lg-3 col-md-4 js-sticky-wrapper" role="complementary">
+            <div class="bs-sidenav hidden-print h-sidenav js-sticky-target"> 
                 <h4>Hangfire Core</h4>
                 <ul class="nav">
                     <li {% if page.sub_active == 'overview' %}class="active"{% endif %}><a href="/overview.html">Overview</a></li>
@@ -50,8 +50,8 @@ active: overview
 
 <script>
     window.onload = function() {
-        var target = document.querySelector('#sticky-target');
-        var wrapper = document.querySelector('#sticky-wrapper');
+        var target = document.querySelector('.js-sticky-target');
+        var wrapper = document.querySelector('.js-sticky-wrapper');
         var STICKY_OFFSET_PX = 10;
 
         var wrapperOffsetTop;
