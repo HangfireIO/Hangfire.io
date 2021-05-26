@@ -59,14 +59,15 @@ $(function () {
     var wrapper = document.querySelector('.js-sticky-wrapper');
     var STICKY_OFFSET_PX = 10;
 
-    var wrapperOffsetTop;
-    var wrapperOffsetHeight;
-    var targetOffsetHeight;
     var targetInitialWidth;
     var targetInitialCssText = target.style.cssText || '';
 
     function onScroll() {
       var scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+      var wrapperOffsetTop = wrapper.offsetTop;
+      var wrapperOffsetHeight = wrapper.offsetHeight;
+      var targetOffsetHeight = target.offsetHeight;
 
       if (scrollTop >= wrapperOffsetTop - STICKY_OFFSET_PX) {
         if (scrollTop + targetOffsetHeight + STICKY_OFFSET_PX > wrapperOffsetTop + wrapperOffsetHeight) {
@@ -90,9 +91,6 @@ $(function () {
         return;
       }
 
-      wrapperOffsetTop = wrapper.offsetTop;
-      wrapperOffsetHeight = wrapper.offsetHeight;
-      targetOffsetHeight = target.offsetHeight;
       targetInitialWidth = target.offsetWidth;
 
       onScroll();
