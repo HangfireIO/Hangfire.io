@@ -87,15 +87,8 @@ $(function () {
       target.style.cssText = targetInitialCssText;
 
       if (!window.matchMedia('(min-width: 992px)').matches || window.innerHeight < target.offsetHeight + STICKY_OFFSET_PX) {
-        wrapper.style.height = 'initial';
-
         return;
       }
-
-      var contentEl = document.querySelector('.js-content');
-      var contentHeight = contentEl.offsetHeight;
-
-      wrapper.style.height = contentHeight + 'px';
 
       wrapperOffsetTop = wrapper.offsetTop;
       wrapperOffsetHeight = wrapper.offsetHeight;
