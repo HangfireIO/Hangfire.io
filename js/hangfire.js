@@ -87,7 +87,7 @@ $(function () {
 
       target.style.cssText = targetInitialCssText;
 
-      if (!window.matchMedia('(min-width: 992px)').matches || window.innerHeight < target.offsetHeight + STICKY_OFFSET_PX) {
+      if (!window.matchMedia('(min-width: 992px)').matches) {
         return;
       }
 

@@ -158,6 +158,10 @@ code {
     .bs-sidenav.h-sidenav {
         margin-bottom: 0;
         position: relative;
+        max-height: calc(100vh - 20px);
+        overflow: scroll;
+        overflow-x: auto;
+        overflow-y: auto;
     }
 
     .row-no-float {
