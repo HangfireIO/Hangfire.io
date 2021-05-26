@@ -4,7 +4,7 @@ active: overview
 ---
 
 <div class="container">
-    <div class="row">
+    <div class="row row-no-float">
         <div class="col-lg-3 col-md-4 js-sticky-wrapper" role="complementary">
             <div class="bs-sidenav hidden-print h-sidenav js-sticky-target"> 
                 <h4>Hangfire Core</h4>
@@ -36,7 +36,7 @@ active: overview
                 </ul>
             </div>
         </div>
-        <div class="col-lg-9 col-md-8 js-content" role="main">
+        <div class="col-lg-9 col-md-8" role="main">
             <article {% if page.article_type %}class="{{ page.article_type }}"{% endif %}>
                 {{ content }}
 
