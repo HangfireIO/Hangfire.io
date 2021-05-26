@@ -8,13 +8,14 @@ redirect_from: /core/download.html
 
 <h1 class="page-header">Downloads</h1>
 
-Hangfire is published as NuGet packages, as are nearly all of the extensions. If you have NuGet installed, you can right-click on your project and choose `Add Library Package Reference`. Search for <a href="https://www.nuget.org/packages?q=Hangfire">Hangfire</a>, and you should see a list of packages. Click *Install*, and you're done. Here is the list of Hangfire packages:
+Hangfire is published as NuGet packages, as are nearly all of the extensions. If you have NuGet installed, you can right-click on your project and choose `Add Library Package Reference`. Search for <a href="https://www.nuget.org/packages?q=Hangfire">Hangfire</a>, and you should see a list of packages. Click *Install*, and you're done. Here are the example packages:
 
-* [Hangfire](https://www.nuget.org/packages/Hangfire/)
 * [Hangfire.Core](https://www.nuget.org/packages/Hangfire.Core/)
+* [Hangfire.AspNet](https://www.nuget.org/packages/Hangfire.AspNet/)
+* [Hangfire.AspNetCore](https://www.nuget.org/packages/Hangfire.AspNetCore/)
+* [Hangfire.InMemory](https://www.nuget.org/packages/Hangfire.InMemory/)
+* [Hangfire.NetCore](https://www.nuget.org/packages/Hangfire.NetCore/)
 * [Hangfire.SqlServer](https://www.nuget.org/packages/Hangfire.SqlServer/)
-* [Hangfire.SqlServer.Msmq](https://www.nuget.org/packages/Hangfire.SqlServer.MSMQ/)
-* [Hangfire.SqlServer.RabbitMq](https://www.nuget.org/packages/Hangfire.SqlServer.RabbitMQ/)
 
 ### Package Manager Console
 
