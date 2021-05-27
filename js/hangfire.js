@@ -51,6 +51,6 @@ $(function () {
     onLoadStart: function() { activityIndicatorOn(); },
     onLoadEnd:   function() { navigationUpdate( selector ); activityIndicatorOff(); }
   });
-
+    
   anchors.add('article h3, article h4');
 });
