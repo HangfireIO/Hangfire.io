@@ -123,7 +123,7 @@ redirect_from: /subscriptions/
                     </ul>
                     </div>
                     <div class="plan-price">
-                        <h3><span class="symbol">$</span>1500</h3>
+                        <h3><span class="symbol">$</span>1,500</h3>
                         <h4>per <strong>organization</strong> / year</h4>
                     </div>
                     <a class="btn btn-success" href="https://sites.fastspring.com/hangfire/instant/hangfire-business2017-subscription" target="_top">Buy Now</a>
@@ -168,7 +168,7 @@ redirect_from: /subscriptions/
                     </ul>
                     </div>
                     <div class="plan-price">
-                        <h3><span class="symbol">$</span>4500</h3>
+                        <h3><span class="symbol">$</span>4,500</h3>
                         <h4>per <strong>organization</strong> / year</h4>
                     </div>
                     <a class="btn btn-warning" href="https://sites.fastspring.com/hangfire/instant/hangfire-enterprise2017-subscription" target="_top">Buy Now</a>
