@@ -157,7 +157,9 @@ code {
 @media (min-width:992px){
     .bs-sidenav.h-sidenav {
         margin-bottom: 0;
-        position: relative;
+        top: 10px;
+        position: -webkit-sticky;
+        position: sticky;
         max-height: calc(100vh - 20px);
         overflow: scroll;
         overflow-x: auto;
