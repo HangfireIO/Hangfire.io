@@ -68,6 +68,7 @@ Hangfire supports all kind of background tasks – short-running and long-runnin
             Recurring jobs are fired <strong>many times</strong> on the specified <strong>CRON schedule</strong>.
         </p>
 <pre><span class="type">RecurringJob</span>.AddOrUpdate(
+    <span class="string">"myrecurringjob"</span>
     () => <span class="type">Console</span>.WriteLine(<span class="string">"Recurring!"</span>),
     <span class="type">Cron</span>.Daily);</pre>
     </div>

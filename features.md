@@ -33,13 +33,13 @@ This call also saves a job, but instead of placing it to a queue, it adds the jo
 Recurring job processing has never been easier. All you need is a single line of code:
 
 {% highlight csharp %}
-RecurringJob.AddOrUpdate(() => Console.Write("Easy!"), Cron.Daily);
+RecurringJob.AddOrUpdate("easyjob", () => Console.Write("Easy!"), Cron.Daily);
 {% endhighlight %}
 
 Hangfire uses NCrontab library to perform scheduling tasks, so you can use more complex CRON expressions:
 
 {% highlight csharp %}
-RecurringJob.AddOrUpdate(() => Console.Write("Powerful!"), "0 12 * */2");
+RecurringJob.AddOrUpdate("powerfuljob", () => Console.Write("Powerful!"), "0 12 * */2");
 {% endhighlight %}
 
 ### SQL Server and Redis support
