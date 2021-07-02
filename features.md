@@ -36,7 +36,7 @@ Recurring job processing has never been easier. All you need is a single line of
 RecurringJob.AddOrUpdate("easyjob", () => Console.Write("Easy!"), Cron.Daily);
 {% endhighlight %}
 
-Hangfire uses NCrontab library to perform scheduling tasks, so you can use more complex CRON expressions:
+Hangfire uses [Cronos](https://github.com/HangfireIO/Cronos) library to perform scheduling tasks, so you can use more complex CRON expressions:
 
 {% highlight csharp %}
 RecurringJob.AddOrUpdate("powerfuljob", () => Console.Write("Powerful!"), "0 12 * */2");
