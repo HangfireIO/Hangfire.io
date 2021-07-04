@@ -88,7 +88,7 @@
     - name: Hangfire.PowerShellExecutor
       description: A plugin for Hangfire that enables you to easily launch your PowerShell scripts.
       url: https://github.com/thomas-illiet/Hangfire.PowerShellExecutor
-      author: Thomas ILLIET
+      author: thomas-illiet
     
     - name: Hangfire.RecurringJobExtensions
       description: Build RecurringJob automatically
