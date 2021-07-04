@@ -84,6 +84,11 @@
       description: A plugin for Hangfire that enables you to launch jobs manually.
       url: https://github.com/ahydrax/Hangfire.MissionControl 
       author: ahydrax
+      
+    - name: Hangfire.PowerShellExecutor
+      description: A plugin for Hangfire that enables you to easily launch your PowerShell scripts.
+      url: https://github.com/thomas-illiet/Hangfire.PowerShellExecutor
+      author: Thomas ILLIET
     
     - name: Hangfire.RecurringJobExtensions
       description: Build RecurringJob automatically
