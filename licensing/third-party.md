@@ -203,7 +203,7 @@ SOFTWARE.
 
 <span class="label label-success">Hangfire.Core</span>
 
-Copyright (c) 2011-2015 Twitter, Inc
+Copyright 2011-2019 Twitter, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -239,7 +239,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <span class="label label-success">Hangfire.Core</span>
 
-Copyright (c) 2011-2013 Tim Wood, Iskren Chernev, Moment.js contributors
+Copyright (c) JS Foundation and other contributors
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -298,8 +298,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <span class="label label-success">Hangfire.Core</span>
 
-Copyright 2014 jQuery Foundation and other contributors
-http://jquery.com/
+Copyright OpenJS Foundation and other contributors, https://openjsf.org/
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -362,7 +361,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <span class="label label-success">Hangfire.Core</span>
 
-Copyright (c) 2018 Akihiko Kusanagi
+Copyright (c) 2021-2019 Akihiko Kusanagi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
