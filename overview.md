@@ -33,9 +33,9 @@ redirect_from: /core/
     </div>
 </div>
 
-### All Types of Background Jobs
+### Many Types of Background Jobs
 
-Hangfire supports all kind of background tasks – short-running and long-running, CPU intensive and I/O intensive, one shot and recurrent. You don't need to reinvent the wheel – it is ready to use.
+Hangfire supports several kinds of background tasks – short-running and long-running, CPU intensive and I/O intensive, one shot and recurrent. You don't need to reinvent the wheel – it is ready to use.
 
 ---
 
