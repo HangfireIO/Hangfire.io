@@ -7,6 +7,8 @@ Starting from Mar 8, 2022 Hangfire is owned by <a href="https://ariregister.rik.
 
 Russian-based entity is closing, and since Mar, 15 nobody works there, and no single penny goes to it starting from charges processed after ~Feb 15. Later this year I will try to contact all companies with custom EULAs to give an option to re-sign the license with the new entity, please let me know if you need to do this earlier.
 
+New sales for companies with Russian residence are now closed and any payments will be refunded back.
+
 Payments, private NuGet feed, technical support and GitHub repositories are unaffected by this change, everything remains the same, except newsletter – I was unable to replicate it in time and it doesn't work currently. I will attempt to rebuild it, but a bit later.
 
 I'm working hard to complete the transition, hope for your patience. Please feel free to ask any questions via <a href="mailto:support@hangfire.io">support@hangfire.io</a>.
