@@ -132,45 +132,15 @@ Hangfire supports several kinds of background tasks – short-running and long-r
 
 ### Backed by Persistent Storage
 
-Background jobs are very important part of an application and Hangfire ensures that any job is performed **at least once**. To persist background job information between application restarts, all the information is saved in your favorite persistent storage. Currently the following storages are supported:
+Background jobs are very important part of an application and Hangfire ensures that any job is performed **at least once**. To persist background job information between application restarts, all the information is saved in your favorite persistent storage. Currently the following storages are officially supported:
 
-<table class="text-center supported-storages">
-    <tr>
-        <td width="33%">
-            <img src="{{ site.cdn }}/img/sqlserver.png" alt="SQL Server" width="150">
-        </td>
-        <td width="33%">
-            <a href="/pro/">
-                <img src="{{ site.cdn }}/img/redis.png" alt="Redis" width="180">
-            </a>
-        </td>
-        <td width="33%">
-            <a href="https://github.com/frankhommers/Hangfire.PostgreSql" target="_blank">
-                <img src="{{ site.cdn }}/img/postgresql.png" alt="PostgreSQL" width="250">
-            </a>
-        </td>
-    </tr>
-</table>
-<table class="text-center supported-storages">
-    <tr>
-        <td width="16%">&nbsp;</td>
-        <td width="33%">
-            <a href="https://github.com/sergun/Hangfire.Mongo" target="_blank">
-                <img src="{{ site.cdn }}/img/mongodb.png" alt="MongoDB" width="250">
-            </a>
-        </td>
-        <td width="33%">
-            <a href="https://www.nuget.org/packages/Hangfire.CompositeC1" target="_blank">
-                <img src="{{ site.cdn }}/img/composite-c1.png" alt="Composite C1 CMS" width="250" style="margin-top:23px;">
-            </a>
-        </td>
-        <td width="16%">&nbsp;</td>
-    </tr>
-</table>
+* <a href="https://docs.hangfire.io/en/latest/configuration/using-sql-server.html">SQL Server</a>
+* <a href="https://docs.hangfire.io/en/latest/configuration/using-redis.html">Redis</a>
+* <a href="https://github.com/HangfireIO/Hangfire.InMemory">In-Memory</a> (preview)
 
-<em>All product names, logos, and brands are property of their respective owners, and are in no way associated or affiliated with Hangfire.</em>
+And support for a lot of other storages are implemented by the community, please see the <a href="/extensions.html">Extensions</a> page for details.
 
-Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite database system is not supported yet, you can implement it. It is cheaper than implementing a background job system from scratch.
+Storage subsystem is abstracted enough to support RDBMS and NoSQL solutions. If your favorite transactional database system is not supported yet, it's likely possible to implement its support as an extension.
 
 ### Automatic Retries
 
