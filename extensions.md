@@ -10,10 +10,15 @@ redirect_from:
 
 <h1 class="page-header">Extensions</h1>
 
-<div class="alert alert-warning">
+<div class="alert alert-info">
     If you author an extension, please don't hesitate to post it here by editing
     the <a href="{{ site.github_repo }}/edit/{{ site.github_branch }}/_data/extensions.yml" target="_blank">_data/extensions.yml</a>
     file and creating a pull-request. Just click the link and follow the instructions.
+</div>
+
+<div class="alert alert-warning">
+    <h4>Disclaimer</h4>
+    Please note that the extensions below developed and maintained by the community. Extensions in Hangfire might significantly affect the execution pipeline, especially job storage implementation. We don't provide official support for community-based packages.
 </div>
 
 {% for category in site.data.extensions %}

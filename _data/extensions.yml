@@ -136,10 +136,8 @@
       author: dalrankov
 
 - name: Storages
-  description: The following projects enable you to use your favorite storage.
-               Each storage has its own benefits and drawbacks, but you are
-               free to change it at any time, since Hangfire is abstracted
-               from a concrete storage.
+  description: The following community projects allow you to use your favorite technology
+               as a job storage.
   projects:
     - name: Hangfire.Azure.ServiceBusQueue
       url: https://github.com/HangfireIO/Hangfire.Azure.ServiceBusQueue
