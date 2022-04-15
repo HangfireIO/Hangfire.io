@@ -23,7 +23,7 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 
 <pre class="nuget-install">PM> Install-Package Hangfire</pre>
 
-<a href="http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+<a href="https://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console" target="_blank">More details about Package Manager Console</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 
 ### Package Manager Dialog (Visual Studio)
 
@@ -32,13 +32,13 @@ The Package Manage Console can be opened in Visual Studio through `Tools` &rarr;
 3. Search for "Hangfire", using the search bar at the top right
 4. Select "Hangfire" and choose Install
 
-<a href="http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
+<a href="https://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">More details on how to use Package Manager Dialog</a> <span class="glyphicon glyphicon-small glyphicon-new-window"></span>
 
 <a id="ci-feed"></a>
 
 ## Continuous Integration Feed
 
-Can't wait for a new release? Not a problem as there is a continuous integration feed for Hangfire packages hosted in [AppVeyor](http://www.appveyor.com/). After each successful commit to the `master` or `dev` branches or any open pull request based on these branches, pre-release packages are pushed to the feed automatically. Here is its url:
+Can't wait for a new release? Not a problem as there is a continuous integration feed for Hangfire packages hosted in [AppVeyor](https://www.appveyor.com/). After each successful commit to the `master` or `dev` branches or any open pull request based on these branches, pre-release packages are pushed to the feed automatically. Here is its url:
 
     https://ci.appveyor.com/nuget/hangfire
 
