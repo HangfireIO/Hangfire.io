@@ -129,7 +129,12 @@
       description: ApplicationInsights integration to track Jobs as Operations.
       url: https://github.com/coolhome/Hangfire.Extensions.ApplicationInsights
       author: coolhome
-      
+
+    - name: OpenTelemetry.Instrumentation.Hangfire
+      description: Instrumentation Library, which instruments Hangfire and collects telemetry about BackgroundJob.
+      url: https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.Instrumentation.Hangfire
+      author: fred2u
+
     - name: TransactHangfire
       description: TransactionScope filter wrapper for Hangfire jobs.
       url: https://github.com/dalrankov/TransactHangfire
