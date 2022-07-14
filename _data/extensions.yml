@@ -211,8 +211,8 @@
       author: ahydrax
       
     - name: Hangfire.Raven
-      url: https://github.com/cady-io/hangfire-ravendb
-      author: cady-io
+      url: https://github.com/CadyIO/hangfire-ravendb
+      author: CadyIO
       
     - name: Hangfire.Realm
       url: https://github.com/gottscj/Hangfire.Realm
