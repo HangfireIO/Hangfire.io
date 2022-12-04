@@ -139,6 +139,16 @@
       description: TransactionScope filter wrapper for Hangfire jobs.
       url: https://github.com/dalrankov/TransactHangfire
       author: dalrankov
+      
+    - name: Bonura.Hangfire.PerformContextAccessor
+      description: Use PerformContextAccessor to access to PerformContext outside Job execution methods.
+      url: https://github.com/meriturva/Hangfire.PerformContextAccessor
+      author: Diego Bonura
+      
+    - name: Bonura.NLog.HangfireLayouts
+      description: Few hangfire layouts to use with NLog logging library.
+      url: https://github.com/meriturva/NLog.HangfireLayouts
+      author: Diego Bonura
 
 - name: Storages
   description: The following community projects allow you to use your favorite technology
