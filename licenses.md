@@ -21,7 +21,7 @@ Hangfire software is an **open-source software** that is **multi-licensed** unde
 * [Hangfire.SqlServer](https://www.nuget.org/packages/HangFire.SqlServer/)
 * [Hangfire.SqlServer.Msmq](https://www.nuget.org/packages/HangFire.SqlServer.MSMQ/)
 
-Copyright &copy; 2013–2022 Hangfire OÜ. All rights reserved.
+Copyright &copy; 2013–2023 Hangfire OÜ. All rights reserved.
 
 ### LGPL v3 License
 
