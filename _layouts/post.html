@@ -31,10 +31,10 @@ active: blog
 
 			{% include blog/newsletter.html %}
 
-			{% if site.disqus_short_name and page.comments == true %}
+			{% if site.hyvor_website and page.comments == true %}
 			<section id="comment">
     			<h2 class="title">Comments</h2>
-    			<div id="disqus_thread" aria-live="polite">{% include blog/disqus_thread.html %}</div>
+    			<div id="hyvor-talk-view" aria-live="polite">{% include blog/hyvor_thread.html %}</div>
 			</section>
 			{% endif %}
 		</div>
@@ -44,4 +44,4 @@ active: blog
 	</div>
 </div>
 
-{% include disqus.html %}
+{% include hyvor.html %}

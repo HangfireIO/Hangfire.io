@@ -10,8 +10,8 @@ author:
 github_repo:   https://github.com/HangfireIO/HangfireIO.github.io
 github_branch: master
 
-disqus_short_name:         hangfire
-disqus_show_comment_count: true
+hyvor_website:         8471
+hyvor_show_comment_count: true
 
 # Windows environments
 # highlighter: rouge

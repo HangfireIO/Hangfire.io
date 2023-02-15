@@ -1,0 +1,12 @@
+{% comment %} Load script if comments are enabled and `page.comments` is either empty (index) or set to true {% endcomment %}
+{% if site.hyvor_website and page.comments != false %}
+<script type="text/javascript">
+  var HYVOR_TALK_WEBSITE = '{{ site.hyvor_website }}';
+  var HYVOR_TALK_CONFIG = {
+    url: '{{ site.url }}{{ page.url }}',
+    id: '{% if page.hyvor_identifier %}{{ page.hyvor_identifier}}{% else %}{{ site.url }}{{ page.url }}{% endif %}'
+  };
+</script>
+<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed.js"></script>
+<script async type="text/javascript" src="//talk.hyvor.com/web-api/count/"></script>
+{% endif %}
