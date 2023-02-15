@@ -433,3 +433,26 @@ table>thead:first-child>tr:first-child>td {
 article.eula {
     text-align: justify;
 }
+
+.recent-news {
+    list-style-type: none;
+    max-height: 316px;
+    padding-left: 0;
+    overflow-y: scroll;
+}
+
+.recent-news h5 {
+    margin-top: 0;
+    color: #337ab7;
+}
+
+.recent-news .link {
+    display: block;
+    color: inherit;
+    padding: 5px 10px;
+}
+
+.recent-news .link:hover {
+    background-color: #f9f9f9;
+    text-decoration: none;    
+}

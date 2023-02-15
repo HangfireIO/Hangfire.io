@@ -1,0 +1,22 @@
+<h3>Recent News</h3>
+<ul class="recent-news">
+{% for post in site.categories.news limit:5 %}
+    <li>
+        <a href="{{ post.url }}" class="link">
+            <h5>{{ post.title }}</h5>
+            <p>
+                {{ post.summary }}
+            </p>
+            {% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
+            {% if date.size > 0 %}
+            <i>
+            <i class="glyphicon glyphicon-calendar"></i>&nbsp;<time datetime="{{ date | datetime | date_to_xmlschema }}" itemprop="datePublished">{{ date | date: "%b %e, %Y" }}</time>
+        </a>
+    </i>
+        {% endif %}        
+    </li>
+{% endfor %}
+</ul>
+<p>
+    <a href="/blog/">See our blog</a>
+</p>
