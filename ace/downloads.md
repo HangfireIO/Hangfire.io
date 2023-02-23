@@ -12,7 +12,7 @@ Hangfire Ace packages are hosted on a [private ProGet Server](https://nuget.hang
 Available Packages
 -------------------
 
-* [Hangfire.Throttling](https://nuget.hangfire.io/feeds/hangfire-ace/Hangfire.Throttling/) – concurrency and rate limiting that don't force your workers to wait.
+* [Hangfire.Throttling](https://nuget.hangfire.io/feeds/hangfire-ace/Hangfire.Throttling/versions/) – concurrency and rate limiting that don't force your workers to wait.
 
 Configuring Feed
 -----------------
