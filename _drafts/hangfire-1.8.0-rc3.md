@@ -88,10 +88,8 @@ Dashboard UI page is now fully responsive and will fit the full-screen size to d
 
 Dark mode support comes for the Dashboard UI with this release. However, since different Dashboard UI extensions aren't currently prepared for that, it's enabled only when `UseDarkModeSupportForDashboard` method is called during the configuration.
 
-```csharp
-configuration
-    .UseDarkModeSupportForDashboard()
-```
+<pre><code>configuration
+    .UseDarkModeSupportForDashboard()</code></pre>
 
 After making the call above, dark mode will be triggered automatically based on system settings, allowing automatic transitions.
 
@@ -101,23 +99,19 @@ After making the call above, dark mode will be triggered automatically based on 
 
 Adding custom CSS and JavaScript files to avoid possible Content Security Policy-related issues in extensions for the Dashboard UI is now possible. These files can be added as embedded resources to an extension assembly, and <code>GetManifestResourceNames</code> method can be used to determine the path names.
 
-```csharp
-var assembly = typeof(MyCustomType).GetTypeInfo().Assembly;
-// Call the `assembly.GetManifestResourceNames` method to learn more about paths.
+<pre><code><span class="keywd">var</span> assembly = <span class="keywd">typeof</span>(<span class="type">MyCustomType</span>).GetTypeInfo().Assembly;
+<span class="comm">// Call the `assembly.GetManifestResourceNames` method to learn more about paths.</span>
 
 configuration
-    .UseDashboardStylesheet(assembly, "MyNamespace.Content.css.styles.css")
-    .UseDashboardJavaScript(assembly, "MyNamespace.Content.js.scripts.js")
-```
+    .UseDashboardStylesheet(assembly, <span class="string">"MyNamespace.Content.css.styles.css"</span>)
+    .UseDashboardJavaScript(assembly, <span class="string">"MyNamespace.Content.js.scripts.js"</span>)</code></pre>
 
 #### Custom Renderers on the Job Details Page
 
 The "Job Details" page became extensible. Custom sections can now be added by calling the `UseJobDetailsRenderer` method that takes an integer-based ordering parameter and a callback function with `JobDetailsRendererDto` parameter that contains all the necessary details about the page itself and a job being displayed.
 
-```csharp
-configuration
-    .UseJobDetailsRenderer(10, dto => new NonEscapedString("<h4>Hello, world!</h4><p>I'm a custom renderer.</p>"))
-```
+<pre><code>configuration
+    .UseJobDetailsRenderer(10, dto => <span class="keywd">new</span> <span class="type">NonEscapedString</span>(<span class="string">"&lt;h4&gt;Hello, world!&lt;/h4&gt;&lt;p&gt;I'm a custom renderer.&lt;/p&gt;"</span>))</code></pre>
 
 After calling a method above, a new section appears on the "Job Details" page under the "Parameters" and above the "States" sections. Please find an example below.
 
@@ -137,10 +131,8 @@ Continuation options enumeration was also extended. It is now possible to create
 
 We now have everything to build try/catch/finally background jobs and even pass results or exceptions to antecedent background jobs as their arguments. We should use the `UseResultsInContinuations` method to enable this feature and apply `FromResult` or `FromException` attributes to corresponding parameters.
 
-```csharp
-configuration
-    .UseResultsInContinuations()
-```
+<pre><code>configuration
+    .UseResultsInContinuations()</code></pre>
 
 As an example, we can create the following methods, where `ExceptionInfo` class (from the `Hangfire` namespace) implements the minimal exception information and `bool` type as a result of the `Try` job and corresponding parameter of the successful continuation.
 
@@ -266,15 +258,11 @@ Deprecations are mainly related to recurring background jobs and are made to avo
 
 Methods with implicit recurring job identifiers are now obsolete. While these methods make it easier to create a recurring job, sometimes they cause confusion when we use the same method to create multiple recurring jobs, but only a single one is created. With queues support for background jobs, there can be even more difficulties. So the following calls:
 
-```csharp
-RecurringJob.AddOrUpdate(() => Console.WriteLine("Hi"), Cron.Daily);
-```
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(() => <span class="type">Console</span>.WriteLine(<span class="string">"Hi"</span>), <span class="type">Cron</span>.Daily);</code></pre>
 
 Should be replaced with the following ones, where the first parameter determines the recurring job identifier:
 
-```csharp
-RecurringJob.AddOrUpdate("Console.WriteLine", () => Console.WriteLine("Hi"), Cron.Daily);
-```
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(<span class="string">"Console.WriteLine"</span>, () => <span class="type">Console</span>.WriteLine(<span class="string">"Hi"</span>), <span class="type">Cron</span>.Daily);</code></pre>
 
 For non-generic methods, the identifier is `{TypeName}.{MethodName}`. For generic methods, it's much better to open the Recurring Jobs page in the Dashboard UI and check the identifier of the corresponding recurring job to avoid any mistakes.
 
@@ -282,29 +270,21 @@ For non-generic methods, the identifier is `{TypeName}.{MethodName}`. For generi
 
 It is impossible to add new parameters to optional methods without introducing breaking changes. So to make the new explicit queues support consistent with other new methods in `BackgroundJob` / `IBackgroundJobClient` types, methods with optional parameters became deprecated. So the following lines:
 
-```csharp
-RecurringJob.AddOrUpdate("my-id", () => Console.WriteLine("Hi"), Cron.Daily, timeZone: TimeZoneInfo.Local);
-```
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(<span class="string">"my-id"</span>, () => <span class="type">Console</span>.WriteLine(<span class="string">"Hi"</span>), <span class="type">Cron</span>.Daily, timeZone: <span class="type">TimeZoneInfo</span>.Local);</code></pre>
 
 Should be replaced with an explicit `RecurringJobOptions` argument.
 
-```csharp
-RecurringJob.AddOrUpdate("my-id", () => Console.WriteLine("Hi"), Cron.Daily, new RecurringJobOptions
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(<span class="string">"my-id"</span>, () => <span class="type">Console</span>.WriteLine(<span class="string">"Hi"</span>), <span class="type">Cron</span>.Daily, <span class="keywd">new</span> <span class="type">RecurringJobOptions</span>
 {
-    TimeZone = TimeZoneInfo.Local
-});
-```
+    TimeZone = <span class="type">TimeZoneInfo</span>.Local
+});</code></pre>
 
 #### The `RecurringJobOptions.QueueName` property is deprecated
 
 New methods with an explicit queue name are suggested to use instead when support is added for your storage. This will also make re-queueing logic work as expected, with queueing to the same queue. So the following calls:
 
-```csharp
-RecurringJob.AddOrUpdate("my-id", () => Console.WriteLine("Hi"), Cron.Daily, queue: "critical");
-```
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(<span class="string">"my-id"</span>, () => <span class="type">Console</span>.WriteLine(<span class="string">"Hi"</span>), <span class="type">Cron</span>.Daily, queue: <span class="string">"critical"</span>);</code></pre>
 
 Should be replaced by these ones:
 
-```csharp
-RecurringJob.AddOrUpdate("my-id", "critical", () => Console.WriteLine("Hi"), Cron.Daily);
-```
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(<span class="string">"my-id"</span>, <span class="string">"critical"</span>, () => <span class="type">Console</span>.WriteLine(<span class="string">"Hi"</span>), <span class="type">Cron</span>.Daily);</code></pre>
