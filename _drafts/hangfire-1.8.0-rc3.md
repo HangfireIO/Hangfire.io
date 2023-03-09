@@ -5,7 +5,7 @@ category: [release, news]
 summary: First-class queue support for jobs, enhanced "Deleted" state, and a lot of Dashboard UI improvements like full-width and optional dark mode support.
 ---
 
-3rd release candidate of the upcoming Hangfire 1.8 is here. It offers a set of great new features like first-class queue support for background jobs, the enhanced role of the Deleted state that now supports exceptions, more options for continuations to implement even try/catch/finally semantics, better defaults to simplify the initial configuration and various Dashboard UI improvements like full-width and optional dark mode support.
+3rd release candidate of the upcoming Hangfire is here. Version 1.8 offers a set of great new features like first-class queue support for background jobs, the enhanced role of the Deleted state that now supports exceptions, more options for continuations to implement even try/catch/finally semantics, better defaults to simplify the initial configuration and various Dashboard UI improvements like full-width and optional dark mode support.
 
 ### Contents
 {:.no_toc}
