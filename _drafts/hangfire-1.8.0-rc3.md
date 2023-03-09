@@ -1,8 +1,8 @@
 ---
-title: Hangfire 1.8.0
+title: Hangfire 1.8.0 RC 3
 author: odinserj
 category: [release, news]
-summary: First-class queue support for jobs, enhanced "Deleted" state and a lot of Dashboard UI improvements like full-width and optional dark mode support.
+summary: First-class queue support for jobs, enhanced "Deleted" state, and a lot of Dashboard UI improvements like full-width and optional dark mode support.
 ---
 
 After three years of development, a brand new version of Hangfire is finally here. It offers a set of great new features like first-class queue support for background jobs, the enhanced role of the Deleted state that now supports exceptions, more options for continuations to implement even try/catch/finally semantics, better defaults to simplify the initial configuration and various Dashboard UI improvements like full-width and optional dark mode support.
@@ -27,7 +27,7 @@ After three years of development, a brand new version of Hangfire is finally her
             <td>Hangfire.Core</td>
             <td>
                 <ul>
-                    <li>Dropped support of <code>net45</code> platform in favor of <code>net451</code> one.</li>
+                    <li>Dropped support of <code>net45</code> platform in favor of the <code>net451</code> one.</li>
                 </ul>
             </td>
         </tr>
@@ -35,9 +35,9 @@ After three years of development, a brand new version of Hangfire is finally her
             <td>Hangfire.SqlServer</td>
             <td>
                 <ul>
-                    <li>Prioritise Microsoft.Data.SqlClient package over System.Data.SqlClient one.</li>
-                    <li>Don't reference System.Data.SqlClient package.</li>
-                    <li>Dropped support of <code>net45</code> platform in favor of <code>net451</code> one.</li>
+                    <li>Don't reference <a href="https://www.nuget.org/packages/System.Data.SqlClient" target="_blank" rel="nofollow noopener">System.Data.SqlClient</a> package explicitly.</li>
+                    <li>Prioritise <a href="https://www.nuget.org/packages/Microsoft.Data.SqlClient" target="_blank" rel="nofollow noopener">Microsoft.Data.SqlClient</a> package over <a href="https://www.nuget.org/packages/System.Data.SqlClient" target="_blank" rel="nofollow noopener">System.Data.SqlClient</a> one.</li>
+                    <li>Dropped support of <code>net45</code> platform in favor of the <code>net451</code> one.</li>
                 </ul>
             </td>
         </tr>
@@ -56,7 +56,7 @@ After three years of development, a brand new version of Hangfire is finally her
 
 From the first versions of Hangfire, the "Queue" property was related only to a specific instance of the "Enqueued" state but not to a background job itself. This factor often leads to confusion in different scenarios with dynamic queueing, despite there being solutions like static or dynamic `QueueAttribute` or other extension filters that offer help in persisting a target queue.
 
-Now it is possible to explicitly assign a queue manually for a background job when creating it using the new method overloads. In this case, the given queue will be used every time the background job is enqueued unless overridden by state filters like the `QueueAttribute`.
+Now it is possible to explicitly assign a queue manually for a background job when creating it using the new method overloads in both `BackgroundJob` class and `IBackgroundJobClient` interface. In this case, the given queue will be used every time the background job is enqueued unless overridden by state filters like the `QueueAttribute`.
 
 <pre><code><span class="keywd">var</span> id = <span class="type">BackgroundJob</span>.Enqueue&lt;<span class="type">IOrdersServices</span>&gt;(<span class="string">"critical"</span>, x => x.ProcessOrder(orderId));
 <span class="type">BackgroundJob</span>.ContinueJobWith&lt;<span class="type">IEmailServices</span>&gt;(id, <span class="string">"email"</span>,  x => x.SendNotification(orderId));</code></pre>
@@ -68,7 +68,7 @@ Perhaps it's also worth noting that new changes allow delayed background jobs wi
 <div class="alert alert-warning">
     <h4>Storage Support Required</h4>
     <p>
-    The new feature requires job storage to persist a new field, which may not be supported by a storage out-of-the-box. That's why additional storage support is required. Otherwise, the <code>NotSupportedException</code> will be thrown. So upgrade of the job storage package is likely needed.
+    The new feature requires job storage to persist a new field, which storage may not support out-of-the-box. That's why additional storage support is required. Otherwise, the <code>NotSupportedException</code> will be thrown. So upgrade of the job storage package is likely needed.
     </p>
 </div>
 
@@ -80,20 +80,20 @@ Specifying an explicit queue name for recurring-based background jobs is also po
 
 #### Full-width Support
 
-Dashboard UI page is now fully responsive and will fit the whole screen size to display more information. Long background or recurring job names, large list of arguments or tables with many columns don't lead to problems now. The new layout is enabled by default.
+Dashboard UI page is now fully responsive and will fit the full-screen size to display more information. Lengthy background or recurring job names, a large list of arguments, or tables with many columns don't lead to problems now. The new layout is enabled by default.
 
 <img alt="Full Width for Dashboard UI" src="/img/full-width-dashboard.png">
 
 #### Optional Dark Mode Support
 
-Dark mode support comes for the Dashboard UI with this release. However since different Dashboard UI extensions aren't currently prepared for that, it's enabled only when `UseDarkModeSupportForDashboard` method is called during the configuration.
+Dark mode support comes for the Dashboard UI with this release. However, since different Dashboard UI extensions aren't currently prepared for that, it's enabled only when `UseDarkModeSupportForDashboard` method is called during the configuration.
 
 ```csharp
 configuration
     .UseDarkModeSupportForDashboard()
 ```
 
-After making the call above, dark mode will be triggered automatically based on system settings, allowing automatic transitions to it.
+After making the call above, dark mode will be triggered automatically based on system settings, allowing automatic transitions.
 
 <img alt="Dark Mode for Dashboard UI" src="/img/dark-mode.png">
 
@@ -112,14 +112,14 @@ configuration
 
 #### Custom Renderers on the Job Details Page
 
-The "Job Details" page became extensible, and custom sections can now be added by calling the `UseJobDetailsRenderer` method that takes an integer-based ordering parameter and a callback function with `JobDetailsRendererDto` parameter that contains all the necessary details about page itself and a job being displayed.
+The "Job Details" page became extensible. Custom sections can now be added by calling the `UseJobDetailsRenderer` method that takes an integer-based ordering parameter and a callback function with `JobDetailsRendererDto` parameter that contains all the necessary details about the page itself and a job being displayed.
 
 ```csharp
 configuration
     .UseJobDetailsRenderer(10, dto => new NonEscapedString("<h4>Hello, world!</h4><p>I'm a custom renderer.</p>"))
 ```
 
-After calling a method above, new section appears on the "Job Details" page under the "Parameters" and above the "States" sections, please find an example below.
+After calling a method above, a new section appears on the "Job Details" page under the "Parameters" and above the "States" sections. Please find an example below.
 
 <img alt="Custom Dashboard Renderer" src="/img/custom-renderer.png">
 
@@ -127,22 +127,22 @@ After calling a method above, new section appears on the "Job Details" page unde
 
 Now we can pass exception information to the "Deleted" state, making it implement the "fault" semantics as a *final state*. Background jobs in the "Deleted" state will automatically expire, unlike jobs in the "Failed" state, which is not considered a *final* one.
 
-Exception is passed by the `AutomaticRetry` filter when all retry attempts exhausted, it is also possible to pass exception manually when creating an instance of the `DeletedState` class. Stack trace isn't persisted to avoid data duplication since it's already preserved in a "Faulted" state, only type, message and inner exceptions if any.
+The `AutomaticRetry` filter automatically passes an exception to a deleted state when all retry attempts are exhausted. It is also possible to pass exceptions manually when creating an instance of the `DeletedState` class. The stack trace isn't persisted to avoid data duplication since it's already preserved in a "Faulted" state. Only type information, message, and inner exceptions (if any) persisted.
 
 <img alt="Deleted state renderer" src="/img/deleted-state.png">
 
-Continuation options enumeration was also extended. It is now possible to create continuations explicitly for the "Deleted" state with the `JobContinuationOptions.OnlyOnDeletedState` option or even use it multiple values in the future since `JobContinuationOptions` now implement the flags semantics.
+Continuation options enumeration was also extended. It is now possible to create continuations explicitly for the "Deleted" state with the `JobContinuationOptions.OnlyOnDeletedState` option or even use it for multiple values in the future since `JobContinuationOptions` now implement the semantics of the flags.
 
 #### Try/Catch/Finally Implementation
 
-We now have everything to build try/catch/finally background jobs and even pass results or exceptions to ancedent background jobs as their arguments. We should use the `UseResultsInContinuations` method to enable this feature and apply `FromResult` or `FromException` attributes to corresponding parameters.
+We now have everything to build try/catch/finally background jobs and even pass results or exceptions to antecedent background jobs as their arguments. We should use the `UseResultsInContinuations` method to enable this feature and apply `FromResult` or `FromException` attributes to corresponding parameters.
 
 ```csharp
 configuration
     .UseResultsInContinuations()
 ```
 
-We can create the following methods as an example, where `ExceptionInfo` class (from the `Hangfire` namespace) implements the minimal exception information, and `bool` type as a result of the `Try` job and corresponding parameter of the successful continuation.
+As an example, we can create the following methods, where `ExceptionInfo` class (from the `Hangfire` namespace) implements the minimal exception information and `bool` type as a result of the `Try` job and corresponding parameter of the successful continuation.
 
 <pre><code><span class="keywd">public</span> <span class="keywd">static</span> <span class="keywd">bool</span> Try() { <span class="comm">/* ... */</span> }
 <span class="keywd">public</span> <span class="keywd">static</span> <span class="keywd">void</span> Catch([<span class="type">FromException</span>] <span class="type">ExceptionInfo</span> exception) { <span class="comm">/* ... */</span> }
@@ -150,7 +150,7 @@ We can create the following methods as an example, where `ExceptionInfo` class (
 
 <span class="keywd">public</span> <span class="keywd">static</span> <span class="keywd">void</span> Continuation([<span class="type">FromResult</span>] <span class="keywd">bool</span> result) { <span class="comm">/* ... */</span> }</code></pre>
 
-After introducing all the methods, let's create background jobs for them. Please note in this case they are created non atomically, since they are not a part of a batch. We pass `default` keywords as arguments for continuations, and actual values will be used at run-time.
+After introducing all the methods, let's create background jobs for them. Please note that we create jobs non-atomically since they are not part of a batch. We pass `default` keywords as arguments for continuations, and actual values will be used at run-time.
 
 <pre><code><span class="keywd">var</span> id = <span class="type">BackgroundJob</span>.Enqueue(() => Try());
 
@@ -166,7 +166,7 @@ After introducing all the methods, let's create background jobs for them. Please
 <span class="type">BackgroundJob</span>.ContinueJobWith(id, () => Continuation(<span class="keywd">default</span>),
     <span class="type">JobContinuationOptions</span>.OnlyOnSucceededState);</code></pre>
 
-<a href="/pro/#atomic-background-job-creation">Batches feature</a> from Hangfire Pro allows to create the whole block atomically, so either all background jobs or none of them will be created on failure.
+<a href="/pro/#atomic-background-job-creation">Batches feature</a> from Hangfire Pro allows the creation of the whole block atomically, so either all background jobs or none of them will be created on failure.
 
 <pre><code><span class="type">BatchJob</span>.StartNew(batch =>
 {
@@ -179,21 +179,13 @@ After introducing all the methods, let's create background jobs for them. Please
 
 ### Storage API Improvements
 
-**Time authority**. Storage as a time authority for delayed and recurring job schedulers.
+**Single time authority**. Storage now can act as a time authority for `DelayedJobScheduler` and `RecurringJobScheduler` background processes. When storage implementation supports this feature, these components will use the current UTC time of the instance instead of the current server's UTC time. This feature makes scheduled processing less sensitive to time synchronization issues.
 
-**More transactional methods**. To make possible new great features.
+**Fewer network roundtrips**. A lot of network calls during processing are related to background job parameters. Since they are small enough and most aren't updated often, we can cache them in the new `ParametersSnapshot` property of the `JobDetailsDto` and `BackgroundJob` classes. The `GetJobParameter` method now supports the `allowStale` argument that we can use to retrieve a cached version instead, eliminating additional network calls.
 
-**Less roundtrips** when processing background jobs.
+**More transactional methods**. Transaction-level distributed locks were added in this version, allowing more features to be implemented in extension filters without sacrificing atomicity. Also, it is now possible to create a background job inside a transaction for storage that generates identifiers on the client side, so it will be possible to reduce the number of roundtrips to storage.
 
-**Feature-based flags** to make transition smooth.
-
-* More transactional methods 
-* Use less round-trips when processing background jobs.
-
-* Feature-based flags
-* More transactional methods to improve behavior on faults, allow more features and improve batching
-* Use less roundtrips when processing jobs (worker changes and new features in storage)
-• Added – Optional `ParametersSnapshot` property for `BackgroundJob` and `JobData` classes to minimize roundtrips in future.
+**Feature-based flags** to smooth the transition, so every new feature is optional to avoid breaking changes for storage implementations.
 
 ### SQL Server Storage
 
@@ -208,7 +200,7 @@ Since `Microsoft.Data.SqlClient` package is the "flagship data access driver for
     </p>
 </div>
 
-In this version neither `Microsoft.Data.SqlClient` nor `System.Data.SqlClient` package is referenced as a dependency. by the `Hangfire.SqlServer` package anymore so needs to be referenced manually if you prefer to stay with it or postpone the transition to a newer package. You can use the following snippet with the `*` as a version version to use always the latest one.
+In this version, neither `Microsoft.Data.SqlClient` nor `System.Data.SqlClient` package is referenced as a dependency by the `Hangfire.SqlServer` package anymore, so the particular package needs to be referenced manually if you prefer to stay with it or postpone the transition to a newer package. You can use the following snippet with the `*` as a version to always use the latest one.
 
 ```xml
 <ItemGroup>
@@ -220,67 +212,81 @@ In this version neither `Microsoft.Data.SqlClient` nor `System.Data.SqlClient` p
 
 #### Better Defaults
 
-* Default isolation level is finally set to READ COMMITTED.
-* Command batching is enabled by default.
+We've introduced many changes in the previous versions of the "Hangfire.SqlServer" storage to make it faster and more robust. However, they weren't enabled by default to ensure first they were working reliably. Now, after they prove themselves useful and stable enough, we can enable them by default to avoid complex configuration options.
+
+* Default isolation level is finally set to `READ COMMITTED`.
+* Command batching for transactions is now enabled by default.
 * Transactionless fetching based on sliding invisibility timeout is used by default.
-* TryAutoDetectSchemaDependentOptions
+* Queue poll interval is set to the `TimeSpan.Zero` value that defaults to `200` ms.
+* Schema-related options such as `DisableGlobalLocks` will be detected automatically using the new `TryAutoDetectSchemaDependentOptions` option enabled by default.
 
-#### `Schema 8` Migration
+#### The `Schema 8` Migration
 
-* Schema 8 migration to fix `JobQueue.Id` column to `bigint` and add support for backups on Azure.
-* `SqlServerStorageOptions.PreferMicrosoftDataSqlClient`
-* New defaults `TryAutoDetectSchemaDependentOptions` enabled by default to reduce the configuration burden.
-* New features implemented to improve clock, produce less roundtrips
+This schema is an optional but recommended migration that contains the following changes. **Please note** that it requires the `SqlServerStorageOptions.EnableHeavyMigrations` option to be enabled to apply the migration automatically since it can take some time when `Counter` or `JobQueue` tables contain many records.
 
-EnableHeavyMigrations should be enabled
+* `Counter` table now has a clustered primary key to allow replication on Azure;
+* `JobQueue.Id` column length was changed to the `bigint` type to avoid overflows;
+* `Server.Id` column's length was changed to `200` to allow lengthy server names;
+* `Hash` and `Set` tables now include the `IGNORE_DUP_KEY` option to make upsert queries faster.
 
-### Default Culture & Compatibility Level
+As always, you can apply the migration manually by downloading it from GitHub using [this link](https://github.com/HangfireIO/Hangfire/blob/master/src/Hangfire.SqlServer/DefaultInstall.sql).
 
-When application deals mostly with a single culture, we can save some storage space by setting a default culture with the new <code>UseDefaultCulture</code> configuration method. It will use the configured default culture when `CurrentCulture` or `CurrentUICulture` background job parameters aren't created for the job and an older compatibility level is used.
+### Default Culture
+
+Hangfire automatically captures `CultureInfo.CurrentCulture` and `CultureInfo.CurrentUICulture` and preserves their two-letter codes as background job parameters using the `CaptureCaptureAttribute` filter to use the same culture information in a background job as in the original caller context. The downside of such defaults can be heavily duplicated data for each background job.
+
+Of course, we can remove that filter to avoid capturing anything and save some storage space for applications with a single culture only. But now we can also set the default culture to both save storage space but still capture non-default culture.
+
+<div class="alert alert-info">
+    <h4>Two-step deployment required</h4>
+    <p>When there are multiple servers, we should deploy the changes in two steps. Otherwise, old servers will not be instructed on what to do when job parameters are missing.</p>
+    <ol>
+        <li>Deploy with <code>UseDefaultCulture(/* Culture */)</code>;</li>
+        <li>Deploy with <code>UseDefaultCulture(/* Culture */, captureDefault: false)</code>.</li>
+    </ol>
+</div>
+
+We can set the default culture by calling the `UseDefaultCulture`. With a single argument, it will use the same culture for both `CurrentCulture` and `CurrentUICulture`, but there's an overload to set both explicitly.
 
 <pre><code>configuration
     .UseDefaultCulture(<span class="type">CultureInfo</span>.GetCultureInfo(<span class="string">"en-US"</span>))</code></pre>
 
-After we instructed what to do when the referenced parameters are missing, we can apply the new `CompatibilityLevel.Version_180` compatibility level to tell Hangfire that 
+After calling the line above, the `CaptureCultureAttribute` filter will use the configured default culture when `CurrentCulture` or `CurrentUICulture` background job parameters are missing for a particular background job.
 
-And when the new `CompatibilityLevel.Version_180` compatibility level is configured, Hangfire will not create those background job parameters when current culture matches the configured default values
-
-`CompatibilityLevel.Version_180` compatibility switch was added that can save some storage space by avoiding to preserve `CurrentCulture` and `CurrentUICulture` parameters if your application depends on a single culture.
+After we instructed what to do when the referenced parameters are missing and **deployed the changes**, we can pass the `false` argument for the `captureDefault` parameter to avoid preserving the default culture.
 
 <pre><code>configuration
-    .UseDefaultCulture(<span class="type">CultureInfo</span>.GetCultureInfo(<span class="string">"en-US"</span>))
-    .SetDataCompatibilityLevel(<span class="type">CompatibilityLevel</span>.Version_180)</code></pre>
-
-<div class="alert alert-info">
-    <h4>Two-step deployment required</h4>
-
-</div>
-
-Support for default culture and UI culture via the `UseDefaultCulture` configuration method.
-`CompatibilityLevel.Version_180` flag to avoid storing culture parameters when they are the same as default.
-• Added – Allow to filter exception types in `AutomaticRetryAttribute` by using the new `OnlyOn` property.
+    .UseDefaultCulture(<span class="type">CultureInfo</span>.GetCultureInfo(<span class="string">"en-US"</span>), captureDefault: <span class="keywd">false</span>)</code></pre>
 
 ### Deprecations in Recurring Jobs
 
-Deprecations mostly relate to recurring background jobs and made to avoid confusion when explicit queue names are used.
+Deprecations are mainly related to recurring background jobs and are made to avoid confusion when explicit queue names are used.
 
 #### Implicit Identifiers Deprecated
+
+Methods with implicit recurring job identifiers are now obsolete. While these methods make it easier to create a recurring job, sometimes they cause confusion when we use the same method to create multiple recurring jobs, but only a single one is created. With queues support for background jobs, there can be even more difficulties. So the following calls:
 
 ```csharp
 RecurringJob.AddOrUpdate(() => Console.WriteLine("Hi"), Cron.Daily);
 ```
 
-For non-generic methods it is `{TypeName}.{MethodName}`, for generic methods it's much better to open Recurring Jobs page in the Dashboard UI and check actual recurring job identifier there to avoid any mistakes.
+Should be replaced with the following ones, where the first parameter determines the recurring job identifier:
 
 ```csharp
 RecurringJob.AddOrUpdate("Console.WriteLine", () => Console.WriteLine("Hi"), Cron.Daily);
 ```
 
+For non-generic methods, the identifier is `{TypeName}.{MethodName}`. For generic methods, it's much better to open the Recurring Jobs page in the Dashboard UI and check the identifier of the corresponding recurring job to avoid any mistakes.
+
 #### Optional Parameters Deprecated
+
+It is impossible to add new parameters to optional methods without introducing breaking changes. So to make the new explicit queues support consistent with other new methods in `BackgroundJob` / `IBackgroundJobClient` types, methods with optional parameters became deprecated. So the following lines:
 
 ```csharp
 RecurringJob.AddOrUpdate("my-id", () => Console.WriteLine("Hi"), Cron.Daily, timeZone: TimeZoneInfo.Local);
 ```
+
+Should be replaced with an explicit `RecurringJobOptions` argument.
 
 ```csharp
 RecurringJob.AddOrUpdate("my-id", () => Console.WriteLine("Hi"), Cron.Daily, new RecurringJobOptions
@@ -289,9 +295,16 @@ RecurringJob.AddOrUpdate("my-id", () => Console.WriteLine("Hi"), Cron.Daily, new
 });
 ```
 
+#### The `RecurringJobOptions.QueueName` property is deprecated
 
-* Deprecated – `AddOrUpdate` overloads with optional params defined in the `RecurringJobManagerExtensions` class.
-* Deprecated – `AddOrUpdate` overloads with optional parameters defined in the `RecurringJob` class.
-* Deprecated – `AddOrUpdate` method overloads with no `recurringJobId` parameter.
-* Deprecated – `RecurringJobOptions.QueueName` property, new methods should be used instead.
-* Deprecated – `SqlServerStorageOptions.UsePageLocksOnDequeue` property is now obsolete and doesn't affect anything.
+New methods with an explicit queue name are suggested to use instead when support is added for your storage. This will also make re-queueing logic work as expected, with queueing to the same queue. So the following calls:
+
+```csharp
+RecurringJob.AddOrUpdate("my-id", () => Console.WriteLine("Hi"), Cron.Daily, queue: "critical");
+```
+
+Should be replaced by these ones:
+
+```csharp
+RecurringJob.AddOrUpdate("my-id", "critical", () => Console.WriteLine("Hi"), Cron.Daily);
+```
