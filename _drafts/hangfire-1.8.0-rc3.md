@@ -223,11 +223,22 @@ This schema is an optional but recommended migration that contains the following
 
 As always, you can apply the migration manually by downloading it from GitHub using [this link](https://github.com/HangfireIO/Hangfire/blob/master/src/Hangfire.SqlServer/DefaultInstall.sql).
 
-### Default Culture
+### Culture & Compatibility Level
 
 Hangfire automatically captures `CultureInfo.CurrentCulture` and `CultureInfo.CurrentUICulture` and preserves their two-letter codes as background job parameters using the `CaptureCaptureAttribute` filter to use the same culture information in a background job as in the original caller context. The downside of such defaults can be heavily duplicated data for each background job.
 
-Of course, we can remove that filter to avoid capturing anything and save some storage space for applications with a single culture only. But now we can also set the default culture to both save storage space but still capture non-default culture.
+Of course, we can remove that filter to avoid capturing anything and save some storage space for applications with a single culture only. But now we can optimize the case when `CurrentCulture` equals `CurrentUICulture` with the new compatibility level and set the default culture to avoid saving culture-related parameters at all if an application uses primarily the same culture.
+
+#### Compatibility Level
+
+**After all our servers** upgraded to version 1.8, we can set the following compatibility level to stop writing the `CurrentUICulture` job parameter when it's the same as the `CurrentCulture` one. Please note that version 1.7 and lower don't know what to do in this case and will throw an exception, so we should upgrade first.
+
+<pre><code>configuration
+    .SetDataCompatibilityLevel(<span class="type">CompatibilityLevel</span>.Version_180)</code></pre>
+
+#### Default Culture
+
+We can also go further and stop writing culture-related parameters when our application deals mainly with a single culture.
 
 <div class="alert alert-info">
     <h4>Two-step deployment required</h4>
