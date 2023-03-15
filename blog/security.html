@@ -17,17 +17,23 @@ rss_url: /atom-security.xml
 </div>
 
 <div class="alert" style="background-color:whitesmoke;">
-    <h4>Newsletter</h4>
+    <h4>Security Newsletter</h4>
     <div>
         <p>Subscribe to receive security announcements by email as soon as possible. Very low traffic, unsubscribe at any time.</p>
-        <form action="https://hangfire.us9.list-manage.com/subscribe/post?u=d2f4abd4cd4d3b1db1b06dc02&amp;id=228ce6c6b1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate style="padding:0;margin-bottom:10px;">
+        <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="191722FC90141D02184CB1B62AB3DC26708D31F236DF138B3A83ABD3DD1748EE348829FF46B0A7A88400F95762C5BD182AD81380EB0D757D1E84DDD2C7E5721B" style="padding:0;margin-bottom:10px;">
             <div class="input-group">
-                <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="me@example.com">
+                <input placeholder="me@example.com" autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email form-control" id="fieldEmail" maxlength="200" name="cm-jidyzl-jidyzl" required="" type="email">
                 <span class="input-group-btn">
-                    <input type="submit" value="Subscribe" name="subscribe" class="btn btn-default">
+                    <button type="submit" class="btn btn-default">Subscribe</button>
                 </span>
             </div>
+            <div>
+                <input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox">
+                <label for="cm-privacy-consent" style="font-weight: normal;">I agree to be emailed</label>
+            </div>
+            <input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
         </form>
+        <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
     </div>
 </div>
 </article>
