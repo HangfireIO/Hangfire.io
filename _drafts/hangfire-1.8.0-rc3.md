@@ -5,7 +5,7 @@ category: [release, news]
 summary: First-class queue support for jobs, enhanced "Deleted" state, and a lot of Dashboard UI improvements like full-width and optional dark mode support.
 ---
 
-3rd release candidate of the upcoming Hangfire is here. Version 1.8 offers a set of great new features like first-class queue support for background jobs, the enhanced role of the Deleted state that now supports exceptions, more options for continuations to implement even try/catch/finally semantics, better defaults to simplify the initial configuration and various Dashboard UI improvements like full-width and optional dark mode support.
+3<sup>rd</sup> release candidate of the upcoming Hangfire is here. Version 1.8 offers a set of great new features like first-class queue support for background jobs, the enhanced role of the Deleted state that now supports exceptions, more options for continuations to implement even try/catch/finally semantics, better defaults to simplify the initial configuration and various Dashboard UI improvements like full-width and optional dark mode support.
 
 ### Contents
 {:.no_toc}
@@ -84,14 +84,9 @@ Dashboard UI page is now fully responsive and will fit the full-screen size to d
 
 <img alt="Full Width for Dashboard UI" src="/img/full-width-dashboard.png">
 
-#### Optional Dark Mode Support
+#### Dark Mode Support
 
-Dark mode support comes for the Dashboard UI with this release. However, since different Dashboard UI extensions aren't currently prepared for that, it's enabled only when `UseDarkModeSupportForDashboard` method is called during the configuration.
-
-<pre><code>configuration
-    .UseDarkModeSupportForDashboard()</code></pre>
-
-After making the call above, dark mode will be triggered automatically based on system settings, allowing automatic transitions.
+Dark mode support comes for the Dashboard UI with this release. It is enabled by default and is triggered automatically based on system settings, allowing automatic transitions.
 
 <img alt="Dark Mode for Dashboard UI" src="/img/dark-mode.png">
 
@@ -171,7 +166,7 @@ After introducing all the methods, let's create background jobs for them. Please
 
 ### Storage API Improvements
 
-**Single time authority**. Storage now can act as a time authority for `DelayedJobScheduler` and `RecurringJobScheduler` background processes. When storage implementation supports this feature, these components will use the current UTC time of the instance instead of the current server's UTC time. This feature makes scheduled processing less sensitive to time synchronization issues.
+**Single time authority for schedulers**. Storage now can act as a time authority for `DelayedJobScheduler` and `RecurringJobScheduler` background processes. When storage implementation supports this feature, these components will use the current UTC time of the instance instead of the current server's UTC time. This feature makes scheduled processing less sensitive to time synchronization issues.
 
 **Fewer network roundtrips**. A lot of network calls during processing are related to background job parameters. Since they are small enough and most aren't updated often, we can cache them in the new `ParametersSnapshot` property of the `JobDetailsDto` and `BackgroundJob` classes. The `GetJobParameter` method now supports the `allowStale` argument that we can use to retrieve a cached version instead, eliminating additional network calls.
 
