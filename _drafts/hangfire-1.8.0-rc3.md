@@ -1,5 +1,5 @@
 ---
-title: Hangfire 1.8.0 RC 3
+title: Hangfire 1.8.0-rc3
 author: odinserj
 category: [release, news]
 summary: First-class queue support for jobs, enhanced "Deleted" state, and a lot of Dashboard UI improvements like full-width and optional dark mode support.
