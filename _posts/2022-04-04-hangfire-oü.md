@@ -11,6 +11,8 @@ New sales for companies with Russian residence are now closed and any payments w
 
 Payments (processed by <a href="https://fastspring.com" target="_blank" rel="noopener">FastSpring</a>), private NuGet feed, technical support and GitHub repositories are unaffected by these changes, everything remains the same, except newsletter – I was unable to replicate it in time and it doesn't work currently. I will attempt to rebuild it, but a bit later.
 
-I'm working hard to complete the transition, hope for your patience. Please feel free to ask any questions via <a href="mailto:support@hangfire.io">support@hangfire.io</a>.
+Please feel free to ask any questions via <a href="mailto:support@hangfire.io">support@hangfire.io</a>.
 
 What happens in Ukraine is much worse than a nightmare.
+
+**UPD. Thanks everyone for patience, understanding and support, your kind words helped a lot.**
