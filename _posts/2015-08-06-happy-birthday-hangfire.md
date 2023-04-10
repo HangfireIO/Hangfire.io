@@ -17,4 +17,4 @@ I wanted to have something simple, transparent and extensible for background pro
 But the main thing – Hangfire is still under active development, after two years! Yay!
 
 
-<iframe src="//giphy.com/embed/FexaeUC89MDAs" width="480" height="268" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe sandbox="allow-scripts" src="//giphy.com/embed/FexaeUC89MDAs" width="480" height="268" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
