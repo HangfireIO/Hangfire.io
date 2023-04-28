@@ -430,8 +430,12 @@ table>thead:first-child>tr:first-child>td {
     transition: all .2s ease-in-out;
 }
 
-article.eula {
+article.eula, article.policy {
     text-align: justify;
+}
+
+article.eula table, article.policy table {
+    text-align: left;
 }
 
 .recent-news {
