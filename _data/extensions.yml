@@ -9,7 +9,12 @@
       description: Logging heartbeats from Hangfire to elmah.io
       url: https://github.com/elmahio/Elmah.Io.Heartbeats.Hangfire
       author: elmahio
-  
+
+    - name: Hangfire.Community.CarbonAwareExecution
+      description: Execute computing tasks when the grid is powered by renewable energy
+      url: https://github.com/bluehands/Hangfire.Community.CarbonAwareExecution
+      author: bluehands
+
     - name: Hangfire.Console
       description: Job console extension for Hangfire
       url: https://github.com/pieceofsummer/Hangfire.Console
