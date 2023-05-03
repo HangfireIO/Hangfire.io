@@ -12,9 +12,7 @@ redirect_from: /core/features.html
 
 Instead of invoking a method synchronously, place it on a persistent queue, and Hangfire worker thread will take it and perform within its own execution context:
 
-{% highlight csharp %}
-BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));
-{% endhighlight %}
+<pre><code><span class="type">BackgroundJob</span>.Enqueue(() => <span class="type">Console</span>.WriteLine(<span class="string">"Hello, world!"</span>));</code></pre>
 
 This method creates a job in the storage and immediately returns control to the caller. Hangfire guarantees that the specified method will be called even after the abnormal termination of the host process.
 
@@ -22,9 +20,7 @@ This method creates a job in the storage and immediately returns control to the 
 
 Instead of invoking a method right now, you can postpone its execution for a specified time:
 
-{% highlight csharp %}
-BackgroundJob.Schedule(() => Console.WriteLine("Hello, world!"), TimeSpan.FromMinutes(5));
-{% endhighlight %}
+<pre><code><span class="type">BackgroundJob</span>.Schedule(() => <span class="type">Console</span>.WriteLine(<span class="string">"Hello, world!"</span>), <span class="type">TimeSpan</span>.FromMinutes(5));</code></pre>
 
 This call also saves a job, but instead of placing it to a queue, it adds the job to a persistent schedule. When the given time has elapsed, the job will be added to its queue. Meanwhile, you can restart your application – it will be executed anyway.
 
@@ -32,15 +28,11 @@ This call also saves a job, but instead of placing it to a queue, it adds the jo
 
 Recurring job processing has never been easier. All you need is a single line of code:
 
-{% highlight csharp %}
-RecurringJob.AddOrUpdate("easyjob", () => Console.Write("Easy!"), Cron.Daily);
-{% endhighlight %}
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(<span class="string">"easyjob"</span>, () => <span class="type">Console</span>.WriteLn(<span class="string">"Easy!"</span>), <span class="type">Cron</span>.Daily);</code></pre>
 
 Hangfire uses [Cronos](https://github.com/HangfireIO/Cronos) library to perform scheduling tasks, so you can use more complex CRON expressions:
 
-{% highlight csharp %}
-RecurringJob.AddOrUpdate("powerfuljob", () => Console.Write("Powerful!"), "0 12 * */2");
-{% endhighlight %}
+<pre><code><span class="type">RecurringJob</span>.AddOrUpdate(<span class="string">"powerfuljob"</span>, () => <span class="type">Console</span>.WriteLn(<span class="string">"Powerful!"</span>), <span class="string">"0 12 * */2"</span>);</code></pre>
 
 ### SQL Server and Redis Support
 
@@ -55,12 +47,10 @@ If your method encounters a transient exception, don’t worry – it will be re
 
 You can also control the retry behavior with the AutomaticRetryAttribute class. Just apply it to your method to tell Hangfire the number of retry attempts:
 
-{% highlight csharp %}
-[AutomaticRetry(Attempts = 100)]
-public static void GenerateStatistics() { }
+<pre><code>[<span class="type">AutomaticRetry</span>(Attempts = 100)]
+<span class="keywd">public</span> <span class="keywd">static</span> <span class="keywd">void</span> GenerateStatistics() { }
 
-BackgroundJob.Enqueue(() => GenerateStatistics());
-{% endhighlight %}
+<span class="type">BackgroundJob</span>.Enqueue(() => GenerateStatistics());</code></pre>
 
 ### Guaranteed Processing
 
@@ -70,14 +60,12 @@ Hangfire was made with the knowledge that the hosting environment can kill all t
 
 All the examples above uses static method invocation, but instance methods are supported as well:
 
-{% highlight csharp %}
-public class EmailService
+<pre><code><span class="keywd">public</span> <span class="keywd">class</span> <span class="type">EmailService</span>
 {
-    public void Send() { }
+    <span class="keywd">public</span> <span class="keywd">void</span> Send() { }
 }
 
-BackgroundJob.Enqueue<EmailService>(x => x.Send());
-{% endhighlight %}
+<span class="type">BackgroundJob</span>.Enqueue&lt;<span class="type">EmailService</span>&gt;(x => x.Send());</code></pre>
 
 When a worker sees that the given method is an instance-method, it will activate its class first. By default, the `Activator.CreateInstance` method is used, so only classes with default constructors are supported by default. But you can plug in your IoC container and pass the dependencies through the constructor.
 
@@ -91,16 +79,14 @@ It is done by the `PreserveCultureAttribute` class that is applied to all of you
 
 Hangfire can tell your methods were aborted or canceled due to shutdown event, so you can stop them gracefully using job cancellation tokens that are similar to the regular `CancellationToken` class.
 
-{% highlight csharp %}
-public void Method(CancellationToken token)
+<pre><code><span class="keywd">public</span> <span class="keywd">void</span> Method(<span class="type">CancellationToken</span> token)
 {
-    for (var i = 0; i < Int32.MaxValue; i++)
+    <span class="keywd">for</span> (<span class="keywd">var</span> i = 0; i < <span class="type">Int32</span>.MaxValue; i++)
     {
         token.ThrowIfCancellationRequested();
-        Thread.Sleep(1000);
+        <span class="type">Thread</span>.Sleep(1000);
     }
-}
-{% endhighlight %}
+}</code></pre>
 
 ### IoC Containers
 
@@ -110,7 +96,7 @@ Don’t worry, you can use your favourite IoC container that will instantiate yo
 
 ### Logging
 
-Hangfire uses the Common.Logging library to log all its events. It is a generic library and you can plug it to your logging framework using adapters. Please, see the list of available adapters on NuGet Gallery.
+Hangfire uses the LibLog library to log all its events. It is a generic library and you can plug it to your logging framework using adapters. Please, see the list of available adapters on NuGet Gallery.
 
 ### Web Garden- and Web Farm-friendly
 
@@ -122,18 +108,14 @@ Hangfire can process multiple queues. If you want to prioritize your jobs or spl
 
 To place a job into a different queue, use the QueueAttribute class on your method:
 
-{% highlight csharp %}
-[Queue("critical")]
-public void SomeMethod() { }
+<pre><code>[<span class="type">Queue</span>(<span class="string">"critical"</span>)]
+<span class="keywd">public</span> <span class="keywd">void</span> SomeMethod() { }
 
-BackgroundJob.Enqueue(() => SomeMethod());
-{% endhighlight %}
+<span class="type">BackgroundJob</span>.Enqueue(() => SomeMethod());</code></pre>
 
 To start to process multiple queues, you need to update your OWIN bootstrapper’s configuration action:
 
-{% highlight csharp %}
-services.AddHangfireServer(options => options.Queues = new [] { "critical", "default" });
-{% endhighlight %}
+<pre><code>services.AddHangfireServer(options => options.Queues = <span class="keywd">new</span> [] { <span class="string">"critical"</span>, <span class="string">"default"</span> });</code></pre>
 
 The order is important, workers will fetch jobs from the critical queue first, and then from the default queue.
 
@@ -141,9 +123,7 @@ The order is important, workers will fetch jobs from the critical queue first, a
 
 Hangfire uses its own fixed worker thread pool to consume queued jobs. Default worker count is set to Environment.ProcessorCount * 5. This number is optimized both for CPU-intensive and I/O intensive tasks. If you experience excessive waits or context switches, you can configure the amount of workers manually:
 
-{% highlight csharp %}
-services.AddHangfireServer(options => options.WorkerCount = 100);
-{% endhighlight %}
+<pre><code>services.AddHangfireServer(options => options.WorkerCount = 100);</code></pre>
 
 ### Process Jobs Anywhere
 
