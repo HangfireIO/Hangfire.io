@@ -50,7 +50,7 @@ To configure a CI feed in Visual Studio open **Tools &rarr; NuGet Package Manage
 
 To configure a project NuGet feed on your development machine run this command:
 
-    nuget sources add -Name hangfire-ci -Source https://ci.appveyor.com/nuget/hangfire-6d3854sflnyb
+    nuget sources add -Name hangfire-ci -Source https://ci.appveyor.com/nuget/hangfire
 
 ### Updating packages
 
