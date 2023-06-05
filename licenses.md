@@ -16,6 +16,7 @@ Hangfire software is an **open-source software** that is **multi-licensed** unde
 * [Hangfire.Core](https://www.nuget.org/packages/HangFire.Core/)
 * [Hangfire.AspNet](https://www.nuget.org/packages/Hangfire.AspNet/)
 * [Hangfire.AspNetCore](https://www.nuget.org/packages/Hangfire.AspNetCore/)
+* [Hangfire.DynamicJobs](https://github.com/HangfireIO/Hangfire.DynamicJobs)
 * [Hangfire.InMemory](https://github.com/HangfireIO/Hangfire.InMemory)
 * [Hangfire.NetCore](https://www.nuget.org/packages/Hangfire.NetCore/)
 * [Hangfire.SqlServer](https://www.nuget.org/packages/HangFire.SqlServer/)
