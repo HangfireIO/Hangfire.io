@@ -9,7 +9,7 @@ article_type: policy
 <h1 class="page-header">Service Providers</h1>
 
 <p>
-    <strong>Last Updated: </strong>April 28, 2023
+    <strong>Last Updated: </strong>June 6, 2023
 </p>
 
 Hangfire OÜ uses services from the following service providers, to provide documentation hosting services. This document supplements our <a href="/legal/privacy-policy.html">Privacy Policy</a> and may be separately updated on a periodic basis. A service provider is a third party data processor who has or potentially will have access to or will process personal data.
