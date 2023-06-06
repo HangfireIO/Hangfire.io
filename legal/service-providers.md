@@ -33,10 +33,6 @@ Hangfire OÜ uses services from the following service providers, to provide docu
       <tr>
          <th>Help Scout</th>
          <td>Internal help desk software for customer communications, including pre-sales, technical support, and maintenance.</td>
-      </tr>      
-      <tr>
-         <th>Envoice</th>
-         <td>Internal accounting tool for storing and processing invoices.</td>
       </tr>
       <tr>
          <th>Plausible Analytics</th>
