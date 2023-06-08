@@ -174,9 +174,27 @@ description: An easy way to perform background processing in .NET and .NET Core 
         <div class="col-md-3">
             {% include news.html %}
 
-            <h3 style="margin-top: 5px;">Pluralsight Course</h3>
+            <h3 style="margin-top: 5px;">Courses</h3>
             <div class="div-thumbnail">
-                <a href="https://www.pluralsight.com/courses/simplified-dotnet-background-tasks-hangfire" target="_blank"><img src="{{ site.cdn }}/img/pluralsight.png" alt="Pluralsight Course"/></a>
+                <div id="carousel-courses" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <a href="https://www.udemy.com/course/building-background-services-in-net-with-hangfire/?referralCode=ADE705B8BB4A44749A7D" target="_blank"><img src="{{ site.cdn }}/img/udemy.png" alt="Udemy Course"/></a>
+                        </div>
+                        <div class="item">
+                            <a href="https://www.pluralsight.com/courses/simplified-dotnet-background-tasks-hangfire" target="_blank"><img src="{{ site.cdn }}/img/pluralsight.png" alt="Pluralsight Course"/></a>
+                        </div>                        
+                    </div>
+
+                    <a class="left carousel-control" href="#carousel-courses" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-courses" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
