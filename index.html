@@ -44,60 +44,62 @@ description: An easy way to perform background processing in .NET and .NET Core 
                     </ol>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" role="listbox">
                         <div class="item active">
                             <a href="{{ site.cdn }}/img/ui/dashboard.png" data-lightbox="Screenshots" data-title="Dashboard">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/dashboard-sm.png" width="450" height="267" alt="Dashboard">
+                                <img src="{{ site.cdn }}/img/ui/dashboard-sm.png" width="450" height="267" alt="Dashboard">
                             </a>
                         </div>
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/queues.png" data-lightbox="Screenshots" data-title="Queue List">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/queues-sm.png" width="450" height="267" alt="Queue List">
+                                <img src="{{ site.cdn }}/img/ui/queues-sm.png" width="450" height="267" alt="Queue List">
                             </a>
                         </div>
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/job-details.png" data-lightbox="Screenshots" data-title="Job Details">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/job-details-sm.png" width="450" height="267" alt="Job Details">
+                                <img src="{{ site.cdn }}/img/ui/job-details-sm.png" width="450" height="267" alt="Job Details">
                             </a>
                         </div>
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/retries.png" data-lightbox="Screenshots" data-title="Retry List">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/retries-sm.png" width="450" height="267" alt="Retry List">
+                                <img src="{{ site.cdn }}/img/ui/retries-sm.png" width="450" height="267" alt="Retry List">
                             </a>
                         </div>
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/failed-jobs.png" data-lightbox="Screenshots" data-title="Failed Job List">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/failed-jobs-sm.png" width="450" height="267" alt="Failed Job List">
+                                <img src="{{ site.cdn }}/img/ui/failed-jobs-sm.png" width="450" height="267" alt="Failed Job List">
                             </a>
                         </div>
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/recurring-jobs.png" data-lightbox="Screenshots" data-title="Recurring Jobs">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/recurring-jobs-sm.png" width="450" height="267" alt="Recurring Jobs">
+                                <img src="{{ site.cdn }}/img/ui/recurring-jobs-sm.png" width="450" height="267" alt="Recurring Jobs">
                             </a>
                         </div>          
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/batches.png" data-lightbox="Screenshots" title="Batch List">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/batches-sm.png" width="450" height="267" alt="Batch List">
+                                <img src="{{ site.cdn }}/img/ui/batches-sm.png" width="450" height="267" alt="Batch List">
                             </a>
                         </div>
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/batch-details.png" data-lightbox="Screenshots" title="Batch Details">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/batch-details-sm.png" width="450" height="267" alt="Batch Details">
+                                <img src="{{ site.cdn }}/img/ui/batch-details-sm.png" width="450" height="267" alt="Batch Details">
                             </a>
                         </div>
                         <div class="item">
                             <a href="{{ site.cdn }}/img/ui/batch-jobs.png" data-lightbox="Screenshots" title="Batch Jobs">
-                                <img itemprop="image" src="{{ site.cdn }}/img/ui/batch-jobs-sm.png" width="450" height="267" alt="Batch Jobs">
+                                <img src="{{ site.cdn }}/img/ui/batch-jobs-sm.png" width="450" height="267" alt="Batch Jobs">
                             </a>
                         </div>
                     </div>
 
                     <!-- Controls -->
-                    <a class="left carousel-control" href="#screenshots" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    <a class="left carousel-control" href="#screenshots" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control" href="#screenshots" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    <a class="right carousel-control" href="#screenshots" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
