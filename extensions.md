@@ -29,6 +29,7 @@ redirect_from:
 <p>{{ category.description }}</p>
 {% endif %}
 
+<div class="table-responsive">
 <table class="table table-condensed table-extensions">
     <thead>
         <tr>
@@ -64,5 +65,6 @@ redirect_from:
     {% endfor %}
     </tbody>
 </table>
+</div>
 
 {% endfor %}
