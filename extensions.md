@@ -57,7 +57,7 @@ redirect_from:
             <td>
                 {% if project.nuget != "n/a" %}
                 <a href="https://www.nuget.org/packages/{{ project.name }}/" target="_blank">
-                    <img alt="Latest version" src="https://shields.hangfire.io/nuget/v/{{ project.name }}.svg">
+                    <img alt="Latest version" src="https://badges.hangfire.io/nuget/v/{{ project.name }}.svg">
                 </a>
                 {% endif %}
             </td>
