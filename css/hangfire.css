@@ -176,3 +176,9 @@ code {
         flex-direction: column;
     }
 }
+
+@media print {
+    .col-print-12 {
+        width: 100%;
+    }
+}

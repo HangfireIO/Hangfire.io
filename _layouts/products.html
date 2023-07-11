@@ -5,8 +5,8 @@ active: overview
 
 <div class="container">
     <div class="row row-no-float">
-        <div class="col-lg-3 col-md-4" role="complementary">
-            <div class="bs-sidenav hidden-print h-sidenav"> 
+        <div class="col-lg-3 col-md-4 hidden-print" role="complementary">
+            <div class="bs-sidenav h-sidenav"> 
                 <h4>Hangfire Core</h4>
                 <ul class="nav">
                     <li {% if page.sub_active == 'overview' %}class="active"{% endif %}><a href="/overview.html">Overview</a></li>
@@ -43,7 +43,7 @@ active: overview
                 </ul>
             </div>
         </div>
-        <div class="col-lg-9 col-md-8" role="main">
+        <div class="col-lg-9 col-md-8 col-print-12" role="main">
             <article {% if page.article_type %}class="{{ page.article_type }}"{% endif %}>
                 {{ content }}
 
