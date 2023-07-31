@@ -115,7 +115,7 @@
       url: https://github.com/pieceofsummer/Hangfire.StackTrace
       author: pieceofsummer
     
-    - name: Hangfire.Tags
+    - name: FaceIT.Hangfire.Tags
       description: Makes it possible to add tags to jobs, and filter jobs based on these tags.
       url: https://github.com/face-it/Hangfire.Tags
       author: face-it
