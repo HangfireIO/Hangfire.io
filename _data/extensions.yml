@@ -155,7 +155,7 @@
       url: https://github.com/meriturva/NLog.HangfireLayouts
       author: meriturva
 
-    - name: Hangfire.Dashboard.JobLogs
+    - name: Bonura.Hangfire.Dashboard.JobLogs
       description: Show job logs on the dashboard.
       url: https://github.com/meriturva/Hangfire.Dashboard.JobLogs
       author: meriturva
