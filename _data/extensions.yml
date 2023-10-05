@@ -155,6 +155,11 @@
       url: https://github.com/meriturva/NLog.HangfireLayouts
       author: meriturva
 
+    - name: Bonura.Hangfire.Dashboard.JobLogs
+      description: Show job logs on the dashboard.
+      url: https://github.com/meriturva/Hangfire.Dashboard.JobLogs
+      author: meriturva
+
 - name: Storages
   description: The following community projects allow you to use your favorite technology
                as a job storage.
