@@ -15,6 +15,11 @@
       url: https://github.com/bluehands/Hangfire.Community.CarbonAwareExecution
       author: bluehands
 
+    - name: IdentityStream.Hangfire.Console
+      description: Updated fork of Hangfire.Console, a job console extension for Hangfire
+      url: https://github.com/IdentityStream/Hangfire.Console
+      author: IdentityStream
+
     - name: Hangfire.Console
       description: Job console extension for Hangfire
       url: https://github.com/pieceofsummer/Hangfire.Console
