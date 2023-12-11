@@ -5,6 +5,11 @@
 
 - name: Common
   projects:
+    - name: IeuanWalker.Hangfire.RecurringJob
+      description: Automatically generates the recurring job registration code using source generators
+      url: https://github.com/IeuanWalker/Hangfire.RecurringJob
+      author: IeuanWalker
+
     - name: Elmah.Io.Heartbeats.Hangfire
       description: Logging heartbeats from Hangfire to elmah.io
       url: https://github.com/elmahio/Elmah.Io.Heartbeats.Hangfire
