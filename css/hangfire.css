@@ -24,13 +24,6 @@
     }
 }
 
-@media print{
-    *,:after,:before {
-        color: inherit !important;
-        background: inherit !important;
-    }
-}
-
 .navbar-hangfire {
     margin-bottom: 30px;
     background-color: #eee;
