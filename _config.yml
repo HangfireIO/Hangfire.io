@@ -7,8 +7,8 @@ author:
   name: 'odinserj'
   url:  https://twitter.com/odinserj
 
-github_repo:   https://github.com/HangfireIO/HangfireIO.github.io
-github_branch: master
+github_repo:   https://github.com/HangfireIO/Hangfire.io
+github_branch: main
 
 disqus_short_name:         hangfire
 disqus_show_comment_count: true
