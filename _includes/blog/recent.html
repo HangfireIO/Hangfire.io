@@ -1,11 +1,11 @@
 <div class="bs-sidenav hidden-print">
     <h4>Posts</h4>
     <ul class="nav">
-        <li class="{% if page.title == 'Blog — Hangfire' %}active{% endif %}">
+        <li class="{% if page.subtitle == 'Blog' %}active{% endif %}">
             <a href="/blog/">All Posts</a>
         </li>
-        <li class="{% if page.title == 'Releases — Hangfire' %}active{% endif %}">
-            <a href="/blog/releases.html">Releases</a>
+        <li class="{% if page.subtitle == 'Release Notes' %}active{% endif %}">
+            <a href="/blog/releases.html">Release Notes</a>
             <ul class="nav">
                 <li class="{% if page.subtitle == 'Hangfire Core' %}active{% endif %}">
                     <a href="/blog/releases/hangfire-core.html">Hangfire Core</a>
@@ -18,7 +18,7 @@
                 </li>
             </ul>
         </li>
-        <li class="{% if page.title == 'Security Announcements — Hangfire' %}active{% endif %}">
+        <li class="{% if page.subtitle == 'Security Announcements' %}active{% endif %}">
             <a href="/blog/security.html">Security Announcements</a>
         </li>
     </ul>
