@@ -1,6 +1,6 @@
 ---
 title: Hangfire.Throttling 1.1.1
-category: release
+category: [release, hangfire-ace]
 author: odinserj
 ---
 

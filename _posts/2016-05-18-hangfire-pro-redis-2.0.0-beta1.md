@@ -1,7 +1,7 @@
 ---
 title: Hangfire.Pro.Redis 2.0.0-beta1
 author: odinserj
-category: release
+category: [release, hangfire-pro]
 ---
 
 New major version of Hangfire.Pro.Redis package (a part of [Hangfire Pro](/pro/)) is almost here. Now it uses popular open-source library [StackExchange.Redis](https://github.com/StackExchange/StackExchange.Redis) to interact with [Redis](http://redis.io/) – a blazing fast data structure store.

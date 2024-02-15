@@ -1,6 +1,6 @@
 ---
 title: Hangfire Pro 1.2.0
-category: release
+category: [release, hangfire-pro]
 author: odinserj
 ---
 

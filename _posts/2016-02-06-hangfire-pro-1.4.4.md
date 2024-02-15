@@ -1,6 +1,6 @@
 ---
 title: Hangfire Pro 1.4.4
-category: release
+category: [release, hangfire-pro]
 author: odinserj
 ---
 
