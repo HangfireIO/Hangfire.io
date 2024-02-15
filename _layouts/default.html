@@ -11,7 +11,12 @@
         {% if page.description %}
         <meta name="description" content="{{ page.description }}">
         {% endif %}
-        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.cdn }}/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.cdn }}/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.cdn }}/favicon-16x16.png">
+        <link rel="manifest" href="{{ site.cdn }}/site.webmanifest"> 
+
         <meta name="twitter:site" content="@hangfireio">
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="Hangfire – Background Jobs for .NET and .NET Core">
