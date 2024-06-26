@@ -30,6 +30,10 @@
     border: none;
 }
 
+.navbar-hangfire .navbar-brand {
+    padding: 10px 15px;
+}
+
 .navbar-hangfire .navbar-nav .active>a, 
 .navbar-hangfire .navbar-nav .active>a:hover {
     background-color: #ccc;
