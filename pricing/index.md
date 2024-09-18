@@ -35,7 +35,7 @@ redirect_from: /subscriptions/
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Storages</h4>
                     <ul class="plan-items">
                         <li>SQL Server 2008 R2+</li>
-                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory</a></li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Community Support</h4>
                     <ul class="plan-items">
@@ -70,7 +70,7 @@ redirect_from: /subscriptions/
                     <ul class="plan-items">
                         <li>SQL Server 2008 R2+</li>
                         <li>Redis 2.6.12+</li>
-                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory</a></li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
@@ -110,7 +110,7 @@ redirect_from: /subscriptions/
                     <ul class="plan-items">
                         <li>SQL Server 2008 R2+</li>
                         <li>Redis 2.6.12+</li>
-                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory</a></li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">
@@ -153,7 +153,7 @@ redirect_from: /subscriptions/
                     <ul class="plan-items">
                         <li>SQL Server 2008 R2+</li>
                         <li>Redis 2.6.12+</li>
-                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory (preview)</a></li>
+                        <li><a href="https://github.com/HangfireIO/Hangfire.InMemory" target="_blank">In-Memory</a></li>
                     </ul>
                     <h4 style="padding-left:12px;margin-top:20px;text-align:left;">Dedicated Support</h4>
                     <ul class="plan-items">

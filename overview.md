@@ -136,7 +136,7 @@ Background jobs are very important part of an application and Hangfire ensures t
 
 * <a href="https://docs.hangfire.io/en/latest/configuration/using-sql-server.html">SQL Server</a>
 * <a href="https://docs.hangfire.io/en/latest/configuration/using-redis.html">Redis</a>
-* <a href="https://github.com/HangfireIO/Hangfire.InMemory">In-Memory</a> (preview)
+* <a href="https://github.com/HangfireIO/Hangfire.InMemory">In-Memory</a>
 
 And support for a lot of other storages are implemented by the community, please see the <a href="/extensions.html">Extensions</a> page for details.
 
