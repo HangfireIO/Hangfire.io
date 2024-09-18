@@ -87,8 +87,8 @@ Hangfire OÜ uses services from the following service providers, to provide docu
          <td>Sep 18, 2024</td>
          <td>
             <ul>
-               <li>Removed "Read the Docs" service, as we moved everything to Microsoft Azure.</li>
-               <li>Added "SonarCloud" vendor for automatic code analysis.
+               <li>Removed <i>Read the Docs</i> service, as we moved everything to Microsoft Azure.</li>
+               <li>Added <i>SonarCloud</i> vendor for automatic code analysis.</li>
             </ul>
          </td>
       </tr>
