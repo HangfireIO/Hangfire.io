@@ -9,7 +9,7 @@ article_type: policy
 <h1 class="page-header">Service Providers</h1>
 
 <p>
-    <strong>Last Updated: </strong>Jun 6, 2023
+    <strong>Last Updated: </strong>Sep 18, 2024
 </p>
 
 Hangfire OÜ uses services from the following service providers, to provide documentation hosting services. This document supplements our <a href="/legal/privacy-policy.html">Privacy Policy</a> and may be separately updated on a periodic basis. A service provider is a third party data processor who has or potentially will have access to or will process personal data.
@@ -43,10 +43,6 @@ Hangfire OÜ uses services from the following service providers, to provide docu
          <td>Hosting for our websites, including <a href="https://www.hangfire.io">https://www.hangfire.io</a> and <a href="https://nuget.hangfire.io">https://nuget.hangfire.io</a>.</td>
       </tr>
       <tr>
-         <th>Read the Docs</th>
-         <td>Hosting for our product documentation at <a href="https://docs.hangfire.io">https://docs.hangfire.io</a>.</td>
-      </tr>
-      <tr>
          <th>Discourse by CDCK</th>
          <td>Hosting for our community forums at <a href="https://discuss.hangfire.io">https://discuss.hangfire.io</a>.</td>
       </tr>
@@ -69,6 +65,32 @@ Hangfire OÜ uses services from the following service providers, to provide docu
       <tr>
          <th>DocuSign</th>
          <td>Electronically signing for documents when necessary.</td>
+      </tr>
+      <tr>
+         <th>SonarCloud</th>
+         <td>Automatic code analysis for our public and private projects.</td>
+      </tr>
+   </tbody>
+</table>
+
+## Updates
+
+<table>
+   <thead>
+      <tr>
+         <th style="width: 20%;">Date</th>
+         <th>Changes</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Sep 18, 2024</td>
+         <td>
+            <ul>
+               <li>Removed "Read the Docs" service, as we moved everything to Microsoft Azure.</li>
+               <li>Added "SonarCloud" vendor for automatic code analysis.
+            </ul>
+         </td>
       </tr>
    </tbody>
 </table>
