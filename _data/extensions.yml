@@ -20,6 +20,11 @@
       url: https://github.com/bluehands/Hangfire.Community.CarbonAwareExecution
       author: bluehands
 
+    - name: Hangfire.Community.Outbox
+      description: Outbox pattern implementation for enqueuing or scheduling Hangfire jobs using EntityFramework Core.
+      url: https://github.com/BredStik/Hangfire.Community.Outbox
+      author: BredStik
+
     - name: IdentityStream.Hangfire.Console
       description: Updated fork of Hangfire.Console, a job console extension for Hangfire
       url: https://github.com/IdentityStream/Hangfire.Console
