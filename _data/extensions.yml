@@ -70,6 +70,11 @@
       url: https://github.com/LabelZhou/Hangfire.Dashboard.RecurringJobExtensions
       author: labelzhou
 
+    - name: Hangfire.EfCore.Outbox
+      description: Outbox pattern implementation for enqueuing or scheduling Hangfire jobs using EntityFramework Core.
+      url: https://github.com/BredStik/Hangfire.EfCore.Outbox
+      author: BredStik
+
     - name: Hangfire.Extensions.Configuration
       description: Functionality to read Hangfire configurations from key-value pair based configuration
       url: https://github.com/Nevets82/Hangfire.Extensions.Configuration
