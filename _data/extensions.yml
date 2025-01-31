@@ -148,7 +148,17 @@
     - name: Hangfire.Extensions.ApplicationInsights
       description: ApplicationInsights integration to track Jobs as Operations.
       url: https://github.com/coolhome/Hangfire.Extensions.ApplicationInsights
-      author: coolhome
+      author: coolhome    
+
+    - name: NomSol.Hangfire.JobManager
+      description: Extension for managing Hangfire jobs dynamically via storage.
+      url: https://github.com/NominalSolutions/NomSol.Hangfire.JobManager
+      author: Nominal Solutions LLC
+
+    - name: NomSol.Hangfire.JobGuardian
+      description: Custom job filter that prevents duplicate jobs from being enqueued.
+      url: https://github.com/NominalSolutions/NomSol.Hangfire.JobGuardian
+      author: Nominal Solutions LLC
 
     - name: OpenTelemetry.Instrumentation.Hangfire
       description: Instrumentation Library, which instruments Hangfire and collects telemetry about BackgroundJob.
