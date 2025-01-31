@@ -153,12 +153,12 @@
     - name: NomSol.Hangfire.JobManager
       description: Extension for managing Hangfire jobs dynamically via storage.
       url: https://github.com/NominalSolutions/NomSol.Hangfire.JobManager
-      author: Nominal Solutions LLC
+      author: NominalSolutions
 
     - name: NomSol.Hangfire.JobGuardian
       description: Custom job filter that prevents duplicate jobs from being enqueued.
       url: https://github.com/NominalSolutions/NomSol.Hangfire.JobGuardian
-      author: Nominal Solutions LLC
+      author: NominalSolutions
 
     - name: OpenTelemetry.Instrumentation.Hangfire
       description: Instrumentation Library, which instruments Hangfire and collects telemetry about BackgroundJob.
