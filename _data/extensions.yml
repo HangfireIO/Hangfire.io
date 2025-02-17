@@ -189,6 +189,11 @@
       description: Publishers create Hangfire Jobs for subscribers by broadcasting events
       url: https://github.com/SitholeWB/SubPub.Hangfire
       author: sitholewb
+      
+    - name: RBC.Hangfire.RecurringJobAdmin
+      description: A simple dashboard to manage Hangfire's recurring jobs.
+      url: https://github.com/SerbanApostol/Hangfire.RecurringJobAdmin
+      author: SerbanApostol
 
 - name: Storages
   description: The following community projects allow you to use your favorite technology
