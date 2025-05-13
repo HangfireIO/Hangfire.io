@@ -14,6 +14,8 @@ Licensee must fully agree and comply with these license terms or must not use th
 
 In the event that we accidentally failed to list a required notice, please bring it to our attention by sending an email to <support@hangfire.io>.
 
+**Last Updated:** May 6, 2025 with the Microsoft.Azure.StackExchangeRedis package.
+
 ### [LibLog](https://github.com/damianh/LibLog) (MIT License)
 
 <span class="label label-success">Hangfire.Core</span>
