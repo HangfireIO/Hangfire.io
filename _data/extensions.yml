@@ -283,7 +283,7 @@
       url: https://github.com/raisedapp/Hangfire.Storage.SQLite
       author: felixclase
       
-    - name: Hangfire.DMStorage
+    - name: DMStorage.Hangfire
       description: Hangfire.DMStorage provides Dameng (DM) database storage support for Hangfire, a popular .NET library used for managing background tasks and jobs.
       url: https://github.com/findersky/Hangfire.DMStorage
       author: findersky
