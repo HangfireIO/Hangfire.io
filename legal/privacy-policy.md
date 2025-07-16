@@ -19,7 +19,7 @@ article_type: policy
 <ul>
 <li>Account details (such as user name, unique user ID, password, etc)</li>
 <li>Contact information (such as email address, phone number, etc)</li>
-<li>Basic personal information (such as name, country of residence, etc)</li>
+<li>Basic personal information (such as first name, last name, etc)</li>
 <li>Payment information (such as credit card details, bank details, etc)</li>
 <li>Any other materials you willingly submit to us (such as articles, images, feedback, etc)</li>
 </ul>
@@ -142,4 +142,4 @@ article_type: policy
 <p>If you have any other questions, concerns, or complaints regarding this Policy, we encourage you to contact us using the details below:</p>
 <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#112;r&#105;v&#97;cy&#64;h&#97;&#110;gf&#105;re&#46;&#105;&#111;">&#112;ri&#118;&#97;c&#121;&#64;ha&#110;g&#102;&#105;r&#101;&#46;i&#111;</a><br/>Ahtri 12, Tallinn, Harju County 15551, Estonia</p>
 <p>We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.</p>
-<p>This document was last updated on April 28, 2023</p>
+<p>This document was last updated on July 16, 2025</p>
