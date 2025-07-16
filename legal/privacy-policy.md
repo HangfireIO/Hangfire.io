@@ -20,7 +20,6 @@ article_type: policy
 <li>Account details (such as user name, unique user ID, password, etc)</li>
 <li>Contact information (such as email address, phone number, etc)</li>
 <li>Basic personal information (such as first name, last name, etc)</li>
-<li>Payment information (such as credit card details, bank details, etc)</li>
 <li>Any other materials you willingly submit to us (such as articles, images, feedback, etc)</li>
 </ul>
 <p>You can choose not to provide us with your Personal Information, but then you may not be able to take advantage of some of the features on the Website. Users who are uncertain about what information is mandatory are welcome to contact us.</p>
