@@ -288,6 +288,17 @@
       url: https://github.com/findersky/Hangfire.DMStorage
       author: findersky
 
+    - name: DMStorage.Hangfire
+      description: Hangfire.DMStorage provides Dameng (DM) database storage support for Hangfire, a popular .NET library used for managing background tasks and jobs.
+      url: https://github.com/findersky/Hangfire.DMStorage
+      author: findersky
+
+    - name: Hangfire.Redis.StackExchange
+      description: HangFire Redis storage based on original (and now unsupported) Hangfire.Redis but using lovely StackExchange.Redis client
+      url: https://github.com/marcoCasamento/Hangfire.Redis.StackExchange
+      author: marcoCasamento
+      
+
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
                your favorite IoC Container. They provide custom implementation
