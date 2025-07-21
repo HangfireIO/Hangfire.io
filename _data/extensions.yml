@@ -288,6 +288,11 @@
       url: https://github.com/findersky/Hangfire.DMStorage
       author: findersky
 
+    - name: Hangfire.Redis.StackExchange
+      description: Hangfire Redis storage based on original (and now unsupported) Hangfire.Redis but using lovely StackExchange.Redis client
+      url: https://github.com/marcoCasamento/Hangfire.Redis.StackExchange
+      author: marcoCasamento
+
 - name: IoC Containers
   description: These projects simplify the integration between Hangfire and
                your favorite IoC Container. They provide custom implementation
