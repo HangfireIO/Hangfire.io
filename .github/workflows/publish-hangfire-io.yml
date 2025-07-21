@@ -12,7 +12,6 @@ jobs:
     name: Build and Deploy Job
     permissions:
       contents: read
-      statuses: write
     steps:
       - uses: actions/checkout@v2
       - name: Build And Deploy
