@@ -137,7 +137,7 @@ article_type: policy
 <p>You acknowledge that you have read this Policy and agree to all its terms and conditions. By accessing and using the Website and Services and submitting your information you agree to be bound by this Policy. If you do not agree to abide by the terms of this Policy, you are not authorized to access or use the Website and Services.</p>
 <h2 id="contacting-us">Contacting us</h2>
 <p>If you have any questions regarding the information we may hold about you or if you wish to exercise your rights, you may use the following data subject request form to submit your request:</p>
-<p><a href="https://app.websitepolicies.com/dsar/view/tu0q3d4k" target="_blank" rel="nofollow noreferrer noopener external">Submit a data access request</a></p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeq7mNwJZQqnbX_OksGzz6an5AL3cABItlgfetGdiN0ThZfSA/viewform?usp=dialog" target="_blank" rel="nofollow noreferrer noopener external">Submit a data access request</a></p>
 <p>If you have any other questions, concerns, or complaints regarding this Policy, we encourage you to contact us using the details below:</p>
 <p><a href="&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#112;r&#105;v&#97;cy&#64;h&#97;&#110;gf&#105;re&#46;&#105;&#111;">&#112;ri&#118;&#97;c&#121;&#64;ha&#110;g&#102;&#105;r&#101;&#46;i&#111;</a><br/>Ahtri 12, Tallinn, Harju County 15551, Estonia</p>
 <p>We will attempt to resolve complaints and disputes and make every reasonable effort to honor your wish to exercise your rights as quickly as possible and in any event, within the timescales provided by applicable data protection laws.</p>
