@@ -246,8 +246,8 @@
       author: perrich
       
     - name: Hangfire.Mongo
-      url: https://github.com/Hangfire-Mongo/Hangfire.Mongo
-      author: Hangfire-Mongo
+      url: https://github.com/gottscj/Hangfire.Mongo
+      author: gottscj
       
     - name: Hangfire.MySqlStorage
       url: https://github.com/arnoldasgudas/Hangfire.MySqlStorage
