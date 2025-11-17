@@ -14,7 +14,7 @@ article_type: policy
 
 Hangfire OÜ uses services from the following service providers, to provide documentation hosting services. This document supplements our <a href="/legal/privacy-policy.html">Privacy Policy</a> and may be separately updated on a periodic basis. A service provider is a third party data processor who has or potentially will have access to or will process personal data.
 
-<table>
+<table class="table table-striped table-bordered">
     <thead>
         <tr>
             <th style="width: 20%;">Name</th>
@@ -36,7 +36,7 @@ Hangfire OÜ uses services from the following service providers, to provide docu
                     <li>Unique user code</li>
                 </ul>
             </td>
-            <td>United States</td>
+            <td>United&nbsp;States</td>
         </tr>
         <tr>
             <th>Google Workspace</th>
@@ -56,7 +56,7 @@ Hangfire OÜ uses services from the following service providers, to provide docu
             <th>Help Scout</th>
             <td>Internal help desk software for customer communications, including pre-sales, technical support, and maintenance.</td>
             <td>Same as above</td>
-            <td>United States</td>
+            <td>United&nbsp;States</td>
         </tr>
         <tr>
             <th>Plausible Analytics</th>
@@ -87,7 +87,7 @@ Hangfire OÜ uses services from the following service providers, to provide docu
                     <li>Email address</li>
                 </ul>
             </td>
-            <td>United States</td>
+            <td>United&nbsp;States</td>
         </tr>
         <tr>
             <th>Discourse by CDCK</th>
@@ -119,7 +119,7 @@ Hangfire OÜ uses services from the following service providers, to provide docu
                     <li>Email address</li>
                 </ul>
             </td>
-            <td>United States</td>
+            <td>United&nbsp;States</td>
         </tr>
         <tr>
             <th>AppVeyor</th>
@@ -145,7 +145,7 @@ Hangfire OÜ uses services from the following service providers, to provide docu
                     <li>Signing location</li>
                 </ul>
             </td>
-            <td>United States</td>
+            <td>United&nbsp;States</td>
         </tr>        
     </tbody>
 </table>
