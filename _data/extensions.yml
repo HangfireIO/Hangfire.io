@@ -5,6 +5,11 @@
 
 - name: Common
   projects:
+    - name: Hangfire.Community.Dashboard.Heatmap
+      description: Adds a visual timeline and heatmap view to Hangfire Dashboard, showing when recurring jobs are scheduled throughout the day.
+      url: https://github.com/brodrigz/Hangfire.Community.Dashboard.Heatmap
+      author: brodrigz
+  
     - name: IeuanWalker.Hangfire.RecurringJob
       description: Automatically generates the recurring job registration code using source generators
       url: https://github.com/IeuanWalker/Hangfire.RecurringJob
