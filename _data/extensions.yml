@@ -280,6 +280,11 @@
       url: https://github.com/ahydrax/Hangfire.PostgreSql
       author: ahydrax
       
+    - name: pengdows.hangfire
+      description: SQL-first storage built on pengdows.crud. Supports PostgreSQL, SQL Server, MySQL, MariaDB, Oracle, Firebird, SQLite, DuckDB, CockroachDB, YugabyteDB, and TiDB.
+      url: https://github.com/pengdows/pengdows.hangfire
+      author: pengdows
+
     - name: Hangfire.Raven
       url: https://github.com/CadyIO/hangfire-ravendb
       author: CadyIO
