@@ -210,6 +210,11 @@
       url: https://github.com/Effektor/Hangfire.Idempotent
       author: Effektor
 
+    - name: Nall.Hangfire.Mcp
+      description: Exposes Hangfire background jobs as Model Context Protocol (MCP) tools over a Streamable HTTP endpoint, so LLM agents can discover and trigger jobs.
+      url: https://github.com/NikiforovAll/hangfire-mcp-dotnet
+      author: NikiforovAll
+
 - name: Storages
   description: The following community projects allow you to use your favorite technology
                as a job storage.
