@@ -18,7 +18,9 @@ redirect_from:
 
 <div class="alert alert-warning">
     <h4>Disclaimer</h4>
-    Please note that the extensions below developed and maintained by the community. Extensions in Hangfire might significantly affect the execution pipeline, especially job storage implementation. We don't provide official support for community-based packages.
+    <p>Please note that the extensions below developed and maintained by the community. Such extensions may significantly affect the execution pipeline, especially job storage implementations, and <strong>have access to the stored data</strong>.</p>
+    <p>This list of extensions is provided for informational purposes only and does not constitute a recommendation or guarantee of their properties, including quality, safety, and security.  </p>
+    <p><strong>Hangfire OÜ and its affiliates are not responsible for any use of these extensions</strong> and does not provide official support for them.</p>
 </div>
 
 {% for category in site.data.extensions %}
