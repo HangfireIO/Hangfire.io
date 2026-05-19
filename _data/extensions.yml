@@ -14,7 +14,12 @@
       description: Monitor the health and performance of your background jobs at a glance, with a live summary grouped by job type, detailed historical views, interactive charts, and built‑in data management.
       url: https://github.com/frankyjquintero/Hangfire.Community.Dashboard.JobsInsights
       author: frankyjquintero
-  
+
+    - name: Hangfire.Community.JobsLauncher.Dashboard
+      description: Dashboard extension for ad-hoc job execution via UI using reflection or JSON payloads. It features a visual Cron generator, reusable templates, and an immutable audit log, utilizing a decoupled architecture to trigger business logic without direct dependencies.
+      url: https://github.com/frankyjquintero/Hangfire.Community.JobsLauncher
+      author: frankyjquintero
+
     - name: IeuanWalker.Hangfire.RecurringJob
       description: Automatically generates the recurring job registration code using source generators
       url: https://github.com/IeuanWalker/Hangfire.RecurringJob
