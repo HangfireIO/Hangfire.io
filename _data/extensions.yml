@@ -5,6 +5,11 @@
 
 - name: Common
   projects:
+    - name: a2n.Hangfire.Dashboard
+      description: Community dashboard extension with console output, job tags, recurring job CRUD, global search, advanced filters, analytics, and SignalR realtime updates.
+      url: https://github.com/anwarminarso/a2n.Hangfire.Dashboard
+      author: anwarminarso
+
     - name: Hangfire.Community.Dashboard.Heatmap
       description: Adds a visual timeline and heatmap view to Hangfire Dashboard, showing when recurring jobs are scheduled throughout the day.
       url: https://github.com/brodrigz/Hangfire.Community.Dashboard.Heatmap
