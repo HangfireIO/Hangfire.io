@@ -185,6 +185,11 @@
       url: https://github.com/open-telemetry/opentelemetry-dotnet-contrib/tree/main/src/OpenTelemetry.Instrumentation.Hangfire
       author: fred2u
 
+    - name: OpsToolkit.Hangfire.JobControl
+      description: Durable operator controls and audit history for Hangfire recurring jobs and job runs, with bundled zero-build UIs.
+      url: https://github.com/GeXiaoguo/Hangfire.OpsToolkit.Public
+      author: GeXiaoguo
+
     - name: TransactHangfire
       description: TransactionScope filter wrapper for Hangfire jobs.
       url: https://github.com/dalrankov/TransactHangfire
