@@ -5,6 +5,11 @@
 
 - name: Common
   projects:
+    - name: Hangfire.Community.Dashboard.Forms
+      description: Hangfire.Community.Dashboard.Forms lets you define dynamic jobs that adapt to any scenario. Forms are auto-generated from your C# job signatures, no front-end code required. Manually kick off jobs directly from the dashboard. 
+      url: https://github.com/Muccarini/Hangfire.Community.Dashboard.Forms
+      author: Muccarini
+      
     - name: a2n.Hangfire.Dashboard
       description: Community dashboard extension with console output, job tags, recurring job CRUD, global search, advanced filters, analytics, and SignalR realtime updates.
       url: https://github.com/anwarminarso/a2n.Hangfire.Dashboard
