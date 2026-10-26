@@ -275,6 +275,11 @@
     - name: Hangfire.LiteDB
       url: https://github.com/codeyu/Hangfire.LiteDB
       author: codeyu 
+
+    - name: Laim.Hangfire.LiteDB
+      description: Maintained fork of Hangfire.LiteDB. Supports SQL Server, Oracle, MySQL, Firebird, PostgreSQL, DB/2.
+      url: https://github.com/laim/Laim.Hangfire.LiteDB
+      author: laim 
       
     - name: Hangfire.MemoryStorage
       url: https://github.com/perrich/Hangfire.MemoryStorage
